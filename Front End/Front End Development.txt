@@ -1,0 +1,35 @@
+Front End Development Guide
+
+	I will be using this document to note down everything that I have been learning in order to complete my Front End Developer Course. 
+	
+	
+Contents
+
+
+1 GITHUB
+
+	Git and Github are tools used for development. It is commonly used for building and sharing software. 
+	
+	It allows for version control, letting a team work on the same files and different versions during completion of a project.
+	
+	So 2 people can work on a document at the same time, merge them together and then use older versions if necessary to correct mistakes etc.
+	
+	
+1.1 Git
+
+	Git is a tool that allows developers to version their software. When developers are building software, they will need to break it into chunks of work.
+
+	For example, if a developer is to build an authentification mechanism that allows users to sign up and log in, they will need to break this task down. 
+	
+	This includes developing the signup and login stages. 
+	
+	Once a developer completes each stage, they will commit that code to the Git repository. This enables developers to track their progress as they develop an application. 
+	
+	For info on installing Git, see the Git Guide. 
+	
+	Git is ran through a command line, the info of which is also provided in the Git guide. 
+	
+	
+1.2 Github
+
+	
