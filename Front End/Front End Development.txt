@@ -2,34 +2,62 @@ Front End Development Guide
 
 	I will be using this document to note down everything that I have been learning in order to complete my Front End Developer Course. 
 	
+	OTHER RELEVENT DOCUMENTS
+	HTML GUIDE
+	CSS GUIDE
+	JAVASCRIPT GUIDE
+	
+	GIT GUIDE
+
 	
 Contents
 
 
-1 GITHUB
+1 Reopening the Box Model
 
-	Git and Github are tools used for development. It is commonly used for building and sharing software. 
+	Video https://youtu.be/th_A4a6vPm0
 	
-	It allows for version control, letting a team work on the same files and different versions during completion of a project.
-	
-	So 2 people can work on a document at the same time, merge them together and then use older versions if necessary to correct mistakes etc.
+	Here we will look into how web pages are structures and achieve an effective and clear design. 
 	
 	
-1.1 Git
+1.1 HTML Refresh
 
-	Git is a tool that allows developers to version their software. When developers are building software, they will need to break it into chunks of work.
+	HTML stands for Hypertext Markup Language.
+	
+	The extention is .html
+	
+	It's used to provide structure and content to electronic documents, typically viewed in web browsers. 
+	
+	I've covered all this before and can all be viewed in the HTML guide, but lets have a short refresh. 
 
-	For example, if a developer is to build an authentification mechanism that allows users to sign up and log in, they will need to break this task down. 
+	A typical HTML Document
 	
-	This includes developing the signup and login stages. 
-	
-	Once a developer completes each stage, they will commit that code to the Git repository. This enables developers to track their progress as they develop an application. 
-	
-	For info on installing Git, see the Git Guide. 
-	
-	Git is ran through a command line, the info of which is also provided in the Git guide. 
-	
-	
-1.2 Github
+	<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Page Title</title>
+		</head>
+		<body>
+			<h1>My Page</h1>
+			<p>A paragraph</p>
+			
+	MOZILLA HAVE KINDLY PROVIDED AN ENTIRE LIST OF HTML ELEMENTS.
 
+	https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+	
+	OTHERWISE USE THE HTML DOCUMENT I MADE, THAT'S WHAT IT'S THERE FOR. 
+	
+	
+1.2 Coding In An Editor
+
+	The most popular editor at the moment is Sublime Text. 
+	
+	Download link here - http://www.sublimetext.com/3
+	
+	A few notes on files -
+	- Don't save files with spaces.
+	- Remember to keep git updated with changes. 
+	- Sublime has a view in browser option on right click. Use it.
+	
+	
 	
