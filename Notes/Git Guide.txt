@@ -20,6 +20,20 @@ GIT Guide
 	5.1 Creating Repository
 	5.2 Pushing
 	
+	6 Branches
+	6.1 Setting up a branch
+	6.2 Navigating Branches
+	6.3 Creating/Editing within Branches
+	6.4 Git Merge
+	
+	7 CONTRIUTING AS A TEAM
+	7.1 Pulling
+	
+	8 README FILES
+	8.1 MarkDown Syntax
+	
+	9 COMMANDS LIST
+	
 	
 1. Glossary
 
@@ -385,6 +399,7 @@ GIT Guide
 	If a repository contains one of these, Github automatically displays it on the code tab. 
 	
 	This is a MarkDown file, extention being .md
+	
 	
 8.1 MarkDown Syntax
 
