@@ -373,6 +373,10 @@ GIT Guide
 	
 	Once the pull request is posted, it can be accepted or ignored by the owner. It can also be stopped from being requested if it will cuase conflicts. 
 	
+	If we own it ourselves, we can then accept these. 
+	
+	REMEMBER TO PULL YOUR LOCAL FILES AFTER THIS, SO THAT YOU HAVE THE LATEST VERSIONS. 
+	
 	
 8 README FILES
 
@@ -380,4 +384,90 @@ GIT Guide
 	
 	If a repository contains one of these, Github automatically displays it on the code tab. 
 	
+	This is a MarkDown file, extention being .md
 	
+8.1 MarkDown Syntax
+
+	# Makes a big header.
+	
+	1. Numbered items make list items 
+		1. Nested numbered items appear nested in the list
+		2. Another lested item for the LOL's.
+	2. Here's some **bold**
+	
+	[Here's some linked text](and here's the url link)
+	
+	
+9 COMMANDS LIST
+
+	Below are all the commands you're likely to use. 
+	
+	
+	NAVIGATION
+	
+	View all files in directory
+		ls
+		
+	View all files, including invisible files
+		ls -a
+		
+	Change Directory
+		cd [directory name]
+		
+	Move up one directory
+		cd ..
+		
+	Make a directory
+		mkdir [directory name]
+	
+	
+	CREATING REPOSITORIES
+	
+	Initialisation
+		git init
+	
+	Entering Info (first time only)
+		git config --global user.name "<Your Name>"
+		git config --global user.email "<your email address>"
+		
+	Connecting with GitHub Repository
+		git remote add origin <your github URL>
+		
+	Initial Push to GitHub Repository
+		git push -u origin master
+		
+	
+	MANAGING VERSIONING
+	
+	Check Status
+		git status
+		
+	Add a file to the next commit
+		git add [file name]
+		
+	Commit changes
+		git commit -m "description of change"
+		
+	Push changes to GitHub repository
+		git push origin [branch name]
+	
+	Update local repository with the GitHub one
+		git pull origin [branch name]
+		
+	
+	MANAGING BRANCHES
+		
+	Fetch list of remote branches
+		git fetch
+		
+	Create local branch
+		git checkout -b [local name] origin/[GitHub name]
+		
+	View all local branches
+		git branch
+		
+	Swap to another branch
+		git checkout [name]
+		
+	Merging the current branch's content with another
+		git merge [other branch's name]
