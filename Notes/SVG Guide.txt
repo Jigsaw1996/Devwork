@@ -1,0 +1,185 @@
+<!--SVG GUIDE-->
+
+	SVG stands for Scalable Vector Graphics, and iis used to draw shapes with HTML.
+
+	It allows for drawing paths, boxes, circles, text amd graphic images. 
+	
+	SVG IS NOT PIXEL BASED, SOO IT CAN BE MAGNIFIED WITHOUT LOSING QUALITY.
+	
+	
+<!--CONTENT GUIDE-->
+
+	1. SVG Images
+	
+	2. SVG TAG
+	
+	3. DRAWING
+	3.1 Circles
+	3.2 Rectangles
+	3.3 Lines
+	3.4 Polylines
+	3.5 Elipse
+	3.6 Polylines
+	
+	4. SVG ANIMATIONS
+	
+	5. LINES
+	5.1 Path Data
+	5.2 Definiting Paths
+	
+	
+<!--1. SVG IMAGES-->
+
+	SVG's can be added using the src attribute.
+	
+	<img src="image.svg" alt="" height="300" />
+	
+	.svg is the extention for svg files.
+	
+	
+<!--2. SVG TAG-->
+
+	To draw svg's, use the below tag.
+	
+	<svg> </svg> - Everything within this will be the drawings for the SVG.
+	width="" - Gives the width of the svg beign drawn.
+	height="" - Ditto with the height.
+	
+	ALL ELEMENTS ARE DRAWN FROM THE TOP LEFT CORNER BY DEFAULT
+	
+<!--3. DRAWING-->
+
+	Below covers how to draw different elements. 	
+	
+<!--3.1 Circles-->
+
+	<circle /> - Is used to add a circle.
+	cx="" - Pushes the center of the circle to the right.
+	cy="" - Pushes the center of the circle downwards.
+	r="" - Defines the radius.
+	fill="" - Gives it a colour.
+	stroke="" - Adds an outline to the circle.
+	
+	EXAMPLE
+	
+	<svg width="1000" height="1000">
+		<circle cx="50" cy="240" r="10" fill="red" />
+	</svg>
+	
+	Result - A red square 
+	
+	
+<!--3.2 Rectangles-->
+
+	<rect /> - Used to add a rectangle.
+	width="" - Defines it's width.
+	height="" - Defines it's height.
+	x="" - Pushes it to the right. 
+	y="" - Pushes it downward.
+	fill="" - Gives it a colour.
+	
+	
+<!--3.3 Lines-->
+
+	<line /> - Used to add a line.
+	x1="" y1="" - Defines it's starting coords.
+	xy="" y2="" - Defines it's ending coords.
+	
+	Inline Style Values:
+	stroke: ; - Adds a colour.
+	strike-linecap: ; - Adds the type of stroke. Can be "round".
+	stroke-width: ; - Defines what it's width is.
+	
+	
+<!--3.4 Polylines-->
+
+	<polyline /> - Adds a line. built from multiple points. 
+	points="" - Adds the points. These are comma seperated. i.e points="100 100, 150 120, 200 100"
+	
+	Inline Style Values:
+	stroke-linejoin: ;
+	stroke: - Adds a stroke colour. 
+	stroke-width:; - Adds a width.
+	fill: ; - Ads a fill colour.
+	
+	
+<!--3.5 Elipse-->
+
+	<elipse  /> - Like a circle, but it can be squashed to make an oval etc.
+	rx="" - Controls the x radius.
+	ry="" - Controls the y radius.
+	cx="" - Pushes the center of the circle to the right.
+	cy="" - Pushes the center of the circle downwards.
+	fill="" - Gives it a colour.
+	stroke="" - Adds an outline to the circle.
+	
+	
+<!--3.6 Polylines-->
+
+	<polygon /> - Used to add a shape made up of at least three sides.
+	points="" - Adds the points. These are comma seperated. i.e points="100 100, 150 120, 200 100"
+	
+	Inline Style Values:
+	fill: ; - Gives it a fill.
+	stroke: ; - Gives it's outside borders a fill.
+	
+	
+<!--4. SVG ANIMATIONS-->
+
+	Animations can be added to SVG's.
+	
+	<animate /> - Used within an element which should be animated.
+	
+	FOR THIS TO WORK, THE SHAPE NEEDS TO HAVE A CLOSING TAG. 
+	
+	attributeName="" - Cpecifies which attribute will be affected. i.e "x" will affect the x value.
+	from="" - Changes the start value.
+	to="" - Changes the end value.
+	dur="" - Time in seconds. Syntax - "3s"
+	fill="" - Specifies if it should return to it's original values when the animation has finished. Values - "remove" or "freeze"
+	repeatCount="" - How many times it should repeat the animation. "indefinite" makes it go on forever. 
+	
+	
+<!--5. LINES-->
+
+	<path /> - Used to define a path on the SVG.
+	
+	
+<!--5.1 Path Data-->
+
+	The following commands are available for path data.
+	
+	M - moveto
+	L - lineto
+	H - horizontal lineto
+	V - vertical lineto
+	C - curveto
+	S - smooth curveto
+	Q - quadratic Bezier curve
+	T - smooth quadratic Bezier curveto
+	A - elliptical Arc
+	Z - closepath
+	
+	
+<!--5.2 Definiting Paths-->
+
+	Paths are defined using the d attribute.
+	
+	d="" - Contains all path data.
+	
+	"m" places the pen down at the first position, we can then use L to define where it goes next.
+	
+	EXAMPLE
+	
+	<path d="m 0 0 L200 200" style="stroke:#000;fill: none;" />
+	
+	Result - A line that starts at 0 0 then moves 200px down to the right. 
+	
+	Now lets make a triangle.
+	
+	<path d="M 0 0 L200 200 L200 0 Z" style="stroke:#000;fill: none;" />
+	
+	Results - A triangle.
+	
+	CAPITAL LETTERS INDICATE AN ABSOLUTE POSITION, LOWER CASE INDICATE A RELATIVE POSITION. 
+	

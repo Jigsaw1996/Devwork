@@ -1,0 +1,283 @@
+<!--HTML TAGS-->
+
+<!--CONTENT-->
+
+	1. STARTER TAGS
+
+	2. HEAD TAGS
+
+	3. BODY TAGS
+	3.1 Text Editing
+	3.2 List Editing
+	3.3 Container Editing
+	3.4 Content Editing
+	3.5 Table Editing
+	
+	4. SCRIPTING
+	4.1 Event Handlers
+	4.2 Progress Bar
+	4.3 Drag&Drop
+	
+	5 FORMS
+	5.1 Input Types
+	5.2 Data Lists
+
+
+<!--1. STARTER TAGS-->
+
+	These tags should be placed right at the top of the HTML document. 
+
+	<!doctype html> - Placed at the very top of a page, signifies html type. 
+
+	<html> </html> - placed after the doctype, signifies start of html.
+
+
+<!--2. HEAD TAGS-->
+
+	The head is the first element of the html document. It contains information that is relevant to the page, but does not display itself. This includes meta information, links and scripts. 
+
+	<head> </head> - Signifies the head of the page, does not display on the page itself, though gives information on the page.
+
+	<meta charset="UTF-8"> - Placed at the very top of the head section. Sets the encoding type.
+
+	<title> </title> - Gives the page a title, which is used on the web page's tab and by search engines.
+
+	<link> </link> - Links items such as stylesheets to the page.
+	rel="" - Specifies the relation of the link. For instance, a stylesheet would be "stylesheet".
+	href="" - The relitive location of the link
+	
+	<script> </script> - Used to add an external javascript file to the site. Javascript can also be added inbetween the tags, though this is best reserved for external files.
+	src="" - Used to link to the relevant file. REQUIRES JAVASCRIPT EXTENTION. Syntax - src="example.js"
+
+
+<!--3. BODY TAGS-->
+
+	The body is the main section of the page. It contains everything that is meant to display on the page. 
+
+	<body> </body> - Signifies the body of the page, which is all of the content which is to be shown when viewed.
+
+
+<!--3.1 Text Editing--> 
+
+	Text editing controls standard text and all relevant elements. 
+
+	<a> </a> - Signifies a link in text.
+	href="" - Specifies where it links to.
+	target="" - How the link is opened. A new tab is made with "_blank".
+
+	<p> </p> - Used for paragraphs. Block element.
+	<br /> - Used within paragraphs if a line break is needed. 
+
+	<strong> </strong> - Makes the text bold. Inline element.
+
+	<em> </em> - Makes text italic. 
+
+	<sup> </sub> - Makes the text small and above the text, similar to the "rd" in 3rd would be.
+
+	<sub> </sub> - Does the same, but underneath the words.
+
+	<del> </del> - Text with a line through it.
+
+	<ins> </ins> - Text with an underline.
+	
+	
+<!--3.2 Header Editing-->
+
+	Headers control titles and important text. 
+
+	<h1></h1> - The main header for the page.
+	
+	Additional headers/
+	<h2></h2>
+	<h3></h3>
+	<h4></h4>
+	<h5></h5>
+	<h6></h6>
+	
+	EACH BROWSER HAS DIFFERENT DEFAULT STYLES FOR EACH OF THESE. 
+	
+
+<!-- 3.2 List Editing-->
+
+	Used to create lists of content.
+
+	<ul> </ul> - An unordered list. Block element.
+
+	<ol> </ol> - An ordered list. Block element.
+
+	<li> </li> - Used for both to signify a line.
+
+
+<!--3.3 Container Editing-->
+
+	Containers are used to hold content so that they can be grouped and styled together. Different containers are good for different purposes.
+
+	<div> </div> - Standard container for content,  block level. 
+
+	<span> </span> - Standard container for content, inline level.
+
+	<header> </header> - Basically a div but specifically for headers. 
+
+	<nav </nav> - A container for the main navigation of a site. 
+
+	<main> </main> - div, used for the main section of the page.
+
+	<section> </section> - A container for a  section of a page.
+
+	<article> </article> - A container for an article or blog post.
+
+	<aside> </aside> - Means the sidebar of a page. 
+
+	<footer> </footer> - Designates the lowest section of the page. 
+	
+	class="" - Used to name containers so that they can be styled. Many containers can have the same class. Ideal for CSS. 
+	
+	Multiple classes can be added at once by making them space seperated. 
+	
+	id="" - Used to name containers so that they can be styled. Only one container can have the same id. Ideal for JS. 
+
+
+<!--3.4 Content Editing-->
+
+	Additional content can be added.
+
+	<img /> - An image for the page, block level.
+	src="" - The link of the image planned for use.
+	alt="" - An alternate piece of text if the picture can't be opened.
+	<figure> </figure> - added over an image to add a caption for an image.
+	<figcaption> </figcaption> - Added inside the <figure> tag alongside an image, text can then be added inside this tag which represents an image's caption.
+
+	<video> </video> - A video for the site. Block level. MUST BE MP4 TO BE SUPPORTED BY ALL BROWSERS.
+	<source> - Used between the opening and closing video tag to link to the video. More than one of these can be used, in order of which one to attempt to load first.
+	src="" - Used in the source tag to link to the video. Must include the video type extention.
+	type="" - Used in the source tag to tell the browser what type of video it is. For mp4, use "video/mp4".
+	[additional text] - Place additional text inbetween the video tags for it to display if none of the videos in the Source tags load. 
+
+	-Further Optional Video Attributes-
+	autoplay - If the video should autoplay on load.
+	controls - If controls should be shown.
+	loop - If the video should loop.
+	muted - If the video should not have audio.
+	poster="" - Gives the video an image whilst it is loading the video. Value is the URL of the picture.
+	preload="" - If the video should be autoloaded or not. Values are "auto", "metadata" or "none".
+
+	<audio> </audio> - Places an audio source on the page. MUST BE MP3 TO BE SUPPORTED BY ALL BROWSERS.
+	<source> - Used between the opening and closing audio tag to link to the video. More than one of these can be used, in order of which one to attempt to load first.
+	src="" - Used in the source tag to link to the audio. Must include the audio type extention.
+	type="" - Used in the source tag to tell the browser what type of audio it is. For mp3, use "audio/mp3".
+	[additional text] - Place additional text inbetween the audio tags for it to display if none of the audio in the Source tags load. 
+
+	-Further Optional Video Attributes-
+	autoplay - If the audio should autoplay on load.
+	controls - If controls should be shown.
+	loop - If the audio should loop.
+	muted - If the audio should be muted.
+	preload="" - If the audio should be autoloaded or not. Values are "auto", "metadata" or "none".
+
+	<iframe> </iframe> - Used to link a part another page into an iframe. Block element.
+	src="" - Links the page to display.
+	name="" - Gives the iframe a name.
+	sandbox="" - A set of restrictions for the iframe. Values are "allow-forms" "allow-pointer-lock" "allow popups" "allow-same-origin" "allow-scripts" and "allow-top-navigation"
+	srcdoc="" - specifies the html content to show. Use "HTML_code"
+
+
+<!--3.5 Table Editing-->
+
+	Tables aren't needed much anymore, but below are some basic editing.
+
+	<table> </table> - produces a table for the page.
+
+	<th> </th> - Represents the head of the table.
+
+	<tr> </tr> - Represents the row of the table.
+
+	<td> </td> - Represents a column of table data.
+
+
+<!--4 SCRIPTING-->
+
+	JS can be added using multiple HTML elements.
+
+	<script> </script> - Used to hold Javascript commands. Can be in head or body.
+	
+	IF IN BODY, IT IS BEST TO PLACE ALL SCRIPT TAGS AT THE BOTTOM SO AS TO IMPROVE LOAD TIMES ETC.
+	
+	
+<!--4.1 Event Handlers-->
+
+	CAN BE USED ON MOST TAGS.
+	
+	onclick="someFunc()" - Will call the someFunc function when the tag is clicked. 
+	Other Handlers - onclick, onload, onunload, onchange, onmouseover, onmouseout, onmousedown, onmouseup, onblur, onfocus
+	
+	SEE THE JS TUTORIAL FOR MORE INFO.
+	
+	
+<!--4.2 Progress Bar-->
+
+	Used alongside scripts to show how long something is taking to load.
+	
+	<progress> </progress>
+	min="" - Dictates the starting percentage. No % sign needed.
+	max="" - Maximum ending percentage. No % needed. 
+	value="" - Shows how much has been completed/
+
+	
+<!--4.3 Drag&Drop-->
+
+	This allows users to move items around a page. 
+
+	draggable="" - Allows an item to be dragged and dropped to another location. 
+	"true" - in order to do this, it's value must be true.  
+	
+	ondragstart="drag(event)" - Called upon the item being dragged. The function will save information of the element.  
+	
+	ondrop="drop(event)" - Called upon the drop taking place. The function prevents default opening and accesses the saved information on the element. 
+	
+	ondragover="allowDrop(event)" - Specifies where the dragged data can be dropped. The function cancels out default handling of the element to allow dropping.
+	
+	SEE THE JS TUTORIAL FOR THE FUNCTIONS MENTIONED HERE AND HOW THEY WORK. ONCE THESE ARE SET UP, USE THE ABOVE TO SET UP THE FUNCTIONALITY.
+	
+	
+<!--5 FORMS-->
+
+	Forms can be created using HTML.
+	
+	<form> </form> - Used to contain the form elements to follow. Everything within this will be treated as a child of the form.
+	autocomplete="" - Sets if the browser can remember previously entered information or not. Default is yes, enter "off" if not needed.
+	
+	<label> </label> - Used to assign labels to inputs etc. 
+	
+	<input /> - Used to create an input of some kind. 
+	type="" - Contains the type of input.
+	name="username" - sets a name for the input, useful for when setting up controls etc. 
+	placeholder="" - Sets placeholder text for particular fields tha will be overwritten when the user types.
+	autofocus - Placing this within an input will make the browser automatically have it selected upon loading the form. 
+	required - Placing this within an input makes it mandaroty, and must have an input of some kind.
+	list="" - added if there is a data list for the item. It's value should be the ID for the data list. 
+	
+	
+<!--5.1 Input Types-->
+
+	text
+	color
+	datadatetime
+	datetime-local
+	email
+	month
+	number
+	range
+	search
+	telltime
+	url
+	week
+
+<!--5.2 Data Lists-->
+	
+	A datalist is used to enter existing values which the user can pick from. 
+
+	<datalist id=""> </datalist> - The list items are displayed inbetween the tags. The ID value must be the same as the list="" value for the input item. 
+	
+	<option value=""> - Sets an option, the value will be used as the data list item. Notice there is no need for a closing tag. 
+	
+	AS MANY OPTIONS CAN BE ADDED TO DATA LISTS AS NEEDED.

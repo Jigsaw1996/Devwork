@@ -1,0 +1,313 @@
+/* CSS GUIDE */
+
+	1 - SELECTORS
+	1.1 - html Selectors
+	1.2 - Pseudo Classes
+	1.3 - Pseudo Elements
+	1.4 - Vendor Prefixes
+	1.5 - Font Face
+	1.6 - Media Selectors
+
+	2 - CSS PROPERTIES
+	2.1 - Font Properties
+	2.2 - Box Model Properties
+	2.3 - Display and Layout Properties
+	2.4 - List Styling
+	2.5 - Background Styling
+	2.6 - Shadow and Opacity Properties
+	2.7 - Mouse Cursor
+
+	3 - TRANSITIONS AND TRANSFORMS
+	3.1 - Transition Properties
+	3.2 - Transform Properties
+	3.3 - 3D Transforms
+	3.4 - Animation and Keyframes
+
+/* 1 - SELECTORS */
+
+
+/* 1.1 - html Selectors */
+
+	* { - Selects everything.
+
+	[HTML Tag Name] { - Selects every instance of that tag.
+
+	.[class name] { - selects every instance of that tag.
+
+	#[id name] { - selects every instance of that ID.
+
+	[], [] { - Allows for multiple selectors, comma seperated. 
+
+	[] [] { - Selects only the elements that follow the path.
+
+
+/* 1.2 - Pseudo Classes */
+
+	Adds to the end of the selector to have numerous affects.
+
+	:first-child - Selects only the first instance of the selected element. 
+
+	:last-child - Selects only the last instance of the selected element.
+
+	:nth-child() - Selects the instance selected in the brackets. i.e (2) would select the second.
+
+	:hover - allows you to add styling to the object only when hovered over.
+
+	:active - allows you to add styling to an object only when active.
+
+
+/* 1.3 - Pseudo Elements */
+
+	::first-line - Selects the first line of text in the selector.
+
+	::first-letter - Selects the first letter of the selector.
+
+	::selector - selects the portion of an element selected by the user.
+	REQUIRES FIREFOX PREFIX
+
+	::placeholder - Useful for setting placeholder text onto an input field.
+	CURRENTLY REQIRES ALL PREFIXES
+
+	::before - Adds styling directly before the element.
+
+	::after - Adds styling directly after the element.
+
+
+/* 1.4 - Vendor Prefixes */
+
+	Not all elements are supported for all browsers. Use the below to add support.
+
+	Chrome, Safari, Newer Opera, Android  = -webkit-
+
+	Firefox = -moz-
+
+	Internet Explorer, Windows Edge = -ms-
+
+	Older Opera = -Opera-
+
+
+/* 1.5 - Font Face */
+
+	@font-face { - Allows for new fonts to be added. 
+	font-family: ; - Sets the name of the font.
+	src: url('link'); - Sets the URL to the font.
+
+	The name can then be used on the page.
+
+
+	SUPPORTED FONT TYPES
+	Firefox, Safari, Chrome, Opera = .ttf, .otf
+	Internet Explorer = .eot
+
+
+/* 1.6 - Media Selectors */
+
+	@media () { - Used to set styles for only specific screen sizes and types.
+	max-width: - Using this within the question marks will select the contained styles only when the screen size is less than the px amount.
+	min-width: - Likewise, but only screen sizes that are bigger.
+
+
+/* 2 - CSS PROPERTIES */
+
+
+/* 2.1 Font Properties */
+
+	font-size: ; - Changes the size of the font for the selected elements. Can be in px, % or ems.
+
+	font-family: ; - Changes the font family of the element. Syntax - "[font], '[two-worded font]';"
+
+	font-weight: ; - Changes the weight of the font. Either "normal", "bold" or number from 100 to 900.
+
+	color: ; - Changes the colour of the element's text. 
+
+	text-decoration: ; - Changes what decoration the text has. Can be "none", "underline", "overline", "line-through" or "inherit".
+
+	text-align: ; - Sets how the text displays in relation to it's container. Can be "left", "right" or "center".
+
+	word-wrap: ; - Sets if words automatically move down to a new line. Values - "normal" or "break-word".
+
+
+/* 2.2 - Box Model Properties */
+
+	width: ; - Sets the width of the element.
+
+	max-width: ; - Sets the maximum width of the element, allowing it to take up only the room it needs. 
+
+	height: ; - Sets the height of the element.
+
+	max-height: ; - Sets the maximum height of the element, allowing it to take up only the room it needs.
+
+	padding: ; - Sets the space between the container's content and the border. 
+
+	border: ; - Sets the border for the element. Syntax - "1px solid/dotted/dashed #ffffff"
+
+	border-radius: ;  - Gives it a curve. A complete circle is half of the height/width, which should be the same amount. Syntax - Can be done "top-left, top-right, bottom-right, bottom-left;"
+
+	margin: ; - Sets the space outside the element. 
+
+
+/* 2.3 - Display and Layout Properties */
+
+	display: ; - Changes how the item displays. 
+	"block" - Takes up the full width of the page. Good as a container
+	"inline" - Takes up only the necessary space on the row. Good for text editing.
+	"inline-block" - Mix of the two. 
+	"block" - Doesn't display the item. 
+
+	float: ; - Controls how the item displays on the page. Can be "left" or "right".
+
+	clear: ; - Helps display items below a float. Can be "left" "right" or "both".
+
+	z-index: ; - Sets the order in which elements overlap. The highest number is displayed on top. Default = the one that was placed last in html is on top. 
+
+	overflow: ; - Sets what happens to overflowing text. "Scroll" will add a scrollbar for the user, "hidden" will simply hide all content and "auto" will decide for itself. 
+
+ 
+/* 2.4 - List Styling */
+
+	list-style: ; - Can be set to "none" so that the list can be broken down for the top navigation.
+
+	list-style-type: ; - Sets the type of bullet point of number. Options - ul = circle, square, disc  ol= lower-alpha, alpha, numeric
+
+	list-style-image: ; - Allows a custom image to be added for bullet points. Syntax - url('url');
+
+	list-style-position: ; - Sets how the list item displays. Either "inside" or "outside". Default = outside.
+
+
+/* 2.5 - Background Styling */
+
+	background-color: ; - Changes the background color of the element.
+
+	background-image: ; - Sets a background image for the element. Syntax - url('url');  
+	To set multiple images for the container, comma seperate. i.e; url('url'), url('url'); 
+
+	background-position: ; - Sets the background's position. Values - Top, Bottom, Left, Right and right top etc. 
+	If there are multiple images, comma seperate appropriately. i.e left top, right bottom;
+
+	background-repeat: ; - Used to decide how the image should display. Values - "no-repeat", "repeat-x", "repeat-y" or "inherit"
+
+	background-size: ; - Sets the width and height of the background image. Syntax - "100px 100px".
+	"contain" - Will scale the image so that it fits the container exactly.
+	"cover" - Will scale the image, but will crop the image if the aspec ratio is different so that it fits.
+
+	background-attachment: ; - Sets how the image reacts when scrolled. Values - "fixed" or "scroll" or also "inherit"
+
+	background-clip: ; - Specifies the painting area of the container, so that the background can cover it all.  Works for both image and text. Values - "border-box", "padding-box", "container-box"
+
+	background: linear-gradient(); - Adds a gradient to the background of an element. Syntax - ([colour 1], [colour 2]) and so on, as many as needed. A % can be added to control when it stops. i.e (#fff 20%, #000 90%). 
+	"left/right/bottom/top" - Added before the first colour to control the direction. i.e (top, #fff 50%, #000 80%) Can be combined, i.e "bottom right". Can also be a degree from 0deg 360 deg.
+	"repeating" - Added before "linear" but after the Firefox prefix. Makes the gradient repeat.
+	REQUIRES THE FIREFOX VENDOR PREFIX!
+
+	background: radial-gradient(); - Adds a radial gradient, which means it's defined by it's center. Syntax - (position, shape or size, color-stops)
+	"position" - Center of the gradient Can be "top/bottom/center/left/right" or can be specified. i.e; 50% 50% with it's position from the top left.
+	"shape" - Represents the shape and gradient size. Either "elipse" (default) or "circle".
+	"color-stops" - All of the colours you wish to be used, in order from the center. Similar to linear gradients, can have percentages to control it's stop point i.e; (center, circle, #fff 30%, #000 80%)
+
+
+/* 2.6 - Shadow and Opacity Propeties */
+
+	opacity: ; - Changes the opacity of the object. Number between 0.0 and 1.0
+	for Internet Explorer, use the following value - filter: alpha(opacity=x) - with x as a value between 1 and 100. 100 makes it completely visible, and 0 makes it disappear. 
+
+	box-shadow: ; - Sets a shadow for a box element. Syntax - "[horizontal offset]px, [veritcal offset]px, [blur radius]px [spread radius]px #[hex]"
+	"inset" - this value can be added before the horizontal offset to make the shadow internal as opposed to external.
+
+	text-shadow: ; - Sets a shadow for text. Syntax - "[horizontal offset]px, [veritcal offset]px, [blur radius]px #[hex]"
+
+	MORE THAN ONE SHADOW CAN BE ADDED BY PUTTING COMMAS BETWEEN THEM. 
+
+
+/* 2.7 - Mouse Cursor */
+
+	cursor: ; - Sets the cursor that is used for the element. Values - auto, crosshair, default, move, help, text, wait, pointer, progress. More can be found. 
+
+
+/* 3 - TRANSITIONS AND TRANSFORMS */
+
+
+NOTE: ALL TRANSFORMS, TRANSLATIONS ETC DO NOT AFFECT CONTENT FLOW. ANY CHANGES TO THE POSITION, ROTATION ETC WILL APPEAR, BUT IN TERMS OF FLOW IT'S STILL WHERE IT WAS BEFORE.
+
+/* 3.1 - Transition Properties */
+
+	transition: ; - Creates a transition for the selected element. So if a :hover is set up it will have a gradual anilmation for the relevant properties. syntax - [element to transform] 5s [transition-timing(optional)]; 
+	[animation type] - Controls the speed curve of the element. Values - ease, ease-in, ease-out, -ease-in-out, linear. default = ease
+	Additionaly there is "cubic-bezier()" which allows it's own values for timing, numbers between 0 and 1. i.e: (0,0,1,1)
+
+
+/* 3.2 - Transform Properties */
+
+	transform: ; - Allows the movement of an element. Useful when combined with an animation.
+	
+	: rotate(); - Rotates the image when moused over. Syntax - (10deg); for clockwise, (-10deg); for counter clockwise.
+	transform-origin: ; - Used with rotate, changes the center of the element of which to rotate from. Default position is 50% 50%, meaning the center of the element. Syntax - 100% 100% is the top left, 0 0 is the bottom right.
+
+	transform: translate(); - Moves an element from it's current position. Syntax - (100px, 50px); with positive being up and left, negative being down and right. Recommended for animations only.
+
+	: skew() - Moves an element's angles to change the shape. Syntax - (30deg); or (30deg, 30deg);
+
+	: scale() - Increases or decreases the size of the element. Syntax - (0.7, 0.7); With 1 being the original size, 2 being double etc. Needs both a width and a height value. 
+	If only value is given, - (0.7) - it will be used for both height and width.
+
+	MULTIPLE TRANSFORMS CAN BE DONE AT ONCE. Syntax - rotate(45deg) translate(100px); - NO COMMAS.
+
+
+/* 3.3 - 3D Transforms */
+
+	transform: ; - Allows the movement of an element. Useful when combined with an animation.
+
+	: rotateX(); - Rotates the object in the X axis. Syntax - (150deg);
+
+	: rotateY(); - Rotates the object in the Y axis. Syntax - (150deg);
+
+	: rotateZ(); - Rotates the object in the Z axis. Syntax - (150deg);
+
+	: translateX(); - Moves the object in the X axis. Syntax - (10px/em/%);
+
+	: translateY(); - Moves the object in the Y axis. Syntax - (10px/em/%);
+
+	: translateZ(); - Moves the object in the Z axis. Syntax - (10px/em/%);
+
+	POSITIVE Z TRANSLATIONS MOVE TOWARDS, NEGATIVE MOVE BACKWARDS
+
+	shorthand - transform: translate3d(-20px, 4em, 10px);
+
+	OBVIOUSLY SWAP translate3d WITH THE CORRECT VALUE. I.E scale3d() OR rotate3d()
+
+	
+	perspective: ; - Changes the viewer perspective. This should be placed on the parent of the affected element. Only affects 3D elements. Syntax - : 100px;
+
+
+/* 3.4 - Animation and Keyframes */
+
+PREFIX NEEDED FOR USE ON THE ANDROID BROWSER
+
+	animation-name: ;  - Names the animation. Required to make use of the keyframes. Syntax - Same requirements as a class or id.
+
+	animation-duration: ; - Uses to set how long the animation will run for. REQUIRED for using keyframes. Syntax - : 1s ;
+
+	animation-timing-function: ; - Sets the speed curve for the element. Values - "ease", "linear", "ease-in", "ease-out", "ease-in-out" or "cubic-bezier()".
+
+	animation-delay: ; - Defines a delay before the animation kicks off. Syntax - : 2s; or : 2000ms;
+
+	animation-iteration-count: ; - Sets how many times it should repeat. Default = 0. Syntax - : 5; or : infinite;
+
+	animation-direction: ; - Sets how the keyframe will run. Values - "normal", "reverse", "alternate", "alternate reverse" or "0" which will stop the animation from ever starting.
+	"alternate" - Animation runs forward, backward then forward.
+	"alternate reverse" - Runs backward, forward then backward.
+
+	Shorthand - animation: testName 3s ease-in 1s infinite reverse;
+
+	ONLY NAME AND DURATION ARE REQUIRED FOR A KEYFRAME.
+
+	@keyframes - Used to hold styles for the element with the same animation name, which it will deploy based on a set time of the duration period.
+	
+	Syntax - 
+	@keyframes [animation name] { 
+	[start time]% {[the requires change }
+	50% {background-color: yellow;} 
+	70% {background-color: blue; }
+	}
+
+	Can also be "from" and "to" instead of percentages.
+		

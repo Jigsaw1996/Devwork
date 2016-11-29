@@ -1,0 +1,2081 @@
+// JAVASCRIPT GUIDE
+
+	1 GLOSSARY
+	
+	2 VARIABLES
+	2.1 Syntax
+	2.2 Document Write Example
+	
+	3 DATA TYPES
+	3.1 Numbers
+	3.2 Strings
+		3.2.1 Special Characters
+
+	4 OPERATORS
+	4.1 Arithmetic Operators
+	4.2 Assignment Operators 
+	4.3 Comparison Operators 
+	4.3.1 Further Comparison Operators
+	4.4 Logical Operators
+	4.5 Terney Operator
+	4.6 String 0perators
+
+	5 CONDITIONALS
+	5.1 if Statements
+	5.2 if else Statements
+	5.3 if, else if, else Statements
+	5.4 Switch Statements
+	
+	6 LOOPS
+	6.1 for Loop
+	6.2 while Loop
+	6.3 do while Loop
+	6.4 Break
+	6.5 Continue
+	
+	7 FUNCTIONS
+	7.1 User-Defined Functions
+		7.1.1 Defining Functions
+		7.1.2 Calling Functions
+	7.2 Function Parameters
+	7.3 return Function
+	7.4 Popup Boxes
+		7.4.1 Alert Box
+		7.4.2 Prompt Box
+		7.4.3 Confirm Box
+	
+	8 OBJECTS
+	8.1 Properties
+	8.2 Calling Propeties
+	8.3 Length
+	8.4 Object Methods
+		8.4.1 Document Write
+	8.5 Object Constructor Function
+	8.6 Methods
+	8.7 Calling Methods
+	8.8 Full Method Example
+	
+	9 ARRAYS
+	9.1 Storing Arrays
+	9.2 Accessing Arrays
+	9.3 Changing Array Elements
+	9.4 Array Lengths
+	9.5 Combining Arrays 
+	9.6 Associate Arrays
+	
+	10 MATH OBJECT
+	10.1 Math Properties
+	10.2 Math Object Methods
+	
+	11 DATE OBJECT
+	11.1 setInterval
+	11.2 Date
+		11.2.1 Current Date and Time
+		11.2.2 Initialising Dates
+	11.3 Date Methods
+	11.4 Dynamic Time
+	
+	12 DOM
+	12.1 DOM Tree
+	12.2 The Document Object
+	12.3 Selecting Elements
+		12.3.1 Selecting Classes
+		12.3.2 Selecting Tags
+	12.4 DOM Properties and Methods
+	12.5 Changing Attributes 
+	12.6 Changing CSS
+	12.7 Adding Elements 
+	12.8 Removing Elements
+	12.9 Replacing Elements
+	
+	13 ANIMATIONS
+	13.1 Syntax
+	
+	14 HANDLING EVENTS
+	14.1 Handlers
+		14.1.1 Handlers Via HTML 
+		14.1.2 Handlers Via JS
+	14.2 Onload and Unload
+	14.3 On Change
+	14.4 Event Listeners
+		14.4.1 Event Propagation
+		
+	15 CREATING A SLIDER
+	
+	16 FORM VALIDATION
+	
+	17 WEB STORAGE API
+	17.1 Storing Keys
+	17.2 Accessing Keys
+	17.3 Removing Keys
+	
+	18 GEOLOCATION API
+	18.1 Presenting Data
+	
+	19 DRAG AND DROP
+	19.1 What to Drag
+	19.2 Where to drop
+	19.3 Do the drop
+	
+	
+// 1 GLOSSARY
+
+	statement - A single command, each are seperated via a ;
+	
+	expression - A condition, used in Conditionals and Loops.
+	
+	data type - Refers to the  types of values for items such as Variables. See 2 for more information.
+	
+	operand - A Logical Operator. See 4.4.
+	
+	function - A block of code designed to perform a certain task. In JS, a function is executed when something calls it.
+	
+	argument -  The value of a parameter in a function.
+	
+	null - A JS term for something without a value. 
+	
+	DOM - Document Object Model.
+	
+	
+// 2 VARIABLES
+	
+	A variable is used to store a data type. There are numerous types of data that can be stored, such as numbers, strings etc. See the different types in Section 3.
+	
+
+// 2.1 Syntax
+
+	var x = 10; - Will assign x with a value of 10.
+	
+	x - Selects the name of the variable. Can be new or existing. Preferably in camel text.
+	
+	JS IS CASE SENSITIVE 
+	
+	THE FIRST CHARACTER CAN'T BE A NUMBER 
+	
+	NO HYPHENS/SPACES OR % ARE ALLOWED
+	
+	VARIABLES CAN BE CREATED WITHOUT A DESIGNATED VALUE, IT'S VALUE WILL THEREFORE BE "UNDEFINED"
+	
+	
+// 2.2 Document Write Example
+	
+	var x = 100;
+	document.write(x);
+	
+	result;
+	100 on the page.
+	
+	
+// 3 DATA TYPES
+
+Variables can be assigned different types of data. Below are the types of data that can be used. 
+
+// 3.1 Numbers
+
+	A numerical value.
+
+	= 21; - A number type can look like this. 
+	
+	= 21.11; - Numbers can have a decimal point.
+	
+	
+// 3.2 Strings
+
+	Strings are used to store text. They are a series of characters treated as a single unit.
+	
+	Requires speech marks to work.
+
+	= "John"; - Stores John as the value
+	
+	= "John Doe"; - Can be multiple words.
+	
+	= 'John Doe'; - Single quotes work too.
+	
+	= "This is a 'quote' inside a quote"; - Quotation marks can be used within the string, as long as they don't match the outer ones.
+	
+	NUMBERS WITHIN A STRING ARE TREATED AS WORDS.
+	
+	Please see the output values below to add characters within the string.
+	
+// 3.2.1 Special Characters
+	
+	\' - Single Quote
+	
+	\" - Double Quote
+	
+	\\ - Backslash
+	
+	\n - New Line
+	
+	\r - Carriage Return
+	
+	\t - Tab
+	
+	\b - Backspace
+	
+	\f - Form Feed
+	
+
+// 3.3 Booleans
+
+	Used for true/false values.
+	
+	= true; - Gives the variable a True value.
+	
+	= false; - Gives the variable a False value.
+	
+
+// 4 OPERATORS
+
+
+// 4.1 Arithmetic Operators
+
+	= - Used as an "assignment" operater instead of an "equal to" operator, unlike in normal text. i.e: x = y will assign the value of x to y.
+	+ - Addition.
+	- - Subtraction.
+	* - Multiplication.
+	/ - Division.
+	% - Modulus (what is left over)
+	++ - Increment (up by 1)
+	-- - Decrement (down by 1)
+
+	AS WITH MATHEMATICS, ITEMS IN () WILL BE CALCULATED FIRST
+	
+	
+// 4.2 Assignment Operators 
+
+	These are used to add and multiply variables together.
+	
+	x = y - Means that x is assigned the same value as y.
+	
+	x += y - Means that x equals x's current value plus y.
+	
+	x -= y - Means that x equals x's current value minus y.
+	
+	x *= y - Means that x equals x's current valus multiplied by y.
+	
+	x /= y - Means that x equals x's current value divided by y.
+	
+	x %= y - Menas that x equals x's current value modulused by y.
+	
+
+// 4.3 Comparison Operators 
+
+	These are used in logical statements to determine if two sums are the same or different. 
+	
+	1 == 1 - This will return a value of true.
+	
+	1 == 2 - This will reutn a value of false.
+	
+	
+// 4.3.1 Further Comparison Operators
+
+	== - Equal To
+	
+	!= - Not Equal to.
+	
+	=== - Identical
+	
+	!== - Not Identical
+	
+	> - Greater Than
+	
+	>= - Greater than or equal to.
+	
+	< - Less than
+	
+	<= - Less than or equal to.
+	
+	ONLY COMPARE DATA OF THE SAME DATA TYPE.
+	
+	
+// 4.4 Logical Operators
+
+	Similar to Comparison Operators, Logical Operators determine a true or false based on certain values.
+	
+	&& - Returns true if both operands are true.
+	
+	|| - Returns true if one of the operands is true.
+	
+	! - Returns true if the operand is false, and false if the operand is true. 
+	
+	EXAMPLE
+	
+	(4 > 2) && (10 < 15)
+
+	For the expression to return true...
+	
+	-4 must be greater than 2.
+	
+	-10 must be smaller than 15. 
+	
+	
+// 4.5 Terney Operator
+
+	Assigns a value to a variable based on a condition.
+	
+	var Test = (condition) ? value1: value2;
+	
+	If the var meets the condition, value1 will be used. Else, value2 will be used.
+	
+	
+// 4.6 String 0perators
+
+	Uses the + value to add strings together. 
+	
+	EXAMPLE
+	
+	var mystring1 = "This is ";
+	var mystring2 = "a test";
+	
+	document.write(mystring1 + mystring2);
+	
+	RESULT
+	
+	This is a test
+	
+	REMEMBER TO USE A SPACE FOR THE VALUE, OR ADD ONE USING " " IN THE RESULT CALCULATIONS.
+	
+	
+// 5 CONDITIONALS
+
+	Conditionals control statements that will only be activated if certain conditions are met.
+
+// 5.1 if Statements
+
+	An if statement will ONLY deploy a statement if a certain expression is met. Below is the syntax for this.
+
+	if (expression) {
+	statement;
+	} 			
+	
+	EXAMPLE
+	The below will only execute if test1 is bigger than test2.
+	
+	var test1 = 15;
+	var test2 = 10;
+	
+	if (test1 > test2) {
+	document.write("test1 is bigger than test2");
+	}
+	
+	REQUIRES LOWERCASE "if" TO WORK CORRECTLY
+	
+	
+// 5.2 if else Statements
+
+	An if else works much like an if, but also gives a statement for when the expression is false.
+	
+	if (expression) {
+	statement for if the expression is true;
+	}
+	else {
+	statement for if the expression is false;
+	}
+	
+	EXAMPLE
+	Below will execute the expression if true, or the "else" if false.
+	
+	var test1 = 15;
+	var test2 = 10;
+	
+	if (test1 < test2) {
+	document.write("test1 is smaller than test2");
+	}
+	else {
+	document.write("test1 is not smaller than test2");
+	}
+	
+	
+// 5.3 if, else if, else Statements
+
+	The else if statement can be used to specify a new expression if the first is false.
+	
+	if (first expression) {
+	statement if the first expression is true;
+	}
+	
+	else if (second expression) {
+	statement for if the second expression is true;
+	}
+	
+	else {
+	statement for if neither of these are true;
+	}
+	
+	EXAMPLE
+	Below will execute different statements depending on which expression, if any, they meet.
+	
+	var test1 = 15
+	var test2 = 10
+	
+	if (test1 == test2) {
+	document.write("The first expression is true");
+	}
+	else if (test1 > test2) {
+	document.write("The second expression is true");
+	}
+	else {
+	document.write("Neither expression is true")
+	}
+	
+	AS MANY ELSE IF STATEMENTS CAN BE ADDED AS NECESSARY. 
+	
+	THE ORDER MUST ALWAYS BE IF, ELSE IF, ELSE. ALL ELSE IF'S GO IN THE MIDDLE.
+	
+	
+// 5.4 Switch Statements
+
+	Used to perform different actions based on different conditions, is quicker and more effective than using multiple if else statements.
+	
+	switch (expression) {
+	case n1: 
+		statements
+		break;
+	case n2:
+		statements
+		break;
+	default:
+		statements
+	}
+	
+	EXAMPLE
+	Below will consider all of the cases. The one with the matching value is chosen.
+	
+	var day = 2;
+	
+	switch (day) {
+	case 1:
+		document.write("Monday")
+		break;
+	case 2:
+		document.write("Tuesday")
+		break;
+	case 3:
+		document.write("Wednesday")
+		break;
+	}
+	default:
+		document.write("Unknown")
+		break;
+	}
+	Result - Tuesday
+	
+	AS MANY CASES CAN BE ADDED AS NECESSARY
+	
+	THE DEFAULT BLOCK IS NOT NECESSARY AND CAN BE OMMITED. IT IS ONLY USEFUL FOR WHEN NO OTHER MATCH IS FOUND.
+	
+	REMEMBER TO HAVE THE BREAK KEYWORD AT THE END OF EVERY CASE
+	
+	
+// 6 LOOPS 
+
+	Loops are used to execute the same statement a number of times. 
+
+	
+// 6.1 for Loop
+
+	The for loop has three statements. It will loop until statement 2 is no longer valid.
+	
+	for (statement 1; statement 2; statement 3) {
+		code to be executed;
+	}
+	
+	statement 1 - Executed before the loop first starts.
+	statement 2 - Defines the condition for running the loop. Once false, the loop stops.
+	statement 3 - Executed after each loop has completed.
+	
+	EXAMPLE
+	
+	for (x=1; x<=5; x++;){
+		document.write(x + "<br />")
+	}
+	
+	Result -
+	1
+	2
+	3
+	4
+	5
+	
+	STATEMENT 1 CAN BE OMMITED IF ALL THE VALUES ARE ALREADY SET UP.
+	
+	MORE THAN ONE VALUE CAN BE ADDED IN STATEMENT 1, COMMA SEPERATED.
+	
+	STATEMENT 2 IS ALSO OPTIONAL, THOUGH A "break" IS REQUIRED OTHERWISE IT'LL REPREAT FOREVER.
+	
+	STATEMENT 3 IS ALSO OPTIONAL IF THE INCREMENTS ARE WITHIN THE LOOP ITSELF, MEANING THERE CAN BE NO STATEMENTS BEFORE THE LOOP'S CODE.
+	
+
+// 6.2 while Loop
+
+	The while loop repreats as long as a specified expression is true. The expression can be any condition with a true/false result.
+	
+	The loop will continue until the expression is false.
+	
+	while (expression) {
+		code to be executed;
+	}
+	
+	EXAMPLE
+	
+	var x = 0;
+	
+	while (x <= 10) {
+	document.write(x + "<br />");
+	x++;
+	}
+	
+	Result - 
+	1
+	2
+	3
+	4
+	5
+	6
+	7
+	8
+	9
+	10
+	
+	
+// 6.3 do while Loop
+
+	This loop is a variant of the while loop. This will execute once, before checking the condition is true, and will then repeat if it is indeed true. 
+	
+	do {
+		code to be executed.
+	}
+	while (expression);
+	
+	NOTE THE POSITION OF THE SEMI COLON.
+	
+	EXAMPLE
+	
+	var x = 20;
+	
+	do {
+	document.write(x + "<br />")
+	x++;
+	}
+	while (x<=25);
+
+	Result -
+	20
+	21
+	22
+	23
+	24
+	25
+	
+	NOTE THAT THE LOOP WILL ALWAYS EXECUTE ONCE, BECAUSE OF THE POSITION OF THE EXPRESSION WHICH THE LOOP USES TO CONTROL THE AMOUNT OF LOOPS.
+	
+	
+// 6.4 Break
+
+	The break statement stops the loop from running any further. As soon as it reads break, it will jump out of the loop and continue on with the code below the loop.
+
+	EXAMPLE
+	
+	for (x=0; x<10;x++) {
+		if (x==5) {
+		break;
+		}
+	document.write("x + "<br />");
+	}
+	
+	Result -
+	0
+	1
+	2
+	3
+	4
+
+	STOPS RUNNING AFTER IT HITS BREAK, WHICH IN THIS CASE HAPPENS AFTER X EQUALS 5.
+	
+	
+// 6.5 Continue
+
+	The continue statement breaks only the remainder of the current iteration of the loop, so it will continue as normal for the next loop iteration providing it doesn't hit another continue.
+	
+	EXAMPLE
+	
+	for (x=0; x<=10;x++;){
+		if(x==5) {
+		continue;
+		}
+	document.write(x + "<br />");
+	}
+	
+	Result -
+	0
+	1
+	2
+	3
+	4
+	6
+	7
+	8
+	9
+	10
+	
+	5 IS SKIPPED AS A RESULT OF THE CURRENT LOOP BEING SKIPPED BEFORE THE 5 CAN BE WRITTEN.
+	
+	
+// 7 FUNCTIONS
+
+	A javascript function is a block of code designed to perform a particular task.
+	
+	Uses of functions:
+	- Code Reuse, define it once and use it many times.
+	- Use the same code many times with different arguments, to produce different results.
+
+
+// 7.1 User-Defined Functions
+
+	Users can have their own js functions.
+	
+	
+// 7.1.1 Defining Functions
+	
+	A function must first be defined. 
+	
+	function name() {
+		code to be executed;
+	} 
+	
+	EXAMPLE
+	
+	function myFunction() {
+		alert("Calling a Function!");
+	}
+	
+	FUNCTION NAMES HAVE THE SAME REQUIREMENTS AND RESTRICTIONS AS VARIABLE NAMES.
+	
+
+// 7.1.2 Calling Functions
+	
+	Once a function is defined, it can then be put to use by calling it. 
+	
+	To then call the function;
+	
+	name();
+	
+	EXAMPLE
+	
+	function myFunction() {
+		alert("Calling a Function!");
+	}
+	
+	myFunction();
+	
+	A FUNCTION CAN BE CALLED AS MANY TIMES AS NECESSARY.
+	
+	
+// 7.2 Function Parameters
+
+	Functions can have parameters. Parameters are the names listed in the function's definition.
+	
+	function name(param1, param2, param3) {
+		code to be executed
+	}
+	
+	After defining a parameter, they can be used inside a called function.
+	
+	EXAMPLE
+	
+	function sayHello(name) {
+		alert("Hi, " + name);
+	}
+	
+	sayHello("David");
+	
+	Result - Alerts "Hi, David"
+	
+	MORE THAN ONE ARGUMENT CAN BE SET BY COMMA SEPERATING THEM.
+	
+	A FUNCTION CAN BE REPEATEDLY CALLED WITH DIFFERENT VALUES EACH TIME.
+	
+	WHENEVER THE FUNCTION IS CALLED, IT MUST CONTAIN ALL OF THE VALUES FOR EVERY PARAMETER, OR ELSE IT WILL HAVE A VALUE OF "UNDEFINED" THESE ARE THE REAL VALUES PASSED TO (AND RECIEVED BY) THE FUNCTION.
+	
+	
+// 7.3 return Function
+
+	A function can have a return statement, which is used to return a value from the function. 
+	
+	This is great for functions which contain calculations, so that a result can be reached. 
+	
+	function myFunction(a, b) {
+	return a * b;
+	}
+	var x = myFunction(5, 6);
+	
+	In this example, the variable x will be given the value returned by myFunction, in this case it's 30.
+	
+	THE RETURN STATEMENT MUST BE PLACED AT THE END OF THE FUNCTION.
+	
+	IF NOTHING IS RETURN, IT WILL INSTEAD RETURN "UNDEFINED".
+	
+	EXAMPLE
+	
+	function addNumbers(a, b) {
+		var c = a+b;
+		return c;
+	}
+	
+	document.write(addNumbers(40,2));
+	
+	Result - Prints 42 onto the page.
+	
+	CALCULATIONS CAN ALSO BE INCLUDED IN THE RETURN'S VALUE.
+	
+	EXAMPLE
+	
+	function addNumbers (a, b) {
+		return a+b;
+	}
+	
+	document.write(addNumbers(40,2));
+	
+	Result - Stil 42.
+	
+	
+// 7.4 Popup Boxes
+
+	JS comes with several functions for setting up popups
+	
+
+// 7.4.1 Alert Box
+
+	An alert box us used when information needs to be displayed and acknowledged by the user. 
+	
+	It has only 1 parameter, which is the message that will display.
+	
+	alert(the alert message);
+	
+	The message is contained within the brackets. This can consist of strings, variables etc.
+	
+	USE STRING SPECIAL CHARACTERS TO, FOR INSTANCE, ADD A LINE BREAK. SEE 3.2.1
+	
+	EXAMPLE
+	
+	alert("Are You Sure You Wish \nTo Leave?")
+	
+	
+// 7.4.2 Prompt Box
+
+	A prompt box is often used to get information from a user. It has OK and Cancel values, as well as a text field. 
+	
+	If the user clicks OK, the box returns the input value. If they click cancel, it returns null. 
+	
+	The prompt has 2 parameters, though only the first is required.
+	
+	prompt(The text for the prompt, default string to display in the text box);
+	
+	
+	EXAMPLE
+	
+	var user = prompt("Please enter your name");
+	alert(user);
+	
+	This gets the information from the user, and then alerts them of the input using an alert.
+	
+
+// 7.4.3 Confirm Box
+
+	A confirm box allows users to confirm or not accept entered information. 
+	
+	If the user clicks OK, the box returns true. If they click Cancel, it returns false.
+	
+	confirm(Message to let the user know what they are confirming);
+	
+	EXAMPLE
+	
+	var result = confirm("Do you really want to leave this page?");
+	if (result==true) {
+		alert("Bye have a great time");
+	}
+	else {
+		alert("Thank You For Staying")
+	}
+	
+	The above example asks for the user to confirm or cancel. An if else then prints the appropriate response. 
+	
+	
+// 8 OBJECTS
+	
+	Variables are containers for data values. Objects are variales too, but they can contain many more values of varying types/
+	
+	Think of an object as a list of values. 
+	
+	var objectName = {
+		properties of the object.
+	};
+	
+	
+// 8.1 Properties
+
+	Properties are used to store values of objects. The values can be numbers, strings, booleans etc.
+	
+	These are presented like below, with a colon seperating the name from the value.
+	
+	property: propertyValue
+	
+	These are comma seperated, so more than one can be added to an object.
+	
+	EXAMPLE
+	
+	var person = {
+	name: "John",
+	age: 31,
+	favColor: "green",
+	height: 183
+	};
+	
+	
+// 8.2 Calling Propeties
+
+	To access a property's value to be used elewhere, do the below. 
+	
+	objectName.propertyName
+	
+	or
+	
+	objectName['propertyName']
+	
+	Either one works just as well. 
+	
+	EXAMPLE
+	
+	var person = {
+	name: "John",
+	age: 31,
+	favColor: "green",
+	height: 183
+	};
+	
+	var x = person.age;
+	
+	Result - 31
+	
+	The current object can also be selected using "this", which we will mention again later.
+	
+	
+// 8.3 Length
+
+	The length property is used to count the number of characters in a property. This is best used for strings or numbers.
+	
+	This information can be called using the below.
+	
+	objectName.propertyName.length
+	
+	.length will then calculate the length and return the answer. 
+	
+	EXAMPLE
+	
+	var course = {
+	name: "JS";
+	lessons: 41
+	};
+	
+	document.write(course.name.length);
+	
+	Result - 2
+
+	
+// 8.4 Object Methods
+
+	Methods are functions that are stored as object properties.
+
+	An object method is the property that contains a function definition for it's value.
+	
+	Below is the syntax to call an object method.
+	
+	objectName.methodName(arguments)
+	
+	Remember that custom functions need to be set up as well as called. 
+	
+	
+// 8.4.1 Document Write
+	
+	The write() function is a method of the document object. We are giving the document object a write property, with a value which in this case is printed due to the function's definition.
+	
+	THIS IS USED FOR TESTING PURPOSES ONLY
+	
+	document.write(Values to display);
+	
+	The "document" is the object name, the "write()" is the property, whose value is the function to be performed. 
+	
+	EXAMPLE
+	
+	document.write("The result equals " + 2 + " points!");
+	
+	Result - "The result equals 2 points!" in the document. 
+	
+	Different values can be added together as arguments to create sentences, calculations etc. Functions can also be used as values, with their own respective arguments.
+	
+	REMEMBER, METHODS ARE FUNCTIONS THAT ARE STORED AS  OBJECT PROPERTIES
+	
+	
+// 8.5 Object Constructor Function
+
+	An object method can be used to create a number of objects of a single type, as opposed to just one.
+	
+	This is done by setting up a function that, when called within a variable, will create and assign values to it's properties.
+	
+	Once the constructor is set up, more of that object can be created by calling the function within a variable of a new name.
+	
+	function person(name, age, color) ={
+	this.name = name;
+	this.age = age;
+	this.color = color;
+	}
+	
+	The arguments in the brackets will be provided when the constructor function, person, is called, which will then fill the values for the three properties.
+	
+	THE "THIS" KEYWORD REFERS TO THE CURRENT OBJECT. THERE IS NO OBJECT YET, BUT WHEN THE FUNCTION RUNS WITHIN A VARIABLE, IT WILL ASSIGN THE PROPERTY AND PROPERTY VALUE TO "THIS" VARIABLE. 
+	
+	
+// 8.5.1 New Objects
+
+	Once an object constructor is set up, more of that object can be set up using a new variable and the "new" keyword.
+	
+	var variableName = new functionName(property1Value, property2Value, property3Value);
+	
+	The values for each property needs to be placed in order within the brackets. 
+	
+	Once complete, the values will be assigned to the new variable. 
+	
+	EXAMPLE
+	
+	function person(name, age){
+		this.name = name;
+		this.age = age;
+	}
+	
+	var John = new person("John", 25);
+	var James = new person("James", 21);
+	
+	document.write(James.name);
+	
+	Result - James
+	
+	John and James are now both objects of the "person" type. The "new" keyword is always needed to create a new object for a certain type.
+	
+	
+// 8.6 Methods
+
+	A method is a function that belongs to a certain object property.
+	
+	The following syntax is used to create a method.
+	
+	methodName: function() { 
+	statements here
+	}
+	
+	A method is a function, belonging to an object. It can be referenced using the "this" keyword.
+	
+	The this keyword is used as a reference to the current object, meaning that you can access the objects properties and methods using it. 
+	
+	Defining methods is done within a constructor function.
+	
+	EXAMPLE
+	
+	function person(name, age) {
+	this.name = name;
+	this.age = age;
+	this.changeName = function(name) {
+	this.name= name;
+	}
+	}
+	
+	var p = new person("David", 21);
+	p.changeName("John");
+	
+	Result - p.name now equals to John, rather than the orginally entered David.
+	
+	This creates a function called changeName which is used to change existing data when called. The function has one parameter, name, which is then provided when called. The called parameter will then replace the name value.
+	
+	The function can also be defined outside of the constructor to make things easier.
+	
+	EXAMPLE
+	
+	function person(name, age) {
+	this.name= name;
+	this.age= age;
+	this.yearOfBirth = bornYear;
+	}
+	
+	function bornYear() {
+	return 2016 - this.age;
+	}
+	
+	This therefore calculates a new value based on entered data. As we know the current year and the age of the individual, we therefore know what year they were born. 
+	
+	This happens by setting bornYear as the value for this object's yearOfBirth as the name of the function, which we then configure. 
+	
+
+// 8.7 Calling Methods
+
+	To then call the method, use the following syntax.
+	
+	objectName.methodName()
+	
+	EXAMPLE
+	
+	testVariable.name("Jason");
+	
+	Result - The variable now equals "Jason".
+	
+	
+// 8.8 Full Method Example
+
+	function person(name, age) {
+	this.name= name;
+	this.age = age;
+	this.yearOfBirth = BornYear;
+	}
+	
+	//This has set up the constructor for our objects.
+	
+	function bornYear() {
+		return 2016 - this.age;
+	}
+	
+	//This will calculate the yearOfBirth value once the this.age value is filled.
+	
+	var p = new person("Dave", 22);
+	
+	//This creates a new object with the name and age values. the year of birth can also now be calculated.
+
+	document.write(p.yearOfBirth);
+	
+	//This then displays the year of birth to the user.
+	
+	Result - 1994
+	
+	CALL THE PROPERTY NAME, NOT THE FUNCTION NAME. IT WILL BE ABLE TO CALCULATE THE VALUE ONCE THE VALUE IS CALLED. 
+	
+	
+// 9 ARRAYS
+
+	Arrays are a special type of object. Arrays use numbers to acces its elements, an object uses names to access it's members. 
+
+	Arrays store multiple values in a single variable.
+
+	
+// 9.1 Storing Arrays
+	
+	To store three names, there needs to be three values.
+	
+	var course1 = "HTML";
+	var course2 = "CSS";
+	var course3 = "JS";
+	
+	But what if there's 500000 courses? Setting up and managing all those var's must be a bitch. 
+	
+	Instead lets do some arrays 'nd shit. 
+	
+	var courses = new Array("HTML", "CSS", "JS");
+	
+	This stores all of the courses under one variable. The strings are comma seperated. 
+	
+	The syntax declared an array named courses, and assigned three values within it, in this case these were strings with the names of the courses.
+	
+	NOTE THE USE OF THE "NEW" KEYWORD, WHICH TELLS JS IT'S CREATING A NEW ARRAY, SIMILAR TO HOW IT TELLS JS IT'S CREATING A NEW OBJECT.
+	
+	Additionally, it can be created in it's literal form, which is simpler and quicker.
+	
+	var courses = ["HTML", "CSS", "JS"];
+	
+	THIS IS THE RECOMMENDED WAY TO SET UP ARRAYS, THOUGH TAKE THE FORMER ONE INTO ACCOUNT.
+	
+
+// 9.2 Accessing Arrays
+
+	Once an array has been created, what if you want to access one of the values?
+	
+	arrayName[number];
+	
+	The arrays are 0 numbered, meaning the first element has the number 0, the second has 1 etc. 
+	
+	EXAMPLE
+	
+	var pizzas = ["American Hot", "Pepperoni", "Margerita"];
+	
+	var chosenFlavor = pizzas[2]; 
+	
+	Result - course has "Margerita" as it's value.
+	
+	document.write(pizzas[0]);
+	
+	Result - Prints "American Hot"
+	
+	SELECTING AN ARRAY NUMBER THAT DOESN'T EXIST RETURNS "UNDEFINED"
+	
+	
+// 9.3 Changing Array Elements.
+
+	To change the element, call it like shown above then assign a new value.
+
+	EXAMPLE
+	
+	var food = ["Burger","Sausage", "Pastie"];
+	
+	Then later on..
+	
+	courses[2] = "Salad";
+	
+	
+// 9.3 Additional ways to Create Arrays
+
+	An array can also be built by declaring how many arrays will be created, and then declaring their values.
+	
+	var variableName = new Array(# of values);
+	variableName[0] = value;
+	variableName[1] = value;
+	variableName[2] = value;
+
+	EXAMPLE
+	
+	var courses = new Array(3);
+	courses[0] = "HTML";
+	courses[1] = "CSS";
+	courses[2] = "JS";
+	
+	document.write(courses[1]);
+	
+	result - "CSS" written on the document.
+	
+	This method means that additional  vars can be added to the array at any point later.
+	
+	courses[3] = "C++";
+
+	THE NUMBER OF ARRAYS WITHIN THE BULLET POINTS ISN'T ACTUALLY NECESSARY, THE ARGUMENTS CAN BE BLANK AND AS MANY CAN BE ADDED AS NEEDED.
+
+	
+	USING THE LINEAR LITERAL METHOD IS STILL IDEAL, THOUGH THESE ARE OTHER WAYS OF SETTING UP ARRAYS IF NECESSARY.
+	
+	
+// 9.4 Array Lengths
+
+	Similar to lengths with objects, the length property returns the length of the defined criteria.
+	
+	In this case, the length property the number of an array's elements. 
+	
+	EXAMPLE
+	
+	var courses = ["HTML", "CSS", "JS"];
+	
+	document.write(couses.length);
+	
+	Result - 3
+	
+	
+// 9.5 Combining Arrays 
+
+	JS has a concat() method which allows the joining of arrays. 
+	
+	var course1 = ["HTML","CSS"];
+	var course2 = ["JS", "C++"];
+	
+	var fullCourse = course1.concat(course2);
+	
+	Result - fullCourse has the four values combined. 
+	
+	THIS DOES NOT DELETE THE TWO PREVIOUS ARRAYS, IT SIMPLY CREATES A NEW ONE WITH THE COMBINED CONTENT.
+	
+	
+// 9.6 Associate Arrays
+
+	Many programming languages support arrays with named indexes, meaning they are indexed by text instead of numbers.
+	
+	JS doesn't support this, however it can still be produced using the below.
+	
+	EXAMPLE
+	
+	var person = []; // An empty array.
+	person["Name"] = "John";
+	person["age"] = 46;
+	
+	document.write(person["age"]);
+	
+	Result - Prints 46
+	
+	Now, "person" is treated as an object, instead of an array, and "name" and "age" are treated as properties of it.
+	
+	This is useful for when values of arrays need to be listed by name, in this case using a string. 
+	
+	BECAUSE THE ARRAY IS NOW TREATED AS AN OBJECT, ARRAY METHODS SUCH AS LENGTH DON'T WORK.
+	
+	IT IS STILL BETTER TO JUST USE OBJECTS FOR NAMED INDEXES FOR JS.
+	
+	
+// 10 MATH OBJECT
+
+	The math object allows you to perform mathematical tasks and includes several properties.
+	
+
+// 10.1 Math Properties
+
+	E - Euler's Constant
+	LN2  - Natural log of the value 2.
+	LN10 - Natural log of the value 3.
+	LOG2E - The base 2 log of Euler's constant (E)
+	LOG10E - The base 10 log of Euler's constant (E)
+	PI - Returns the contant PI.
+	
+	EXAMPLE
+	
+	document.write(Math.PI);
+	
+	Result - Prints 3.141592653589793
+	
+	MATH DOES NOT NEED A CONSTRUCTOR.
+	
+	
+// 10.2 Math Object Methods
+
+	The math object contains a number of methods that are used for calculations.
+	
+	sqrt(x) - Returns the square roof of the number.
+	abs(x) - Returns the absolute value of x.
+	acos(x) - Returns the arccosine of x, in radians.
+	asin(x) - Returns the arcsine of x, in radians.
+	atan(x) - Returns the arctangment of x as a numeric value between PI/2 and PI/2 radians.
+	atan2(x,y) - Returns the arctangent of x as a numeric value between PI/2 and PI/2 radians.
+	ceil(x) - Returns x, rounded upwards to the nearest integer.
+	cos(x) - Returns the cosine of x (x is in radians)
+	exp(x) - Returns the value of E*
+	floor(x) - Returns x, rounded downwards to the nearest integer.
+	log(x) - Returns the natural logarithm (base E) of x.
+	etc
+	
+	EXAMPLE
+	
+	var n = prompt("Enter a number");
+	var answer= Math.sqrt(n);
+	alert("The square root of " + n + "is " + answer);
+	
+	
+// 11 DATE OBJECT
+
+	This section allows us to work with dates etc.
+	
+
+// 11.1 setInterval
+
+	The setInterval() method calls a function or evaluates an expression at specified intervals.
+	
+	This is done in milliseconds.
+	
+	setInterval(related function's name, time);
+	
+	EXAMPLE
+	
+	function myAlert() {
+		alert("Hi");
+	}}
+	
+	setInterval(myAlert, 3000);
+	
+	This will call the myAlert function every 3 seconds. 
+	
+	THIS WILL CONTINUE UNTIL IT IS STOPPED.
+	
+	
+// 11.2 Date
+
+	The date object gives us control over dates etc. 
+	
+	A date consists of a year, month, day, hour, minute, second and milliseconds.
+	
+	Basically the whole shebang.
+	
+	DATE OBJECTS ARE STATIC, NOT DYNAMIC. COMPUTER TIME TICKS, BUT DATE OBJECTS DON'T CHANGE ONCE CREATED. 
+	
+	
+// 11.2.1 Current Date and Time
+
+	To find the current date and time, leave the arguments blank.
+	
+	var d = new Date();
+	
+	d now stores the current date and time. 
+	
+	
+// 11.2.2 Initialising Dates
+
+	The other ways to initialise dates allow for the creation of new date objects from the specified date and time.
+	
+	new Date(milliseconds)
+	new Date(dateString)
+	newDate(year, month, day, hours, minutes, seconds, milliseconds);
+	
+	JS dates are calculated in milliseconds from 01 January, 1970 00:00:00 Universal Time(UTC).
+	
+	One day contains 86,400,000 milliseconds.
+	
+	EXAMPLE
+	
+	//Fri Jan 02 1970 00:00:00
+	var d1 = new Date(86400000);
+	
+	//Fri Jan 02 2015 10:42:00
+	var d2 = new Date("January 2, 2015 10:42:00");
+	
+	// Sat Jun 11 1988 11:42:00
+	var d3 = new Date(88,5,11,11,42,0,0);
+	
+	JS CALCULATES MONTHS FROM 0 TO 11, AS THEY ARE ZERO BASED. AS SUCH FEBRUARY IS 1.
+	
+	
+// 11.3 Date Methods
+
+	When a date object is created,a number of methods make it possible to perform operations with it.
+	
+	getFullYear() - Gets the year
+	getMonth() - Gets the month
+	getDate() - Gets the date
+	getDay() - Gets the day of the week.
+	getHours() - Gets the hour.
+	getMinutes() - Gets the minutes
+	getSeconds() - Gets the seconds.
+	getMilliseconds - Gets the milliseconds.
+	
+	EXAMPLE
+	
+	var d = new Date();
+	var hours = d.getHours();
+	
+	Result - the hours variable is now equal to the hour recorded from the date. 
+	
+	
+// 11.4 Dynamic Time
+
+	Using this, we can set up a dynamic function that will repeatedly check the date, time etc.
+	
+	function printTime() {
+		var d = new Date();
+		var hours = d.getHours();
+		var mins = d.getMinutes();
+		var secs = d.getSeconds();
+		document.body.innerHTML = hours+":"+mins+":"+secs;
+	}
+	
+	setInterval(printTime, 1000);
+	
+	This will print the time to the page and update every second, as the interval dicates that's how often it should run. 
+	
+	THE innerHTML PROPERTY SETS OR RETURNS THE HTML CONTENT FOR AN ELEMENT. AS SUCH IT UPDATES, RATHER THAN POSTING IT REPEATEDLY OVER AND OVER AGAIN.
+	
+	
+// 12 DOM
+
+	When any web page is opened ina  brwoser, the HTML of the page is loaded and rendered visually on the screen.
+	
+	To accomplish this, the browser builds the Document Object Model of that page, which is an object oriented model of it's logical structure. 
+	
+	This is basically a tree of all the individual elements, it's parents and it's children etc, in order and under the relevant section. i.e: a html tag has 2 children, a head and a body which form the tree.
+	
+	Basically the DOM just means the document and all of the individual HTML sections within it, including children of other sections etc.
+	
+	JS can be used to manipulate the DOM of the page dynamically to add, delete and modify elements. 
+	
+	HTML elements are refered to as nodes here.
+	
+	
+// 12.1 DOM Tree
+
+	The DOM represents a document as a tree structure.
+	
+	HTML elements become interrelated nodes in the tree. As such all of the nodes have some form of connection within the tree. 
+	
+	Nodes have child nodes. Nodes on the same level are siblings. 
+	
+	For example.
+	
+			head
+	html - 			header
+			body - 
+					main
+					
+	html has 2 children, head and body,
+	
+	head and body are siblings.
+	
+	body has 2 children, header and main. 
+	
+	header and main's parent is body.
+	
+	You get the idea, right?
+	
+	
+// 12.2 The Document Object
+
+	There is a predefined document object in JS, which is used to access all elements on the DOM.
+	
+	In other words, the document is the owner (or root) of all objects in my webpage. 
+	
+	As such, to access objects within a HTML page, you start with accessing the document object first. 
+	
+	EXAMPLE 
+	
+	document.body.innerHTML = "Some text";
+	
+	As body is an element of the DOM, we can also access it using the document object and change the content of the innerHTML propertly.
+	
+	THE innerHTML PROPERTY CAN BE USED ON ALL HTML ELEMENTS TO CHANGE IT'S CONTENT. 
+	
+	
+// 12.3 Selecting Elements
+	
+	All HTML elements are objects. As we know every object has properties and methods. 
+	
+	The document object has methods that allow you to select the desired HTML element. 
+	
+	These three are the most common.
+	
+	document.getElementsById(id)
+	
+	document.getElementsByClassName(name)
+	
+	document.getElementsByTagName(name)
+	
+	EXAMPLE
+	
+	var x = document.getElementById("demo");
+	x.innerHTML = "Hello World!";
+	
+	Result, the element with the ID of demo will have it's inner html changed to "Hello World!"
+	
+
+// 12.3.1 Selecting Classes
+
+	Classes work slightly differently than ID's.
+	
+	When using the getElementsByClassName() method, it finds all elements by class name and returns them as an array. 
+	
+	EXAMPLE
+	
+	If a html page contained three elements with class="demo", the following code would return all those elements as an array.
+	
+	var arr = document.getElementsByClassName("demo");
+	
+	// We can then change the content of one using the array selector.
+	
+	arr[1].innerHTML = "Hi"
+	
+	Result - The second one has it's innerHTML property changed to "Hi".
+	
+	
+// 12.3.2 Selecting Tags
+
+	Similar to classes, accessing individual html tags is done using arrays.
+	
+	EXAMPLE
+	
+	Presuming there are three paragraph tags on the page...
+	
+	var arr = document.getElementsByTagName("p");
+	
+	// We can then make changes to it.
+	
+	for (var x = 0; x < arr.length; x++) {
+		arr[x].innerHTML = "Hi There";
+	}
+	
+	Result - Changes the content of all three tags to the "Hi There message"
+	
+	The for loop continues until it reaches the last array number. 
+	
+	Remember that the "length" property for an array is equal to the amount of variables it contains. 
+	
+	
+// 12.4 DOM Properties and Methods
+
+	Each element in the DOM has a set of properties and methods
+
+	element.childNodes - returns an array of the element's child nodes.
+	
+	element.firstChild - returns the first child node of the element.
+	
+	element.lastChild - returns the last child node of the element. 
+	
+	element.hasChildNodes - a boolean, returns true if the element has child nodes, false if it doesn't.
+	
+	element.nextSibling - returns the next node at the same tree level.
+	
+	element.previousSibling - returns the previous node at the same tree level.
+	
+	element.parentNode - returns the parent of the element. 
+	
+	
+	We can use these + loops to select all child nodes of an element and change their content. 
+	
+	EXAMPLE
+	
+	For selecting all the children of a node with the "demo" id and then changing their content....
+	
+	var a = document.getElementByID("demo");
+	var arr = a.childNodes;
+	
+	for(var x=0; x<arr.length; x++) {
+		arr[x].innerHTML = "new text";
+	}
+	
+	Result - Changes the content of all of the children to "new text"
+	
+	
+// 12.5 Changing Attributes 
+
+	Once I have selected the elements, you can change their attributes.
+	
+	The innerHTML is one example, as it allows you to change the content between the opening and closing tag. 
+	
+	Similarly, we can change the attributes contained within the selected html tag itself, such as the src="" of an image tag.
+	
+	EXAMPLE
+	var el = document.getElementById("myimg");
+	el.src = "apple.png";
+	
+	This creates a variable relating to a html image tag with the id of "myimg", and then uses a property selector to change it's value through the var.
+	
+	REMEMBER, HTML NODES ARE OBJECTS IN JS. ALL OF THEIR HTML ATTRIBUTES ARE TREATED AS OBJECT PROPERTIES, AS IS THE CONTENT BETWEEN THE OPENING AND CLOSING TAG. 
+	
+	PRACTICALLY ALL ATTRIBUTES OF AN ELEMENT CAN BE CHANGED USING JS.
+	
+	
+// 12.6 Changing CSS
+
+	The style of HTML elements can also be changed using JS. All style attributes can be accessed using the style object of the element.
+	
+	EXAMPLE
+	
+	var x = document.getElementById("demo");
+	x.style.color = "6600FF";
+	x.style.width = "100px";
+	
+	Result - Selects the node with an id of "demo" and changes it's color and width. 
+	
+	ALL CSS PROPERTIES CAN BE SET/MODIFIED USING JS. 
+	
+	REMEMBER THAT DASHES CANNOT BE USED IN PROPERTY NAMES FOR JS LIKE THEY CAN IN CSS, AND ARE THEREFORE CONVERTED INTO CAMEL CASE.
+	
+	i.e background-color becomes backgroundColor etc.
+	
+	
+// 12.7 Adding Elements 
+
+	element.cloneNode() - Clones the element and returns the resulting node.
+	
+	document.createElement(element) - Creates a new element node.
+	
+	document.createTextNode(text) - Creates a new text node.
+	
+	EXAMPLE
+	
+	var node = document.createNExtNode("Some text");
+	
+	This creates a new text node, but it won't appear until called. 
+	
+	To do this, you must append it to an existing element with one of the following methods.
+	
+	element.appendChild(newNode) - Adds a new child node to the element. This will be the last child node.
+	
+	element.insertBefore(node1, node2) - inserts node1 as a child before node2.
+	
+	EXAMPLE
+	
+	var p = document.createElement("p");
+	var node = document.createTextNode("Some new text");
+	
+	p.appendChild(node);
+	
+	var div = document.getElementByd("demo");
+	div.appendChild(p);
+	
+	Result - Creates new paragraph and adds it to the existing div element on the page.
+	
+	
+// 12.8 Removing Elements
+
+	To remove an element, you must select the parent of the element and use the removeChild(node) method.
+	
+	EXAMPLE
+	
+	var parent = document.getElementById("parent");
+	var child = document.getElementByID("child");
+	
+	parent.removeChild(child);
+	
+	Result - Removes the child element from the html.
+	
+	Another way is to use the parentNode property to select it's parent, and then use removeChild.
+	
+	EXAMPLE
+	
+	var child = document.getElementById("child");
+	child.parentNode.removeChild(child);
+	
+	
+// 12.9 Replacing Elements
+
+	To replace a html element, use the replaceChild(newNode, oldNode) method.
+	
+	var p = document.createElement("p");
+	var node = document.createTextNode("This is new");
+	p.appendChild(node);
+	
+	var parent = document.getElementById("parent");
+	var child = document.getElementById("child");
+	parent.replaceChild(p, child);
+	
+	Result - Replaces the current child element with the new p element.
+	
+	
+// 13 ANIMATIONS
+
+	Now that we understand selecting and editing DOM elements, we can do fancy stuff with them like animations.
+	
+
+// 13.1 Syntax
+
+	First we must use the setInterval() method to make a timer and call a function to call properties repeatedly at defined intervals. 
+	
+	EXAMPLE
+	
+	var t = setInterval(move, 500);
+	
+	This creates a timer that calls a move() function that will run every half-second. 
+	
+	Now we need to set up the move function.
+	
+	EXAMPLE
+	
+	var pos = 0;
+	
+	var box = document.getElementById("box");
+	
+	function move() {
+	pos += 1;
+	box.style.left - pos+"px";
+	}
+	
+	Only one issue, how does it know when to stop? We nee dto use the clearInterval method to stop the repeat.
+	
+	EXAMPLE
+	
+	var t = setInterval(move, 500);
+	
+	var pos = 0;
+	
+	var box = document.getElementById("box");
+	
+	function move() {
+		if (pos >= 150) {
+			clearInterval(t);
+	}
+		else {
+			pos += 1;
+			box.style.left = pos+"px";
+		}
+	}
+	
+	Result - An animation where a box moves left by 150px.
+	
+	
+// 14 HANDLING EVENTS
+
+	JS code can e eexecuted when an event occurs, such as when a user clicks a HTML element, moves the most, or submits a form. 
+	
+	
+// 14.1 Handlers
+
+	When an event occurs on a target element, a handler function is executed. Below are some examples.
+	
+	onclick - when the element is clicked.
+	onload - when the element has loaded, such as a page load. typically used on body tag.
+	onunload - when the page has unloaded. typically used on body tag.
+	onchange - Used for forms for when content has changed. 
+	onmouseover - When the element is moused over. 
+	onmouseout - When they mouse off it. 
+	onmousedown - When the user clicks on the element. 
+	onmouseup - When the user releases a mouse button over an element. 
+	onblur - When the element loses focus.
+	onfocus - When the element gets focus. 
+	
+	
+// 14.1.1 Handlers Via HTML 
+	
+	Can be added to HTML like below.
+	
+	EXAMPLE
+	
+	<p onclick="someFunc()">Lorem Ipsum</p>
+	
+	Result - The someFunc function will be activated when the text is clicked. 
+	
+	
+// 14.1.2 Handlers Via JS
+
+	They can also be assigned via JS. 
+	
+	EXAMPLE
+	
+	var x = document.getElementById("demo");
+	x.onclick = function() {
+		document.body.innerHTML = Date();
+	}
+	
+	This assigns a function that will only be active on click. Same for other handlers etc.
+	
+	
+// 14.2 Onload and Unload
+
+	These are triggered when the user enters or leaves the page. Do this on the body tag or using the window property.
+
+	This can be used to call alerts, functions, loops etc as soon as the page loads. 
+	
+	EXAMPLE IN HTML
+	
+	<body onload="doSomething()">
+	
+	EXAMPLE IN JS
+	
+	window.onload = function() {
+		/code etc.
+	}
+	
+	The window property can be used in JS for this purpose.
+	
+	
+// 14.3 On Change
+
+	The onChange function is mostly used on text boxes. The event handler gets called when the text inside the textbox changes and focus is taken away from the element. 
+	
+	EXAMPLE
+	
+	<input type="text" id="name" onChange="change()">
+	
+	function change() {
+	var x = docuent.getElementById("name");
+	x.value = x.value.toUpperCase();
+	}
+	
+	Result - Makes the entered text uppercase.
+	
+	
+// 14.4 Event Listeners
+
+	The addEventListener() method attaches an event handler to an element without overriding others.
+	
+	In other words it allows you to add more than one handler to one element.
+	
+	EXAMPLE
+	
+	element.addEventListener(event, function, useCapture);
+	
+	The first parameter is the event's type (like click or mousedown).
+	The second is the function we want to call when that happens.
+	The thirrd is a boolean specifying if it should use event bubbling or event capturing. This parameter is optional, with bubbling being standard. 
+	
+	NOTE THAT YOU DON'T NEED TO USE THE "ON" IN "ONCLICK" WHEN DOING THIS. CLICKS CAN SIMPLY BE CALLED "CLICK" IN LISTENERS. 
+	
+	EXAMPLE
+	
+	element.addEventListener("click", myFunction);
+	element.EventListener("mouseover", myFunction);
+	
+	function myFunction() {
+		code to be called when the handler is activated.
+	}
+	
+	To remove event listeners, use the below 
+	
+	removeEventListener("mouseover", myFunction);
+	
+	Obviously with the two arguments being the same values as what you want removed. 
+	
+	This is useful for removing a handler once it has been used. 
+	
+	EXAMPLE
+	
+	<button id="demo">Start</button>
+	
+	<script>
+	var btn = document.getElementById("demo");
+	btn.addEventListener("click", myFunction);
+
+	function myFunction() {
+		alert(Math.random());
+		btn.removeEventListener("click", myFunction);
+	}
+	</script>
+	
+	Result - Executes the alert (which displays a random number) and then removes itself, so that it won't happen ahain when the button is clicked. 
+	
+	NOTE: IE VERSIONS 8 AND LOWER DON'T SUPPORT EVENT LISTENERS
+	
+// 14.4.1 Event Propagation
+
+	When setting up event listeners, the third value is a boolean which defines what the propagation is.
+	
+	element.addEventListener(event, function, useCapture);
+	
+	The useCapture is the propogation method. It is refered to as "useCapture" because that's the only time when you would use it.
+	
+	What does it do? It sets the order for when an event occurs. If you have a <p> inside a <div> and the user clicks on the p, which element's "click" should be handled first?
+	
+	There are two types:
+	bubbling - the innermost is handled first.
+	caturing - the othermost is handled first. 
+	
+	Bubbling is the default. 
+	
+	To do capture propagation, set the third value to True. For bubbling, set it to false or simply don't choose a value, it does this by default.
+	
+	THIS IS TYPICALLY USEFUL WHEN YOU HAVE THE SAME EVENT HANDLED FOR MULTIPLE ELEMENTS IN THE DOM HIERARCHY. 
+	
+	
+// 15 CREATING A SLIDER
+
+	Lets use the above lessons to create a simple slider.
+	
+	The HTML.
+	
+	Here we have set up the image with two buttons. We will set up the functions shortly.
+	
+	<div>
+		<button onclick="prev()">Prev</button>
+		<img src="images/img1" alt="Slider" width="200px" height="100px" />
+		<button onclick="next()">Next</button>
+	</div>
+	
+	The JS
+	
+	First lets set up an array with all the image URLS we need for our slider.
+	
+	var images = ["images/img1" "images/img2" "images/img3"];
+	
+	Now lets declare a number variable to monitor what slide we are on.
+	
+	var num = 0;
+	
+	Now lets set up the functions which will make use of the above.
+	
+	function next() {
+		var slider = document.getElementById("slider");
+		num++;
+		if(num >= images.length){
+			num= 0;
+		}
+		slider.src = images[num]
+	}
+	
+	This makes the next button to move up to the next slide image. If the slider number becomes higher than the amount of slides, it will then cycle back to the start.
+	
+	Now lets do the same for the prev button.
+	
+	function prev() {
+		var slider = document.getElementById("slider");
+		num--;
+		if(num < 0) {
+			num = images.length-1;
+		}
+	
+		slider.src = images[num];
+	}
+	
+	Congrats, you've now made a slider!
+	
+	
+// 16 FORM VALIDATION
+
+	HTML5 added some stuff that can help with form validation, though better stuff can be done using JS. 
+	
+	The onsumbit handler can be used on the form tag to add a function that will be executed once the form is submitted. 
+	
+	This can be used to validate the fields. 
+	
+	Use "return" for the function to simply return it's end value.
+	
+	EXAMPLE
+	
+	<form onsubmit="return validate()" method="post">
+	Number: <input type="text" name="num1" id="num1" />
+	<br />
+	Repeat: <input type="text" name="num2" id="num2" />
+	<br />
+	<input type="submit" value="Submit" />
+	</form>
+	
+	<script>
+	function validate() {
+		var n1= document.getElementById("num1");
+		var n2 = document.getElementById("num2");
+		
+		if(n1.value != "" && n2.value != ""){
+			return true;
+		}
+	alert("The values must be filled in");
+	return false;
+	}
+	</script>
+	
+	Result - If the fields are left blank, it returns false. If they are filled in, it returns true. The form will only be submitted if it returns true. 
+	
+	The "return" ends the function, hence why a true value will not also be ran despite being outside an "else" condition.
+	
+	Note that the .value property value refers to what has been entered into an input type. 
+	
+	
+// 17 WEB STORAGE API
+
+	Websites can store data on a user's computer using HTML5 web storage. This used to be done by JS cookies but HTML5 can be faster, more secure and allows for larger sizes etc.
+	
+	LOCAL STORAGE IS PER DOMAIN. ALL PAGES ON THAT DOMAIN CAN USE THIS.
+	
+	There are two types
+	
+	sessionStorage() - Stores until they leave.
+	localStorage() - Stores for the forseeable future when the user goes to the website.
+	
+	
+// 17.1 Storing Keys
+
+	The syntax for both types is the same, just with a different name.
+	
+	localStorage.setItem("key", "value");
+	
+	As you can see, you can access the "localStorage" of the browser and store something there. It uses key/value pairs.
+	
+
+// 17.2 Accessing Keys
+
+	Once one has been created, we can then retrieve is using the getItem property value. 
+	
+	localStorage.getItem("key");
+	
+	This will return the key's value.
+	
+	EXAMPLE
+	
+	alert(localStorage.getItem("keyName"));
+	
+	Result - Prints the value to the user in an alert. 
+	
+	
+// 17.3 Removing Keys
+
+	A key can be removed using the removeItem value. 
+
+	localStorage.removeItem("keyName");
+	
+	ALL keys can be removed using the following command.
+	
+	localStorage.clear();
+	
+	After this, all stored storage for the site are removed. 
+	
+	
+// 18 GEOLOCATION API
+	
+	This retrives the geographical location of a user. 
+	
+	USERS HAVE TO ACCEPT ACCESS TO THIS, IT CANNOT BE ACCESSED WITHOUT USER CONSENT.
+	
+	navigator.geolocation.getCurrentPosition();
+	
+	Parameters;
+	
+	showLocation (mandatory): defines the callback method that retrieves the information.
+	ErrorHandler(optional): Defines the callback method for when an error occurs.
+	Options (options): Defines a set of options for retrieving the location information.
+	
+	
+// 18.1 Presenting Data
+
+	User location can be presented in two ways; Geodetic and Civic.
+	
+	Geogetic - Latitude and Longitude.
+	Civic - Another format which is easier to read. 
+	
+	EXAMPLE
+	
+	Attribute	Geodetic	Civic
+	
+	position	59.3,18.6	Stockholm
+	elevation	10 metres	4th floor
+	heading		234 degrees	City Center		
+	speed		5km /h		Walking
+	Orientation	45 degrees	North-East
+	
+	The getCurrentPosition() method returns an object if it was successful. Latitude, longitude and accuracy properties are always returned. 
+	
+	
+// 19 DRAG AND DROP
+
+	Make HTML elements drag and drop, we must set up three functions to be called during the process. 
+	
+	Below is what they look like together.
+	
+	function drag(ev) {
+	ev.dataTransfer.setData("text", ev.target.id);
+	}
+	
+	function allowDrop(ev) {
+		ev.preventDefault();
+	}
+	
+	function drop(ev) {
+	ev.preventDefault();
+	var data = ev.dataTransfer.getData("text");
+	ev target.appendChild(document.getElementById(data));
+	}
+	
+	But lets break it down.
+	
+	SEE THE HTML GUIDE FOR THE RELEVANT HTML TAGS AND EVENTS.
+	
+	
+// 19.1 What to Drag
+
+	function drag(ev) {
+		ev.dataTransfer.setData("text", ev.target.id);
+	}
+	
+	When an element which is allowed to be dragged begins the drag process, this function is called within the "ondragstart" event in HTML. 
+	
+	the dataTransfer.setData() method sets the data type and value of the data being dragged. 
+	
+	In the above, the data type is "text" and the value is the ID of the draggable element. 
+	
+	
+// 19.2 Where to drop
+
+	function allowDrop(ev) {
+		ev.preventDefault();
+	}
+	
+	The "ondragover" event specifies where dragged data can be dropped. All this function does is overide the default settings for the element, which is to NOT allow dropping.
+	
+	preventDefault() will remove the standard handling and allow dropping for the element it is linked to.
+	
+
+// 19.3 Do the drop
+
+	When dragged data is dropped, the "ondrop" event is called, and this function is used to control this.
+	
+	function drop(ev) {
+		ev.preventDefault();
+		var data = ev.dataTransfer.getData("text");
+		ev.target.appendChild(document.getElementById(data));
+	}
+	
+	The preventDefault() method prevents the browser's default handling as before.
+	
+	the variable calls dataTransfer.getData() to access the dragged data that was set in the drag() function. This will return any data that was set. 
+	
+	The new variable, data, now has data equal to that of what we are dragging. As such we can select the current item using ev.target and use the appendChild() method to add a new child. We then call the data 
+	variable we just created as an id. 

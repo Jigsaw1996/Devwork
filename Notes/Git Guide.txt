@@ -1,0 +1,344 @@
+GIT Guide
+
+	This is a guide to how to use GIT and related features to help manage and control workflow.
+	
+	1. Glossary
+	
+	2. Command Line
+	2.1 Command Line Interface
+		2.1.1 Creating Folders
+		2.1.2 Navigating Directories
+		
+	3 Setting Up Git Repositories
+	
+	4 Repository
+	4.1 Adding Files to the Repository
+	4.2 Comitting Files
+	4.3 Summary Explanation
+	
+	5 GitHub Intro
+	5.1 Creating Repository
+	5.2 Pushing
+	
+	
+1. Glossary
+
+	Directory - Another word for folder, it breaks up content into different locations etc. 
+	
+	Hidden Directory - A folder which is hidden by default. 
+	
+	Repository - A documentation of all changes to the folder which it is created in. 
+	
+	Untracked Files - Files which are not tracked within a directory.
+
+	
+2. Command Line
+
+	The first step here is to download Git Bash for windows. This is the command line, and will be referenced as such from now on.
+	
+	First we need to update some settings.
+	
+	We need to update the Git config so we can tell Git who we are.
+	
+	git config --global user.name "<Your Name>"
+	git config --global user.email "<your email address>"
+
+	
+	
+2.1 Command Line Interface
+
+	When we’re working inside a Command Line Interface, we are basically viewing all of our files and folders without the help of the visual interface.
+
+	Typing ls in lower case will show all files and folders currently contained within the current folder we are in. 
+	
+	In other words this is like opening the Documents on your computer, you can see all the files and folders it contains. 
+	
+	EXAMPLE
+	
+	ls
+	
+	Result - Displays all files and folders currently existing within the current folder.
+	
+	
+2.1.1 Creating Directories
+
+	To create a folder, use the mkdir function. mkdir stands for make directory. 
+	
+	EXAMPLE
+	
+	mrdir test
+	
+	Result - A folder names test is added to the current directory.
+	
+	
+2.1.2 Navigating Directories
+
+	Use the cd function to move between directories, using the name of the directory you wish to access.
+	
+	EXAMPLE
+	
+	cd test
+	
+	CD STANDS FOR CHANGE DIRECTORY. 
+	
+	Will access a folder named "test" and will then be inside that directory.
+	
+	Navigating up to the parent directory can be done using ..
+	
+	EXAMPLE
+	
+	cd .. 
+	
+	A single dot refers to the current folder. 
+	
+	
+3 Setting Up Git Repositories
+
+	Once we have changed into a test directory, we can initialise Git in this directory. 
+	
+	We do this using the following command.
+	
+	git init
+	
+	This will initialise a new Git instance in our new test directory.
+	
+	It creates a new directory called .git which is hidden, as the dot usually emphasises. These are refered to as hidden directories. 
+	
+	In order to see a hidden directory, a flag needs to be used. A flag is something we use to signify that we wish to run a command with certain settings. 
+	
+	-a means "all"
+	
+	EXAMPLE
+	
+	ls -a
+	
+	Result - Will display all folders, including hidden ones. 
+
+	
+4 Repository
+
+	Once we use git init within a directory, a new repository is created within it. Once this happens, Git will track all of the files within the directory.
+	
+	This means that it can document all of the changes made throughout the lifecycle of the application.
+
+	Run the following command to get information on the current state of my repository for the folder. 
+	
+	
+	git status
+	
+	This will give us information. By default it gives three pieces of information.
+	
+	"On branch master
+
+	Initial commit
+
+	nothing to commit (create/copy files and use "git add" to track)"
+
+	
+	"On branch master" - Every Git repository will contain a master branch. The master will usually contain the latest working version of the codebase. 
+	Usually when a dev is working on a piece of functionality, they will fork the master branch. This creates a copy of the master branch that a dev can work on in isolation from the main code base.
+	Once they are finished developing, they'll merge the coe back into the master branch. 
+	
+	"Initial comit" - This tells us what the last commit message was. We haven't created one yet, but convention for creating the first commit of a repository is to include a message of initial commit. 
+	A commit is when the developer decides that the code they’ve been working on is ready and wish to commit it into the repository.
+	
+	"nothing to commit" - Just means we haven't made any changes to the repository.
+	
+	
+4.1 Adding Files to the Repository
+
+	HOWEVER what if we add a file to the folder?
+	
+	I've added a hello.txt file to the folder.
+	
+	If you rerun git status, it'll notify you of untracked files. 
+	
+	Untracked files are files that have been added to the directory, but have yet to be included in the repository. 
+	
+	To add the file to the repository, run the below.
+	
+	git add hello.txt
+	
+	Here, git is the program we are using, add is the function within the program we are using, and hello.txt is the parameter we are passing through the function.
+	
+	Obviously change the name to whatever fits.
+	
+	This means that the file is being tracked. Git will continue to track all of the changes made to the file from now on.
+	
+	
+4.2 Comitting Files
+
+	Now a file has been added, is ready to be comitted. 
+	
+	git commit -m "Initial commit"
+	
+	This will move all added files to the local repository. 
+	
+	
+4.3 Summary Explanation
+
+	First we created a directory. We then initialised Git within it. This folder is considered to be our "working directory" and all the files contained within it are project files.
+	
+	In order to allow us to contribute to a project, Git must track our files. If we make changes to one, or create a new one, those changes will be untracked.
+	
+	When we then use add, we're adding those changes to the staging area. Those changes will then be considered tracked. 
+	
+	Once a file is staged, we can then commit that file. Once we run the commit command, we commit all of the files in the staging into the local repository. 
+	
+	So the standard workflow should be as follows.
+	
+	Make changes
+	Add to Staging Area
+	Commit all files in the Staging Area to the local repository
+	
+	Cool image which shows this - http://codeinstitute.wpengine.com/wp-content/uploads/2016/08/1472481264_image9.png
+	
+	But what if we need multiple developers working on a single project? That's where GitHub comes in handy. 
+	
+	
+5 GitHub Intro
+
+	GitHub is a tool for developers which is used to host their code in an exteral location that will allow multiple developers to work on a single codebase. 
+	
+	Imagine creating a local repository like we have been is just like creating a new folder where you store documents you're working on.
+	
+	Now imagine you wish to share them with coworkers. You need to find some way of uploading them to a central location for everyone to download, work on them, then re-upload them.
+	
+	GitHub allows developers to do this easily. 
+	
+	
+5.1 Creating Repository
+
+	After setting up it's name etc, we need to set up the repository page.
+	
+	We have a number of options as to how to set this up.
+	
+	As we already have a repository set up locally, we can use the provided link to connect it.
+	
+	git remote add origin <your github url>
+	
+	Once this is done, our local repository is connected with the Github remote repository. 
+
+	
+	
+5.2 Pushing
+
+	Next run the push command
+	
+	git push -u origin master
+	
+	Master needs to be replaced with whatever branch is currently selected.
+	
+	This is our push command. When we added our remote repository we connected local repository to the URL that GitHub provided. 
+	We called that origin, which is the reference we use when we wish to refer to the Github remote repository.
+	
+	Each repository will have a branch called master by default. This means that our origin has a branch called master.
+	
+	When we use the push command, we are tellign Git to push all of the changes we have commited to origin's master branch.
+	
+	The -u is used to set the upstream. Here we are setting the upstream to origin master.
+
+	Whenever we wish to push code into the remote repository (GitHub) we do so via the upstream. Whenever we retrieve code, we do so via the downsteam. This is similar to uploading/downloading on dropbox etc.
+	
+	We won't need to do this again once the push is set up, as from now on we'll push code simply by using "git push origin master" and then entering the logins. 
+	
+	So if we head back to GitHub and refresh the page, we see hello.txt in the repository now. 
+	
+	All the code is now available for the world to see! Now we can make changes and storing them in the repository. 
+	
+	Try changing the content of the file, run "git add", "git commit" and "git push" and then refresh the GitHub page.
+	
+	And that's about the jist of it!
+	
+	
+6 Branches
+
+	Branches are used to set up different coding enviroments for testing etc. 
+	
+	
+6.1 Setting up a branch
+
+	From the GitHub repository screen, select the dropdown that says "Branch: master" pick a name for one. 
+	
+	Now we need to connect to the branch locally so that we can connect to it. 
+	
+	In the command line, do the following. 
+	
+	git fetch
+	
+	This will fetch all of the remote branches. 
+	
+	Now we need to create a local branch to connect with the remote one.
+	
+	We do this using the below.
+	
+	git checkout -b test origin/test
+	
+	checkout - This is the command we use to swap between branches.
+	-b - Means we wish to checkout to a new branch.
+	test - this is the name we have given it, it can be named anything.
+	origin/test - We need to give it the reference of the remote we are connecting to, followed by the name of the remote branch which is origin/test in this case. 
+	
+	So in plain English, this would read as checkout to a new branch called test that’s linked to origin/test.
+	
+	
+6.2 Navigating Branches
+
+	To see what branches are available, do the below. 
+	
+	git branch
+	
+	This gives a list of all local branches and places a * next to the currently selected one.
+	
+	Swap between them using the below.
+	
+	git checkout [name of the branch]
+	
+	EXAMPLE
+	
+	git checkout master
+	
+	Result - Will swap to the master branch. 
+	
+	REMEMBER TO CHECK WHAT BRANCH YOU ARE WORKING ON. 
+	
+	
+6.3 Creating/Editing within Branches
+
+	Now that we have a branch and are within it, we can use the command line to edit just within that branch.
+	
+	Create a new document and add text to it, then add it to the branch. 
+	
+	In this case we are creating and uploading a world.txt file.
+	
+	git add world.txt
+	git commit -m "Add world.txt"
+	
+	This will first add the file, and then commit it to the repository, under the current branch. 
+	
+	Once done, using the following will push it to the remote branch. 
+	
+	git push origin [branch name]
+	
+	THIS WILL ONLY HAPPEN TO THE CURRENT BRANCH. IT WILL NOT HAPPEN WITH ANY OTHER BRANCH WE HAVE CREATED. 
+	
+	THIS ALLOWS FOR MULTIPLE DEVELOPERS TO WORK WITHOUT INTERRUPTING EACH OTHER'S WORK. 
+	
+	
+6.4 Git Merge
+
+	What if we then want to merge branches together?
+	
+	Git has the solution.
+	
+	git merge test
+	
+	"test" is the name of the branch we want to merge with.
+	
+	This will merge the current branch with whater other branch we have called. 
+	
+	As before, use the below to push this forward.
+	
+	git push origin [branch name]
+	
+	
