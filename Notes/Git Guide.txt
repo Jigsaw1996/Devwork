@@ -341,4 +341,43 @@ GIT Guide
 	
 	git push origin [branch name]
 	
+	Once this is done, the changes will added to the master branch. 
+	
+	
+7 CONTRIUTING AS A TEAM
+
+	If we find a project we want to work on, or work with a company that uses Github, we need to understand contributing. 
+	
+	First, find someone else's project and click the "Fork" button at the top right. 
+	
+	This creates a duplicate version of the repository under our user account. 
+	
+	Now grab the url for OUR repository (not the original which we forked from) and do the below.
+	
+	git clone [URL]
+	
+	Once complete, do ls to see the new folder that we have made. 
+	
+	From here, we can edit as we please. 
+	
+	
+7.1 Pulling
+
+	But this only changes things for our own repository. How do we get our changes onto the original repository we forked from? This is where pulling comes in.
+	
+	We need their permission first, so we need to make a pull request.
+	
+	From their Github repository, use the Pull Request tab and request a new pull. 
+	
+	Make sure that the right branch is selected and is up to date, and select the repository you wish to be pulled. A title and descriptioncan be given. 
+	
+	Once the pull request is posted, it can be accepted or ignored by the owner. It can also be stopped from being requested if it will cuase conflicts. 
+	
+	
+8 README FILES
+
+	A readme file is a file that contains info on a repository. It is useful for containing important or advisory information. 
+	
+	If a repository contains one of these, Github automatically displays it on the code tab. 
+	
 	
