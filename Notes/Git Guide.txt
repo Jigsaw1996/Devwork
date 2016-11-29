@@ -460,6 +460,15 @@ GIT Guide
 	Add a file to the next commit
 		git add [file name]
 		
+	Add files in bulk
+		git add .
+		
+	Remove files
+		git rm [file name]
+		
+	Change/Remove Current files (doesn't stage any new files)
+		git add -u
+		
 	Commit changes
 		git commit -m "description of change"
 		
