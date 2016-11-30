@@ -12,4 +12,3 @@ So far I've learned how to
 5. Creating README files
  
 [I learned all this from Code Institute!](http://codeinstitute.net)
-1
