@@ -60,4 +60,20 @@ Contents
 	- Sublime has a view in browser option on right click. Use it.
 	
 	
+1.3 The Box Model
+
+	Web Pages are comprised of HTML and CSS elements. Positioning these elements on a web page allows you to have complete control over how the page looks.
 	
+	Here we will look at how to control layout. 
+	
+	When discussing web design and layout, the "Box Model" os the collective term that is used to describe how elements are spaced on the page.
+	
+	The box model of an element works like the below. 
+	
+	Content Area
+	Padding
+	Border
+	Margin
+	Total Width
+	
+	See the box model example to see how this works. 
