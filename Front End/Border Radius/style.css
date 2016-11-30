@@ -1,0 +1,51 @@
+main {
+	width: 80%;
+	margin: 25px auto;
+}
+
+div {
+	display: inline;
+	float: left;
+	width: 300px;
+	height: 300px;
+	margin: 0 25px 15px 0;
+	box-sizing: border-box;
+	background-color: #F6F6F6;
+}
+
+.box1 {
+	border: 20px double #A8F4FF;
+	border-radius: 10%;
+}
+
+.box2 {
+	border: 10px dotted #64A9B2;
+}
+
+.box3 {
+	border: 20px double #A8F4FF;
+	border-radius: 120px/30px;
+}
+
+.box4 {
+	border: 10px dashed #9CCB98;
+}
+
+.box5 {
+	border: 10px outset #A8F4FF;
+}
+
+.box6 {
+	border: 20px double #A8F4FF;
+	border-radius: 10%;
+	border-top-style: none;
+	border-bottom-style: none;
+}
+
+@media (max-width: 800px) {
+	div {
+		display: block;
+		float: none;
+		margin: 0 auto 15px auto;
+	}
+}
