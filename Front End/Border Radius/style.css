@@ -23,16 +23,17 @@ div {
 }
 
 .box3 {
-	border: 20px double #A8F4FF;
+	border: 20px double #415D49;
 	border-radius: 120px/30px;
 }
 
 .box4 {
 	border: 10px dashed #9CCB98;
+	border-radius: 50%;
 }
 
 .box5 {
-	border: 10px outset #A8F4FF;
+	border: 10px outset #F6F6F6;
 }
 
 .box6 {
