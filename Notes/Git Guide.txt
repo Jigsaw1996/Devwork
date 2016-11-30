@@ -1,4 +1,4 @@
-GIT Guide
+﻿GIT Guide
 
 	This is a guide to how to use GIT and related features to help manage and control workflow.
 	
@@ -403,14 +403,33 @@ GIT Guide
 	
 8.1 MarkDown Syntax
 
-	# Makes a big header.
+	# H1
+	## H2
+	### H3
+	And so on
 	
 	1. Numbered items make list items 
 		1. Nested numbered items appear nested in the list
 		2. Another lested item for the LOL's.
 	2. Here's some **bold**
+
+	* Asterisks make bullet points.
+		..* Nested bullet points appear under them
+	* Here's some _italics_.
 	
-	[Here's some linked text](and here's the url link)
+	[Here's some linked text](and here's the url link "Link title text")
+
+	![Image alt text](Image url link "Logo Title Text 1")
+
+	> This text will be in a quote block.
+
+	Inline code has `back-ticks around it`
+
+	```python
+	code here
+	```
+
+	The above will display the code itself and not convert it into anything. The language doesn't need to be specified for this to work. 
 	
 	
 9 COMMANDS LIST
