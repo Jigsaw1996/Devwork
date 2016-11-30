@@ -1,14 +1,15 @@
 main {
 	width: 80%;
+	border-radius: 5%;
 	margin: 25px auto;
 }
 
 div {
 	display: inline;
 	float: left;
-	width: 300px;
+	width: 30%;
 	height: 300px;
-	margin: 0 25px 15px 0;
+	margin: 0 5% 15px 0;
 	box-sizing: border-box;
 	background-color: #F6F6F6;
 }
@@ -25,6 +26,7 @@ div {
 .box3 {
 	border: 20px double #415D49;
 	border-radius: 120px/30px;
+	margin: 0 0 15px 0;
 }
 
 .box4 {
@@ -41,6 +43,7 @@ div {
 	border-radius: 10%;
 	border-top-style: none;
 	border-bottom-style: none;
+	margin: 0 0 15px 0;
 }
 
 @media (max-width: 800px) {
