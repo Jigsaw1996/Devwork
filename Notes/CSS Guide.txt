@@ -162,7 +162,8 @@
 
 	overflow: ; - Sets what happens to overflowing text. "Scroll" will add a scrollbar for the user, "hidden" will simply hide all content and "auto" will decide for itself. 
 
- 
+	vertical-align: ; - Useful for images when controlling their position on their line. Can be top, middle, bottom, sub, super, text-top, text-bottom or baseline. Middle is ideal.
+
 /* 2.4 - List Styling */
 
 	list-style: ; - Can be set to "none" so that the list can be broken down for the top navigation.

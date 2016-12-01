@@ -24,10 +24,12 @@ h1 {
 
 h2 {
   font-size: 1.875em;
+  margin: 15px 0 10px 0;
 }
 
 p {
   font-size: 0.875em;
+  margin-bottom: 10px;
 }
 
 /* Page Styles */
@@ -39,10 +41,6 @@ main {
   margin: 25px 0 25px 5%;
   overflow: auto;
   background-color: #EDEDED;
-}
-
-.paraMarg {
-  margin-bottom: 10px;
 }
 
 /* Responsive Styles */

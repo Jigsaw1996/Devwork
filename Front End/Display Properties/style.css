@@ -1,0 +1,16 @@
+.blockExample {
+	width: 40%;
+	padding: 5%;
+	border: 10px dotted #fff;
+	border-radius: 25%;
+	margin: 0 0 10px 0;
+	box-sizing: border-box;
+	text-align: center;
+	background-color: #0073BA;
+	color: #fff;
+}
+
+img {
+	width: 30%;
+	vertical-align: middle;
+}
