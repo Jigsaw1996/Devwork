@@ -46,6 +46,21 @@ div {
 	margin: 0 0 15px 0;
 }
 
+.box7 {
+	border: 10px solid #F5F240;
+	border-radius: 75%/25%;
+}
+
+.box8 {
+	border: 10px dashed #E7450F;
+	border-radius: 25%/50%;
+}
+
+.box9 {
+	border: 10px groove #81BBC9;
+	margin: 0 0 15px 0;
+}
+
 @media (max-width: 800px) {
 	div {
 		display: block;

@@ -74,6 +74,86 @@ Contents
 	Padding
 	Border
 	Margin
+	=
 	Total Width
 	
+	The Total Width is equal to all of the above factors, on both sides.
+	
 	See the box model example to see how this works. 
+
+	
+1.4 Border and Border Radius
+
+	There are a number of border styles, as seen below:
+	solid
+	dashed
+	dotted
+	double
+	groove
+	ridge
+	inset
+	outset
+	
+	This can be individually set using the border-style: ; property. 
+	
+
+	Border Radius is a new CSS3 property. It gives rounded corners to a border without use of an image. 
+	
+	It works using the border-radius property. 
+	
+	border-radius: ;
+	
+	A circle is equal to the height/width, or 50% if working with percentages.
+
+	
+	It can be written with individual values for each corner. 
+	
+	For example: 
+	
+	border-radius: top-left top-right bottom-right bottom-left;
+	
+	Each corner can also have a different radius for either side, done using a / as seen below.
+	
+	border-radius: 120px/30px
+
+	This gives both sides different values. 
+	
+	See the border radius examples for how this is done.
+	
+	
+2 More Box Model
+
+	Video - https://youtu.be/M3aq4tQvAOs
+
+	Following on from the previous lesson, having the ability to control layout is highly dependent on the display property. 
+	
+	In this lesson we will discuss how you can apply different display properties to achieve various results. 
+	
+	We will also cover shorthand syntax. 
+	
+	
+2.1 Display Properties
+
+	For the purpose of CSS styling, elements can be divided into a few different categories. 
+	
+	Each element has it's own default display, but this can be manually changed in CSS to impact display. 
+	
+	The display types are below:
+	Block - These elements take up the full width if it's line. Examples: <p> <h1> <div>
+	Inline - These elements only take up the room they need to, and can sit alongside one another. Examples: <strong> <a> <span>
+	Inline-block - This is a mix of the previous 2. Will sit alongside other element, but will accept height and width editing. Examples: <img>
+	None - Item doesn't appear at all, taking up no room. 
+	
+	
+2.2 Centering Elements
+
+	To center inline elements within it's container, do the below. 
+	
+	text-align: center;
+	
+	To center block elements within it's container, the left and right margins have to be set to auto, so that the browser will automatically set them equally.
+	
+	margin: 0 auto;
+	
+	
+2.3 A Walk Through
