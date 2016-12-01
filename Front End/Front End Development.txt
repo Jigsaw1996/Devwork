@@ -12,6 +12,17 @@ Front End Development Guide
 	
 Contents
 
+	1 Reopening the Box Model
+		1.1 HTML Refresh
+		1.2 Coding In An Editor
+		1.3 The Box Model
+		1.4 Border and Border Radius
+	
+	2 More Box Model
+		2.1 Display Properties
+		2.2 Centering Elements
+		2.3 A Walk Through
+
 
 1 Reopening the Box Model
 
