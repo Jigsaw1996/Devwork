@@ -4,7 +4,7 @@ main {
 	margin: 25px auto;
 }
 
-div {
+main div {
 	display: inline;
 	float: left;
 	width: 30%;
