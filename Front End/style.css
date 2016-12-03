@@ -41,10 +41,8 @@ a {
 /* Header Styles */
 header {
   width: 100%;
-  height: 50px;
-  margin: 0 0 30px 0;
+  overflow: auto;
   background-color: #A99999;
-  color: #F6F6F6;
 }
 
 header div {
@@ -54,13 +52,18 @@ header div {
   text-align: center;
 }
 
+header div h1 {
+	margin: 10px 0;
+	color: #F6F6F6;
+}
+
 
 /* Main Page Styles */
 main {
   width: 40%;
   padding: 2.5%;
   border-radius: 5% 10% 10% 5%;
-  margin: 0 0 25px 5%;
+  margin: 30px 0 30px 5%;
   overflow: auto;
   background-color: #EDEDED;
 }
@@ -70,7 +73,14 @@ main {
 footer {
   width: 100%;
   height: 50px;
+  text-align: center;
   background-color: #A99999;
+}
+
+footer p {
+	display: none;
+	margin: 10px 0 10px 0;
+	color: #F6F6F6;
 }
 
 
@@ -79,7 +89,7 @@ footer {
   main {
     width: 80%;
     border-radius: 5% 5% 5% 5%;
-    margin: 0 auto 15px auto;
+    margin: 15px auto 15px auto;
   }
 
   h1 {
