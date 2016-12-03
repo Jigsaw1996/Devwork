@@ -32,23 +32,64 @@ p {
   margin-bottom: 10px;
 }
 
-/* Page Styles */
+a {
+  text-decoration: none;
+  color: #000000;
+}
 
+
+/* Header Styles */
+header {
+  width: 100%;
+  overflow: auto;
+  background-color: #A99999;
+}
+
+header div {
+  display: inline-block;
+  float: left;
+  width: 30%;
+  text-align: center;
+}
+
+header div h1 {
+	margin: 10px 0;
+	color: #F6F6F6;
+}
+
+
+/* Main Page Styles */
 main {
   width: 40%;
   padding: 2.5%;
   border-radius: 5% 10% 10% 5%;
-  margin: 25px 0 25px 5%;
+  margin: 30px 0 30px 5%;
   overflow: auto;
   background-color: #EDEDED;
 }
+
+
+/*Footer Styles */
+footer {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  background-color: #A99999;
+}
+
+footer p {
+	display: none;
+	margin: 10px 0 10px 0;
+	color: #F6F6F6;
+}
+
 
 /* Responsive Styles */
 @media (max-width: 800px) {
   main {
     width: 80%;
     border-radius: 5% 5% 5% 5%;
-    margin: 15px auto;
+    margin: 15px auto 15px auto;
   }
 
   h1 {
