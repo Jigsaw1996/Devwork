@@ -183,7 +183,7 @@ Contents
 	
 	For exact spacing, using the float property is a great solution. We will come back to the idea of floats. 
 	
-	See the walkthrough example for the end result. 
+	See the "Inline Positioning vs Floats" example for the end result. 
 	
 	
 2.4 Shorthand
