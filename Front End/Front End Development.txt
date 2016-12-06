@@ -26,6 +26,7 @@ Contents
 		2.5 Validator
 		
 	3 Positioning and CSS
+		3.1 CSS3 Border Box
 
 
 1 Reopening the Box Model
@@ -179,11 +180,22 @@ Contents
 	
 	We make this by using inline-blocks for adjascent containers. 
 	
-	However inline-block elements have spacing issues, due to them typically being used for text.
+	However this isn't ideal for page structuring. inline-block elements have natural spacing which can add to total widths etc, due to them typically being used for text.
 	
-	For exact spacing, using the float property is a great solution. We will come back to the idea of floats. 
+	To solve this, we need to remove the white space. This is done by setting the font size of the parent container to 0. The children can then be given the font size.
 	
-	See the "Inline Positioning vs Floats" example for the end result. 
+	However this only works with px or % amounts. This doesn't work with ems. There are workarounds for this however. See here: https://davidwalsh.name/remove-whitespace-inline-block
+	
+	In any case, the example uses the following to create layouts:
+	
+	display: ;
+	float: ;
+	width: ; 
+	height: ; - Left blank in some cases so that it will fit it's children.
+	padding: ;
+	margin: ;
+	
+	See the "Inline Block Positioning" example for how this is done.
 	
 	
 2.4 Shorthand
@@ -230,3 +242,22 @@ Contents
 	
 	
 3 Positioning and CSS
+
+	Video: https://youtu.be/YT3UhoYL3B8
+
+	In this lesson we peel back some CSS layers and see how it works. 
+
+	We will look at the importance of positioning and flow in a document. 
+	
+	We will also reopen the Box Mode yet again and explore better ways of dealing with widths. 
+	
+	Includes:
+	CSS3 Border-Box
+	Position and Flow
+	Absolute Positioning
+	Developer Tools
+	Fixed Positioning
+	Cascading
+	
+	
+3.1 CSS3 Border Box
