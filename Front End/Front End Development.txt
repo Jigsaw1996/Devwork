@@ -180,7 +180,7 @@ Contents
 	
 	We make this by using inline-blocks for adjascent containers. 
 	
-	However this isn't ideal for page structuring. inline-block elements have natural spacing which can add to total widths etc, due to them typically being used for text.
+	However this has it's issues. inline-block elements have natural spacing which can add to total widths etc, due to them typically being used for text.
 	
 	To solve this, we need to remove the white space. This is done by setting the font size of the parent container to 0. The children can then be given the font size.
 	
@@ -261,3 +261,49 @@ Contents
 	
 	
 3.1 CSS3 Border Box
+
+	The last time we looked at the Box Model, we noted some of the difficulties involved in layout out a web page, including the maths.
+	
+	But what if you hate the maths? 1st World Problems right there.
+	
+	If you're lazy, CSS3 has border-box to make the maths easy. 
+	
+	Normal Full width:
+	left margin + left border + left padding + content + right padding + right border + right margin = Full Width
+	
+	border-box Full Width:
+	left margin + content + right margin = Full Width
+	
+	What this means is that you no longer have to worry about padding and border widths. 
+	
+	Border and padding are instead handled within the content width. 
+	
+	Syntax:
+	
+	box-sizing: border-box;
+	
+	The padding and border are contained as part of the content spacing. 
+	
+	
+3.2 Vendor Prefixes
+
+	Vendor Prefixes are a useful when it comes to elements not in full support yet.
+	
+	The CSS3 Spec is not fully signed off, so the browsers implement the features in their own way using prefixes until the entire spec is complete.
+	
+	This means that not all browsers fully support all tags.
+	
+	In time prefixes will disappear, but for now the newest tags need vendor prefixes. 
+	
+	Use the following site to see compatibility for tags: http://caniuse.com/
+	
+	See the CSS Guide for more info.
+	
+	These are the Vendor Prefixes. 
+	
+	Chrome, Safari, Newer Opera, Android  = -webkit-
+	Firefox = -moz-
+	Internet Explorer, Windows Edge = -ms-
+	Older Opera = -Opera-
+	
+	
