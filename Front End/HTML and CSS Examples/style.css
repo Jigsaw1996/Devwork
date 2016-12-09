@@ -27,7 +27,7 @@ h2 {
   margin: 15px 0 10px 0;
 }
 
-p {
+p, main li {
   font-size: 0.875em;
   margin-bottom: 10px;
 }
@@ -39,6 +39,10 @@ a {
 
 a:hover {
 	color:#F6F6F6;
+}
+
+strong {
+  color: #A99999;
 }
 
 
@@ -75,9 +79,6 @@ main {
 
 /*Footer Styles */
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 50px;
   overflow: auto;

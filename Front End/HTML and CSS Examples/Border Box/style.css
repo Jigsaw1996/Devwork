@@ -1,0 +1,24 @@
+.standard {
+	width: 300px;
+	height: 300px;
+	padding: 10px;
+	border: 5px dotted #000000;
+	margin: 20px;
+	background-color: #73BECB;
+}
+
+.borderBox {
+	width: 300px;
+	height: 300px;
+	padding: 10px;
+	border: 5px dotted #000000;
+	margin: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+	box-sizing: border-box;
+	background-color: #73BECB;
+}
+
+main ul {
+	margin: 0 0 0 20px;
+}
