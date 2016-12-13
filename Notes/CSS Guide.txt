@@ -144,6 +144,8 @@
 	border-radius: ;  - Gives it a curve. A complete circle is half of the height/width, which should be the same amount. Syntax - Can be done "top-left, top-right, bottom-right, bottom-left;"
 
 	margin: ; - Sets the space outside the element. 
+	
+	box-sizing: ; - Setting this to "border-box"  will make padding and border be calculated from the content area, and therefore doesn't affect full width of the relevant element. 
 
 
 /* 2.3 - Display and Layout Properties */

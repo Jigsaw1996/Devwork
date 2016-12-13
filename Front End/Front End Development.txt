@@ -27,7 +27,13 @@ Contents
 		
 	3 Positioning and CSS
 		3.1 CSS3 Border Box
-
+		3.2 Vendor Prefixes
+		3.3 Positioning and Flow
+			3.3.1 Static
+			3.3.2 Relative
+			3.3.3 Absolute
+			3.3.4 Fixed
+		
 
 1 Reopening the Box Model
 
@@ -305,5 +311,69 @@ Contents
 	Firefox = -moz-
 	Internet Explorer, Windows Edge = -ms-
 	Older Opera = -Opera-
+	
+
+3.3 Positioning and Flow
+
+	CSS allows us to position content on pages whichever way we want. This is one of CSS's key uses.
+	
+	We are going to continue using inline-blocks for most layout purposes and then look at flexboxes.
+
+	An HTML page has flow, this is how elements know where they are to be positioned. Elements can position themselves in certain ways that go with or break the flow.
+	
+	Elements with flow interact with one another, either making space to be stacked above/below, or next to one another. 
+	
+	There are several position types which define the flow.
+	
+	Position Types
+	
+	Static
+	Relative
+	Absolute
+	Fixed
+	
+	
+3.3.1 Static
+
+	Static is the default positioning of an element, where everything is stacked on top of one another. Everything flows down the page.
+	
+	This is what you're used to, unless explicitly changed. 
+	
+	
+3.3.2 Relative
+
+	Relative positioning maintains flow, taking the static position but allows us to offset the element in a certain direction. 
+	
+	For instance, we can set the element 100px to the left, and 10px the top, from it's original position.
+	
+	NOTE: IT STILL LEAVES SPACE WHERE THE ELEMENT WAS ORIGINALLY, THEREFORE NOT BREAKING THE FLOW OF THE PAGE.
+	
+	Moving elements can make them overlap. Use z-index: ; to set position. The highest number is displayed on top.
+	
+	Relative positioning is important as it interacts with absolute positioning.
+	
+	
+3.3.3 Absolute
+
+	Absolute positioning breaks the flow of the page. 
+	
+	The space which would normally be given to the element in the flow is instead occupied by the next in-flow item. 
+	
+	Similar to relative positioning, they can be moved around, only they are moved from the top left of their parent element, providing it uses relative positioning. 
+	
+	This gives a meaningful relationship between absolute children and their relative parents. 
+	
+	Moving elements can make them overlap. Use z-index: ; to set position. The highest number is displayed on top.
+	
+	
+3.3.4 Fixed
+
+	Fixed elements break the flow completely, not paying any attention to it. 
+	
+	The element will be fixed on the screen, not moving if scrolled etc. 
+	
+	They can be moved across the screen, relative to the top left corner of the user's screen. 
+	
+	Moving elements can make them overlap. Use z-index: ; to set position. The highest number is displayed on top.
 	
 	
