@@ -357,9 +357,13 @@ Contents
 
 	Absolute positioning breaks the flow of the page. 
 	
-	The space which would normally be given to the element in the flow is instead occupied by the next in-flow item. 
+	The space which would normally be given to the element in the flow is instead occupied by the next in-flow item. It is positioned freely from an absolute position.
 	
 	Similar to relative positioning, they can be moved around, only they are moved from the top left of their parent element, providing it uses relative positioning. 
+	
+	If absolute elements are set without the parent being relative, it will set them in relation to the body instead, or the next higher non-static element. 
+	
+	Positioning the parent as a relative makes absolutes treat it as the container, because of it's non-fixed status.
 	
 	This gives a meaningful relationship between absolute children and their relative parents. 
 	
@@ -376,4 +380,45 @@ Contents
 	
 	Moving elements can make them overlap. Use z-index: ; to set position. The highest number is displayed on top.
 	
+	If no z-index is set, the element set last in the HTML will be displayed on top. 
 	
+	
+3.4 Further Absolute Positioning
+	
+	Continuing with border-box related stuff, lets take a further look at absolute positioning. 
+	
+	See the Absolute Positioning tutorial for an example of how we can use absolute positioning to move an element around the page.
+
+	This also shows amn example of using a relative parent, otherwise the item would move around from the body tag, not it's container like we want.
+	
+	This allows us to easily set the element's position.
+	
+	
+3.5 The Developer Tools
+
+	Most browsers have what are known as Developer Tools. These are really useful tools that allow us further inspection of web pages and their elements. 
+	
+	It also allows us to edit a page from our browser to see the effects etc.
+	
+	Press Ctrl + Shift + I to open this up for both Chrome and Firefox. 
+	
+	Pressing Ctrl + U opens up the page source itself. 
+	
+	
+3.6 Fixed Positioning
+
+	Lets go further with Fixed positioning. 
+	
+	In the Tutorials, new functionality has been added. At the bottom right of each page, there is now a link containing an image, which will allow users to scroll back to the top.
+	
+	It has been given position: fixed; and placed using bottom: ; and right: ;
+	
+	Be aware of overlapping positioning and use the z-index where necessary. 
+	
+	Because the elements are positioned last on HTML, they are automatically displayed on top. As no custom z-index has yet been set, it will automaically display over all other elements. 
+	
+	This highlights why you should watch where you place elements in HTML so that they benefit this. 
+	
+	
+3.7 The Cascade
+

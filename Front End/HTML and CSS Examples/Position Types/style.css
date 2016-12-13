@@ -58,6 +58,38 @@ main div p {
 
 .fixed {
 	position: fixed;
-	bottom: 0;
-	right: 0;
+	top: 140px;
+	right: 10px;
 }
+
+
+	/* Absolute Styles */
+
+	.absoluteExample {
+		position: relative;
+		width: 300px;
+		min-height: 1px;
+		padding: 5%;
+		border-radius: 15px;
+		margin: 25px 0 0 5%;
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+    	box-sizing: border-box;
+		background-color: #7DC9D0;
+	}
+
+	.absoluteExample p {
+		margin-bottom: 50px;
+	}
+
+	#linkToTop {
+		position: absolute;
+		right: 110px;
+		bottom: 0;
+	}
+
+	.absoluteFooter {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}

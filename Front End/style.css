@@ -95,6 +95,11 @@ footer p {
 	color: #F6F6F6;
 }
 
+#bottomLinkToTop {
+	position: fixed;
+	bottom: 60px;
+	right: 20px;
+}
 
 /* Responsive Styles */
 @media (max-width: 800px) {
