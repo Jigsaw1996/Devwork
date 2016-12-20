@@ -80,7 +80,7 @@
 	
 	EXAMPLE
 	
-	mrdir test
+	mkdir test
 	
 	Result - A folder names test is added to the current directory.
 	
@@ -179,6 +179,12 @@
 	
 	This means that the file is being tracked. Git will continue to track all of the changes made to the file from now on.
 	
+	To add all new/changed/deleted files to the next commit, use a full stop.
+	
+	EXAMPLE
+	
+	git add .
+	
 	
 4.2 Comitting Files
 
@@ -248,7 +254,7 @@
 	
 	Each repository will have a branch called master by default. This means that our origin has a branch called master.
 	
-	When we use the push command, we are tellign Git to push all of the changes we have commited to origin's master branch.
+	When we use the push command, we are telling Git to push all of the changes we have commited to origin's master branch.
 	
 	The -u is used to set the upstream. Here we are setting the upstream to origin master.
 

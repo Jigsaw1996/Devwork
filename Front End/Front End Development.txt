@@ -420,5 +420,203 @@ Contents
 	This highlights why you should watch where you place elements in HTML so that they benefit this. 
 	
 	
-3.7 The Cascade
+3.7 Types of Stylesheet
 
+	CSS stands for cascading stylesheets. The cascade refers to how stylesheets all cascade together to form a single stylesheet in the end. 
+	
+	There are multiple ways stylesheets can be displayed. 
+	
+	
+3.7.1 Internal Stylesheets
+
+	These are located in the head of a HTML document, within the <style> tags. 
+	
+	These styles are specific to the page in question. 
+	
+	Example:
+	
+	<head>
+		<style>
+			p {
+			color: red;
+			}
+		</style>
+	</head>
+	
+	
+3.7.2 External Stylesheets
+
+	External Stylesheets are located externally to the HTML document, linked in the head of the html document. 
+	
+	External Stylesheets use the .css extention, and can be linked to as many pages as required. Multiple Stylesheets can be linked to, and they will all be added into one cascading stylesheet.
+	
+	It will read the first linked Stylesheet first, then the next, overriding any of the first Stylesheet's styles if there is overlap. 
+	
+	Example:
+	
+	<head>
+		<link rel="stylesheet" href="style.css"></link>
+	</head>
+	
+	External Stylesheets are the best to use as they can be linked on multiple pages and they completely seperate styling and content. 
+	
+	
+3.7.3 Inline Styles
+
+	Don't do this. 
+	
+	Inline styles uses the style="" attribute to style a HTML element. 
+	
+	This ruins the purpose of CSS, which is to seperte style from content. 
+	
+	As such don't bother with this. 
+	
+	Example:
+	
+	<p style="color: red;">Lorem Ipsum</p>
+	
+	
+3.8 The Cascade
+
+	When Stylesheets are read, it's likely there will be overlap of styles.
+	
+	For example, in an external Stylesheet, you might get this.
+	
+	p {
+		color: blue;
+	}
+	
+	But an internal Stylesheet may then say this.
+	
+	p {
+		color: red;
+	}
+	
+	Which does it use? 
+	
+	It'd be red, and here's why. 
+	
+3.8.1 Style Priority
+	
+	One of the governing principles behind CSS is that the browser loads the last as priority. 
+	
+	The browser loads stylesheets in this order:
+	
+	1. External Stylesheets
+	2. Internal Stylesheets
+	3. Inline Styles
+	
+	As a result, if each of the three offer conflicting styles, the inline style would be used as it's loaded last, overriding the previous ones. 
+	
+	Similarly when reading individual Stylesheets, it reads from top to bottom, so lower styles have priority. 
+	
+	UNLESS the style is more specific. 
+	
+	Specificity is another important aspect. The more specific, the higher the priority. 
+	
+	Below is the specificity order:
+	
+	1. ID's have highest priority, as they are unique. 
+	2. Classes are next as they are more specifically named than elements. 
+	3. Elements then come last, as they aren't as specific. 
+	
+	To explain further. 
+	
+	Example:
+	
+	p {
+		color: purple;
+	}
+	
+	#red {
+		color: red;
+	}
+	
+	.blue {
+		color: blue;
+	}
+	
+	What colour would a paragraph with an id of "red" and a class of "blue" be? 
+	
+	It'd be red, because id's have a higher priority than classes and elements. 
+	
+	It's best practice to start each stylesheet with the least specific options then work your way down to more specific styling. This is easier to read and maintain.
+	
+	
+3.9 Summary
+
+	The ability of CSS to polition elements and content on a web-page in almost any way imaginable is one of it'ss primary assets. 
+	
+	Taking what has been learned about the box model and positioning, means we are on our way to becoming web designers. 
+	
+	Understanding positioning is key to mastering web page layouts. 
+	
+	
+4 Media
+
+	Video: https://youtu.be/wbEy2C2cJAo
+	
+	HTML5 introduces both audio and video support. 
+	
+	CSS3 also comes with some cool new image related editing.
+	
+	In this section we will learn a bit more about how to use Media related content. 
+	
+	Includes:
+	Using the img tag
+	Media filters
+	Embedding video
+	Embedding audio
+	
+	
+4.1 The img Tag
+
+	We have already seen  how the <img> tag is used to represent images in HTML.
+	
+	<img src="image.png" alt="alt txt" />
+	
+	Firstly there are several image formats supported.
+	
+	These include:
+	jpeg
+	png
+	svg
+	gif
+	
+	Lets look further into best practices for images. 
+	
+	An image must always have an alt attribute, to give some information on the image inc ase it cannot load, and is also useful for SEO etc. 
+	
+	It's also desirable to include a width and height attribute so that, when the image loads, there is already a space in the flow of the document for the image.
+	
+	This solves possible display issues with large images. 
+	
+	
+4.1.1 Positioning Images
+
+	The img tag is, by default, an inline-block element. So it will sit alongside other elements such as text.
+	
+	However, this will not always be visually ideal. 
+	
+	As such, it's useful to set images to display as a block element unless specifically required otherwise. 
+	
+	display: block;
+	
+	
+4.1.1 Floating Images
+
+	Now this is where floating comes in. 
+	
+	Floating allows for two or more elements in the same container to wrap around one another by floating one of them. In this case, an image and some text.
+	
+	Floating moves an item to the left or right of the container. Any unfloated elements in the container will move up to fill the available space.
+	
+	img {
+		float: left;
+	}
+	
+	Unlike either block or inline-block, the elements will naturally wrap around next to each other, creating a much more natural appearance.
+	
+	Using margin is particularly important when doing this, so that there is space between the text and the floated image.
+	
+	Floating was originally designed to solve the issue of text on images, though it is often used for positioning. We won't find that in this course, we have something much more interesting. 
