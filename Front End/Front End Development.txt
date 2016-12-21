@@ -631,13 +631,15 @@ Contents
 	This is done using the background-image attribute. 
 	
 	background-image: url(link);
+
+	Multiple backgrounds can be added by comma seperating them. Overlapping background images will display the first declared on top. 
 	
 	The background-size attribute can be used to set what it's size is. 
 	
 	background-size: cover/contain/100px 100px;
 	
 	Cover - Will make the background image cover the element, and the aspect ratio will be maintained. 
-	Contain - Will fit the element exactly, though this may cause aspect ratio issues. 
+	Contain - Will fit the element exactly, though this may cause sizing issues. 
 	
 	ASPECT RATIO IS THE RATIO OF THE WIDTH TO THE HEIGHT OF AN IMAGE
 	
