@@ -1,0 +1,52 @@
+main {
+	width: 50%;
+	border-radius: 25px;
+
+}
+
+section {
+	width: 600px;
+	font-size: 0;
+}
+
+section div {
+	border: 5px dashed #000000;
+	border-radius: 15px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	font-size: 16px;
+	text-align: center;
+	background-color: #73BECB;
+	color: #ffffff;
+}
+
+.header, .footer, .paralax {
+	width: 600px;
+	height: 100px;
+	padding: 42px 0;
+	margin: 0 0 20px 0;
+}
+
+.background1, .background2 {
+	display: inline-block;
+	width: 290px;
+	height: 300px;
+	padding: 142px 0;
+	background-image: url(img/trees.png);
+}
+
+.background1 {
+	margin: 0 20px 20px 0;
+	background-size: contain;
+}
+
+.background2 {
+	margin: 0 0 20px 0;
+	background-size: cover;
+}
+
+.paralax {
+	background-image: url(img/trees.png);
+	background-attachment: fixed;
+}
