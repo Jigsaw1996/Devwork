@@ -21,7 +21,7 @@ section div {
 	color: #ffffff;
 }
 
-.header, .footer, .paralax {
+.header, .footer {
 	width: 600px;
 	height: 100px;
 	padding: 42px 0;
@@ -34,6 +34,7 @@ section div {
 	height: 300px;
 	padding: 142px 0;
 	background-image: url(img/trees.png);
+	background-repeat: no-repeat;
 }
 
 .background1 {
@@ -47,6 +48,32 @@ section div {
 }
 
 .paralax {
+	width: 600px;
+	height: 200px;
+	padding: 84px 0;
+	margin: 0 0 20px 0;
 	background-image: url(img/trees.png);
 	background-attachment: fixed;
+}
+
+.contain2Img, .overlap2Img {
+	display: inline-block;
+	width: 290px;
+	height: 300px;
+	padding: 142px 0;
+	background-repeat: no-repeat;
+}
+
+.contain2Img {
+	margin: 0 20px 20px 0;
+	background-image: url(img/trees.png), url(img/cat.jpg);
+	background-size: 290px 150px, contain;
+	background-position: 0 0, 0 150px;
+}
+
+.overlap2Img {
+	margin: 0 0 20px 0;
+	background-image: url(img/cat.jpg), url(img/trees.png);
+	background-size: 150px 100px, cover;
+	background-position: 140px 200px, 0 0;
 }
