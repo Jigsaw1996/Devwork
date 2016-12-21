@@ -14,6 +14,9 @@
 body {
 	font-family: 'Lato', sans-serif;
 	font-size: 100%;
+	background-image: url(img/background.png);
+	background-repeat: repeat;
+	background-attachment: fixed;
 	background-color: #F6F6F6;
 }
 
@@ -80,6 +83,9 @@ main {
 	background-color: #EDEDED;
 }
 
+main h1 {
+	margin: 0 0 25px 0;
+}
 
 /*Footer Styles */
 footer {
