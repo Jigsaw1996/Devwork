@@ -22,6 +22,9 @@
 	3.2 - Transform Properties
 	3.3 - 3D Transforms
 	3.4 - Animation and Keyframes
+	
+	4 - IMAGE FILTERING
+	
 
 /* 1 - SELECTORS */
 
@@ -39,6 +42,8 @@
 	[], [] { - Allows for multiple selectors, comma seperated. 
 
 	[] [] { - Selects only the elements that follow the path.
+	
+	[] > [] - Selects the second element only from direct children of the first element. 
 
 
 /* 1.2 - Pseudo Classes */
@@ -75,7 +80,7 @@
 
 /* 1.4 - Vendor Prefixes */
 
-	Not all elements are supported for all browsers. Use the below to add support.
+	Not all attributes are supported for all browsers. Use the below before the attribute when required so that it works on the browser. 
 
 	Chrome, Safari, Newer Opera, Android  = -webkit-
 
@@ -84,6 +89,8 @@
 	Internet Explorer, Windows Edge = -ms-
 
 	Older Opera = -Opera-
+	
+	Declare the necessary vendor prefixes first, then place the normal attribute after to ensure it is supported by all browsers.
 
 
 /* 1.5 - Font Face */
@@ -283,7 +290,7 @@ NOTE: ALL TRANSFORMS, TRANSLATIONS ETC DO NOT AFFECT CONTENT FLOW. ANY CHANGES T
 
 /* 3.4 - Animation and Keyframes */
 
-PREFIX NEEDED FOR USE ON THE ANDROID BROWSER
+	PREFIX NEEDED FOR USE ON THE ANDROID BROWSER
 
 	animation-name: ;  - Names the animation. Required to make use of the keyframes. Syntax - Same requirements as a class or id.
 
@@ -313,4 +320,26 @@ PREFIX NEEDED FOR USE ON THE ANDROID BROWSER
 	}
 
 	Can also be "from" and "to" instead of percentages.
-		
+	
+	
+/*	4 - IMAGE FILTERING */
+
+	PREFIX NEEDED FOR USE ON CHROME.
+	
+	filter: ; - Used to add effects to images and, in some cases, text.
+	
+	: greyscale(); - Makes the element grey. Value between 0 and 1.
+	
+	: blur(); - Adds a blur to the element. Value in pixels.
+	
+	: sepia(); - Adds a sepia effect to the element. Value between 0 and 1.
+	
+	: hue-rotate(); - Adds a hue to the element. Value in degrees.
+	
+	: saturate(); - Adds saturation to the element. Value between 0 and 1.
+	
+	: opacity(); - Changes the opacity of the element. Value between 0 and 1. 
+	
+	: brightness(); - Changes the brightness of the element. Value between 0 and 1.
+	
+	: contrast(); - Changes the contrast of the element. Value between 0 and 1.

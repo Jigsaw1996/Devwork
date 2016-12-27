@@ -33,6 +33,23 @@ Contents
 			3.3.2 Relative
 			3.3.3 Absolute
 			3.3.4 Fixed
+		3.4 Further Absolute Positioning
+		3.5 The Developer Tools
+		3.6 Fixed Positioning
+		3.7 Types of Stylesheet
+			3.7.1 Internal Stylesheets
+			3.7.2 External Stylesheets
+			3.7.3 Inline Styles
+		3.8 The Cascade
+			3.8.1 Style Priority
+		3.9 Summary
+		
+		4 Media
+		4.1 The img Tag
+			4.1.1 Positioning Images
+			4.1.2 Floating Images
+		4.2 Background Image
+		4.3 CSS Filters
 		
 
 1 Reopening the Box Model
@@ -650,3 +667,40 @@ Contents
 	See the CSS Guide for more info on these.
 	
 	
+4.3 CSS Filters
+
+	CSS Filters are applied to basic HTML elements, such as image and video. 
+	
+	They are made using the filter: ; attribute. 
+	
+	REMEMBER to use the webkit prefix for support on chrome.
+	
+	The attribute allows for basic editing of their display etc, such as images.
+	
+	Here are the options below:
+	
+	filter: greyscale(1); 
+	
+	filter: blur(5px);
+	
+	filter: sepia(1);
+	
+	filter: hue-rotate(279deg);
+	
+	filter: saturate(.9);
+	
+	filter: opacity(.5);
+	
+	filter: brightness(.9);
+	
+	filter: contrast(1);
+	
+	Most filters go between 0 and 1, with values inbetween. 1 is always max, 0 is minimum. 
+	
+	Multiple filters can be added to an element by putting a space between them.
+	
+	To overide filters on an element. Use the below:
+	
+	original: unfiltered;
+	
+	Please look at the Filter Example for tutorials on how to do these. 
