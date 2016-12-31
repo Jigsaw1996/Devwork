@@ -44,12 +44,20 @@ Contents
 			3.8.1 Style Priority
 		3.9 Summary
 		
-		4 Media
+	4 Media
 		4.1 The img Tag
 			4.1.1 Positioning Images
 			4.1.2 Floating Images
 		4.2 Background Image
 		4.3 CSS Filters
+		4.4 HTML Video
+			4.4.1 Video Attributes
+			4.4.2 Media Fragments
+		4.5 HTML Audio
+			4.5.1 Audio Attributes
+			
+	5 Gradients, Transforms and Transitions
+		5.1 Gradients
 		
 
 1 Reopening the Box Model
@@ -802,3 +810,19 @@ Contents
 	
 	See the Audio and Video Example for help with both of these.
 	
+
+5 Gradients, Transforms and Transitions
+
+	Video: https://youtu.be/Y-Z1l6WnGqI
+	
+	In this section, we will be looking into how to create gradients, transformations and transitions.
+	
+	Gradients in particular used to be a pain, but now have direct support in CSS3.
+	
+	Includes:
+	Gradients
+	Transforms
+	Transitions
+	
+	
+5.1 Gradients
