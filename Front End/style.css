@@ -40,6 +40,11 @@ h2 {
 	margin: 20px 0 15px 0;
 }
 
+h3 {
+	font-size: 1.25em;
+	margin: 10px 0 15px 0;
+}
+
 p, main li {
 	font-size: 0.875em;
 	margin-bottom: 10px;
