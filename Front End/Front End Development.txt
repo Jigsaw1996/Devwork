@@ -58,7 +58,20 @@ Contents
 			
 	5 Gradients, Transforms and Transitions
 		5.1 Gradients
-		
+			5.1.1 Linear Gradients
+			5.1.2 Multiple Color Stop Gradients
+			5.1.3 Transparency with RGBA
+			5.1.4 Radial Gradients
+		5.2 Transformations
+			5.2.1 Rotate
+			5.2.2 Scale
+			5.2.3 Skew
+			5.2.4 Translate
+		5.3 3D Transformations
+			5.3.1 3D Rotate
+			5.3.2 3D Translate
+			5.3.3. Perspective
+			
 
 1 Reopening the Box Model
 
@@ -826,3 +839,210 @@ Contents
 	
 	
 5.1 Gradients
+
+	CSS3 gives us the ability to add gradients to backgrounds and buttons.
+	
+	This is done using the backgroun attribute.
+	
+5.1.1 Linear Gradients
+
+	Linear gradients work by having two colors which change in a certain direction over the background.
+	
+	background: linear-gradient(to [direction], [first color], [second color]);
+	
+	The direction can be top, bottom, left or right. It can also be a degree value.
+	
+	EXAMPLE
+	
+	background: linear-gradient(to left, #FF4E50, #F9D423)
+	
+	
+5.1.2 Multiple Color Stop Gradients
+
+	Linear Gradients can also be used to create color stops.
+	
+	These allow for many colors, with set points for when they shoul begin and end.
+	
+	background: linear-gradient(to [direction], [first color] [first color stop], [second color] [second color stop])
+	
+	The color stop is the percentage in the given direction where that color should stop.
+	
+	EXAMPLE
+	
+	background: linear-gradient(to right, #FFED21 1%, #FF2A06 50%, #9412FF 100%);
+	
+	
+5.1.3 Transparency with RGBA
+
+	It's not possible to control transparency with HEX.
+	
+	We can instead use rgba to do this.
+	
+	RGBA has four values. Red, Green, Blue and transparency, 
+	
+	The colour options run up to 255. Transparency is between 0 and 1.
+	
+	rgba(255,0,0,1) - Fully visible red.
+	rgba(255,0,0,9) - Invisible red.
+	
+	But how do we use this with gradients?
+	
+	By placing the RGBA within brackets in the relevant place. 
+	
+	EXAMPLE
+	
+	background: linear-gradient(-45deg, rgba(0,0,0,0), #ff0000);
+	
+	
+5.1.4 Radial Gradients
+
+	Radial gradients is a gradient from a single point, rather than across the background.
+	
+	This is done using radial-gradient instead of linear-gradient. 
+	
+	background: radial-gradient([first color], [second color]);
+	
+	The center of the image will be the first color, and as it exands it will turn into the second color.
+	
+	Similar to linear backgrounds, we can set color stops.
+	
+	EXAMPLE
+	
+	background: radial-gradient(#5f2c82 40%, #3498db 60%);
+	
+	
+5.2 Transformations
+
+	The transform property is one of the newly minted CSS3 features.
+	
+	They are used to manipulate the shape of elements.
+	
+	There are two types of transformations. 2D and 3D. 3D transformations are discussed in the next section. 
+	
+	These are the transformations possible:
+	
+	Scew - Pushes the element, shifting it's top and bottom apart. 
+	Scale - Makes the element move closer or further aay from the screen.
+	Rotate - Rotates the element.
+	Translate - Moves an element across the page from it's initial position.
+	
+	This image accurately represents each of the transforms possible: http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/15-768x240.png
+	
+	All transformations are done using the transform property, then the transform type with the value in brackets.
+	
+	transform: type(value);
+	
+	Multiple can be set at the same time by placing a space between them.
+	
+	See the Transforms Example for examples for each of these.
+	
+5.2.1 Rotate
+
+	Rotations are clockwise by defaukt and measured in degrees.
+	
+	Anti-clockwise is done using the - sign. 
+	
+	EXAMPLE
+	
+	transform: rotate(10deg); 
+	transform: rotate(-10deg);
+	
+	The first rotates it clockwise, the second anti-clockwise.
+	
+
+5.2.2 Scale
+
+	Scaling an element increases or decreases it's size. 
+	
+	We can scale along both the x and y axis.
+	
+	EXAMPLE
+	
+	transform: scale(2, .5);
+	
+	This scales the element to be twice as large along the x axis, and half the size on the y axis.
+	
+	
+5.2.3 Skew
+
+	Skewing an element stretches it in one or more directions. 
+	
+	We can skew both the x and y axis.
+	
+	Values are calculated using degrees. 
+	
+	EXAMPLE
+	
+	transform: skew(5deg, 10deg)
+
+	This skews 5deg n the x axis, and 10 on the y-axis.
+	
+	
+5.2.4 Translate
+
+	Translating an element offsets it's position.
+	
+	This is done using pixels, for both the x and y axis.
+	
+	EXAMPLE
+	
+	transform: transform: translate(200px, 100px);
+	
+	
+5.3 3D Transformations
+
+	Now that we've looked at 2D transformations along the x and y axis', we can look at transforming along the z axis.
+	
+	The syntax of 3D transformations have changed slightly. The type of transformation has "X" "Y" or "Z" on the end, and it only specifies a single value. 
+	
+	EXAMPLE
+	
+	transform: rotateZ(30deg);
+	
+	This can also be done for X and Y axis' for 3D transformations with them.
+	
+	See the 3D Transformations Examples for examples of each of these.
+	
+5.3.1 3D Rotate
+
+	This image best represents the effects of this. 
+	
+	http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/16-e1444405054123.png
+	
+	The element can be rotated in all 3 axis's.
+	
+	EXAMPLE
+	
+	transform: rotateX(30deg) transformY(30deg) rotate(30deg);
+	
+		
+5.3.2 3D Translate
+
+	Items can also be translated in 3D.
+	
+	This image shows the effects of this.
+	
+	http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/17-e1444405134471.png
+	
+	EXAMPLE
+	
+	transform: translateZ(30deg);
+	
+	
+5.3.3. Perspective
+
+	Perspective can be tricky to explain on a 3D screen.
+	
+	The perspective measurement is in pixels, between 0 and 1000px. 
+	
+	The principle is that, the higher the value, the further away the perspective appears.
+	
+	The lower the value, the closer the perspective appears.
+	
+	A low perspective value creates a sense of depth as you are closer to the object.
+	
+	EXAMPLE
+	
+	transform: perspective(600px) rotateY(45deg);
+	
+	This makes it appear like the left of the element is closer to the screen.
