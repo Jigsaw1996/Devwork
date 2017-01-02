@@ -72,7 +72,7 @@ strong {
 header {
 	width: 100%;
 	overflow: auto;
-	background-color: #A99999;
+	background: linear-gradient(to right, #A99999 50%, rgba(0,0,0,0) 90%);
 }
 
 header div {
