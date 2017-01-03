@@ -87,9 +87,3 @@ main div p {
 		right: 110px;
 		bottom: 0;
 	}
-
-	.absoluteFooter {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-	}
