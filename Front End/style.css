@@ -72,12 +72,11 @@ strong {
 header {
 	width: 100%;
 	overflow: auto;
-	background: linear-gradient(to right, #A99999 50%, rgba(0,0,0,0) 90%);
+	background: linear-gradient(to right, #A99999 75%, rgba(0,0,0,0) 100%);
 }
 
 header div {
 	display: inline-block;
-	float: left;
 	width: 50%;
 	text-align: center;
 }
