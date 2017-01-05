@@ -1001,7 +1001,7 @@ Contents
 	
 	This can also be done for X and Y axis' for 3D transformations with them.
 	
-	See the 3D Transformations Examples for examples of each of these.
+	See the Transformations Examples for examples of each of these.
 	
 	
 5.3.1 3D Rotate
