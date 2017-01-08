@@ -1047,3 +1047,23 @@ Contents
 	transform: perspective(600px) rotateY(45deg);
 	
 	This makes it appear like the left of the element is closer to the screen.
+	
+	
+5.4 Transitions
+
+	CSS3 transitions allow for smooth, simple and elegant animations for webpages to utilize. 
+	
+	Transitions can be added to any element so that when a specific (or any) property is changed, the change happens gradually.
+
+	transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];
+	
+	To apply a transition time for all transitions, simply do the below:
+	
+	transition: 0.5s;
+	
+
+5.5 Animations With CSS
+
+	Now that we know what transitions are, we can learn more about how to do animations in CSS. 
+	
+	
