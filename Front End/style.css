@@ -91,7 +91,7 @@ header div h1 {
 main {
 	width: 42%;
 	padding: 2.5%;
-	border-radius: /*5% 10% 10% 5%*/25px 50px 25px 50px;
+	border-radius: 25px 50px 25px 50px;
 	margin: 30px 0 30px 5%;
 	overflow: auto;
 	background-color: #EDEDED;
