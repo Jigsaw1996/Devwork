@@ -1091,3 +1091,88 @@ Contents
 	DON'T go overboard with animations. 
 	
 	See the animations example for tutorials on these. 
+	
+	
+6 Mobile and Navbar - CSS Selectors 
+
+	Video: https://youtu.be/iJKJr8zxSGo
+	
+	Mobile devices are more frequently used for browsing than a few years ago.
+	
+	As such we need to take this into account when building websites. 
+	
+	Constraints on screen size, internet and device speed are required when designing for mobile.
+	
+	Use of touchscreen is also very different to use of mouse, which will need to be understood for good accessibility.
+	
+	Outcomes:
+	
+	Responsive Design
+	Mobile first
+	Building site navigation
+	CSS selectors
+	Pseudo classes (:)
+	Pseudo elements (::)
+	Table Related Elements and Selectors
+
+
+6.1 Mobile First
+
+	When mobile browsing first began, it was niche and not very thought of.
+	
+	You'd most likely build a desktop version, then work your way down.
+	
+	Mobile First design reverses this, for several reasons, one being progressive enhancement.
+	
+	The philosophy behind progressive enhancement is to only show the very minimum needed for the device. The site can then gradually be enhanced for larger platforms. 
+
+	As such, the code we write (or at least display) first is the CSS for mobile, then work our way up.
+	
+	We do this using media queries.  
+
+6.2 Relative Widths
+
+	One of the key parts of responsive design is use of relative widths instead of fixed widths.
+	
+	img {
+		width: 720px; #Fixed width, will always take up 720px width on all devices.
+	}
+	
+	img {
+		width: 100%; #Relative width. Will change dynamically for all devices so that it takes up 100% of the width on that row.
+	}
+	
+	
+6.3 Media Queries 
+
+	Media queries are badass. They allow us to set styles which only apply to devices within a certain width.
+	
+	This means the site can have different layouts for desktop, tablet and mobile without building different sites or requiring seperate stylesheets. 
+	
+	@media parameters {
+	
+		/* Styles will only be applied if it meets the parameter. */
+	
+	}
+	
+	
+6.3.1 Parameters
+
+	@media screen and (max-width: 400px) {
+
+	The above first asks if we are using a screen, and if the screen width is less than 400px.
+	
+	If it is, styles located in the query will be read and applied. 
+	
+	
+6.4 Setting the Viewport
+
+	The first thing we want to do is to set the page width equal to the width of the device.
+	
+	The meta viewport tag gives the browser instructions on how to control the page dimensions and scaling.
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	This will force browsers to make use of 100% of the screen, including when the screen is rotated etc. 
+	
+	
