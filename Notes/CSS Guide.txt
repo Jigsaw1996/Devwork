@@ -343,3 +343,10 @@ NOTE: ALL TRANSFORMS, TRANSLATIONS ETC DO NOT AFFECT CONTENT FLOW. ANY CHANGES T
 	: brightness(); - Changes the brightness of the element. Value between 0 and 1.
 	
 	: contrast(); - Changes the contrast of the element. Value between 0 and 1.
+	
+	
+/*	4.1 - Background Blending */
+
+	background-blend-mode: ; - Allows for blending between images, gradients and colours. 
+	
+	: multiply; - Blends the layers together.

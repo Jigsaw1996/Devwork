@@ -14,7 +14,7 @@ main .walkthroughExample div p {
 }
 
 .header {
-	width: 600px;
+	width: 300px;
 	height: 50px;
 	border-radius: 10px;
 	margin: 0 0 10px 0;
@@ -35,25 +35,19 @@ main .walkthroughExample div p {
 }
 
 .sidebar {
-	width: 180px;
+	width: 80px;
 	margin: 0 20px 10px 0;
 }
 
 .content {
-	width: 400px;
+	width: 200px;
 	margin: 0 0 10px 0;
 }
 
 .footer {
-	width: 600px;
+	width: 300px;
 	height: 50px;
 	border-radius: 10px;
 	margin: 0 0 10px 0;
 	clear: both;
-}
-
-footer {
-	position: absolute;
-	bottom: 0;
-	left: 0;
 }

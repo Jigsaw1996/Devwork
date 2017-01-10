@@ -1,5 +1,10 @@
 /* General Styles */
 
+main > div {
+	width: 100%;
+	padding: 50px 0 20px 0;
+}
+
 main .standard, main div div {
 	width: 250px;
 	height: 150px;
@@ -12,11 +17,6 @@ main .standard, main div div {
 	text-align: center;
 	background-color: #7DC9D0;
 	color: #000;
-}
-
-main div {
-	width: 100%;
-	padding: 50px 0 20px 0;
 }
 
 /* Rotate Styles */
@@ -86,4 +86,37 @@ main .translateDown {
 main .translateBoth {
 	-webkit-transform: translate(50px, 50px);
 	transform: translate(50px, 50px);
+}
+
+/* 3D Rotate Styles */
+
+main .rotate3DX {
+	-webkit-transform: rotateX(50deg);
+	transform: rotateX(50deg);
+}
+
+main .rotate3DY {
+	margin: 0 0 100px 0;
+	-webkit-transform: rotateY(50deg);
+	transform: rotateY(50deg);
+}
+
+main .rotate3DZ {
+	margin: 0 0 100px 0;
+	-webkit-transform: rotateZ(50deg);
+	transform: rotateZ(50deg);
+}
+
+/* 3D Translate Styles */
+
+main .translate3DUp {
+	margin: 40px auto;
+	-webkit-transform: perspective(800px) translateZ(200px);
+	transform: perspective(800px) translateZ(200px);
+}
+
+main .translate3DDown {
+	margin: 40px auto;
+	-webkit-transform: translateZ(-200px);
+	transform: translateZ(-200px);
 }
