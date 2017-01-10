@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Image Positioning Examples</title>
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+</head>
+<body>
+	<header id="top">
+		<div>
+			<h1>Front End Tutorial</h1>
+		</div>
+	</header>
+	<main>
+		<h1>Image Positioning Examples</h1>
+		<p>Below are examples of how images can be positioned.</p>
+
+		<h2>Default Display</h2>
+		<p>Images display as an inline block <img src="img/cat.jpg" alt="Cat" width="120" height="95" /> element by default, as seen here.</p>
+
+		<h2>Inline Positioning</h2>
+		<div class="inlineBlockWrap">
+			<img id="imgInlineBlock" src="img/cat.jpg" alt="Cat" width="120" height="95" />
+			<p>Here we have used inline-block to make the text and image adjascent from one another.</p>
+		</div>
+
+		<h2>Block Level</h2>
+		<p>The image has now been set as a block level element<img id="imgBlock" src="img/cat.jpg" alt="Cat" width="120" height="95" /> which positions itself on it's own line, like so</p>
+
+		<h2>Floating Images</h2>
+		<img id="imgBlock" src="img/cat.jpg" alt="Cat" width="120" height="95" />
+		<p>As both the text and the image are now block level, they are displayed directly below one another. But what if we want text to wrap around the image?</p>
+
+		<div class="floatWrap">
+			<img id="imgFloat" src="img/cat.jpg" alt="Cat" width="120" height="95" />
+			<p>The text and image have been placed in a container, and the image has been floated. This means that the image is taken out of the normal flow and the text will move up into the free space, wrapping around it, as seen here.</p>
+		</div>
+	</main>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,122 @@
+/* General Styles */
+
+main > div {
+	width: 100%;
+	padding: 50px 0 20px 0;
+}
+
+main .standard, main div div {
+	width: 250px;
+	height: 150px;
+	padding: 20px;
+	border: 5px dashed #000;
+	margin: 0 0 40px 0;
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	text-align: center;
+	background-color: #7DC9D0;
+	color: #000;
+}
+
+/* Rotate Styles */
+
+main .rotateClockwise {
+	margin: 0 0 100px 0;
+	-webkit-transform: rotate(25deg);
+	transform: rotate(25deg);
+}
+
+main .rotateAntiClockwise {
+	-webkit-transform: rotate(-25deg);
+	transform: rotate(-25deg);
+}
+
+/* Scale Styles */
+
+main .scaleUp {
+	margin: 30px auto 80px auto;
+	-webkit-transform: scale(2);
+	transform: scale(2);
+}
+
+main .scaleDown {
+	margin: 0 auto 20px auto;
+	-webkit-transform: scale(.5);
+	transform: scale(.5);
+}
+
+main .scaleWidth {
+	margin: 0 auto 40px auto;
+	-webkit-transform: scale(2, 1);
+	transform: scale(2, 1);
+}
+
+/* Skew Styles */
+
+main .skewX {
+	margin: 0 0 50px 0;
+	-webkit-transform: skew(10deg, 0);
+	transform: skew(10deg, 0);
+}
+
+main .skewY {
+	margin: 0 0 50px 0;
+	-webkit-transform: skew(0, 10deg);
+	transform: skew(0, 10deg);
+}
+
+main .skewBoth {
+	-webkit-transform: skew(10deg);
+	transform: skew(10deg);
+}
+
+/* Translate Styles */
+
+main .translateRight {
+	-webkit-transform: translate(50px, 0);
+	transform: translate(50px, 0);
+}
+
+main .translateDown {
+	-webkit-transform: translate(0, 50px);
+	transform: translate(0, 50px);
+}
+
+main .translateBoth {
+	-webkit-transform: translate(50px, 50px);
+	transform: translate(50px, 50px);
+}
+
+/* 3D Rotate Styles */
+
+main .rotate3DX {
+	-webkit-transform: rotateX(50deg);
+	transform: rotateX(50deg);
+}
+
+main .rotate3DY {
+	margin: 0 0 100px 0;
+	-webkit-transform: rotateY(50deg);
+	transform: rotateY(50deg);
+}
+
+main .rotate3DZ {
+	margin: 0 0 100px 0;
+	-webkit-transform: rotateZ(50deg);
+	transform: rotateZ(50deg);
+}
+
+/* 3D Translate Styles */
+
+main .translate3DUp {
+	margin: 40px auto;
+	-webkit-transform: perspective(800px) translateZ(200px);
+	transform: perspective(800px) translateZ(200px);
+}
+
+main .translate3DDown {
+	margin: 40px auto;
+	-webkit-transform: translateZ(-200px);
+	transform: translateZ(-200px);
+}

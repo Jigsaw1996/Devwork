@@ -1,0 +1,31 @@
+main div {
+	width: 400px;
+	height: 150px;
+	border-radius: 20px 20px 10px 10px;
+	margin: 0 0 20px 0;
+}
+
+.linear {
+	background: linear-gradient(to right, #FF4E50, #F9D423);
+}
+
+.linearStops1 {
+	background: linear-gradient(to right, #FFED21 1%, #FF2A06 50%, #9412FF 100%);
+}
+
+.linearStops2 {
+	background: linear-gradient(to right, #ff0000, rgba(0,0,0,0));
+}
+
+.radial {
+	background: radial-gradient(#FF4E50, #F9D423)
+}
+
+.radialStops1 {
+	background: radial-gradient(#FFED21 1%, #FF2A06 50%, #9412FF 100%);
+}
+
+
+.radialStops2 {
+	background: radial-gradient(#ff0000, rgba(0,0,0,0) 60%);
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Audio and Video Examples</title>
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+</head>
+<body>
+	<header id="top">
+		<div>
+			<h1>Front End Tutorial</h1>
+		</div>
+	</header>
+	<main>
+		<h1>Audio and Video Examples</h1>
+		<p>Below are examples for both audio and video tags.</p>
+		
+		<h2>Audio</h2>
+		<p>Below is standard audio.</p>
+		<audio controls="controls">
+			<source src="audio/thrones.mp3" type="audio/mpeg; codecs=mp3" />
+		</audio>
+		<h3>Audio Attributes</h3>
+		<p><strong>preload</strong> - Specifies if the audio is preloaded into the browser or not, or simply it's metadata.</p>
+		<p><strong>autoplay</strong> - Will play the audio as soon as it loads.</p>
+		<p><strong>loop</strong> - Will make the audio loop upon ending.</p>
+		
+		<h2>Video</h2>
+		<p>Below is a standard video:</p>
+		<video controls="controls" width="400">
+			<source src="video/bee.mp4" type="video/mp4" />
+			<source src="video/" type="video/ogg" />
+		</video>
+		<h3>Video Attributes</h3>
+		<p><strong>preload</strong> - Sets if it should preload the video or not.</p>
+		<p><strong>poster</strong> - Sets an image as a placeholder before the user hits play.</p>
+		<p><strong>autoplay</strong> - Placing this in the video tag means the video will play automatically upon page load.</p>
+	</main>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>

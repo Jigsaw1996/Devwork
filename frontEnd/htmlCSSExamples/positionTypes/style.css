@@ -1,0 +1,89 @@
+main > div {
+	height: 460px;
+	margin: 15px 0 15px 0;
+}
+
+main div div, main .fixed {
+	width: 300px;
+	height: 100px;
+	padding: 40px 0 0 0;
+	margin: 0 0 15px 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+	background-color: #7DC9D0;
+}
+
+main div p {
+	font-weight: 700;
+	text-align: center;
+}
+
+/* Relative */
+
+.relative div {
+	position: relative;
+}
+
+.relative div:first-child {
+	top: 115px;
+	left: 315px;
+}
+
+/* Absolute */
+
+.absolute {
+	position: relative;
+	height: 230px;
+}
+
+.absolute div {
+	position: absolute;
+}
+
+.absolute div:nth-child(2) {
+	left: 315px;
+}
+
+.absolute div:nth-child(3) {
+	top: 115px;
+}
+
+.absolute div:nth-child(4) {
+	top: 115px;
+	left: 315px;
+}
+
+/* Fixed */
+
+.fixed {
+	position: fixed;
+	top: 140px;
+	right: 10px;
+}
+
+
+	/* Absolute Styles */
+
+	.absoluteExample {
+		position: relative;
+		width: 300px;
+		min-height: 1px;
+		padding: 5%;
+		border-radius: 15px;
+		margin: 25px 0 0 5%;
+	    -webkit-box-sizing: border-box;
+	    -moz-box-sizing: border-box;
+    	box-sizing: border-box;
+		background-color: #7DC9D0;
+	}
+
+	.absoluteExample p {
+		margin-bottom: 50px;
+	}
+
+	#linkToTop {
+		position: absolute;
+		right: 110px;
+		bottom: 0;
+	}
