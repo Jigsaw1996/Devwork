@@ -1,0 +1,63 @@
+.standard p {
+	color: green;
+}
+
+.standard .class {
+	color: blue;
+}
+
+.standard #id {
+	color: red;
+}
+
+
+.advanced p {
+	color: green;
+}
+
+.advanced > .direct {
+	color: blue;
+}
+
+.advanced span, .advanced strong {
+	color: red;
+}
+
+
+.pseudo p:nth-child(2) a:hover {
+	color: green;
+}
+
+.pseudo p:nth-child(3) a:visited {
+	color: blue;
+}
+
+.pseudo p:nth-child(4) a:active {
+	color: red;
+}
+
+.pseudo p:nth-child(5) {
+	color: purple;
+}
+
+
+.elements .firstLine::first-line {
+	color: green;
+}
+
+.elements .firstLetter::first-letter {
+	color: blue;
+}
+
+.elements .selector::selection {
+	background-color: none;
+	color: red;
+}
+
+.elements .before::before {
+	content:url('img/icon.png');
+}
+
+.elements .after::after {
+	content:url('img/icon.png');
+}

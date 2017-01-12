@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Selector Examples</title>
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+</head>
+<body>
+	<header id="top">
+		<div>
+			<h1>Front End Tutorial</h1>
+		</div>
+	</header>
+	<main>
+		<h1>Selector Examples</h1>
+		<p>This page shows all selectors and how they can be used.</p>
+		
+		<div class="standard">
+			<h2>Standard Selectors</h2>
+			<p>Element - Least Specific</p>
+			<p class="class">Class</p>
+			<p id="id">ID - Most Specific</p>
+		</div>
+		
+		<div class="advanced">
+			<h2>Advanced Selectors</h2>
+			<p>Descendance</p>
+			<p class="direct">Descendance with direct children only.</p>
+			<p><span>Selecting</span> <strong>multiple element</strong>s</p>
+			<p class="attribute">Selecting only elements with a certain attribute and value.</p>
+		</div>
+		
+		<div class="pseudo">
+			<h2>Pseudo Selectors</h2>
+			<p class="hover"><a href="">Hover</a></p>
+			<p><a href="" class="visited">Visited</a></p>
+			<p><a href="#" class="active">Active</a></p>
+			<p>Nth Child</p>
+		</div>
+		
+		<div class="elements">
+			<h2>Pseudo-Elements</h2>
+			<p class="firstLine">Selecting the first<br />line only</p>
+			<p class="firstLetter">Selecting the first letter only</p>
+			<p class="selector">Styles selected text only</p>
+			<p class="before">Selecting the area before the element</p>
+			<p class="after">Selecting the area after the element</p>
+		</div>
+	</main>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>
