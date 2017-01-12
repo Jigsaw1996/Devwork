@@ -1,0 +1,86 @@
+main > div {
+	display: flex;
+	width: 100%;
+	padding: 5%;
+	border: 2px solid #666;
+	border-radius: 10px;
+	margin: 20px 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+main div div {
+	width: 28%;
+	padding: 30px 2%;
+	background-color: #FF534D;
+}
+
+main div div p {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	font-weight: strong;
+}
+
+.rowNoWrap {
+	flex-flow: row nowrap;
+}
+
+.rowWrap {
+	flex-flow: row wrap;
+}
+
+.rowWrapReverse {
+	flex-flow: row wrap-reverse;
+}
+
+.rowNoWrapCenterCenter {
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.rowNoWrapCenterStretch {
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: stretch;
+}
+
+.rowNoWrapSpaceAroundStretch {
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: stretch;
+}
+
+.rowNoWrapSpaceBetweenStretch {
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+.rowNoWrapSpaceBetweenCenter {
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.rowNoWrapSpaceAroundFlexEnd {
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: flex-end;
+}
+
+.rowNoWrapSpaceAroundBaseline {
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: baseline;
+}
+
+.reorder div:first-child {
+	order: 3;
+}
+
+.reorder div:last-child {
+	order: 1;
+}

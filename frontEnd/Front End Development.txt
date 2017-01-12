@@ -1281,3 +1281,137 @@ Contents
 	
 	
 7.1 Setting Up A Flexbox
+
+	The first step to this is to give a container a display value of flex.
+	
+	display: flex;
+	
+	Any children in the container are now flex items and have intelligent flex properties. 
+	
+	These flex items can automatically expand to fill the container space, both horizontally and vertically.
+	
+	These items can be customized further with a few lines of CSS. There's no need to worry about margins or overflowing elements.
+	
+	The container of the flex controls much of the flex behaviour, such as alignment, spacing and direction.
+	
+	
+7.2 Axes
+
+	The layout of flexbox uses two axes: the main axis and the cross axis.
+	
+	The main axis, which the flex items travel, and the cross axis, which is perpendicular to the main axis.
+	
+	These are used to effectively space elements in a way that is more tricky with traditional CSS.
+	
+	
+7.3 Properties For Flexbox
+
+	Within the properties of the flexbox container, a number of attributes can be used.
+	
+
+7.3.1 Flex Direction
+
+	The flex-direction attribute establishes the main axis, which flex items will travel along.
+	
+	flex-direction: ;
+	
+	row - Displays horizontally, left to right. Default.
+	
+	row-reverse - Displays horizontally, right to left. 
+	
+	column - Displays vertically, top to bottom.
+	
+	column-reverse - Displays vertically, bottom to top.
+	
+	
+7.3.2 Flex Wrap
+
+	Having defined the direction, we can set how the flex items behave.
+	
+	The flex-wrap attribute defines if the flex items are forced into a single line or are allowed multiple lines.
+	
+	flex-wrap: ;
+	
+	nowrap - Items do not wrap, one line only. Default.
+	
+	wrap - Items can wrap on multiple lines if necessary.
+	
+	wrap-reverse - Allows wrapping but in reverse order, so they will wrap onto an above row rather than a below row.
+	
+	
+7.3.3 Shorthand
+
+	The flex-flow attribute allows these attributes to be set in shorthand on the container.
+	
+	flex-flow: direction wrap;
+	
+	Replace direction and wrap with the relevant values.
+	
+	
+7.4 Alignment
+
+	Flexbox containers use the properties justify-content and align-items to handle the previously tricky task of alignment.
+	
+	
+7.4.1 Justify Content
+
+	The justify-content attribute defines how flex items are laid out on the main axis. 
+	
+	It essentially distributes the space around the flex items.
+	
+	justify-content: ;
+	
+	flex-start - Positions flex items around the begining of the flex container. Default.
+	
+	flex-end - Positions flex items at the end of the flexbox container.
+	
+	center - Positions flex items at the center of the flexbox container.
+	
+	space-between - Positions flex items with space between them onl.
+	
+	space-around - Positions flex items with space before, between and after them. 
+
+
+7.4.2 Align Items
+
+	The align-items attribute works similar to the justify-content property, except along the cross axis.
+	
+	This is how you vertically align elements.
+	
+	align-items: ;
+	
+	flex-start - Positions the items at the start of the flexbox container.
+	
+	flex-end - Positions the items at the end of the flexbox container.
+	
+	center - Positions items at the center of the flexbox container.
+	
+	baseline - Positions items along the baseline of their content.
+	
+	stretch - Stretches flex items to fit the container. Default.
+	
+	
+7.5 Flex Attribute
+
+	The flex items have some attributes of their own to consider.
+	
+	Chief amongst these is the flex attribute, which works by allowing the flex item to fill whatever space the container gives them.
+	
+	If all flex items have a flex of 1, they will have equal space. However if one of them has 2, then that one will get double the space compared to those with 1 etc.
+	
+	
+7.6 Ordering Flex Items
+
+	The order in which flex items appear can be changed.
+	
+	By default it's the order written in html. However the order attribute changes this.
+	
+	order: ;
+	
+	The value is a number. The lowest number is placed first etc. If more than one have the same value, it goes by the source code as to which comes first.
+
+	Flex items with no set order will always go first.
+	
+	See the Flexbox Examples for guides on how to do all of this and the effects it has.
+	
+	
