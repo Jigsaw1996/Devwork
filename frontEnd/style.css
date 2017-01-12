@@ -120,6 +120,8 @@ footer p {
 	position: fixed;
 	bottom: 60px;
 	right: 20px;
+	border-radius: 50px;
+	
 }
 
 /* Responsive Styles */

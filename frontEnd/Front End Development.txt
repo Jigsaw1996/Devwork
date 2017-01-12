@@ -71,6 +71,22 @@ Contents
 			5.3.1 3D Rotate
 			5.3.2 3D Translate
 			5.3.3. Perspective
+		5.4 Transitions
+		5.5 Animations With CSS
+		
+	6 Mobile and Navbar - CSS Selectors 
+		6.1 Mobile First
+		6.2 Relative Widths
+		6.3 Media Queries 
+			6.3.1 Parameters
+		6.4 Setting the Viewport
+		6.5 Advanced CSS Selectors
+			6.5.1 Pseudo-Classes
+			6.5.2 Pseudo-Elements
+		6.6 Table Related Elements
+		
+	7 Flexbox
+		7.1 Setting Up A Flexbox
 			
 
 1 Reopening the Box Model
@@ -1176,3 +1192,92 @@ Contents
 	This will force browsers to make use of 100% of the screen, including when the screen is rotated etc. 
 	
 	
+6.5 Advanced CSS Selectors
+
+	Lets have a look at some more advanced CSS selectors.
+	
+	See the CSS Selector Examples for guides for each of these listed below.
+	
+	Remember the ones we already have?
+	
+	type - Selecting the HTML element
+	id - Selecting a unique ID.
+	class- Selecting a class of elements.
+	
+	Now lets look at some others:
+	
+	* - Selects all elements. Can be used on parents to select all children. Best not to be overused.
+	
+	Descendant - Can be used to select only elements that follow a certain path. i.e: ul li a {
+	
+	Direct Descendant - Used to select only direct children down the descent. i.e: ul > li > a {
+	
+	Attribute - Used to select an element with certain attributes only. i.e a[style="text-decoration: none"] {
+	
+	
+6.5.1 Pseudo-Classes
+
+	These are a special type of selector.
+	
+	They are used to target an element specifically in a variety of situations.
+	
+	Link Based;
+	
+	:hover - Styles for when hovering over the item.
+	:visited - Styles for when the link of an anchor tag has been visited.
+	:active - Styles for when the link has been activated (clicked etc).
+	
+	Position Based;
+	
+	:first-child - Selects the first child element within it's parent.
+	:last-child - Selects the last child element within it's parent.
+	:first-of-type - Selects the first occurence of an element type within it's parent.
+	:first-of-type - Selects the last occurence of an element type within it's parent.
+	:nth-child(x) - Replace x with the order number of the element you wish to select.
+	
+	nth-child can be used to select all elements in multiples of 2 etc by doing "2n" as it's value. Multiples of 3 would be "3n" and so on.
+	
+	TAKE INTO ACCOUNT HOVER ETC ISN'T POSSIBLE ON MOBILE.
+	
+	
+6.5.2 Pseudo-Elements
+
+	These use two colons instead of one, and are used to style specific parts of an element.
+	
+	::first-line - Selects only the first line. Typically used on text.
+	::first-letter - Selects only the first letter. Typically used on text.
+	::selector - selects the portion of an element selected by the user.
+	::placeholder - Useful for setting placeholder text onto an input field.
+	::before - Adds styling directly before the element.
+	::after - Adds styling directly after the element.
+	
+6.6 Table Related Elements
+
+	We haven't touched on table elements much recently. Here's a quick rundown.
+	
+	<table> - Used to place the table and it's children.
+	<th> - Contains table data used for the header
+	<tr> - Placed within a table tag to denote a new row. Elements within this will be in that row.
+	<td> - Placed within a row to denote a data column.
+	
+	The below can be added to a table to make the table data collapse and close up around each other. If margins are intended, don't use this.
+		
+		border-collapse: collapse;
+	
+	See the "Table Example" for an example of a table making good use of a range of selectors to accomplish a clean layout. 
+
+
+7 Flexbox
+
+	Video: https://youtu.be/NEQV2Fm7eXQ
+	
+	Using CSS to control layout can be a hastle. Especially when it comes to positioning. 
+	
+	Getting items to have equal heights, positioning content centrally, aligning elements etc can be a pain.
+	
+	As such, Flexbox was introduced to solve the common issues and help with dynamic layouts. This helps for both desktop and mobile display.
+	
+	The syntax takes a short while to get a hang of and there's a few different attributes to learn, but it's a very useful tool for developers. 
+	
+	
+7.1 Setting Up A Flexbox

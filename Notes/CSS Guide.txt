@@ -45,6 +45,8 @@
 	
 	[] > [] - Selects the second element only from direct children of the first element. 
 
+	element[attribute="value"] - Selects only the matching element with the same attribute and value as specified.
+
 
 /* 1.2 - Pseudo Classes */
 
@@ -161,7 +163,8 @@
 	"block" - Takes up the full width of the page. Good as a container
 	"inline" - Takes up only the necessary space on the row. Good for text editing.
 	"inline-block" - Mix of the two. 
-	"block" - Doesn't display the item. 
+	"flex" - Makes all children part of a flexbox. Check the Flexbox section for more info.
+	"none" - Doesn't display the item. 
 
 	float: ; - Controls how the item displays on the page. Can be "left" or "right".
 
