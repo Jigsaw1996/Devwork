@@ -87,6 +87,20 @@ Contents
 		
 	7 Flexbox
 		7.1 Setting Up A Flexbox
+		7.2 Axes
+		7.3 Properties For Flexbox
+			7.3.1 Flex Direction
+			7.3.2 Flex Wrap
+			7.3.3 Shorthand
+		7.4 Alignment
+			7.4.1 Justify Content
+			7.4.2 Align Items
+		7.5 Flex Attribute
+		7.6 Ordering Flex Items
+		
+	8 Semantic Web and Font
+		8.1 Semantic Tags
+		8.2 Fonts
 			
 
 1 Reopening the Box Model
@@ -1415,3 +1429,70 @@ Contents
 	See the Flexbox Examples for guides on how to do all of this and the effects it has.
 	
 	
+8 Semantic Web and Font
+
+	Video: https://youtu.be/KLHrO29GPIM
+	
+	The internet wants to know about the web pages make. Search Engines look at your site using crawlers, for SEO and other purposes.
+	
+	Understanding how the semantic web works is important to modern web development. Understanding how search engines etc understand content and structure will be discussed here.
+	
+	We're also looking at fonts, text attributes and measurements. Because why not.
+	
+	Fonts are an essential component of a web page, and have a profound effect on how the page comes across to the user.
+	
+	
+8.1 Semantic Tags
+
+	We use divs loads during development. Usually content is placed in a div container and given a class or ID to explain it's purpose and style it.
+	
+	However, that class can be anything, and a robot won't know if "bar" means navigation, a section of a page or a container for some text about chocolate bars etc. They need clear semantics. 
+	
+	HTML5 introduced a bunch of semantic versions of a div, which can be used instead of this.
+	
+	This is great for two reasons. First, it makes the HTML5 structure easier to read and maintain. Second, it allows for crawlers to understand structure easily.
+
+	These are the important semantic tags:
+	
+	<header> - Used for the header of the site.
+	
+	<nav> - Used for site navigation.
+	
+	<main> - Used for the "main" section of the page.
+	
+	<article> - Used to identify an article or text container etc.
+	
+	<section> - Used to identify a section of the page.
+	
+	<aside> - Used for a sidebar.
+	
+	<footer> - Used for the page footer.
+	
+	These don't add any styling or content changes, they are treated as normal divs. Semantic value for users and robots is the only benefit.
+	
+	Robots can now tell that the content within the <header> tag are part of the header for the site. This gives robots a very clear idea baout page structure and how content relates to each other.
+	
+	There's some others, some reqire more of a description.
+	
+	
+8.1.1 Figure and Figcaption
+
+	This is used to contain an image, alongside some text relevant to the image, such as an image title or description.
+	
+	The figure element contains both the image annd caption. The figcaption tag is then used as the container for the text.
+	
+	This can also be used for audio and video if the need arises. 
+	
+	Example:
+	
+	<figure>
+		<img src="img/cat.jpg" alt="Cat"/>
+		<figcaption>This is a cat.</figcaption>
+	</figure>
+	
+	This gives robots crawling the site a very good idea of how the image and text is being used, and how they relate to one another. 
+	
+	It also makes it easier to read, with less classes and divs to keep track of. 
+	
+	
+8.2 Fonts
