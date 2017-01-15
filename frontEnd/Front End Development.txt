@@ -115,7 +115,7 @@ Contents
 			8.5.3 Measurement Types Explained
 		8.6 Responsive Font Sizing
 		
-		9 User Experience Design
+	9 User Experience Design
 			
 
 1 Reopening the Box Model
