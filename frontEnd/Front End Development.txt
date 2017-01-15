@@ -101,6 +101,21 @@ Contents
 	8 Semantic Web and Font
 		8.1 Semantic Tags
 		8.2 Fonts
+			8.2.1 Font Size
+			8.2.2 Font Style
+			8.2.3 Font Weight
+			8.2.4 Color
+		8.3 Custom Fonts
+			8.3.1 Font Face
+			8.3.2 Link in HTML
+		8.4 Text Attributes
+		8.5 Measurements
+			8.5.1 Relative Lengths
+			8.5.2 Absolute Lengths
+			8.5.3 Measurement Types Explained
+		8.6 Responsive Font Sizing
+		
+		9 User Experience Design
 			
 
 1 Reopening the Box Model
@@ -1496,3 +1511,205 @@ Contents
 	
 	
 8.2 Fonts
+
+	Fonts are very important to the look and feel of a page, and there's lots we can do with them.
+	
+	The key attribute here is font-family, which sets the family which text uses.
+	
+	font-family: lato, Verdana, sans-serif;
+	
+	The first font will be attempted. If the font isn't found, it will use the second. It is a good idea to have at least one backup font.
+	
+	There are a numbeur of common default fonts which browsers use. 
+	
+	A list of standard fonts can be found here: http://cssfontstack.com/oldsites/cssfontstack/?_ga=1.229589660.1402088432.1443468538
+	
+	We will come back to how to load custom fonts shortly.
+	
+	
+8.2.1 Font Size
+
+	The font-size attribute allows us to change the size of text in the browser. 
+	
+	font-size: 16px;
+	
+	The size can be given in px, % or ems.
+	
+	
+8.2.2 Font Style
+
+	The font-style property allows us to change the element's display.
+	
+	font-style: italic;
+	
+	Can be normal, italic or oblique.
+	
+	
+8.2.3 Font Weight
+
+	Controling the weight with the font-weight attribute allows us to add strength text.
+	
+	font-weight: bold;
+	
+	The weight can be lighter, normal, bold or balder.
+	
+	A number value can also be given, between 100 and 900.
+	
+	400 is the standard.
+	
+	
+8.2.4 Color
+
+	The color property sets the color which the text uses.
+	
+	color: #ffffff;
+	
+	Can be given by name (black,red etc), Hex or RGBA.
+	
+	 
+8.3 Custom Fonts
+
+	Default fonts are very generic and uninspiring. Whilst it is useful to have them as backup fonts, we can load custom fonts into the browser.
+	
+	There are multiple ways of doing this. 
+	
+8.3.1 Font Face
+
+	The first way is using the font-face rule.
+	
+	Once reading the font-face within CSS, it instructs the browser to download the font from the given URL.
+	
+	This allows us to use much better fonts. 
+	
+	@font-face {
+		font-family: "MyFont";
+		src: url("fonts/myfont.woff2");
+	}
+	
+	The value given in font-family will be the name we refer it to when assigning it after the font face.
+	
+	We also give the src, which is the location of the font file we are adding.
+	
+	We can comma seperate src url's, to give different font file types.
+	
+	Example;
+	
+	@font-face {
+		font-family: 'NewFont';
+		src: url('myfont.woff') format('woff'),
+			 url('myfont.ttf') format('truetype');
+	}
+
+	body {
+		font-family: 'NewFont';
+	}
+	
+	
+8.3.2 Link in HTML
+
+	Font-face is all good, but it's a bit too complex to set up.
+	
+	We can instead use Google Fonts, which actually does font-face behind the scenes, to set fonts in the head of HTML.
+	
+	Google Fonts can be found here: https://fonts.google.com/
+	
+	This is easier and gives access to a large platform of fonts without requiring us to host them ourselves.
+	
+	When you find a font, copy and paste the given HTML link tag into the head of the page.
+	
+	Example
+	
+	<link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+	<style>
+		body {
+			font-family: 'Open Sans', sans-serif;
+		}
+	</style>
+	
+	The font will then be downloaded with the page, and called when necessary with CSS.
+	
+	
+8.4 Text Attributes
+
+	Text attributes are different to font attribute as they deal more with alignment and indentation.
+	
+	Lets take a look at som text attributes.
+	
+	text-align: ; - This is used to align text within it's allowed space. Can be left, right and center.
+	
+	text-decoration: ; - This sets if there are any effects on the text. This can be none, underline or line through.
+	
+	text-indent: ; - This sets how much you would like to indent the FIRST line of text from it's corner. Usually given in px, but can be % too.
+	
+	text-transform: ; - Will transform the case of the text. Can be none, capitalize (first letters), uppercase or lowercase.
+	
+	
+8.5 Measurements
+
+	CSS has too many ways to set the size of your text. 
+	
+	Luckily many of them are leftovers from the print world and aren't used on the web too much.
+	
+	There are two key types of measurement units that need to be considered. Relative Lengths, and absolute lengths.
+	
+	
+8.5.1 Relative Lengths
+
+	These units can change size according to the size of the screen it is viewed on.
+	
+	This is great for when the output media is of different sizing, from phones to desktop, and therefore has to scale in accordance with mobile design.
+	
+	Relevant Measurements:
+	
+	Percentages
+	em
+	rem
+	
+	
+8.5.2 Absolute Lengths
+
+	Unlike relative lengths, absolute lengths have a fixed size and do not scale or change for screen size. 
+	
+	Naturally this isn't great for mobile design, unless we wish to manually change it's size, which isn't ideal.
+	
+	The only common unit for this is px.
+	
+	It is ideally used when the format size is fixed.
+	
+	
+8.5.3 Measurement Types Explained
+
+	px - Pixel sizing uses raw pixel measurements to set a fixed sizing. 
+	
+	% - Percentages are always relative to the parent container. 
+	
+	em - Using em makes the sizing relative to the font size of the element itself.
+	
+	rem - Using root em sets the size relative to the root of the page. 
+	
+	
+8.6 Responsive Font Sizing
+
+	So what's the best way for using font sizes in responsive design?
+	
+	In practice, there's lots of debate about this. The simplest way to setup mobile fonts is like below.
+	
+	First, declare the root element, html, in pixels, and then use rem's to set up font sizing for the different elements.
+	
+	This is sufficient for most projects, though there are other ways this can be accomplished.
+	
+	Example:
+	 
+	html {
+		font-size: 12px; /*declaring root element in pixels*/
+	}
+ 
+	h1 {
+		font-size: 2rem; /*displayed at 24px*/
+	}
+ 
+	See the Font Examples for guides on how to accomplish all of what you're learned here. 
+	
+	
+9 User Experience Design
