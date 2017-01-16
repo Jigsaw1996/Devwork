@@ -1638,7 +1638,7 @@ Contents
 	
 	text-align: ; - This is used to align text within it's allowed space. Can be left, right and center.
 	
-	text-decoration: ; - This sets if there are any effects on the text. This can be none, underline or line through.
+	text-decoration: ; - This sets if there are any effects on the text. This can be none, underline or line-through.
 	
 	text-indent: ; - This sets how much you would like to indent the FIRST line of text from it's corner. Usually given in px, but can be % too.
 	

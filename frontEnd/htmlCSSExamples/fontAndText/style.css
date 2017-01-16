@@ -1,0 +1,89 @@
+figure, figure img {
+	width: 300px;
+}
+
+figure figcaption {
+	width: 100%;
+	text-align: center;
+	font-style: italic;
+}
+
+.standardFonts .arial {
+	font-family: Arial;
+}
+
+.standardFonts .courierNew {
+	font-family: Courier New;
+}
+
+.standardFonts .papyrus {
+	font-family: Papyrus;
+}
+
+.standardFonts .georgia {
+	font-family: Georgia;
+}
+
+.standardFonts .verdana {
+	font-family: Verdana;
+}
+
+.importedFonts .raleway {
+	font-family: 'Raleway', sans-serif;
+}
+
+.importedFonts .playfairDisplay {
+	font-family: 'Playfair Display', serif;
+}
+
+.importedFonts .pacifico {
+	font-family: 'Pacifico', cursive;
+}
+
+.importedFonts .bitter {
+	font-family: 'Bitter', serif;
+}
+
+.coloRed {
+	color: red;
+}
+
+.strengthBold {
+	font-weight: bold;
+}
+
+.strengtHigher {
+	font-weight: 900;
+}
+
+.italics {
+	font-style: italic;
+}
+
+.indentMe {
+	text-indent: 10px;
+}
+
+.alignRight {
+	text-align: right;
+}
+
+.alignCenter {
+	text-align: center;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.lineThrough {
+	text-decoration: line-through;
+}
+
+.capital {
+	text-transform: capitalize;
+}
+
+.fullCaps {
+	text-transform: uppercase;
+}
