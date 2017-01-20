@@ -11,14 +11,14 @@
 		<nav>
 			<ul>
 				<li class="title">Biscuit</li>
-				<li><a href="">Home</a></li>
-				<li><a href="">Contact</a></li>
+				<li id="homeBtn">Home</li>
+				<li id="contactBtn">Contact</li>
 			</ul>
 		</nav>
 	</header>
 	<main>
 		<div class="banner">
-			<div class="bannerDefault">
+			<div class="slide bannerDefault">
 				<div class="txt">
 					<h1>Video Editing Like Never Before!</h1>
 					<p>Biscuit offers premium video editing capabilities in true HD quality!</p>
@@ -26,6 +26,18 @@
 				<div class="graphic">
 					<img src="img/playIcon.png" alt="videoImg" />
 				</div>
+			</div>
+			<div class="slide contactUs">
+				<div class="txt">
+					<p class="cta">Please let us know how we can help with your streaming needs!</p>
+					<p class="details">Phone: <a href="tel:01295000000">01295 000000</a> - Email: <a href="mailto:info@biscuitvideo.com">info@biscuitvideo.com</a></p>
+				</div>
+				<form>
+					<input type="text" placeholder="Your Name" />
+					<input type="email" placeholder="Email Address" />
+					<textarea placeholder="Please enter your message" ></textarea>
+					<input type="submit" />
+				</form>
 			</div>
 		</div>
 	</main>
@@ -63,5 +75,6 @@
 	<footer>
 		<p>Sam Moore 2017 - All Rights Reserved</p>
 	</footer>
+	<script src="js/slide.js" ></script>
 </body>
 </html>

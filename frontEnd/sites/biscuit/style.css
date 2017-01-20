@@ -6,6 +6,11 @@
 	margin: 0;
 }
 
+*::selection {
+	background-color: #FFCC19;
+	color: #fff;
+}
+
 html {
 	font-size: 16px;
 }
@@ -49,11 +54,15 @@ ul, ol {
 a {
 	text-decoration: none;
 	color: #E86B0C;
+	transition: .3s;
 }
 
 a:hover {
 	color:#FF0000;
-	transition: .3s;
+}
+
+form input:focus, form textarea:focus {
+	outline: none;
 }
 
 /* Header Styles */
@@ -87,6 +96,7 @@ a:hover {
 		margin: 0;
 		text-align: center;
 		font-size: 1.2rem;
+		color: #ffffff;
 	}
 	
 	header nav ul li:nth-child(2) {
@@ -97,10 +107,6 @@ a:hover {
 	header nav ul .title {
 		font-size: 2.5rem;
 		font-weight: bold;
-	}
-	
-	header nav ul li a {
-		color: #ffffff;
 	}
 	
 	
@@ -121,6 +127,15 @@ a:hover {
 		flex: 1;
 	}
 	
+	header nav ul li {
+		cursor: pointer;
+		transition: .3s;
+	}
+	
+	header nav ul li:nth-child(2):hover, header nav ul li:nth-child(3):hover {
+		color: #E86B0C;
+	}
+	
 	header nav ul .title {
 		flex: 6;
 		text-align: left;
@@ -138,16 +153,30 @@ a:hover {
 		padding: 0 0 70px 0;
 		border-bottom: 3px solid #fff;
 		margin: 0 0 70px 0;
+		overflow: auto;
 	}
 
 	main .banner {
 		width: 100%;
+		height: 340px;
+		position: relative;
+		overflow: hidden;
+		transition: .5s;
 	}
 	
-	main .banner .bannerDefault {
+	main .banner .slide {
 		width: 80%;
-		margin: 0 auto;
+		padding: 0 10%;
 		font-size: 0;
+		position: absolute;
+		transition: left 0.5s;
+	}
+	
+	/* Default Slide */
+	
+	main .banner .bannerDefault {
+		top: 0;
+		left: 0;
 	}
 	
 	main .banner .bannerDefault .txt {
@@ -169,6 +198,52 @@ a:hover {
 	main .banner .bannerDefault .graphic img {
 		width: 100%;
 	}
+	
+	/* Contact Slide */
+	
+	main .banner .contactUs {
+		top: 0;
+		left: 100%;
+	}
+
+	main .banner .contactUs .txt p {
+		text-align: center;
+	}
+	
+	main .banner .contactUs .txt p.cta {
+		font-size: 1.875rem;
+		font-weight: bold;
+	}
+	
+	main .banner .contactUs .txt p.details {
+		margin: 0 0 20px 0;
+	}
+	
+	main .banner .contactUs form {
+		width: 100%;
+	}
+	
+	main .banner .contactUs form input, main .banner .contactUs form textarea {
+		display: block;
+		width: 90%;
+		padding: 10px 5%;
+		border-radius: 15px;
+		margin: 0 auto 10px auto;
+		font-size: 1rem;
+		color: #000;
+	}
+	
+	main .banner .contactUs form input[type="submit"] {
+		padding: 10px 5%;
+		box-sizing: content-box;
+		background-color: #0013B2;
+		color: #fff;
+		transition: .3s;
+	}
+	
+	main .banner .contactUs form input[type="submit"]:hover {
+		background-color: #E86B0C;
+	}
 }
 
 @media screen and (min-width: 768px) {
@@ -176,7 +251,18 @@ a:hover {
 	main {
 		padding: 0;
 		border: 0;
+		margin: 0 0 70px 0;
 	}
+	
+	main .banner {
+		height: 422px;
+	}
+	
+	main .banner {
+		height: 422px;
+	}
+	
+	/* Default Slide */
 
 	main .banner .bannerDefault .txt {
 		display: inline-block;
@@ -193,6 +279,37 @@ a:hover {
 		vertical-align: middle;
 	}
 
+	/* Contact Slide */
+	
+	main .banner .contactUs .txt, main .banner .contactUs form {
+		display: inline-block;
+		width: 50%;
+		margin: 0 5% 0 0;
+		padding: 0;
+		vertical-align: middle;
+	}
+	
+	main .banner .contactUs .txt p  {
+		width: 100%;
+	}
+	
+	main .banner .contactUs  .txt p.details {
+		margin: 0 auto 30px auto;
+	}
+	
+	main .banner .contactUs form {
+		width: 45%;
+		margin: 0;
+		padding: 83.5px 0;
+	}
+	
+	main .banner .contactUs form input, main .banner .contactUs form textarea {
+		margin: 0 auto 20px auto;
+	}
+	
+	main .banner .contactUs form input[type="submit"] {
+		cursor: pointer;
+	}
 }
 
 
@@ -211,6 +328,7 @@ a:hover {
 	
 	.infoRow > div {
 		padding: 5%;
+		border-radius: 10px;
 		box-sizing: border-box;
 		margin: 0 0 20px 0;
 		background-color: #ffffff;
@@ -240,11 +358,19 @@ a:hover {
 		flex-flow: row nowrap;
 		align-items: stretch;
 		justify-content: space-between;
+		cursor: pointer;
 	}
 	
 	.infoRow > div {
 		width: 30%;
 		margin: 0;
+		transition: .5s;
+	}
+	
+	.infoRow > div:hover {
+		transform: translate(0, -20px);
+		box-shadow: 0 10px 2px -2px #aaa;
+		transition: .5s;
 	}
 	}
 }
@@ -256,7 +382,8 @@ a:hover {
 	.newsletter {
 		width: 80%;
 		padding: 70px 10%;
-		background-color: #FFCC19;
+		border-top: 3px solid #fff;
+		border-bottom: 3px solid #fff;
 	}
 	
 	.newsletter p {
@@ -268,10 +395,6 @@ a:hover {
 		width: 100%;
 		margin: 40px auto 0 auto;
 		font-size: 0;
-	}
-	
-	.newsletter form input:focus {
-		outline: none;
 	}
 	
 	.newsletter form input[type="email"] {
@@ -314,6 +437,11 @@ a:hover {
 		border-radius: 0 25px 25px 0;
 		margin: 0 auto;
 		cursor: pointer;
+		transition: .3s;
+	}
+	
+	.newsletter form input[type="submit"]:hover {
+		background-color: #E86B0C;
 	}
 }
 
