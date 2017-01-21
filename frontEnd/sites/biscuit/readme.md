@@ -8,4 +8,5 @@
 
 * Mobile First Design
 * JS DOM manipulation
+* JS Event Handlers
 * One Page Design
