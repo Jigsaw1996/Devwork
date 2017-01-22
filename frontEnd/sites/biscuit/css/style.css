@@ -42,6 +42,11 @@ h3 {
 	font-size: 1.25rem;
 }
 
+h4 {
+	margin: 0 0 15px 0;
+	font-size: 1.15rem;
+}
+
 p, main li {
 	margin: 0 0 10px 0;
 	font-size: 1rem;
@@ -91,7 +96,8 @@ form input:focus, form textarea:focus {
 	header nav ul li {
 		width: 100%;
 		padding: 20px 0 20px 0;
-		border: 3px solid #ffffff;
+		border-top: 3px solid #ffffff;
+		border-bottom: 3px solid #ffffff;
 		box-sizing: border-box;
 		margin: 0;
 		text-align: center;
@@ -379,13 +385,21 @@ form input:focus, form textarea:focus {
 @media screen and (min-width: 1px) {
 	.textBlock {
 		width: 80%;
-		padding: 0 10%;
-		margin: 0 0 70px 0;
+		padding: 70px 10%;
+		border-top: 3px solid #fff;
 	}
 	
 	.textBlock h2 {
 		margin: 0 0 25px 0;
 		text-align: center;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.textBlock {
+		padding: 0 10%;
+		border: 0;
+		margin: 70px 0;
 	}
 }
 

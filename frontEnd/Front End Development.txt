@@ -116,6 +116,22 @@ Contents
 		8.6 Responsive Font Sizing
 		
 	9 User Experience Design
+		9.1 User Experience (UX)
+			9.1.1 Surface
+			9.1.2 Skeleton
+			9.1.3 Structure
+			9.1.4 Scope
+			9.1.5 Strategy
+		9.2 User Centered Design
+			9.2.1 UX Designer
+			9.2.2 UI Designer
+			9.2.3 Graphic Designer
+		9.3 Understanding Users
+		9.4 Personas
+		9.5 Usability
+		9.6 Prototyping
+		
+	10 Balsamiq
 			
 
 1 Reopening the Box Model
@@ -1713,3 +1729,302 @@ Contents
 	
 	
 9 User Experience Design
+
+	Video: https://youtu.be/osUxvQxoxwo
+	
+	As technologies advance, so does the complexity of the applications we use. 
+	
+	Web application and websites, which in the past have been static and bland, have evolved into interactive experiences. 
+	
+	However, no matter how the applications change over time, a website's success depends largely by how it's percieved by the user. 
+	
+	When a user accesses a website, they ask themselves three questions:
+	
+	- Does this website solve my problem?
+	- Do I find it easy to use?
+	- Do I find it pleasant to use?
+	
+	A website has to answer these three questions correctly in order to be successful.
+	
+	In this lesson we will focus on answering these questions fr the user.
+
+	Outcomes:
+	User Experience
+	Users
+	Usability and Visual Design
+	
+	
+9.1 User Experience (UX)
+
+	"After all, usability really just means making sure that something works well: that a person of average (or even below average) ability and experience can use the thing -whether it’s a web site, a fighter jet, or a revolving door- for its intended purpose without getting hopelessly frustrated."
+	
+	- Steve Krug
+	
+	Useful image for understanding UX - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/UXnewimage.png
+	
+	User Experience determines how a person feels when interacting with a system.
+	
+	The system could be a website, a web application etc. 
+	
+	Here's some good examples for UX.
+	
+	http://www.hongkiat.com/blog/ui-designer-portfolios/
+	
+	To achieve similar results, lets look deeper into what is involved and why it's important.
+	
+	No matter how complex a site it, a good UX is essential to encouraging users to keep interacting with us. 
+	
+	User Experience is built from dependent layers@
+	
+	Surface		Contrete
+	Skeleton	^
+	Structure	|
+	Scope		^
+	Strategy	Abstract
+	
+	Each layer validates the next, and work together to form a powerful UX.
+	
+	Lets go through each of these.
+	
+	
+9.1.1 Surface
+
+	The surface layer describes the finished visual design aspects. 
+	
+	This can be used effectively by using clean and consitent use of colors, fonts and images which all work to push a certain feel. 
+	
+	Image - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/surface.png
+	
+	
+9.1.2 Skeleton
+
+	The skeleton describes the screen layout and functional compartments in the screen. Basically the layout framework for the page.
+	
+	Good UX requires a clean layout which isn't cluttered, breaks up information and draws attention naturally during scroll.
+	
+	Note: The user naturally looks at the top left of a web page first.
+	
+	Image - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/skeleton.png
+	
+	
+9.1.3 Structure
+
+	Structure defines navigation from place to place in the user interface. 
+	
+	Think of it like the user journey, the expected travel the user will take from place to place. 
+	
+	A good structure has a clear progression and naturally pushes users from one step to the next. 
+	
+	Image - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/structure.png
+
+
+9.1.4 Scope
+
+	Scope is the tasks which the user can engage in whilst on the site.
+	
+	The tasks must be clear from the creation so each can be taken into consideration for the higher steps.
+	
+	Image - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/scope.png
+	
+	
+9.1.5 Strategy
+
+	Strategy consists of the business goals of the site and the relevant uses the site must entail.
+	
+	Good UX requires consideration of what it is the website is meant to achieve, so that users will convert. 
+	
+	Image - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/strategy.png
+	
+	
+9.2 User Centered Design
+
+	UCD refers to a class of methodologies where design decisions are based on some tangable user model.
+	
+	That user model must be based on the research of the users of the application.
+	
+	Rather than requiring users to adapt their attitudes and behaviors in order to learn and use a system, a system is designed to support user's existing beliefs.
+	
+	There are a few types of designers to be aware of.
+	
+	
+9.2.1 UX Designer
+
+	UX designers are primarily concerned with how the product feels.
+	
+	UX designers explore many different approach to solving a specific user problem. 
+	
+	The board responsibility of UX designers is to ensure the product logically flows from one step to the next.
+	
+	
+9.2.2 UI Designer
+
+	Unlike UX designers who are concerned with the overall feel, UI designers are more particular with how the product is laid out.
+	
+	They are in charge of designing each screen or page wto ensure that the UI visually communicates the path which the UX designer has laid out.
+	
+	For example, a UI designer creating an analtics dashboard might front load the most important info at the top. 
+	
+	UI designers are also typically responsible from creating a cohesive style guide and ensuring the consistent design language is applied. 
+	
+	Visual consistency falls under UI as well.
+	
+	
+9.2.3 Graphic Designer
+
+	Visual designers are less concerned with interaction or how pages link to each other, instead focusing on making it look pretty.
+	
+	This includes icons, colours and overall visual appearance.
+	
+	They often crave the small details and work to add visual quality to a site. 
+	
+	
+9.3 Understanding Users
+
+	Understanding users more, we can investigate them to try and figure out motives and needs.
+	
+	First we need to group them:
+	
+	Actor and Goal:
+	
+	Often a job title or common name for the type of user. i.e: Online Shopper
+	
+	User Role:
+	
+	A short name describing the goal of the user. i.e: casual browser - passes time browsing products etc.
+	
+	User Profile:
+	
+	Adding summary information about types of users, including the amount of users, the activites they will want to engage in, their computer skils and their experience with the subject matter.
+	
+	Persona:
+	
+	Choosing specific characteristics and compiling those into a description of that person. 
+	
+	
+9.4 Personas
+
+	Personas are based on research such as focus groups, observation, surveys etc. THey can e useful when personalising the target user.
+	
+	They are a representation of the target user which we use when designing.
+	
+	Personas:
+	- Describe the user's behavior patterns.
+	- Are represented as individuals.
+	- Express and focus on major needs and expectations of the most important user groups. 
+	- Give a clear picture of the user's expectations and how they're likely to use the site.
+	- Aid in uncovering universal features and functionality.
+	
+	From the research, we can construct personas and a user story. This allows us to create the user exoerience of a very specific user. 
+	
+	Personas are focused, concise user models that we can use to base our decisions on. 
+	
+	Once we identify multiple groups, what seperates them etc, we can break them down into different personas.
+	
+	Things we can include:
+	- Fictional Name
+	- Demographics such as age, education, ethnicity.
+	- Occupation, job title etc.
+	- IT Experience
+	- Experience with the subject matter.
+	- Personality.
+	- Goal/Task for going on our site. 
+	- Frequency of use, how often are they likely to use the site?
+	- Amount of Internet/Social Media Use.
+	
+	If we create a persona called Sarah, for instance, we can then ask ourselves some questions when designing the site.
+	
+	- What would Sarah think of this?
+	- Are we meeting Sarah's goals?
+	- Will this make it easier for Sarah to achieve her goals?
+	- Does this application meet Sarah's aspiratons/expectations?
+	
+	How many personas are necessary depends on the site. 
+
+
+9.5 Usability
+
+	Usability refers to the ability of a specific type of user being able to carry out a task using a product.
+	
+	Usability is me asured through testing. There are a few main questions:
+	
+	- How many completed the task?
+	- How quickly was the task completed, on average?
+	- How many user errors are made whilst attempting to complete the task?
+	
+	There are evolving standards for interaction design. 
+	
+	10 Usability Heuristics:
+	
+	1. Visibility of system status
+	The system should always keep users informed about what is going
+	on, through appropriate feedback within reasonable time.
+	
+	2. Match between system and real world
+	The system should speak the user's language. Words, phrases,
+	concepts familiar to the user, rather than system oriented terms.
+	Follow real world conventions, making information clear and in 
+	order.
+	
+	3. User control and freedom
+	Users often choose system functions by mistake, will need 
+	"emergency exit" to leave unwanted states. Support undo/redo.
+	
+	4. Consistency and standards
+	Users should not have to wonder if different words, situations,
+	actions etc mean the same thing. Follow platform conventions.
+	
+	5. Error prevention
+	Eliminate error-prone conditions, inform users with error 
+	messaging etc.
+	
+	6. Recognition rather than recall
+	Minimize the user's memory load. Make objects, actions etc 
+	visable. Users should not have to remember too much. Instructions
+	should be provided to help guide and educate use of the system.
+	
+	
+	7. Flexibility and efficiency of use
+	Accelerators – unseen by the novice user – may often speed up
+	the interaction for the expert user such that the system can 
+	cater to both inexperienced and experienced users. Allow users 
+	to tailor frequent actions.
+	
+	8. Aesthetic and minimalist design
+	Dialogues should not contain information which is irrelevent.
+	Every element should have meaning as they each compete for 
+	attention.
+	
+	9. Help users recognize, diagnose and recover from errors
+	User errors should be dealt with effectively, notifying the user
+	with what happened, how to fix it and why, to make continuing
+	a quick and easy process.
+	
+	10. Help and documentation
+	Whilst the best systems are likely not to need documentation to
+	use, it may be necessary to provide help and docs which are easy
+	to locate and search. List these by their expected frequency of
+	need.
+	
+	Useful read in regards to this: http://designingwebinterfaces.com/explore
+	
+	
+9.6 Prototyping
+
+	Do not fall into the trap of coding early in the project. This can waste time and resources.
+	
+	Better to create a cheap wireframes of the site and it's elements to plan out it's UX, how it will appeal to personas, usability etc.
+	
+	Prototypes are quick to build, can show problems and better solutions, and better plan for upcoming building of the site. 
+	
+	It's also cheap and there are loads of tools to help with this.
+	
+	By prototyping a project, we can plan out the work, get an idea of how it will look, how it will meet UX, personas, usability etc and if there are any changes or additions needed etc.
+	
+	Sketching and wireframing are two great ways of doing this. 
+	
+	Examples of wireframes - http://www.wireframeshowcase.com/wireframes/detail/iplagg_webshop
+	
+	We'll discuss some great was to do this next. 
+	
+	
+10 Balsamiq
