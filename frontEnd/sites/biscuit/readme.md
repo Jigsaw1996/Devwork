@@ -33,7 +33,6 @@ The secondardy target audience will be users looking to watch videos which have 
 range. These can be direct users, who have come because they have been linked to a video, or indirect users who have come to browse and search for general
 or specific sorts of content. 
 
-
 # Strategy
 
 * Make money off of advertising on videos and pages of the site.
@@ -50,3 +49,8 @@ or specific sorts of content.
 * Find content similar to your existing tastes.
 * Rate content to give feedback on it.
 * Report harmful or illegal content. 
+
+
+# Structure
+
+![Structure](structure.png)

@@ -132,6 +132,10 @@ Contents
 		9.6 Prototyping
 		
 	10 Balsamiq
+		10.1 The Basics
+		
+	11 Forms
+		11.1 Forms Explained
 			
 
 1 Reopening the Box Model
@@ -2028,3 +2032,61 @@ Contents
 	
 	
 10 Balsamiq
+
+	Video - https://youtu.be/GSNYJu8hRIk
+	
+	Balsamiq Mockups is a user interface design tool. It is used to create wireframes or mockups.
+	
+	We can use this to create sketches of product ideas, share them with team members and get feedback before actually coding anything.
+	
+	Here we will cover the basic overview of using the platform, it's features and controls.
+	
+	For further guides, use this link: https://docs.balsamiq.com/mybalsamiq/
+
+	Outcomes:
+	The basics
+	Adding controls
+	Image paper controls
+	Completing the mockup
+	Finishing touches
+
+
+10.1 The Basics
+
+	Some basic components of Balsamiq include:
+	
+	Toolbar - The primary control interface for common commands (copy, past and delete)
+	
+	Canvas - The grid where the drawing occurs.
+	
+	UI Library - Controls that can be dragged onto the Canvas at any time. 
+	
+	Navigator - Allows navigation to your other mockups through thumbmail images. 
+	
+	Property Inspector - Allows the configuration of properties and actions specific to each UI control (colour, size).
+	
+	Image Example - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/34-e1444898477283.png
+
+	Use the biscuit example and Balsamiq docs for how to best utilize each of these.
+
+
+11 Forms
+	
+	Video - https://youtu.be/-5EPuEVt-HU
+	
+	Firstly, nobody likes forms. But they are an important part of a website and it's users, so use of smart, attractive forms can greatly increase conversions.
+	
+	Here we will be looking into how best to build forms in HTML5 so that they are low hastle and make use of some great features such as autocomplete.
+	
+	Basically forms are at their best when you have to enter as little as possible. Lets look at how best to accomplish this.
+	
+	Outcomes:
+	What is a Form?
+	Input Types
+	Other Form Tags
+	Exploring input Attributes
+	Numbers and Patterns
+	Making Choices
+
+
+11.1 Forms Explained
