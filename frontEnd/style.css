@@ -21,9 +21,12 @@
 	color: #EDEDED;
 }
 
+html {
+	font-size: 16px;
+}
+
 body {
 	font-family: 'Lato', sans-serif;
-	font-size: 100%;
 	background-image: url(img/background.png);
 	background-repeat: repeat;
 	background-attachment: fixed;
@@ -32,22 +35,22 @@ body {
 
 h1 {
 	margin: 0 0 15px 0;
-	font-size: 2.5em;
+	font-size: 2.5rem;
 }
 
 h2 {
-	font-size: 1.875em;
 	margin: 20px 0 15px 0;
+	font-size: 1.875rem;
 }
 
 h3 {
-	font-size: 1.25em;
 	margin: 10px 0 15px 0;
+	font-size: 1.25rem;
 }
 
 p, main li {
-	font-size: 0.875em;
 	margin-bottom: 10px;
+	font-size: 0.875rem;
 }
 
 ul, ol {

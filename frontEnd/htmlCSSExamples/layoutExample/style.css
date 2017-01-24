@@ -17,9 +17,16 @@ main {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     overflow: auto;
-	font-size: 16px;
 	background-color: #73BECB;
 	color: #ffffff;
+}
+
+.container div p {
+	font-size: 0.875rem;
+}
+
+.container div h3 {
+	font-size: 1.25rem;
 }
 
 .container .header {
@@ -49,10 +56,4 @@ main {
 	width: 600px;
 	height: 100px;
 	padding: 30px 0 0 0;
-}
-
-footer {
-	position: absolute;
-	bottom: 0;
-	left: 0;
 }

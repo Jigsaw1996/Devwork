@@ -87,6 +87,55 @@ Contents
 		
 	7 Flexbox
 		7.1 Setting Up A Flexbox
+		7.2 Axes
+		7.3 Properties For Flexbox
+			7.3.1 Flex Direction
+			7.3.2 Flex Wrap
+			7.3.3 Shorthand
+		7.4 Alignment
+			7.4.1 Justify Content
+			7.4.2 Align Items
+		7.5 Flex Attribute
+		7.6 Ordering Flex Items
+		
+	8 Semantic Web and Font
+		8.1 Semantic Tags
+		8.2 Fonts
+			8.2.1 Font Size
+			8.2.2 Font Style
+			8.2.3 Font Weight
+			8.2.4 Color
+		8.3 Custom Fonts
+			8.3.1 Font Face
+			8.3.2 Link in HTML
+		8.4 Text Attributes
+		8.5 Measurements
+			8.5.1 Relative Lengths
+			8.5.2 Absolute Lengths
+			8.5.3 Measurement Types Explained
+		8.6 Responsive Font Sizing
+		
+	9 User Experience Design
+		9.1 User Experience (UX)
+			9.1.1 Surface
+			9.1.2 Skeleton
+			9.1.3 Structure
+			9.1.4 Scope
+			9.1.5 Strategy
+		9.2 User Centered Design
+			9.2.1 UX Designer
+			9.2.2 UI Designer
+			9.2.3 Graphic Designer
+		9.3 Understanding Users
+		9.4 Personas
+		9.5 Usability
+		9.6 Prototyping
+		
+	10 Balsamiq
+		10.1 The Basics
+		
+	11 Forms
+		11.1 Forms Explained
 			
 
 1 Reopening the Box Model
@@ -1281,3 +1330,763 @@ Contents
 	
 	
 7.1 Setting Up A Flexbox
+
+	The first step to this is to give a container a display value of flex.
+	
+	display: flex;
+	
+	Any children in the container are now flex items and have intelligent flex properties. 
+	
+	These flex items can automatically expand to fill the container space, both horizontally and vertically.
+	
+	These items can be customized further with a few lines of CSS. There's no need to worry about margins or overflowing elements.
+	
+	The container of the flex controls much of the flex behaviour, such as alignment, spacing and direction.
+	
+	
+7.2 Axes
+
+	The layout of flexbox uses two axes: the main axis and the cross axis.
+	
+	The main axis, which the flex items travel, and the cross axis, which is perpendicular to the main axis.
+	
+	These are used to effectively space elements in a way that is more tricky with traditional CSS.
+	
+	
+7.3 Properties For Flexbox
+
+	Within the properties of the flexbox container, a number of attributes can be used.
+	
+
+7.3.1 Flex Direction
+
+	The flex-direction attribute establishes the main axis, which flex items will travel along.
+	
+	flex-direction: ;
+	
+	row - Displays horizontally, left to right. Default.
+	
+	row-reverse - Displays horizontally, right to left. 
+	
+	column - Displays vertically, top to bottom.
+	
+	column-reverse - Displays vertically, bottom to top.
+	
+	
+7.3.2 Flex Wrap
+
+	Having defined the direction, we can set how the flex items behave.
+	
+	The flex-wrap attribute defines if the flex items are forced into a single line or are allowed multiple lines.
+	
+	flex-wrap: ;
+	
+	nowrap - Items do not wrap, one line only. Default.
+	
+	wrap - Items can wrap on multiple lines if necessary.
+	
+	wrap-reverse - Allows wrapping but in reverse order, so they will wrap onto an above row rather than a below row.
+	
+	
+7.3.3 Shorthand
+
+	The flex-flow attribute allows these attributes to be set in shorthand on the container.
+	
+	flex-flow: direction wrap;
+	
+	Replace direction and wrap with the relevant values.
+	
+	
+7.4 Alignment
+
+	Flexbox containers use the properties justify-content and align-items to handle the previously tricky task of alignment.
+	
+	
+7.4.1 Justify Content
+
+	The justify-content attribute defines how flex items are laid out on the main axis. 
+	
+	It essentially distributes the space around the flex items.
+	
+	justify-content: ;
+	
+	flex-start - Positions flex items around the begining of the flex container. Default.
+	
+	flex-end - Positions flex items at the end of the flexbox container.
+	
+	center - Positions flex items at the center of the flexbox container.
+	
+	space-between - Positions flex items with space between them onl.
+	
+	space-around - Positions flex items with space before, between and after them. 
+
+
+7.4.2 Align Items
+
+	The align-items attribute works similar to the justify-content property, except along the cross axis.
+	
+	This is how you vertically align elements.
+	
+	align-items: ;
+	
+	flex-start - Positions the items at the start of the flexbox container.
+	
+	flex-end - Positions the items at the end of the flexbox container.
+	
+	center - Positions items at the center of the flexbox container.
+	
+	baseline - Positions items along the baseline of their content.
+	
+	stretch - Stretches flex items to fit the container. Default.
+	
+	
+7.5 Flex Attribute
+
+	The flex items have some attributes of their own to consider.
+	
+	Chief amongst these is the flex attribute, which works by allowing the flex item to fill whatever space the container gives them.
+	
+	If all flex items have a flex of 1, they will have equal space. However if one of them has 2, then that one will get double the space compared to those with 1 etc.
+	
+	
+7.6 Ordering Flex Items
+
+	The order in which flex items appear can be changed.
+	
+	By default it's the order written in html. However the order attribute changes this.
+	
+	order: ;
+	
+	The value is a number. The lowest number is placed first etc. If more than one have the same value, it goes by the source code as to which comes first.
+
+	Flex items with no set order will always go first.
+	
+	See the Flexbox Examples for guides on how to do all of this and the effects it has.
+	
+	
+8 Semantic Web and Font
+
+	Video: https://youtu.be/KLHrO29GPIM
+	
+	The internet wants to know about the web pages make. Search Engines look at your site using crawlers, for SEO and other purposes.
+	
+	Understanding how the semantic web works is important to modern web development. Understanding how search engines etc understand content and structure will be discussed here.
+	
+	We're also looking at fonts, text attributes and measurements. Because why not.
+	
+	Fonts are an essential component of a web page, and have a profound effect on how the page comes across to the user.
+	
+	
+8.1 Semantic Tags
+
+	We use divs loads during development. Usually content is placed in a div container and given a class or ID to explain it's purpose and style it.
+	
+	However, that class can be anything, and a robot won't know if "bar" means navigation, a section of a page or a container for some text about chocolate bars etc. They need clear semantics. 
+	
+	HTML5 introduced a bunch of semantic versions of a div, which can be used instead of this.
+	
+	This is great for two reasons. First, it makes the HTML5 structure easier to read and maintain. Second, it allows for crawlers to understand structure easily.
+
+	These are the important semantic tags:
+	
+	<header> - Used for the header of the site.
+	
+	<nav> - Used for site navigation.
+	
+	<main> - Used for the "main" section of the page.
+	
+	<article> - Used to identify an article or text container etc.
+	
+	<section> - Used to identify a section of the page.
+	
+	<aside> - Used for a sidebar.
+	
+	<footer> - Used for the page footer.
+	
+	These don't add any styling or content changes, they are treated as normal divs. Semantic value for users and robots is the only benefit.
+	
+	Robots can now tell that the content within the <header> tag are part of the header for the site. This gives robots a very clear idea baout page structure and how content relates to each other.
+	
+	There's some others, some reqire more of a description.
+	
+	
+8.1.1 Figure and Figcaption
+
+	This is used to contain an image, alongside some text relevant to the image, such as an image title or description.
+	
+	The figure element contains both the image annd caption. The figcaption tag is then used as the container for the text.
+	
+	This can also be used for audio and video if the need arises. 
+	
+	Example:
+	
+	<figure>
+		<img src="img/cat.jpg" alt="Cat"/>
+		<figcaption>This is a cat.</figcaption>
+	</figure>
+	
+	This gives robots crawling the site a very good idea of how the image and text is being used, and how they relate to one another. 
+	
+	It also makes it easier to read, with less classes and divs to keep track of. 
+	
+	
+8.2 Fonts
+
+	Fonts are very important to the look and feel of a page, and there's lots we can do with them.
+	
+	The key attribute here is font-family, which sets the family which text uses.
+	
+	font-family: lato, Verdana, sans-serif;
+	
+	The first font will be attempted. If the font isn't found, it will use the second. It is a good idea to have at least one backup font.
+	
+	There are a numbeur of common default fonts which browsers use. 
+	
+	A list of standard fonts can be found here: http://cssfontstack.com/oldsites/cssfontstack/?_ga=1.229589660.1402088432.1443468538
+	
+	We will come back to how to load custom fonts shortly.
+	
+	
+8.2.1 Font Size
+
+	The font-size attribute allows us to change the size of text in the browser. 
+	
+	font-size: 16px;
+	
+	The size can be given in px, % or ems.
+	
+	
+8.2.2 Font Style
+
+	The font-style property allows us to change the element's display.
+	
+	font-style: italic;
+	
+	Can be normal, italic or oblique.
+	
+	
+8.2.3 Font Weight
+
+	Controling the weight with the font-weight attribute allows us to add strength text.
+	
+	font-weight: bold;
+	
+	The weight can be lighter, normal, bold or balder.
+	
+	A number value can also be given, between 100 and 900.
+	
+	400 is the standard.
+	
+	
+8.2.4 Color
+
+	The color property sets the color which the text uses.
+	
+	color: #ffffff;
+	
+	Can be given by name (black,red etc), Hex or RGBA.
+	
+	 
+8.3 Custom Fonts
+
+	Default fonts are very generic and uninspiring. Whilst it is useful to have them as backup fonts, we can load custom fonts into the browser.
+	
+	There are multiple ways of doing this. 
+	
+8.3.1 Font Face
+
+	The first way is using the font-face rule.
+	
+	Once reading the font-face within CSS, it instructs the browser to download the font from the given URL.
+	
+	This allows us to use much better fonts. 
+	
+	@font-face {
+		font-family: "MyFont";
+		src: url("fonts/myfont.woff2");
+	}
+	
+	The value given in font-family will be the name we refer it to when assigning it after the font face.
+	
+	We also give the src, which is the location of the font file we are adding.
+	
+	We can comma seperate src url's, to give different font file types.
+	
+	Example;
+	
+	@font-face {
+		font-family: 'NewFont';
+		src: url('myfont.woff') format('woff'),
+			 url('myfont.ttf') format('truetype');
+	}
+
+	body {
+		font-family: 'NewFont';
+	}
+	
+	
+8.3.2 Link in HTML
+
+	Font-face is all good, but it's a bit too complex to set up.
+	
+	We can instead use Google Fonts, which actually does font-face behind the scenes, to set fonts in the head of HTML.
+	
+	Google Fonts can be found here: https://fonts.google.com/
+	
+	This is easier and gives access to a large platform of fonts without requiring us to host them ourselves.
+	
+	When you find a font, copy and paste the given HTML link tag into the head of the page.
+	
+	Example
+	
+	<link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+	<style>
+		body {
+			font-family: 'Open Sans', sans-serif;
+		}
+	</style>
+	
+	The font will then be downloaded with the page, and called when necessary with CSS.
+	
+	
+8.4 Text Attributes
+
+	Text attributes are different to font attribute as they deal more with alignment and indentation.
+	
+	Lets take a look at som text attributes.
+	
+	text-align: ; - This is used to align text within it's allowed space. Can be left, right and center.
+	
+	text-decoration: ; - This sets if there are any effects on the text. This can be none, underline or line-through.
+	
+	text-indent: ; - This sets how much you would like to indent the FIRST line of text from it's corner. Usually given in px, but can be % too.
+	
+	text-transform: ; - Will transform the case of the text. Can be none, capitalize (first letters), uppercase or lowercase.
+	
+	
+8.5 Measurements
+
+	CSS has too many ways to set the size of your text. 
+	
+	Luckily many of them are leftovers from the print world and aren't used on the web too much.
+	
+	There are two key types of measurement units that need to be considered. Relative Lengths, and absolute lengths.
+	
+	
+8.5.1 Relative Lengths
+
+	These units can change size according to the size of the screen it is viewed on.
+	
+	This is great for when the output media is of different sizing, from phones to desktop, and therefore has to scale in accordance with mobile design.
+	
+	Relevant Measurements:
+	
+	Percentages
+	em
+	rem
+	
+	
+8.5.2 Absolute Lengths
+
+	Unlike relative lengths, absolute lengths have a fixed size and do not scale or change for screen size. 
+	
+	Naturally this isn't great for mobile design, unless we wish to manually change it's size, which isn't ideal.
+	
+	The only common unit for this is px.
+	
+	It is ideally used when the format size is fixed.
+	
+	
+8.5.3 Measurement Types Explained
+
+	px - Pixel sizing uses raw pixel measurements to set a fixed sizing. 
+	
+	% - Percentages are always relative to the parent container. 
+	
+	em - Using em makes the sizing relative to the font size of the element itself.
+	
+	rem - Using root em sets the size relative to the root of the page. 
+	
+	
+8.6 Responsive Font Sizing
+
+	So what's the best way for using font sizes in responsive design?
+	
+	In practice, there's lots of debate about this. The simplest way to setup mobile fonts is like below.
+	
+	First, declare the root element, html, in pixels, and then use rem's to set up font sizing for the different elements.
+	
+	This is sufficient for most projects, though there are other ways this can be accomplished.
+	
+	Example:
+	 
+	html {
+		font-size: 12px; /*declaring root element in pixels*/
+	}
+ 
+	h1 {
+		font-size: 2rem; /*displayed at 24px*/
+	}
+ 
+	See the Font Examples for guides on how to accomplish all of what you're learned here. 
+	
+	
+9 User Experience Design
+
+	Video: https://youtu.be/osUxvQxoxwo
+	
+	As technologies advance, so does the complexity of the applications we use. 
+	
+	Web application and websites, which in the past have been static and bland, have evolved into interactive experiences. 
+	
+	However, no matter how the applications change over time, a website's success depends largely by how it's percieved by the user. 
+	
+	When a user accesses a website, they ask themselves three questions:
+	
+	- Does this website solve my problem?
+	- Do I find it easy to use?
+	- Do I find it pleasant to use?
+	
+	A website has to answer these three questions correctly in order to be successful.
+	
+	In this lesson we will focus on answering these questions fr the user.
+
+	Outcomes:
+	User Experience
+	Users
+	Usability and Visual Design
+	
+	
+9.1 User Experience (UX)
+
+	"After all, usability really just means making sure that something works well: that a person of average (or even below average) ability and experience can use the thing -whether it’s a web site, a fighter jet, or a revolving door- for its intended purpose without getting hopelessly frustrated."
+	
+	- Steve Krug
+	
+	Useful image for understanding UX - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/UXnewimage.png
+	
+	User Experience determines how a person feels when interacting with a system.
+	
+	The system could be a website, a web application etc. 
+	
+	Here's some good examples for UX.
+	
+	http://www.hongkiat.com/blog/ui-designer-portfolios/
+	
+	To achieve similar results, lets look deeper into what is involved and why it's important.
+	
+	No matter how complex a site it, a good UX is essential to encouraging users to keep interacting with us. 
+	
+	User Experience is built from dependent layers@
+	
+	Surface		Contrete
+	Skeleton	^
+	Structure	|
+	Scope		^
+	Strategy	Abstract
+	
+	Each layer validates the next, and work together to form a powerful UX.
+	
+	Lets go through each of these.
+	
+	
+9.1.1 Surface
+
+	The surface layer describes the finished visual design aspects. 
+	
+	This can be used effectively by using clean and consitent use of colors, fonts and images which all work to push a certain feel. 
+	
+	Image - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/surface.png
+	
+	
+9.1.2 Skeleton
+
+	The skeleton describes the screen layout and functional compartments in the screen. Basically the layout framework for the page.
+	
+	Good UX requires a clean layout which isn't cluttered, breaks up information and draws attention naturally during scroll.
+	
+	Note: The user naturally looks at the top left of a web page first.
+	
+	Image - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/skeleton.png
+	
+	
+9.1.3 Structure
+
+	Structure defines navigation from place to place in the user interface. 
+	
+	Think of it like the user journey, the expected travel the user will take from place to place. 
+	
+	A good structure has a clear progression and naturally pushes users from one step to the next. 
+	
+	Image - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/structure.png
+
+
+9.1.4 Scope
+
+	Scope is the tasks which the user can engage in whilst on the site.
+	
+	The tasks must be clear from the creation so each can be taken into consideration for the higher steps.
+	
+	Image - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/scope.png
+	
+	
+9.1.5 Strategy
+
+	Strategy consists of the business goals of the site and the relevant uses the site must entail.
+	
+	Good UX requires consideration of what it is the website is meant to achieve, so that users will convert. 
+	
+	Image - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/strategy.png
+	
+	
+9.2 User Centered Design
+
+	UCD refers to a class of methodologies where design decisions are based on some tangable user model.
+	
+	That user model must be based on the research of the users of the application.
+	
+	Rather than requiring users to adapt their attitudes and behaviors in order to learn and use a system, a system is designed to support user's existing beliefs.
+	
+	There are a few types of designers to be aware of.
+	
+	
+9.2.1 UX Designer
+
+	UX designers are primarily concerned with how the product feels.
+	
+	UX designers explore many different approach to solving a specific user problem. 
+	
+	The board responsibility of UX designers is to ensure the product logically flows from one step to the next.
+	
+	
+9.2.2 UI Designer
+
+	Unlike UX designers who are concerned with the overall feel, UI designers are more particular with how the product is laid out.
+	
+	They are in charge of designing each screen or page wto ensure that the UI visually communicates the path which the UX designer has laid out.
+	
+	For example, a UI designer creating an analtics dashboard might front load the most important info at the top. 
+	
+	UI designers are also typically responsible from creating a cohesive style guide and ensuring the consistent design language is applied. 
+	
+	Visual consistency falls under UI as well.
+	
+	
+9.2.3 Graphic Designer
+
+	Visual designers are less concerned with interaction or how pages link to each other, instead focusing on making it look pretty.
+	
+	This includes icons, colours and overall visual appearance.
+	
+	They often crave the small details and work to add visual quality to a site. 
+	
+	
+9.3 Understanding Users
+
+	Understanding users more, we can investigate them to try and figure out motives and needs.
+	
+	First we need to group them:
+	
+	Actor and Goal:
+	
+	Often a job title or common name for the type of user. i.e: Online Shopper
+	
+	User Role:
+	
+	A short name describing the goal of the user. i.e: casual browser - passes time browsing products etc.
+	
+	User Profile:
+	
+	Adding summary information about types of users, including the amount of users, the activites they will want to engage in, their computer skils and their experience with the subject matter.
+	
+	Persona:
+	
+	Choosing specific characteristics and compiling those into a description of that person. 
+	
+	
+9.4 Personas
+
+	Personas are based on research such as focus groups, observation, surveys etc. THey can e useful when personalising the target user.
+	
+	They are a representation of the target user which we use when designing.
+	
+	Personas:
+	- Describe the user's behavior patterns.
+	- Are represented as individuals.
+	- Express and focus on major needs and expectations of the most important user groups. 
+	- Give a clear picture of the user's expectations and how they're likely to use the site.
+	- Aid in uncovering universal features and functionality.
+	
+	From the research, we can construct personas and a user story. This allows us to create the user exoerience of a very specific user. 
+	
+	Personas are focused, concise user models that we can use to base our decisions on. 
+	
+	Once we identify multiple groups, what seperates them etc, we can break them down into different personas.
+	
+	Things we can include:
+	- Fictional Name
+	- Demographics such as age, education, ethnicity.
+	- Occupation, job title etc.
+	- IT Experience
+	- Experience with the subject matter.
+	- Personality.
+	- Goal/Task for going on our site. 
+	- Frequency of use, how often are they likely to use the site?
+	- Amount of Internet/Social Media Use.
+	
+	If we create a persona called Sarah, for instance, we can then ask ourselves some questions when designing the site.
+	
+	- What would Sarah think of this?
+	- Are we meeting Sarah's goals?
+	- Will this make it easier for Sarah to achieve her goals?
+	- Does this application meet Sarah's aspiratons/expectations?
+	
+	How many personas are necessary depends on the site. 
+
+
+9.5 Usability
+
+	Usability refers to the ability of a specific type of user being able to carry out a task using a product.
+	
+	Usability is me asured through testing. There are a few main questions:
+	
+	- How many completed the task?
+	- How quickly was the task completed, on average?
+	- How many user errors are made whilst attempting to complete the task?
+	
+	There are evolving standards for interaction design. 
+	
+	10 Usability Heuristics:
+	
+	1. Visibility of system status
+	The system should always keep users informed about what is going
+	on, through appropriate feedback within reasonable time.
+	
+	2. Match between system and real world
+	The system should speak the user's language. Words, phrases,
+	concepts familiar to the user, rather than system oriented terms.
+	Follow real world conventions, making information clear and in 
+	order.
+	
+	3. User control and freedom
+	Users often choose system functions by mistake, will need 
+	"emergency exit" to leave unwanted states. Support undo/redo.
+	
+	4. Consistency and standards
+	Users should not have to wonder if different words, situations,
+	actions etc mean the same thing. Follow platform conventions.
+	
+	5. Error prevention
+	Eliminate error-prone conditions, inform users with error 
+	messaging etc.
+	
+	6. Recognition rather than recall
+	Minimize the user's memory load. Make objects, actions etc 
+	visable. Users should not have to remember too much. Instructions
+	should be provided to help guide and educate use of the system.
+	
+	
+	7. Flexibility and efficiency of use
+	Accelerators – unseen by the novice user – may often speed up
+	the interaction for the expert user such that the system can 
+	cater to both inexperienced and experienced users. Allow users 
+	to tailor frequent actions.
+	
+	8. Aesthetic and minimalist design
+	Dialogues should not contain information which is irrelevent.
+	Every element should have meaning as they each compete for 
+	attention.
+	
+	9. Help users recognize, diagnose and recover from errors
+	User errors should be dealt with effectively, notifying the user
+	with what happened, how to fix it and why, to make continuing
+	a quick and easy process.
+	
+	10. Help and documentation
+	Whilst the best systems are likely not to need documentation to
+	use, it may be necessary to provide help and docs which are easy
+	to locate and search. List these by their expected frequency of
+	need.
+	
+	Useful read in regards to this: http://designingwebinterfaces.com/explore
+	
+	
+9.6 Prototyping
+
+	Do not fall into the trap of coding early in the project. This can waste time and resources.
+	
+	Better to create a cheap wireframes of the site and it's elements to plan out it's UX, how it will appeal to personas, usability etc.
+	
+	Prototypes are quick to build, can show problems and better solutions, and better plan for upcoming building of the site. 
+	
+	It's also cheap and there are loads of tools to help with this.
+	
+	By prototyping a project, we can plan out the work, get an idea of how it will look, how it will meet UX, personas, usability etc and if there are any changes or additions needed etc.
+	
+	Sketching and wireframing are two great ways of doing this. 
+	
+	Examples of wireframes - http://www.wireframeshowcase.com/wireframes/detail/iplagg_webshop
+	
+	We'll discuss some great was to do this next. 
+	
+	
+10 Balsamiq
+
+	Video - https://youtu.be/GSNYJu8hRIk
+	
+	Balsamiq Mockups is a user interface design tool. It is used to create wireframes or mockups.
+	
+	We can use this to create sketches of product ideas, share them with team members and get feedback before actually coding anything.
+	
+	Here we will cover the basic overview of using the platform, it's features and controls.
+	
+	For further guides, use this link: https://docs.balsamiq.com/mybalsamiq/
+
+	Outcomes:
+	The basics
+	Adding controls
+	Image paper controls
+	Completing the mockup
+	Finishing touches
+
+
+10.1 The Basics
+
+	Some basic components of Balsamiq include:
+	
+	Toolbar - The primary control interface for common commands (copy, past and delete)
+	
+	Canvas - The grid where the drawing occurs.
+	
+	UI Library - Controls that can be dragged onto the Canvas at any time. 
+	
+	Navigator - Allows navigation to your other mockups through thumbmail images. 
+	
+	Property Inspector - Allows the configuration of properties and actions specific to each UI control (colour, size).
+	
+	Image Example - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/34-e1444898477283.png
+
+	Use the biscuit example and Balsamiq docs for how to best utilize each of these.
+
+
+11 Forms
+	
+	Video - https://youtu.be/-5EPuEVt-HU
+	
+	Firstly, nobody likes forms. But they are an important part of a website and it's users, so use of smart, attractive forms can greatly increase conversions.
+	
+	Here we will be looking into how best to build forms in HTML5 so that they are low hastle and make use of some great features such as autocomplete.
+	
+	Basically forms are at their best when you have to enter as little as possible. Lets look at how best to accomplish this.
+	
+	Outcomes:
+	What is a Form?
+	Input Types
+	Other Form Tags
+	Exploring input Attributes
+	Numbers and Patterns
+	Making Choices
+
+
+11.1 Forms Explained

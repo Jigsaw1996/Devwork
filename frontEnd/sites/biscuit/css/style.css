@@ -1,0 +1,493 @@
+/* Default Styles */
+
+* {
+	padding: 0;
+	border: 0;
+	margin: 0;
+}
+
+*::selection {
+	background-color: #E86B0C;
+	color: #fff;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	width: 100%;
+	font-family: 'Overpass', sans-serif;
+	background-color: #F5D76E;
+	color: #ffffff;
+}
+
+div {
+	margin: 0;
+	padding: 0
+}
+
+h1 {
+	margin: 0 0 15px 0;
+	font-size: 2.5rem;
+}
+
+h2 {
+	margin: 0 0 15px 0;
+	font-size: 1.875rem;
+}
+
+h3 {
+	margin: 0 0 15px 0;
+	font-size: 1.25rem;
+}
+
+h4 {
+	margin: 0 0 15px 0;
+	font-size: 1.15rem;
+}
+
+p, main li {
+	margin: 0 0 10px 0;
+	font-size: 1rem;
+}
+
+ul, ol {
+	margin: 20px 0 20px 5%;
+}
+
+a {
+	text-decoration: none;
+	color: #E86B0C;
+	transition: .3s;
+}
+
+a:hover {
+	color:#FF0000;
+}
+
+form input:focus, form textarea:focus {
+	outline: none;
+}
+
+/* Header Styles */
+
+@media screen and (min-width: 1px) {
+	
+	header {
+		width: 100%;
+		margin: 0 0 70px 0;
+	}
+	
+	header nav {
+		width: 100%;
+		margin: 0 auto;
+	}
+	
+	header nav ul {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: stretch;
+		width: 100%;
+		margin: 0;
+		list-style: none;
+	}
+	
+	header nav ul li {
+		width: 100%;
+		padding: 20px 0 20px 0;
+		border-top: 3px solid #ffffff;
+		border-bottom: 3px solid #ffffff;
+		box-sizing: border-box;
+		margin: 0;
+		text-align: center;
+		font-size: 1.2rem;
+		color: #ffffff;
+	}
+	
+	header nav ul li:nth-child(2) {
+		border-top: none;
+		border-bottom: none;
+	}
+
+	header nav ul .title {
+		font-size: 2.5rem;
+		font-weight: bold;
+	}
+	
+	
+}
+
+@media screen and (min-width: 768px) {
+
+	header nav ul {
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+		align-items: center;
+		width: 80%;
+		padding: 0 10%;
+	}
+	
+	header nav ul li {
+		border: 0;
+		flex: 1;
+	}
+	
+	header nav ul li {
+		cursor: pointer;
+		transition: .3s;
+	}
+	
+	header nav ul li:nth-child(2):hover, header nav ul li:nth-child(3):hover {
+		color: #E86B0C;
+	}
+	
+	header nav ul .title {
+		flex: 6;
+		text-align: left;
+	}
+
+}
+
+
+/* Banner Styles */
+
+@media screen and (min-width: 1px) {
+
+	main {
+		width: 100%;
+		border-bottom: 3px solid #fff;
+		margin: 0 0 70px 0;
+		overflow: auto;
+	}
+
+	main .banner {
+		width: 100%;
+		height: 440px;
+		position: relative;
+		overflow: hidden;
+		transition: .5s;
+	}
+	
+	main .banner .slide {
+		width: 80%;
+		padding: 0 10%;
+		font-size: 0;
+		position: absolute;
+		transition: left 0.5s;
+	}
+	
+	/* Default Slide */
+	
+	main .banner .bannerDefault {
+		top: 0;
+		left: 0;
+	}
+	
+	main .banner .bannerDefault .txt {
+		width: 100%;
+		font-size: 1rem;
+		text-align: center;
+		color: #000;
+	}
+	
+	main .banner .bannerDefault .txt h1 {
+		font-size: 2.5rem;
+	}
+	
+	main .banner .bannerDefault .graphic {
+		width: 50%;
+		margin: 0 auto;
+	}
+	
+	main .banner .bannerDefault .graphic img {
+		width: 100%;
+	}
+	
+	/* Contact Slide */
+	
+	main .banner .contactUs {
+		top: 0;
+		left: 100%;
+	}
+
+	main .banner .contactUs .txt p {
+		text-align: center;
+	}
+	
+	main .banner .contactUs .txt p.cta {
+		font-size: 1.875rem;
+		font-weight: bold;
+	}
+	
+	main .banner .contactUs .txt p.details {
+		margin: 0 0 20px 0;
+	}
+	
+	main .banner .contactUs form {
+		width: 100%;
+	}
+	
+	main .banner .contactUs form input, main .banner .contactUs form textarea {
+		display: block;
+		width: 90%;
+		padding: 10px 5%;
+		border-radius: 15px;
+		margin: 0 auto 10px auto;
+		font-size: 1rem;
+		color: #000;
+	}
+	
+	main .banner .contactUs form input[type="submit"] {
+		padding: 10px 5%;
+		box-sizing: content-box;
+		background-color: #0013B2;
+		color: #fff;
+		transition: .3s;
+	}
+	
+	main .banner .contactUs form input[type="submit"]:hover {
+		background-color: #E86B0C;
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	main {
+		padding: 0;
+		border: 0;
+		margin: 0 0 70px 0;
+	}
+	
+	/* Default Slide */
+
+	main .banner .bannerDefault .txt {
+		display: inline-block;
+		width: 50%;
+		margin: 0 5% 0 0;
+		vertical-align: middle;
+		text-align: left;
+	}
+	
+	main .banner .bannerDefault .graphic {
+		display: inline-block;
+		width: 45%;
+		margin: 0;
+		vertical-align: middle;
+	}
+
+	/* Contact Slide */
+	
+	main .banner .contactUs .txt, main .banner .contactUs form {
+		display: inline-block;
+		width: 50%;
+		margin: 0 5% 0 0;
+		padding: 0;
+		vertical-align: middle;
+	}
+	
+	main .banner .contactUs .txt p  {
+		width: 100%;
+	}
+	
+	main .banner .contactUs  .txt p.details {
+		margin: 0 auto 30px auto;
+	}
+	
+	main .banner .contactUs form {
+		width: 45%;
+		margin: 0;
+		padding: 83.5px 0 83.5px 0;
+	}
+	
+	main .banner .contactUs form input, main .banner .contactUs form textarea {
+		margin: 0 auto 20px auto;
+	}
+	
+	main .banner .contactUs form input[type="submit"] {
+		cursor: pointer;
+	}
+}
+
+@media screen and (min-width: 1366px) {
+	
+	main .banner {
+		height: 600px;
+	}
+}
+
+
+/* Info Row Styles */
+
+@media screen and (min-width: 1px) {
+	
+	.infoRow {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: space-between;
+		width: 80%;
+		padding: 0 10%;
+		margin: 0 0 70px 0;
+	}
+	
+	.infoRow > div {
+		padding: 10%;
+		border-radius: 10px;
+		box-sizing: border-box;
+		margin: 0 0 20px 0;
+		background-color: #ffffff;
+	}
+	
+	.infoRow > div:last-child {
+		margin: 0;
+	}
+	
+	.infoRow div img {
+		display: block;
+		margin: 0 auto 50px auto;
+		vertical-align: top;
+	}
+	
+	.infoRow div .txt {
+		display: block;
+		margin: 0;
+		padding: 0;
+		vertical-align: top;
+		color: #000;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	
+	.infoRow {
+		flex-flow: row nowrap;
+		align-items: stretch;
+		justify-content: space-between;
+		cursor: pointer;
+	}
+	
+	.infoRow > div {
+		width: 30%;
+		padding: 5%;
+		margin: 0;
+		transition: .5s;
+	}
+	
+	.infoRow > div:hover {
+		transform: translate(0, -20px);
+		box-shadow: 0 20px 0 0 rgba(232, 107, 12, 0.25);
+		transition: .5s;
+	}
+}
+
+/* Text Block Styles */
+
+@media screen and (min-width: 1px) {
+	.textBlock {
+		width: 80%;
+		padding: 70px 10%;
+		border-top: 3px solid #fff;
+	}
+	
+	.textBlock h2 {
+		margin: 0 0 25px 0;
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.textBlock {
+		padding: 0 10%;
+		border: 0;
+		margin: 70px 0;
+	}
+}
+
+
+/* Newsletter Styles */
+
+@media screen and (min-width: 1px) {
+	
+	.newsletter {
+		width: 80%;
+		padding: 70px 10%;
+		border-top: 3px solid #fff;
+		border-bottom: 3px solid #fff;
+	}
+	
+	.newsletter p {
+		font-size: 2rem;
+		text-align: center;
+	}
+	
+	.newsletter form {
+		width: 100%;
+		margin: 20px auto 0 auto;
+		font-size: 0;
+	}
+	
+	.newsletter form input[type="email"] {
+		display: block;
+		width: 80%;
+		padding: 15px 0 15px 5%;
+		border-radius: 25px;
+		margin: 0 auto 20px auto;
+		font-size: 1rem;
+	}
+	
+	.newsletter form input[type="submit"] {
+		display: block;
+		width: 50%;
+		padding: 15px 0;
+		border-radius: 25px;
+		margin: 0 auto;
+		font-size: 1rem;
+		background-color: #0013B2;
+		color: #fff;
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	.newsletter form {
+		width: 60%;
+		margin: 40px auto 0 autod;
+	}
+	
+	.newsletter form input[type="email"] {
+		display: inline-block;
+		width: 65%;
+		border-radius: 25px 0 0 25px;
+		margin: 0;
+	}
+	
+	.newsletter form input[type="submit"] {
+		display: inline-block;
+		width: 30%;
+		border-radius: 0 25px 25px 0;
+		margin: 0 auto;
+		cursor: pointer;
+		transition: .3s;
+	}
+	
+	.newsletter form input[type="submit"]:hover {
+		background-color: #E86B0C;
+	}
+}
+
+
+/* Footer Styles */
+
+@media screen and (min-width: 1px) {
+	
+	footer {
+		width: 100%;
+		padding: 30px 0;
+		text-align: center;
+	}
+	
+	footer p {
+		padding: 0;
+		margin: 0;
+	}
+}
