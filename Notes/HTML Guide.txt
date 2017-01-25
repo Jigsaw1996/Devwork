@@ -247,6 +247,7 @@
 	autocomplete="" - Sets if the browser can remember previously entered information or not. Default is yes, enter "off" if not needed.
 	
 	<label> </label> - Used to assign labels to inputs etc. 
+	for="" - Enter the ID value of the element it relates to.
 	
 	<input /> - Used to create an input of some kind. 
 	type="" - Contains the type of input.

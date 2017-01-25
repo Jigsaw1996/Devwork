@@ -136,6 +136,17 @@ Contents
 		
 	11 Forms
 		11.1 Forms Explained
+		11.2 Form Attributes
+		11.3 Input Types
+		11.4 More Form Tags
+		11.5 Numbers and Patterns
+			11.5.1 Pattern
+		11.6 Select Boxes
+		11.7 List and Datalist
+		11.8 Focus
+		11.9 Summary
+		
+	12 Bootstrap
 			
 
 1 Reopening the Box Model
@@ -2090,3 +2101,208 @@ Contents
 
 
 11.1 Forms Explained
+
+	HTML forms collect data from visitors to a website. There are many examples of this:
+	
+	-Shopping Carts
+	-User Signup
+	-Search Forms
+	-Application Forms
+	
+	A basic form would be like the below.
+	
+	<form id="UserRegForm" action="server_side_script.php" method="post">
+		Firstname:<input type="text" name="fname"/>
+		Surname:<input type="text" name="sname"/>
+		Email:<input type="text" name="email"/>
+		<input type="submit" value="submit"/>
+	</form>
+	
+	As you can see, we use the form tag as a container, and fill it with the input types and their relevant components, in this case some text.
+	
+	
+11.2 Form Attributes
+
+	There are many form inputs that help change how the form operates.
+	
+
+11.2.1 Form Tag
+
+	action="" - This determines what happens when the form info is submitted. Usually a back end script will be the target of this.
+	
+	method="" - Determines how the action is performed. Either get or post. 
+	
+	Get is good for testing purposes, post should be used otherwise.
+	
+	
+11.2.2 Input Tag
+
+	type="" - Decides the type of input. Two examples are text, and submit. More are explained below.
+
+	id="" - Not only for styling, but also allows us to access an element in the form. i.e; labelling
+	
+	value="" - Sets a default value. This is required for some inputs such as checkboxes.
+	
+	name="" - Used to name an input tag. This is passed with the form information to the server and is used as a reference for the field.
+	
+	placeholder="" - Places a temproary text value. Useful for describing the information. Disappears when clicked.
+	
+	autocomplete="" - Set this to "On" and it will allow the input to remember previously entered values.
+	
+	list="" - Used by text inputs to link the input to a datalist.
+	
+	required - Simply place this without any value and it will stop the form from submitting without input.
+	
+	autofocus - Place this in the input and it will make it focused on page load. 
+	
+	
+11.3 Input Types
+
+	Lets look at some input types. 
+	
+	<input type="type here" />
+	
+	"text" - A text field, capable of anticipating user text input. 
+	
+	"submit" - Creates a button which will submit the form.
+	
+	"email" - A text field designed for email syntax.
+	
+	"number" - Accepts a number input.
+	
+	"date" - Opens a calendar for a date to be entered. 
+	
+	"color" - Opens up a color selector.
+	
+	"password" - Textbox, but text is obscured for security.
+	
+	"url" - Allows for url input.
+	
+	"range" - Gives a range selector as the input.
+	
+	"checkbox" - Sets an individal checkbox. the value="" attribute is required, and all the checkboxes of the same group should have the same name.
+
+	"radio" - Similar to checkboxes. Requires the value and name attributes. Only one allowed of each set.
+
+
+11.4 More Form Tags
+
+	By now we can make some cool forms. Lets go a step further with some more tags.
+	
+	<label> </label> - Rather than simply adding text as a label, we can use the semantic label tag. 
+	for="" - Enter the ID value of the element it relates to.
+	
+	<fieldset>
+		<!-- Set of related fields -->
+	</fieldset>
+	
+	Fieldset is used to group together a bunch of related inputs. It adds a border to them by default.
+	
+	<legend> </legend> - Used within a fieldset to give it a title. 
+
+
+11.5 Numbers and Patterns
+
+	We have been able to create input restrictions with the required attribute as well as the email and url types.
+	
+	These restrict what can be inputted into the field and the syntax it must follow.
+	
+	We can restrict it further, as follows.
+	
+	min="" - With a number input, sets a minimum allowed value.
+	
+	max="" - With a number input, sets a maximum allowed value.
+	
+	This works particularly well with the range input type.
+	
+	
+11.5.1 Pattern
+
+	If we want to go further, we can restrict inputs to follow certain patterns, like below:
+	
+	<input type="text" pattern="[0-9][A-Z]" />
+	
+	The input must be a number between 0 and 9, then an uppercase letter between A and Z.
+	
+	i.e: 3C
+	
+	If we want three of the same value, we can do [a-z]{3} to set three lowercase letters as part of the pattern.
+	
+	For both upper and lowercase, do [A-Za-z] or whatever restriction you want.
+
+
+11.6 Select Boxes
+
+	Select boxes are very useful. They don't require an input tag to create.
+	
+	<label for="currency">Currency:</label>
+	<select id="currency">
+		<option value="euro">Euro</option> 
+		<option value="dollar">Dollar</option>
+		<option value="pound">Pound</option> 
+		<option value="yen">Yen</option> 
+		<option value="rupee">Rupee</option> 
+		<option value="pesos">Pesos</option> 
+		<option value="duckets">Duckets</option> 
+		<option value="guilders">Guilders</option>   
+	</select>
+
+	As you can see, we use the <select> as a container which holds <option> tags.
+	
+	The <optgroup> tag can also be used to hold groups of options:
+	
+	<optgroup label="Popular">
+		<option value="euro">Euro</option> 
+		<option value="dollar">Dollar</option>
+		<option value="pound">Pound</option> 
+		<option value="yen">Yen</option> 
+	</optgroup>
+	
+	The options are broken up into the label titles. 
+	
+	This then displays as a dropdown selector.
+	
+	
+11.7 List and Datalist
+
+	When we have a text field, we can set recommended values to appear whilst they are typing. 
+	
+	<input list="browsers" name="browser">
+		<datalist id="browsers">
+			<option value="Internet Explorer">
+			<option value="Firefox">
+			<option value="Chrome">
+			<option value="Opera">
+			<option value="Safari">
+		</datalist>
+		
+	As you can see, the <datalist> tag contains options, the values of which will be the recommended options.
+	
+	The relevant input must use the list="" attribute which matches the ID attribute of the datalist tag.
+	
+	
+11.8 Focus
+
+	The :focus CSS selector is useful for editing how inputs react when they are currently selected.
+	
+	We can use it to style forms etc and make them look fancy when they are selected.
+	
+	Example:
+	
+	:focus{
+      background-color: #FFECE9;
+	}
+		
+	
+11.9 Summary
+
+	Importance of forms is often overlooked, but they are the most interactive part of a website in many cases.
+	
+	Particularly with the progression of HTML5, there has been big imporvements to input and design. 
+	
+	Making use of what's above will make forms much easier to make and fill in.
+
+
+12 Bootstrap
+
+	Video - https://youtu.be/j4SYPHLBiVo

@@ -1,0 +1,18 @@
+main form {
+	margin: 20px 0 50px 0;
+}
+
+main form label {
+	display: block;
+	margin: 0 0 10px 0;
+}
+
+main form input {
+	display: block;
+	padding: 2%;
+	margin: 0 0 20px 0;
+}
+
+main form input:focus {
+	outline-color: #A99999;
+}
