@@ -2474,7 +2474,7 @@ Contents
         <span class="glyphicon glyphicon-camera"></span> Photos
     </li>
     <li class="list-group-item ">
-	<span class="glyphicon glyphicon-comment"></span> Comments
+		<span class="glyphicon glyphicon-comment"></span> Comments
     </li>
 	</ul>
 
