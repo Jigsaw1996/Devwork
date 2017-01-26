@@ -9,8 +9,13 @@ main form label {
 
 main form input {
 	display: block;
+	width: 50%;
 	padding: 2%;
 	margin: 0 0 20px 0;
+}
+
+main form input[type="submit"] {
+	box-sizing: content-box;
 }
 
 main form input:focus {
