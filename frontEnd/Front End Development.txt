@@ -2510,12 +2510,140 @@ Contents
 
 	We can make the badges functional with dynamic values using angular.js, which will be shown later.
 	
-	
 	Additional Boostrap knowledge: https://scotch.io/bar-talk/bootstrap-3-tips-and-tricks-you-might-not-know
 
 
 13 Bootstrap Nav Elements
 
 	Video - https://youtu.be/jwU5W8koLs4
+	
+	In the previous lesson, we learned a lot about Twitter Bootstrap.
+	
+	However there's plenty of other things Bootstrap can do.
+	
+	In this nesson we will learn about the Bootstrap navbar. We will also learn about Bootstrap menus.
+	
+	Outcomes:
+	Navigation
+	Tabs and Pills
+	Bootstrap Components
+	Creating an Accordion panel
+
+
+13.1 Navigation
+
+	In the previous lessons, we have learned how important navigation, and specifically a navbar, is for a site.
+	
+	Bootstrap navbars are resposive and can extend and collapse.
+	
+	They are made using the .navbar class on the container, preferably on the nav tag for semantic layout.
+	
+	<div class="container">
+		<nav class="navbar navbar-default">
+			...
+		</nav>
+	</div>
+	
+	Now we need to add elements inside of the navbar. 
+	
+	Firstly we can add a brand to the header. First, create a div with the .navbar-header class, then place an a tag inside with a .navbar-brand class.
+	
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">TITLE</a>
+			</div>
+		</nav>
+	</div>
+
+	If we want to change the colour of the navbar, we can use the .navbar-inverse class instead of .navbar-default.
+	
+	But what about the nav items themselves?
+	
+	First we need a ul tag, with .nav and .navbar-nav classes. Then add the list items using li and a tags. 
+	
+	To align the list items right, also add the .navbar-right tag to the ul element.
+	
+	<nav class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Front End Tutorial</a>
+		</div> 
+		<ul class ="nav navbar-nav navbar-right">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	</nav>
+	
+	If we want the navigation to be fixed to the top of the page, add the .navbar-fixed-top class to the nav element. 
+	
+	There's also .navbar-fixed-bottom in case it's needed.
+	
+	
+13.2 Tabs and Pills
+
+	Besides the navbar, there are two other nav components that are often used for navigation.
+	
+	These are called tabs and pills.
+	
+	Generally these compenents are within page content and aren't used as main navigation for the site.
+	
+	
+13.2.1 Tabs
+
+	Tabs are used to display large amounts of content in a small area, without having to leave the page.
+	
+	The user can switch between the tab panes to access the content, where each tab can only be viewed one at a time.
+	
+	Here's an example of how this is done:
+	
+	<nav>
+		<ul class="nav nav-tabs">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li class="active"><a href="#">Portfolio</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	
+	
+13.2.2 Pills
+
+	Tabs can be turned into pills, they do not have 3d effects, instead using rounded borders.
+	
+	Just use the .nav-pills class instead of .nav-tabs.
+	
+	<nav>
+		<ul class="nav nav-pills">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li class="active"><a href="#">Portfolio</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	
+	
+13.2.3 Nav Width
+
+	Tabs and Pills can be displayed and positioned differently, as seen below.
+	
+	The most useful of which, you can allow them to take up their parents containers using .nav-justified.
+	
+	This is done using the .nav-justified class on the ul.
+	
+	
+13.3 Bootstrap Components
+
+	Bootstrap contains a number of components to help add useful functionality to a website.
+	
+	These can be reviewed here - http://getbootstrap.com/components/
+	
+	A number of these components introduce some dynamic JS content. As such, the bootstrap Javascript file must be linked.
+	
+	
+13.4 Accordion Panels
+
+	Accordions are common in web design. It allows a list of titles which expand to reveal more details when the title is clicked. 
+	
+	Generally only accordion tab is open at one time. 
 	
 	
