@@ -2457,7 +2457,7 @@ Contents
 		<li class="list-group-item">Item 3</li>
 	</ul>
 
-	Bootstrap also comes with some funky icons. A full list of them here: http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/186.png
+	Bootstrap also comes with some funky icons. A full list of them here: http://getbootstrap.com/components/
 	
 	To make them appear inlne, use the span tag and ass the .glyphicon class followed by the relevant icon class.
 
@@ -2638,7 +2638,7 @@ Contents
 	These can be reviewed here - http://getbootstrap.com/components/
 	
 	A number of these components introduce some dynamic JS content. As such, the bootstrap Javascript file must be linked.
-	
+
 	
 13.4 Accordion Panels
 
