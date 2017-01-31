@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Page Title</title>
+	<title>Bootstrap Breadcrumps and Pagination</title>
 	<link href="../../extensions/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="../../style.css" rel="stylesheet" />
 	<link href="style.css" rel="Stylesheet" />
@@ -25,8 +25,24 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 main">
-				<h1>Page Title</h1>
-				<p>Page Content</p>
+				<h1>Bootstrap Breadcrumps and Pagination</h1>
+				<p>Bootstrap has some useful page and navigation related elements which help users find their way around.</p>
+				<p>Two of these are breadcrumbs and pagination, which we will look at here.</p>
+				
+				<h2>Breadcrumbs</h2>
+				<p>Breadcrumbs are typically displayed at the top of the page, as a way of letting users know the page heirarchy, allowing them to return to less specific pages.</p>
+				<p>This is great for giving users full control over navigation and find content specific to them.</p>
+				<p>They are created using an ordered list with the .breadcrumb class. List items and links are then added, which represents the crumbs.</p>
+				<p>The .active class should be added to the page the user is currently on.</p>
+				
+				<ol class="breadcrumb">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Services</a></li>
+					<li class="active">Cleaning</li>
+				</ol>
+				
+				<h2>Pagination</h2>
+				<p></p>
 			</div>
 		</div>
 	</div>

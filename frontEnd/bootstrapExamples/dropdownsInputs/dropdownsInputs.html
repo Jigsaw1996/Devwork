@@ -32,7 +32,7 @@
 				<p>Dropdowns used to make the user pick one of multiple options.</p>
 				<p>First, give a containing div a class of .dropdown.</p>
 				<p>Then create a button, including the class .dropdown-toggle and a unique ID.</p>
-				<p>Lastly create a list with a class of .dropdown-menu, and give the aria-labelledby="" attribute with the ID of the button.</p>
+				<p>Lastly create a list with a class of .dropdown-menu.</p>
 				<div class="dropdown">
 					<button class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
 						Dropdown
@@ -65,19 +65,92 @@
 				<h2>Button Grouping</h2>
 				<p>We've learned buttons and we've learned dropdowns, but what if we want multiple of these on the same row?</p>
 				<p>Giving the buttons a container with the .btn-group does the trick.</p>
+				<p>Dropdowns must have their own nested container with .btn-group if they are displayed on the same line.</p>
 				<div class="btn-group">
-					<button class="btn btn-default">Button 1</button>
-					<button class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown"><span class="caret"></span></button>
-					<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-						<li>First Item</li>
-						<li>Second Item</li>
-						<li>Third Item</li>
-					</ul>
-					<button class="btn btn-primary">Button 2 <span class="glyphicon glyphicon-fire"></span></button>
-					<button class="btn btn-warning">Button 3 <span class="glyphicon glyphicon-minus-sign"></span></button>
-					<button class="btn btn-info">Button 4 <span class="glyphicon glyphicon-refresh"></span></button>
+					<div class="btn-group">
+						<button class="btn btn-default dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown">Button 1<span class="caret"></span></button>
+						<ul class="dropdown-menu">
+							<li>First Item</li>
+							<li>Second Item</li>
+							<li>Third Item</li>
+						</ul>
+					</div>
+					<div class="btn-group">
+						<button class="btn btn-primary">Button 2 <span class="glyphicon glyphicon-fire"></span></button>
+						<button class="btn btn-warning">Button 3 <span class="glyphicon glyphicon-minus-sign"></span></button>
+						<button class="btn btn-info">Button 4 <span class="glyphicon glyphicon-refresh"></span></button>
+					</div>
+					<div class="btn-group">
+						<button class="btn btn-info dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown"><span class="caret"></span></button>
+						<ul class="dropdown-menu dropdown-menu-right">
+							<li>First Item</li>
+							<li>Second Item</li>
+							<li>Third Item</li>
+						</ul>
+					</div>
 				</div>
-				<p>Note that the dropdown doesn't need the .dropup class container when grouped.</p>
+				<p>Use .button-group-vertical as the container class if you want them to display vertically.</p>
+				
+				<h2>Inputs</h2>
+				<p>Bootstrap allows us to make changes to the way that inputs display.</p>
+				
+				<p>To add Bootstrap elements to forms, wrap the input and other elements in a container with an .input-group class.</p>
+				<p>Add a class of .form-control to the input, and place a span either before or after the input, containing the necessary content.</p>
+				<p>Lastly, give the span a class of .input-group-addon and an id of #basic-addonx with x as the correct number, from 1 to 3 depending on size.</p>
+				
+				<form method="post">
+					<label for="email">Email Address: </label>
+					<div class="input-group">
+						<input type="email" class="form-control" id="email" placeholder="Type your email here" required />
+						<span class="input-group-addon" id="basic-addon2">@example.com</span>
+					</div>
+					
+					<label for="cost">Cost:</label>
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1">£</span>
+						<input type="text" class="form-control" id="cost" placeholder="Enter Your Amount" required />
+						<span class="input-group-addon" id="basic-addon1">.00</span>
+					</div>
+					
+					<label for="url">Your URL:</label>
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon3">http://www.biscuit.com/user/</span>
+						<input type="text" class="form-control" id="url" placeholder="Enter Your Chosen URL here" required />
+					</div>
+				</form>
+				
+				<p>Adding the .input-group-lg class to the .input-group container makes it larger. sm makes it smaller.</p>
+				
+				<p>For checkboxes, they can be added within an addon, which can help display options like below.</p>
+				
+				<form method="post">
+					<div class="input-group">
+						<span class="input-group-addon" id="basic-addon1">
+							<input type="checkbox" />
+						</span>
+						<input type="text" class="form-control" placeholder="More information here" required />
+					</div>
+				</form>
+				
+				<p>Lastly, we can add buttons to this, including dropdowns, like below.</p>
+				
+				<div class="input-group">
+					<div class="input-group-btn">
+						<button class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">Action <span class="caret"></span></button>
+						<ul class="dropdown-menu dropdown-menu-left">
+							<li>First Item</li>
+							<li>Second Item</li>
+							<li>Third Item</li>
+						</ul>
+					</div>
+					<input type="text" class="form-control" placeholder="More info here" required />
+					<div class="input-group-btn">
+						<button class="btn btn-primary">Send</button>
+					</div>
+				</div>
+				
+				<p>This is done by wrapping the whole thing in an .input-group container, and wrapping the buttons in an .input-group-btn container as well.</p>
+				<p>Multiple buttons can be added to the same side by placing them within one .input-group-btn container.</p>
 			</div>
 		</div>
 	</div>

@@ -28,14 +28,4 @@ header {
 	color: #A99999;
 }
 
-.dropdown, .dropup, .btn-group, .input-group {
-	margin: 20px 0;
-}
 
-form {
-	margin: 20px 0;
-}
-
-form .input-group {
-	margin: 10px 0 10px 0;
-}

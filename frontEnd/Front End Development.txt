@@ -2637,6 +2637,8 @@ Contents
 	
 	These can be reviewed here - http://getbootstrap.com/components/
 	
+	See the bootstrap examples for more guides to these.
+	
 	A number of these components introduce some dynamic JS content. As such, the bootstrap Javascript file must be linked.
 
 	
