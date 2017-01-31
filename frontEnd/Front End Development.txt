@@ -136,6 +136,17 @@ Contents
 		
 	11 Forms
 		11.1 Forms Explained
+		11.2 Form Attributes
+		11.3 Input Types
+		11.4 More Form Tags
+		11.5 Numbers and Patterns
+			11.5.1 Pattern
+		11.6 Select Boxes
+		11.7 List and Datalist
+		11.8 Focus
+		11.9 Summary
+		
+	12 Bootstrap
 			
 
 1 Reopening the Box Model
@@ -2090,3 +2101,551 @@ Contents
 
 
 11.1 Forms Explained
+
+	HTML forms collect data from visitors to a website. There are many examples of this:
+	
+	-Shopping Carts
+	-User Signup
+	-Search Forms
+	-Application Forms
+	
+	A basic form would be like the below.
+	
+	<form id="UserRegForm" action="server_side_script.php" method="post">
+		Firstname:<input type="text" name="fname"/>
+		Surname:<input type="text" name="sname"/>
+		Email:<input type="text" name="email"/>
+		<input type="submit" value="submit"/>
+	</form>
+	
+	As you can see, we use the form tag as a container, and fill it with the input types and their relevant components, in this case some text.
+	
+	
+11.2 Form Attributes
+
+	There are many form inputs that help change how the form operates.
+	
+
+11.2.1 Form Tag
+
+	action="" - This determines what happens when the form info is submitted. Usually a back end script will be the target of this.
+	
+	method="" - Determines how the action is performed. Either get or post. 
+	
+	Get is good for testing purposes, post should be used otherwise.
+	
+	
+11.2.2 Input Tag
+
+	type="" - Decides the type of input. Two examples are text, and submit. More are explained below.
+
+	id="" - Not only for styling, but also allows us to access an element in the form. i.e; labelling
+	
+	value="" - Sets a default value. This is required for some inputs such as checkboxes.
+	
+	name="" - Used to name an input tag. This is passed with the form information to the server and is used as a reference for the field.
+	
+	placeholder="" - Places a temproary text value. Useful for describing the information. Disappears when clicked.
+	
+	autocomplete="" - Set this to "On" and it will allow the input to remember previously entered values.
+	
+	list="" - Used by text inputs to link the input to a datalist.
+	
+	required - Simply place this without any value and it will stop the form from submitting without input.
+	
+	autofocus - Place this in the input and it will make it focused on page load. 
+	
+	
+11.3 Input Types
+
+	Lets look at some input types. 
+	
+	<input type="type here" />
+	
+	"text" - A text field, capable of anticipating user text input. 
+	
+	"submit" - Creates a button which will submit the form.
+	
+	"email" - A text field designed for email syntax.
+	
+	"number" - Accepts a number input.
+	
+	"date" - Opens a calendar for a date to be entered. 
+	
+	"color" - Opens up a color selector.
+	
+	"password" - Textbox, but text is obscured for security.
+	
+	"url" - Allows for url input.
+	
+	"range" - Gives a range selector as the input.
+	
+	"checkbox" - Sets an individal checkbox. the value="" attribute is required, and all the checkboxes of the same group should have the same name.
+
+	"radio" - Similar to checkboxes. Requires the value and name attributes. Only one allowed of each set.
+
+
+11.4 More Form Tags
+
+	By now we can make some cool forms. Lets go a step further with some more tags.
+	
+	<label> </label> - Rather than simply adding text as a label, we can use the semantic label tag. 
+	for="" - Enter the ID value of the element it relates to.
+	
+	<fieldset>
+		<!-- Set of related fields -->
+	</fieldset>
+	
+	Fieldset is used to group together a bunch of related inputs. It adds a border to them by default.
+	
+	<legend> </legend> - Used within a fieldset to give it a title. 
+
+
+11.5 Numbers and Patterns
+
+	We have been able to create input restrictions with the required attribute as well as the email and url types.
+	
+	These restrict what can be inputted into the field and the syntax it must follow.
+	
+	We can restrict it further, as follows.
+	
+	min="" - With a number input, sets a minimum allowed value.
+	
+	max="" - With a number input, sets a maximum allowed value.
+	
+	This works particularly well with the range input type.
+	
+	
+11.5.1 Pattern
+
+	If we want to go further, we can restrict inputs to follow certain patterns, like below:
+	
+	<input type="text" pattern="[0-9][A-Z]" />
+	
+	The input must be a number between 0 and 9, then an uppercase letter between A and Z.
+	
+	i.e: 3C
+	
+	If we want three of the same value, we can do [a-z]{3} to set three lowercase letters as part of the pattern.
+	
+	For both upper and lowercase, do [A-Za-z] or whatever restriction you want.
+
+
+11.6 Select Boxes
+
+	Select boxes are very useful. They don't require an input tag to create.
+	
+	<label for="currency">Currency:</label>
+	<select id="currency">
+		<option value="euro">Euro</option> 
+		<option value="dollar">Dollar</option>
+		<option value="pound">Pound</option> 
+		<option value="yen">Yen</option> 
+		<option value="rupee">Rupee</option> 
+		<option value="pesos">Pesos</option> 
+		<option value="duckets">Duckets</option> 
+		<option value="guilders">Guilders</option>   
+	</select>
+
+	As you can see, we use the <select> as a container which holds <option> tags.
+	
+	The <optgroup> tag can also be used to hold groups of options:
+	
+	<optgroup label="Popular">
+		<option value="euro">Euro</option> 
+		<option value="dollar">Dollar</option>
+		<option value="pound">Pound</option> 
+		<option value="yen">Yen</option> 
+	</optgroup>
+	
+	The options are broken up into the label titles. 
+	
+	This then displays as a dropdown selector.
+	
+	
+11.7 List and Datalist
+
+	When we have a text field, we can set recommended values to appear whilst they are typing. 
+	
+	<input list="browsers" name="browser">
+		<datalist id="browsers">
+			<option value="Internet Explorer">
+			<option value="Firefox">
+			<option value="Chrome">
+			<option value="Opera">
+			<option value="Safari">
+		</datalist>
+		
+	As you can see, the <datalist> tag contains options, the values of which will be the recommended options.
+	
+	The relevant input must use the list="" attribute which matches the ID attribute of the datalist tag.
+	
+	
+11.8 Focus
+
+	The :focus CSS selector is useful for editing how inputs react when they are currently selected.
+	
+	We can use it to style forms etc and make them look fancy when they are selected.
+	
+	Example:
+	
+	:focus{
+      background-color: #FFECE9;
+	}
+		
+	
+11.9 Summary
+
+	Importance of forms is often overlooked, but they are the most interactive part of a website in many cases.
+	
+	Particularly with the progression of HTML5, there has been big imporvements to input and design. 
+	
+	Making use of what's above will make forms much easier to make and fill in.
+
+
+12 Bootstrap
+
+	Video - https://youtu.be/j4SYPHLBiVo
+
+	When it comes to design and layout, it can be time consuming and high maintenence.
+	
+	A solution to this is Twitter Bootstrap. This allows developers with no design background to make great looking websites in very little time.
+	
+	It's open source, which makes it great to extend with custom functionality and third party extensions.
+	
+	It's easy to use, saves time, is mobile first and has cross browser compatibility.
+	
+	Outcomes:
+	What is Bootstrap?
+	The grid system and Bootstrap layouts
+	Bootstrap components
+
+
+12.1 Bootstrap Setup
+
+	Bootstrap can be downloaded from the following link: http://getBootstrap.com/getting-started/#download
+	
+	Click the "download bootstrap" to download, then extract to the relevant directory.
+	
+	This comes with CSS, Font and JS folders by default. These contain all Bootstrap files. 
+
+	Files with .min are minimized files, and will load faster in browser.
+
+	Pages using bootstrap need to have the following scripts:
+	
+	 <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" async></script>
+	  
+	 Jquery is needed in order to handle the JS files.
+
+
+12.2 The Grid System
+
+	The most important concept in Bootstrap is how it defines layout. This is done using the grid system.
+	
+	The system divides the web page into rows, each row containing a number of columns. 
+	
+	These columns will contain content for page, such as text, images and navigation. 
+	
+	Rows are stacked one on top of another, similar to the image below:
+	
+	http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/49.png
+	
+	Rows are comprised of 12 columns, and the elements in that row can take up as many of these as needed.
+	
+	12 is the maximum as that is the number used to measure the page. The sums of the row MUST equal 12.
+	
+	i.e: An element with full width will have a column value of 12. Half would be 6.
+	
+	An example layout: http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/58.png
+	
+	
+12.3 Implementing Grids
+
+	In practice, you place rows inside a .container class. Each row then has a .row class.
+	
+	The columns then have a .col-sm-x class, with x being the column value.
+	
+	So full width would be .col-sm-12
+	
+	"col" - The element is a column
+	"sm" - This is the screen size, in this case "small." We'll cover this further next.
+	
+	The bootstrap css files handle the heavy lifting for this.. 
+	
+	Example:
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<!-- Content -->
+			</div>
+			<div class="col-sm-4">
+				<!-- Content -->
+			</div>
+			<div class="col-sm-4">
+				<!-- Content -->
+			</div>
+		</div>
+	</div>
+	
+	As you can see, the column values equal 12, filling the row.
+	
+
+12.3.1 Offsetting Columns
+
+	Offsetting is done using the following:
+	
+	col-xx-offset-*
+	
+	the xx is sm or whatever the correct equivilent is.
+	
+	the * is the number of columns to move it over. 
+	
+	So to center a 4 column element:
+	
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">.col-md-4 .col-md-offset-4</div>
+	</div>
+
+
+12.4 Bootstrap Components
+
+	Now that we understand layout, lets examine it's components. This includes buttons, lists and badges.
+	
+	Bootstrap comes with some cool default elements which make developing them much easier.
+
+	
+12.4.1 Bootstrap Buttons
+
+	Bootstrap makes developing buttons easy.
+	
+	It's best to apply the bootstrap buttons to either the a, button or input tags.
+	
+	They are made like the below:
+	
+	<a href="#" class="btn btn-success">Learn</a>
+	
+	"btn" - Conveys it's a button.
+	
+	"btn-success" - Styles the button to a particular predefined style class.
+	
+	Here are all the styles available - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/138.png
+	
+	And also sizing - http://codeinstitute.wpengine.com/wp-content/uploads/2015/10/buttonclasssizes.png
+	
+	Example:
+	
+	<a href="#" class="btn btn-success">Success</a>
+	<a href="#" class="btn btn-primary">Primary</a>
+	<a href="#" class="btn btn-danger">Danger</a>
+
+
+12.4.2 Bootstrap Lists
+
+	Similar to buttons, lists in Boostrap are straightforward and gives access to layout classes.
+
+	Boostrap also inclues glyphs and badgets that add extra dimenson to lists and other elements.
+
+	Add a .list-group class to the ul, and then a .list-group-item class to the individual list items. This gives them a funky list design.
+
+	Example:
+
+	<ul class="list-group">
+		<li class="list-group-item">Item 1</li>
+		<li class="list-group-item">Item 2</li>
+		<li class="list-group-item">Item 3</li>
+	</ul>
+
+	Bootstrap also comes with some funky icons. A full list of them here: http://getbootstrap.com/components/
+	
+	To make them appear inlne, use the span tag and ass the .glyphicon class followed by the relevant icon class.
+
+	Example:
+	
+	<ul class="list-group">
+    <li class="list-group-item">
+	<span class="glyphicon glyphicon-star-empty"></span> Stars
+    </li>
+    <li class="list-group-item active">
+        <span class="glyphicon glyphicon-music"></span> Songs
+    </li>
+    <li class="list-group-item">
+        <span class="glyphicon glyphicon-camera"></span> Photos
+    </li>
+    <li class="list-group-item ">
+		<span class="glyphicon glyphicon-comment"></span> Comments
+    </li>
+	</ul>
+
+	Remember to leave a space between the span and the text, if text is needed.
+	
+	
+12.4.3 Badges
+
+	Badges allow numerical information to be associated with a link.
+	
+	To do this, replace the li tags in your list with a tags instead. 
+	
+	Gives the a tags a href of #.
+	
+	<ul class="list-group">
+    <a href="#" class="list-group-item">
+        <span class="glyphicon glyphicon-star-empty"></span> Stars
+    </a>
+	</ul>
+
+	Now all we need to do is add the badge. We do this with a second span, with a badge class.
+	
+	Example:
+	
+	<ul class="list-group">
+		<a href="#" class="list-group-item">
+			<span class="glyphicon glyphicon-star"></span> Stars
+			<span class="badge">145</span>
+		</a>
+	</ul>
+
+	The numerical value will then be displayed within the badge.
+
+	We can make the badges functional with dynamic values using angular.js, which will be shown later.
+	
+	Additional Boostrap knowledge: https://scotch.io/bar-talk/bootstrap-3-tips-and-tricks-you-might-not-know
+
+
+13 Bootstrap Nav Elements
+
+	Video - https://youtu.be/jwU5W8koLs4
+	
+	In the previous lesson, we learned a lot about Twitter Bootstrap.
+	
+	However there's plenty of other things Bootstrap can do.
+	
+	In this nesson we will learn about the Bootstrap navbar. We will also learn about Bootstrap menus.
+	
+	Outcomes:
+	Navigation
+	Tabs and Pills
+	Bootstrap Components
+	Creating an Accordion panel
+
+
+13.1 Navigation
+
+	In the previous lessons, we have learned how important navigation, and specifically a navbar, is for a site.
+	
+	Bootstrap navbars are resposive and can extend and collapse.
+	
+	They are made using the .navbar class on the container, preferably on the nav tag for semantic layout.
+	
+	<div class="container">
+		<nav class="navbar navbar-default">
+			...
+		</nav>
+	</div>
+	
+	Now we need to add elements inside of the navbar. 
+	
+	Firstly we can add a brand to the header. First, create a div with the .navbar-header class, then place an a tag inside with a .navbar-brand class.
+	
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">TITLE</a>
+			</div>
+		</nav>
+	</div>
+
+	If we want to change the colour of the navbar, we can use the .navbar-inverse class instead of .navbar-default.
+	
+	But what about the nav items themselves?
+	
+	First we need a ul tag, with .nav and .navbar-nav classes. Then add the list items using li and a tags. 
+	
+	To align the list items right, also add the .navbar-right tag to the ul element.
+	
+	<nav class="container">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Front End Tutorial</a>
+		</div> 
+		<ul class ="nav navbar-nav navbar-right">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	</nav>
+	
+	If we want the navigation to be fixed to the top of the page, add the .navbar-fixed-top class to the nav element. 
+	
+	There's also .navbar-fixed-bottom in case it's needed.
+	
+	
+13.2 Tabs and Pills
+
+	Besides the navbar, there are two other nav components that are often used for navigation.
+	
+	These are called tabs and pills.
+	
+	Generally these compenents are within page content and aren't used as main navigation for the site.
+	
+	
+13.2.1 Tabs
+
+	Tabs are used to display large amounts of content in a small area, without having to leave the page.
+	
+	The user can switch between the tab panes to access the content, where each tab can only be viewed one at a time.
+	
+	Here's an example of how this is done:
+	
+	<nav>
+		<ul class="nav nav-tabs">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li class="active"><a href="#">Portfolio</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	
+	
+13.2.2 Pills
+
+	Tabs can be turned into pills, they do not have 3d effects, instead using rounded borders.
+	
+	Just use the .nav-pills class instead of .nav-tabs.
+	
+	<nav>
+		<ul class="nav nav-pills">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li class="active"><a href="#">Portfolio</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+	
+	
+13.2.3 Nav Width
+
+	Tabs and Pills can be displayed and positioned differently, as seen below.
+	
+	The most useful of which, you can allow them to take up their parents containers using .nav-justified.
+	
+	This is done using the .nav-justified class on the ul.
+	
+	
+13.3 Bootstrap Components
+
+	Bootstrap contains a number of components to help add useful functionality to a website.
+	
+	These can be reviewed here - http://getbootstrap.com/components/
+	
+	See the bootstrap examples for more guides to these.
+	
+	A number of these components introduce some dynamic JS content. As such, the bootstrap Javascript file must be linked.
+
+	
+13.4 Accordion Panels
+
+	Accordions are common in web design. It allows a list of titles which expand to reveal more details when the title is clicked. 
+	
+	Generally only accordion tab is open at one time. 
+	
+	

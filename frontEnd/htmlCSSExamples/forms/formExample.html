@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form Examples</title>
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+</head>
+<body>
+	<header id="top">
+		<div>
+			<h1>Front End Tutorial</h1>
+		</div>
+	</header>
+	<main>
+		<h1>Form Examples</h1>
+		<p>Forms are an interactive form of websites in which the user inputs a range of information.</p>
+		<p>We will be demonstrating this here.</p>
+		
+		<h2>Form Types and Attributes</h2>
+		<form method="post">
+				<label for="text">Text Input (Required):</label>
+				<input type="text" id="text" name="text" placeholder="Placeholder text" required />
+				
+				<label for="email">Email Input:</label>
+				<input type="email"  id="email" name="email" placeholder="Email syntax only" />
+				
+				<label for="number">Number Input:</label>
+				<input type="number" id="number" name="number" value="1" />
+				
+				<label for="date">Date Input:</label>
+				<input type="date" id="date" name="date" />
+				
+				<label for="color">Colour Input:</label>
+				<input type="color" id="color" name="color" value="#ffffff" />
+				
+				<label for="password">Password Input:</label>
+				<input type="password" id="password" name="password" />
+				
+				<label for="url">URL Input:</label>
+				<input type="url" id="url" name="url" />
+				
+				<label for="range">Range Input:</label>
+				<input type="range" min="1" max="20" id="range" name="range" />
+				
+				<label for="checkbox1">Checkbox 1</label>
+				<input type="checkbox" value="checkbox1" id="checkbox1" name="check"/>
+				
+				<label for="checkbox">Checkbox 2</label>
+				<input type="checkbox" value="checkbox2" id="checkbox2" name="check"/>
+				
+				<input type="submit" value="Submit Input"/>
+		</form>
+		
+		<h2>Datalist</h2>
+		<form method="post">
+		<label for="datalist">Text Input with Datalist:</label>
+		<input type="text" id="datalist" list="list" name="datalist" placeholder="Enter a browser" />
+		<datalist id="list">
+			<option value="Chrome" />
+			<option value="Firefox" />
+			<option value="Edge" />
+			<option value="Internet Explorer" />
+			<option value="Safari" />
+		</datalist>
+		</form>
+		
+		<h2>Select Boxes</h2>
+		<form method="post">
+		<label for="boxes">Select Box:</label>
+		<select id="boxes" name="boxes">
+			<optgroup label="Popular">
+				<option value="Chrome">Chrome</option>
+				<option value="Firefox">Firefox</option>
+				<option value="Safari">Safari</option>
+				<option value="Edge">Edge</option>
+			</optgroup>
+			<optgroup label="Other">
+				<option value="Explorer">Explorer</option>
+				<option value="Opera">Opera</option>
+			</optgroup>
+		</select>
+		</form>
+		
+		<h2>Pattern</h2>
+		<form method="post">
+			<label for="pattern">Pattern:</label>
+			<input type="text" name="pattern" id="pattern" pattern="[A-Z][1-9]{3}" placeholder="Captial Letter, then 3 numbers" />
+			<input type="submit" />
+		</form>
+	</main>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>

@@ -33,11 +33,11 @@
 					<p class="cta">Please let us know how we can help with your streaming needs!</p>
 					<p class="details">Phone: <a href="tel:01295000000">01295 000000</a> - Email: <a href="mailto:info@biscuitvideo.com">info@biscuitvideo.com</a></p>
 				</div>
-				<form>
-					<input type="text" placeholder="Your Name" />
-					<input type="email" placeholder="Email Address" />
-					<textarea placeholder="Please enter your message" ></textarea>
-					<input type="submit" />
+				<form method="post">
+					<input type="text" placeholder="Your Name" name="name" required />
+					<input type="email" placeholder="Email Address" name="email" required />
+					<textarea placeholder="Please enter your message" name="message" required ></textarea>
+					<input type="submit" name="submit" value="Send" />
 				</form>
 			</div>
 		</div>
@@ -76,9 +76,9 @@
 	<section class="newsletter">
 		<p>Interested in finding out more?</p>
 		<p>Subscribe to our newsletter:</p>
-		<form>
-			<input type="email" placeholder="Email" />
-			<input type="submit" />
+		<form method="post">
+			<input type="email" placeholder="Email" name="email" required />
+			<input type="submit" value="Subscribe" name="submit" />
 		</form>
 	</section>
 	<footer>
