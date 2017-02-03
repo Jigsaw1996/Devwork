@@ -42,7 +42,49 @@
 				</ol>
 				
 				<h2>Pagination</h2>
-				<p></p>
+				<p>Pagination displays links to previous and upcoming pages, either by number or name. These are often seen on search engines etc.</p>
+				<p>This is done usling an unordered list with the .pagination class.</p>
+				<p>The list items start and end with the double arrow sybmow.</p>
+				<p>The ones in between are simply the numbers/names relevant.</p>
+				<p>Here's an example.</p>
+				
+				<nav>
+					<ul class="pagination">
+						<li class="disabled"><a href="">&laquo;</a></li>
+						<li class="active"><a href="">1</a></li>
+						<li><a href="">2</a></li>
+						<li><a href="">3</a></li>
+						<li><a href="">4</a></li>
+						<li><a href="">5</a></li>
+						<li><a href="">&raquo;</a></li>
+					</ul>
+				</nav>
+				
+				<p>The pagination should be contained within a nav tag, representing it's status as a navigation element.</p>
+				<p>The previous page list item has been given the .disabled class, as there's no previous page. The first item has been given the .active class to show it's the current page selected.</p>
+				<p>The .pagination-lg class can be added to make it larger.</p>
+				
+				<h2>Pager</h2>
+				<p>Similar to pagination, a pager displays links to other pages. However it only has two links, usually containing text.</p>
+				<p>Just like pagination, it takes an unordered list class. Add the .pager class to it and add the two list items with anchor tags.</p>
+				
+				<nav>
+					<ul class="pager">
+						<li><a href="">&laquo; Previous</a></li>
+						<li><a href="">Next &raquo;</a></li>
+					</ul>
+				</nav>
+				
+				<p>Add the .previous and .next classes to the relevant list item, that way thye align to the left and right hand sides.</p>
+				
+				<nav>
+					<ul class="pager">
+						<li class="previous"><a href="">&laquo; Previous</a></li>
+						<li class="next"><a href="">Next &raquo;</a></li>
+					</ul>
+				</nav>
+				
+				<p>The .disabled class can also be added to a list item if there is no next or previous item.</p>
 			</div>
 		</div>
 	</div>
