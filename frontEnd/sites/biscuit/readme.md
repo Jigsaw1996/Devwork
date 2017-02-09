@@ -7,10 +7,12 @@
 
 # Gives examples of:
 
+* One Page Design
 * Mobile First Design
+* UX
 * JS DOM manipulation
 * JS Event Handlers
-* One Page Design
+* Wireframing and Mockups
 
 
 # General Description
