@@ -147,7 +147,40 @@ Contents
 		11.9 Summary
 		
 	12 Bootstrap
-			
+		12.1 Bootstrap Setup
+		12.2 The Grid System
+		12.3 Implementing Grids
+			12.3.1 Offsetting Columns
+		12.4 Bootstrap Components
+			12.4.1 Bootstrap Buttons
+			12.4.2 Bootstrap Lists
+			12.4.3 Badges
+		
+	13 Bootstrap Nav Elements
+		13.1 Navigation
+		13.2 Tabs and Pills
+			13.2.1 Tabs
+			13.2.2 Pills
+			13.2.3 Nav Width
+		13.3 Bootstrap Components
+			13.3.1 Component Types
+			13.3.2 Contextual Colours
+			13.3.3 Glyphicons
+		13.4 Accordion Panels
+			13.4.1 Linking Title to Body
+			13.4.2 Linking Elements Together
+		13.5 Summary
+		
+	14 Bootstrap Responsive
+		14.1 Responsive Classes
+		14.2 Responsive Grid System
+			14.2.1 Hiding Elements
+		14.3 Responsive Navigation
+		14.4 Overiding Bootstrap
+		14.5 Summary
+		
+	15 Javascript Revisited
+
 
 1 Reopening the Box Model
 
@@ -539,7 +572,7 @@ Contents
 	CSS stands for cascading stylesheets. The cascade refers to how stylesheets all cascade together to form a single stylesheet in the end. 
 	
 	There are multiple ways stylesheets can be displayed. 
-	
+
 	
 3.7.1 Internal Stylesheets
 
@@ -2641,11 +2674,340 @@ Contents
 	
 	A number of these components introduce some dynamic JS content. As such, the bootstrap Javascript file must be linked.
 
+	Here's a breakdown of these, see the Bootstrap Examples for more information on each of these.
+	
+
+13.3.1 Component Types
+
+	Lists - Lists are used to display structured and related data. Bootstrap expands the available options for display, layout etc.
+
+	Dropdowns - Dropdowns are used to let users select from a number of options without having to click. 
+	
+	Inputs - Bootstrap expands upon the existing input options, especially when it comes to how they display.
+	
+	Buttons - Bootstrap once again expands greatly on button display, grouping and types. Buttons can be used to initiate actions/links/forms etc.
+	
+	Breadcrumbs - Bootstrap comes with default styling for Breadcrumbs, which are displayed at the top of the page showing the user journey. i.e: Home > About
+	
+	Pagination - This is used to link to next/previous page, or by numbered result. 
+	
+	Labels - Used typically after titles to highlight a certain piece of information.
+	
+	Badges - Used typically after text or listing to highlight numbering/text etc.
+	
+	Jumbotron - Is a container for top page content, usually as a top banner etc.
+	
+	Thumbnails - Used to hold adjascent containers for images, text etc.
+	
+	Alerts - Bootstrap provides these as a means of communicating important text to the user when required, for a variety of purposes.
+	
+	Progress Bars - Represents how much of a task is complete. Bootstrap expands upon display and animation etc. 
+	
+	Media Object - Bootstrap provides a container to hold an image, and then some text relevant to it etc. These can be nested.
+	
+	Panels - Panels are used to hold a title and some text relevant to it, similar to alerts but with more detail.
+	
+	Responsive Embed - Bootstrap provdes a quick and easy way to allow videos, embeds etc to take up responsive widths around a set aspect ratio.
+	
+	Wells - Used to add important page text within an inset. 
+	
+	
+13.3.2 Contextual Colours
+
+	Many of the above components and previous sections such as alerts, lists, badges, labels, progess bars, buttons etc can be styled with different visual colours.
+	
+	These are used, as you'd expect, to add context to the element, it's meaning and how it should be percieved to the user. 
+	
+	These are applied using a second class, typically the first class but with -warning on the end. Below are the different types you will come across.
+	
+	- Default
+	- Primary
+	- Info
+	- Success
+	- Warning
+	- Danger
+	
+	Example: 
+	
+	<div class="progress">
+		<div class="progress-bar progress-bar-warning" style="width: 80%;min-width: 2em;">
+			Warning
+		</div>
+	</div>
+	
+	As you can see, this is a progress bar which uses the warning context.
+
+	See the examples of the above components to see what each of these look like.
+	
+
+13.3.3 Glyphicons
+
+	Similarly, icons are used in many components such as lists, badges and inputs. These are known as glyphicons, and there's many default ones to have a look at. 
+	
+	These are created using spans with the correct class. These always use the .glyphicon class followed by .glyphicon-x with x being the name of the icon needed.
+	
+	A full list of icons and their names can be found here: http://getbootstrap.com/components/#glyphicons
+
 	
 13.4 Accordion Panels
+
+	Now that we understand most components in Bootstap, we can move on to more complex things.
 
 	Accordions are common in web design. It allows a list of titles which expand to reveal more details when the title is clicked. 
 	
 	Generally only accordion tab is open at one time. 
 	
+	These are made using a containing div with the .panel class.
 	
+	We then set the panel heading and body with .panel-heading and .panel-body respectfully.
+
+	If the heading actually contain's a h element, give it a class of .panel-heading.
+	
+	Example:
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				1. What is Bootstrap?
+			</h4>
+		</div>
+		<div class="panel-body">
+			<p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions.
+			<a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+		</div>
+	</div>
+	
+	
+13.4.1 Linking Title to Body
+
+	So we have the visual setup, but how do we link the heading to the body?
+	
+	First, we wrap the .panel-body div with a container, using the .panel-collapse and .collapse classes. Also give it a unique ID.
+	
+	Then we wrap the title's content with an anchor tag. We give the anchor tag a data=toggle="" value of collapse, and a href="" of the id we give to the new body container.
+
+	So in final:
+	
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" href="#collapse1">
+					1. What is Bootstrap?
+				</a>
+			</h4>
+		</div>
+		<div id="collapse1" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions.
+				<a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+			</div>
+		</div>
+	</div>
+	
+	So what actually happens here?
+	
+	When the anchor tag is activated, it uses the "collapse" data toggle on the link, in this case the container for the body.
+	
+	As such, when clicked, it will open.
+	
+	In the CSS, all it does it change the display from none, to block or vice versa.
+	
+	
+13.4.2 Linking Elements Together
+
+	So lets add more tabs to this. We do this by giving each of them the above code, containing them all within a div, with the .panel-group class.
+	
+	Also give the group an id which will be used to refer tabs to their parent.
+	
+	On the anchor tag, add data-parent="" with the id of the panel group.
+	
+	Make sure the individual tabs have different id's and are linked appropriately.
+	
+	Example:
+	
+	<div class="panel-group" id="accordion">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+						1. What is Bootstrap?
+					</a>
+				</h4>
+			</div>
+			<div id="collapse1" class="panel-collapse collapse">
+				<div class="panel-body">
+					<p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions.
+					<a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+						2. What is Bootstrap?
+					</a>
+				</h4>
+			</div>
+			<div id="collapse2" class="panel-collapse collapse">
+				<div class="panel-body">
+					<p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions.
+					<a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	The result of this is that the tabs can toggle between each other, with the handling of CSS and JS being handled behind the scenes by Bootstrap.
+
+	See the Accordion Example for a further look at this.
+	
+13.5 Summary
+
+	A lot of Bootstrap has been covered here, showing how to best use Bootstrap for navigation and page elements. 
+	
+	Make use of the many examples that have been created which showcase everything learnt here.
+
+
+14 Bootstrap Responsive
+
+	Video - https://youtu.be/2v74M9SwYfc
+
+	Responsive Design is as important in Bootstrap as otherwise.
+	
+	Bootstrap supports the ability to adjust and adapt the site to fit different screen sizes and still look good.
+	
+	Luckily Bootstrap makes this a quick and easy process.
+	
+	We will look into how best to deploy Bootstrap Responsive Design.
+
+	Outcomes:
+	Responsive Bootstrap
+	Responsive Navbar
+	Responsive Grid System
+
+
+14.1 Responsive Classes
+
+	Twitter Bootstrap is designed with responsiveness as a core feature. 
+	
+	To cater to these, there are four size classes, which cater to the common device displays.
+	
+	Extra Small (-xs-)	Less than 768px
+	Small (-sm-)		Bigger than or equal to 768px
+	Medium (-md-)		Bigger than or equal to 992px
+	Large (-lg-)		Bigger than or equal to 1200px
+	
+	To apply these, first make sure that the correct meta tag is in the header of the page, which sets default scaling and zoom for correct display.
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	After this, apply these to columns etc so that different screen sizes will have columns with different column widths etc.
+
+
+14.2 Responsive Grid System
+
+	As seen above, Bootstrap has four classes used to adapt to the size of the user's screen.
+	
+	You've also learnt about Bootstrap's 12 columns and how they make up row width.
+	
+	To keep content on the same line, the total of the row must be less or equal to 12.
+	
+	If this does happen, columns will not fit inside the row and will be push down onto the next. 
+	
+	Bearing this in mind:
+	
+	We can apply multiple classes to one element, so one div can have multiple column widths depending on the screen size.
+	
+	Example:
+	
+	<div class="col-xs-12 col-sm-6 col-md-4 col-lg-6">
+		<h2>Bootstrap</h2>
+		<p>This div has multiple widths depending on screen size.</p>
+	</div>
+	
+	In this example, on extra small screens it has a width of 12, small has 6, medium has 4 and large has 6.
+
+	Not all of these have to be used. It comes down to the page and it's design. 
+	
+	Because Bootstrap is mobile first, the small screen option will display on larger displays unless they are declared.
+	
+	
+14.2.1 Hiding Elements
+
+	What if we don't want an element to appear at a certain size.
+	
+	We do this by adding the .hidden-xs class to the element.
+	
+	Obviously replace xs with whatever the correct size is.
+	
+
+14.3 Responsive Navigation
+
+	As with previous lessons, navbars are important. But what about a display on mobile?
+	
+	Ideally what we need is a navigation button which, upon clicked, will display top navigation elements.
+	
+	First we need a button in our header. It uses the .navbar-toggle and .collapsed classes and has a data-toggle="" of collapse.
+
+	Example:
+	
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"></button>
+	
+	The data-toggle attribute controls the behavior of the button on click. When clicked, it will collapse. When clicked again, it will expand.
+	
+	However, how does the browser know WHAT to expand and collapse?
+	
+	To do this, we use the data-target attribute. Give this the ID of the relevant element, and it will expand and collapse it's children.
+	
+	We also need some visual element to click on, preferably an icon. There is a glyph we can use for this, known as "bar." Three of these, one after the other, will create the result.
+	
+	In total, below is what we need to make:
+	
+	<div class="navbar-header">
+		<a class="navbar-brand" href="#">CHOCOBLOCK</a>  
+		<ul id="myCollapsingList" class ="nav navbar-nav collapse navbar-collapse">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Portfolio</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>                 
+		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myCollapsingList">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+
+	Now you have a responsive, good looking button for a navigation bar.
+
+	
+14.4 Overiding Bootstrap
+
+	When using Bootstrap, you may wish to change the CSS which Boottrap uses.
+	
+	Possible uses include changing font size, family, background colours, borders etc,.
+	
+	The best way to do this is to create your own CSS file and link it AFTER the bootstrap css link.
+	
+	Placing it after means that the code is read after Bootstrap code, and will therefore be overwritten.
+	
+	Then simply identify the code in Bootstrap you wish to change, copy and paste it into your own CSS and make the changes.
+	
+	This also means all standard Bootstrap styles remain the same. 
+	
+	
+14.5 Summary
+
+	We have now looked into not only how to use Bootstrap responsively, but how to save an awful lot of time.
+	
+	Using Bootstrap can be a great solution when you need to build a responsive application fast. 
+	
+	It also comes with tonnes of additional components and shortcuts to speed up the overall production time.
+
+	Overall, Bootstrap can be a great help when building web applications.
+
+
+15 Javascript Revisited
+
+	Video - https://youtu.be/qKQJuqFGhI8
