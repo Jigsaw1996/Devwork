@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Accordion Examples</title>
+	<link href="../../extensions/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="../../extensions/bootstrap-3.3.7-dist/js/bootstrap.min.js" async></script>
+</head>
+<body>
+	<header class="navbar-fixed-top">
+		<nav class="container">
+			<div class="navbar-header">
+			<a class="navbar-brand" href="#">Front End Tutorial</a>
+			</div> 
+			<ul class ="nav navbar-nav navbar-right">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 main">
+				<h1>Accordion Examples</h1>
+				<p>Accordion Tabs are used to display content under titles, which only display on click.</p>
+				<p>This is great for breaking down content and making the page easier to read.</p>
+				
+				<div class="panel-group" id="accordion">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+									1. What is Bootstrap?
+								</a>
+							</h4>
+						</div>
+						<div id="collapse1" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions.
+								<a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+									2. What is Bootstrap?
+								</a>
+							</h4>
+						</div>
+						<div id="collapse2" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions.
+								<a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<p>Take note of the ID's elements use and the anchor tags which link to them. ALso note the data values the anchor tags use.</p>
+				
+				
+				<h2>Contextual Tabs</h2>
+				<p>Much like other Bootstrap components, we can alter the display of the accordion tabs to give it context and a better appearance more fit for purpose.</p>
+				
+				<p>Below are the contextual tabs in use:</p>
+				
+				<div class="panel-group" id="accordion2">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion2" href="#collapse10">
+									1. Primary
+								</a>
+							</h4>
+						</div>
+						<div id="collapse10" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions.
+								<a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-info">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion2" href="#collapse20">
+									2. Info
+								</a>
+							</h4>
+						</div>
+						<div id="collapse20" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions.
+								<a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-success">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion2" href="#collapse30">
+									3. Success
+								</a>
+							</h4>
+						</div>
+						<div id="collapse30" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions.
+								<a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-warning">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion2" href="#collapse40">
+									4. Warning
+								</a>
+							</h4>
+						</div>
+						<div id="collapse40" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions.
+								<a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<h4 class="panel-title">
+								<a data-toggle="collapse" data-parent="#accordion2" href="#collapse50">
+									5. Danger
+								</a>
+							</h4>
+						</div>
+						<div id="collapse50" class="panel-collapse collapse">
+							<div class="panel-body">
+								<p>Bootstrap is a powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions.
+								<a href="http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Learn more.</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+ 
+				<p><strong>Take into account that, when there are multiple accordions on one grid, they must have different group and tab ID's to avoid conflict.</strong></p>
+			</div>
+		</div>
+	</div>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>

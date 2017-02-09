@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Media Objects and Panels Examples</title>
+	<link href="../../extensions/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="../../extensions/bootstrap-3.3.7-dist/js/bootstrap.min.js" async></script>
+</head>
+<body>
+	<header class="navbar-fixed-top">
+		<nav class="container">
+			<div class="navbar-header">
+			<a class="navbar-brand" href="#">Front End Tutorial</a>
+			</div> 
+			<ul class ="nav navbar-nav navbar-right">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 main">
+				<h1>Media Objects and Panels Examples</h1>
+				<p>Below are examples of two types of containers in Bootstrap.</p>
+				<p>The first are media objects, which are used to display left-right media content.</p>
+				<p>Lastly there are panels, which are used to display title-content pairs.</p>
+				
+				<h2>Media Objects</h2>
+				<p>Media objects display content such as images and text on the same row.</p>
+				<p>This is accomplished with a .media class container. Two divs are then used to contain the left-right content.</p>
+				<p>The first div should have the .media-left class, the second should have the .media-body class.</p>
+				<p>The image etc should then be placed within the first, and the content within the second, as seen below.</p>
+				
+				<div class="media">
+					<div class="media-left media-middle">
+						<img src="img/cat.jpg" alt="Cat" width="64" />
+					</div>
+					<div class="media-body">
+						<h4 class="media-heading">Heading</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+						Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+						nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+						pariatur.</p>
+					</div>
+				</div>
+				
+				<p>Notice how the .media-heading class was added to the heading of the text.</p>
+				<p>We've also added a media-middle class to the image container so that it vertically centers in comparison to the text. This can also have a value of top and bottom.</p>
+				
+				<h3>Nested Media Objects</h3>
+				<p>Media Objects can be nested within one another by making them part of a list.</p>
+				<p>First, contain the media items within an unordered list with the .media-list class. The list items are given the .media class. Placing a ul within a ul creates the desired effect, as seen below.</p>
+
+				<ul class="media-list">
+					<li class="media">
+						<div class="media-left media-middle">
+							<img src="img/cat.jpg" alt="Cat" class="media-object" width="64" />
+						</div>
+						<div class="media-body">
+							<h4 class="media-heading">Heading</h4>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+							Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+							pariatur.</p>
+						</div>
+					</li>
+					<ul>
+						<li class="media">
+							<div class="media-left media-middle">
+								<img src="img/cat.jpg" alt="Cat" class="media-object" width="64" />
+							</div>
+							<div class="media-body">
+								<h4 class="media-heading">Heading</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+								sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+								reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+								pariatur.</p>
+							</div>
+						</li>
+					</ul>
+				</ul>
+				
+				<p><strong>Take note of the .media-object class added to the images.</strong></p>
+				
+				<h2>Panels</h2>
+				<p>Panels stick your content in a box. This can consist of a title-content pair to make it look a bit more snazzy.</p>
+				<p>This is done using a div element with the .panel class. Also add .panel-default for default styling.</p>
+				<p>This contains two divs. The first has a class of .panel-heading, the second has a class of .panel-body.</p>
+				<p>You can also have other sections, such as a footer using the .panel-footer class. </p>
+				
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Panel Title
+					</div>
+					<div class="panel-body">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+				
+				<h3>Panels With Contextual Styling</h3>
+				<p>As you can expect, these can be given multiple appearances by changing the .panel-default class to the relevant one below.</p>
+				
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						Primary
+					</div>
+					<div class="panel-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+				
+				<div class="panel panel-success">
+					<div class="panel-heading">
+						Panel Title
+					</div>
+					<div class="panel-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+				
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						Panel Title
+					</div>
+					<div class="panel-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+				
+				<div class="panel panel-warning">
+					<div class="panel-heading">
+						Panel Title
+					</div>
+					<div class="panel-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+				
+				<div class="panel panel-danger">
+					<div class="panel-heading">
+						Panel Title
+					</div>
+					<div class="panel-body">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+						sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</div>
+				
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>
