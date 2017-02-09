@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap Alerts and Progress Bars</title>
+	<link href="../../extensions/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="../../extensions/bootstrap-3.3.7-dist/js/bootstrap.min.js" async></script>
+</head>
+<body>
+	<header class="navbar-fixed-top">
+		<nav class="container">
+			<div class="navbar-header">
+			<a class="navbar-brand" href="#">Front End Tutorial</a>
+			</div> 
+			<ul class ="nav navbar-nav navbar-right">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 main">
+				<h1>Bootstrap Alerts and Progress Bar Examples</h1>
+				<p>Bootstrap offers two useful components for user feedback and updates.</p>
+				<p>These take the form of alerts and progress bars. Alerts convey information to the user based on their actions and inputs, and progress bars give an idea of how much of a task is complete.</p>
+				
+				<h2>Alerts</h2>
+				<p>Alerts display important information to the user based on their/our actions.</p>
+				<p>These can take multiple forms, depending on the type of alert we want to give.</p>
+				<p>Create a div with the .alert class, followed by the .alert-success or equivalent.</p>
+			
+				<div class="alertContain">
+					<div class="alert alert-success">Success Alert! Congratulations!</div>
+					<div class="alert alert-info">Info Alert! Be Aware of This Information!</div>
+					<div class="alert alert-warning">Warning Alert! Correct Or Be Wary of This Message!</div>
+					<div class="alert alert-danger">Danger Alert! Urgent Action Needed!</div>
+				</div>
+				
+				<p>But what if we want the user to be able to dismiss the message?</p>
+				<p>Here we need a button added inside the alert. This needs the data-dismiss="alert" attribute (to make sure it's compatible with all browsers) and a class of .close.</p>
+				<p>The content of this should be a time symbol.</p>
+				
+				<div class="alertContain">
+					<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">&times;</button>Success Alert! Congratulations!</div>
+				</div>
+				
+				<p>With this in place, the button will then disappear when clicked.</p>
+				<p>Naturally this requires Boostrap's Javascript files to work.</p>
+				<p>You may also want a link in the alert. This requires the .alert-link class for styling purposes.</p>
+				
+				<h2>Progress Bars</h2>
+				<p>Progress bars represent completion of a task by either the user or the site.</p>
+				<p>They are made using a div container with the .progress class.</p>
+				<p>Another div is then placed inside this with the .progress-bar class. Use the style="" atribute to assign a width value in percentages.</p>
+				<p>This width represents the progress.</p>
+				<p>Place the value in text within this div to display the percentage to the user.</p>
+				
+				<div class="progress">
+					<div class="progress-bar" style="width: 60%;min-width: 2em;">
+						60%
+					</div>
+				</div>
+				
+				<p>To ensure the text is visable even in low percentages, add a min-width as well, preferably with a value of 2em, to ensure there is always enough room.</p>
+				<p>To make things look a bit more interesting, we can use .progress-bar-success and other variations on the progress bar. These are the same as buttons, badges etc, so the names should be familiar.</p>
+				
+				<div class="progress">
+					<div class="progress-bar progress-bar-success" style="width: 60%;min-width: 2em;">
+						Success
+					</div>
+				</div>
+				
+				<div class="progress">
+					<div class="progress-bar progress-bar-info" style="width: 40%;min-width: 2em;">
+						Info
+					</div>
+				</div>
+				
+				<div class="progress">
+					<div class="progress-bar progress-bar-warning" style="width: 80%;min-width: 2em;">
+						Warning
+					</div>
+				</div>
+				
+				<div class="progress">
+					<div class="progress-bar progress-bar-danger" style="width: 30%;min-width: 2em;">
+						Danger
+					</div>
+				</div>
+				
+				<p>We can also add funky strips to it by also adding the .progress-bar-striped class after the colour type.</p>
+				
+				<div class="progress">
+					<div class="progress-bar progress-bar-success progress-bar-striped" style="width: 60%;min-width: 2em;">
+						60%
+					</div>
+				</div>
+				
+				<p>To animate it, add the .active class as well.</p>
+				
+				<div class="progress">
+					<div class="progress-bar progress-bar-success progress-bar-warning progress-bar-striped active" style="width: 50%;min-width: 2em;">
+						50%
+					</div>
+				</div>
+				
+				<p>Multiple colours can be added to one progress bar by simply adding multiple progress bars within the container.</p>
+			</div>
+		</div>
+	</div>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>

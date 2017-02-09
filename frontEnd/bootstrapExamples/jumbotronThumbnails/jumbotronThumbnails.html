@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap Jumbotron and Thumbnails</title>
+	<link href="../../extensions/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="../../extensions/bootstrap-3.3.7-dist/js/bootstrap.min.js" async></script>
+</head>
+<body>
+	<header class="navbar-fixed-top">
+		<nav class="container">
+			<div class="navbar-header">
+			<a class="navbar-brand" href="#">Front End Tutorial</a>
+			</div> 
+			<ul class ="nav navbar-nav navbar-right">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 main">
+				<h1>Bootstrap Jumbotron and Thumbnail Examples</h1>
+				<p>Bootstrap provides two useful display features for pages. Jumbotron, useful for page headers, and thumbnails, great for containing pictures and similar adjascent content.</p>
+				
+				<h2>Jumbotron</h2>
+				<p>Extends the viewport to hold key information, such as a banner or title for the page. Typically seen at the top of the page.</p>
+				<p>To make full width, place outside of any .container class elements, instead placing a .container class element within to hold content.</p>
+				<p>Placing within a container will make it scale appropriately, and give it rounded corners.</p>
+				<p>For the jumbotron itself, create a container with the .jumbotron class.</p>
+				
+				<div class="whitespace">
+					<div class="jumbotron">
+						<h3>Bonjour</h3>
+						<p>Lorem Ipsum</p>
+						<p><a class="btn btn-primary btn-sm" href="#" role="button">Learn more</a></p>
+					</div>
+				</div>
+				
+				<p>White space represents outside of the jumbotron.</p>
+				<p>Notice how the content is automatically aligned within the jumbotron.</p>
+				
+				<h2>Thumbnails</h2>
+				<p>Thumbnails are designed to hold images or text in minmal space within adjascent containers. Bootstrap achieves this with a lot amount of markup.</p>
+				<p>On a row, set up your grid system with the necessary columns.</p>
+				<p>Within the columns, add an anchor tag with the .thumbnail class. The content within this anchor tag will be the thumbnail content.</p>
+
+				<div class="row thumbContain">
+					<div class="col-xs-6 col-md-4">
+						<a href="" class="thumbnail">
+							<h3>Content</h3>
+							<p>Thumbnail content, images etc go here.</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4">
+						<a href="" class="thumbnail">
+							<h3>Content</h3>
+							<p>Thumbnail content, images etc go here.</p>
+						</a>
+					</div>
+					<div class="col-xs-6 col-md-4">
+						<a href="" class="thumbnail">
+							<h3>Content</h3>
+							<p>Thumbnail content, images etc go here.</p>
+						</a>
+					</div>
+				</div>
+				
+				<p>The .thumbnail class can instead go on a div instead of an anchor tag.</p>
+				<p>Any type and amount of content can be added here.</p>
+			</div>
+		</div>
+	</div>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>

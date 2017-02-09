@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wells and Responsive Embed Examples</title>
+	<link href="../../extensions/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="../../extensions/bootstrap-3.3.7-dist/js/bootstrap.min.js" async></script>
+</head>
+<body>
+	<header class="navbar-fixed-top">
+		<nav class="container">
+			<div class="navbar-header">
+			<a class="navbar-brand" href="#">Front End Tutorial</a>
+			</div> 
+			<ul class ="nav navbar-nav navbar-right">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 main">
+				<h1>Wells and Responsive Embed Examples</h1>
+				<p>Bootstrap has two other components which are useful for displaying specific content. Wells are great for displaying small pieces of important text.</p>
+				<p>Responsive Embeds help display embeded videos etc within a container that scales via aspect ratio.</p>
+				
+				<h2>Wells</h2>
+				<p>Used on text, wells give it an inset effect.</p>
+				<p>This is done by containing the text within a div, with the .well class.</p>
+				<p>As seen below:</p>
+				
+				<div class="well">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+				</div>
+				
+				<p>We can create larger or smaller versions using .well-lg or .well-sm, as seen below.</p>
+				
+				<div class="well well-lg">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+				</div>
+				
+				<div class="well well-sm">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+				</div>
+				
+				<h2>Responsive Embed</h2>
+				<p>Bootstrap can embed videos, iframes etc with dynamic widths.</p>
+				<p>This is done by setting a ratio for the video etc to use.</p>
+				<p>To do this, place the video, embed etc within a div, using the .embed-responsive class. A second class is then needed, depending on the desired aspect ratio.</p>
+				<p>For 16:9, use .embed-responsive-16by9</p>
+				<p>For 4:3, use .embed-responsive-4by3</p>
+				<p>Lastly give the item inside the container a class of .embed-responsive-item</p>
+				
+				<h3>16:3</h3>
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe src="https://www.youtube.com/embed/XibzC-e_s5M" class="embed-responsive-item" allowfullscreen></iframe>
+				</div>
+				
+				<h3>4:3</h3>
+				<div class="embed-responsive embed-responsive-4by3">
+					<iframe src="https://www.youtube.com/embed/XibzC-e_s5M" class="embed-responsive-item" allowfullscreen></iframe>
+				</div>
+				
+				<p>You don't need to set frameborder="" when doing this either, Bootstrap sorts this for us.</p>
+			</div>
+		</div>
+	</div>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>

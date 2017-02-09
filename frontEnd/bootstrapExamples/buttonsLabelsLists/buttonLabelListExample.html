@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Bootstrap Grid Example</title>
+	<title>Bootstrap Buttons, Labels and Lists</title>
 	<link href="../../extensions/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="../../style.css" rel="stylesheet" />
 	<link href="style.css" rel="Stylesheet" />
@@ -11,17 +11,23 @@
 	<script src="../../extensions/bootstrap-3.3.7-dist/js/bootstrap.min.js" async></script>
 </head>
 <body>
-	<header id="top">
-		<div>
-			<h1>Front End Tutorial</h1>
-		</div>
+	<header class="navbar-fixed-top">
+		<nav class="container">
+			<div class="navbar-header">
+			<a class="navbar-brand" href="#">Front End Tutorial</a>
+			</div> 
+			<ul class ="nav navbar-nav navbar-right">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
 	</header>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 main">
-				<h1>Bootstrap Example</h1>
-				<p>This page uses Bootstrap to display this main section.</p>
-				<p>As you can see, it uses a .container to hold the bootstrap, .row to control the row and then .col-xx-* to control columns.</p>
+				<h1>Bootstrap Buttons, Labels and Lists</h1>
+				<p>Three basic Bootstrap components are buttons, labels and lists. All of these are an important part of UX.</p>
+				<p>Here, we will explain how to use each of these.</p>
 				
 				<h2>Buttons</h2>
 				<p>As well as page layout, we can also use Bootstrap to create buttons.</p>
@@ -36,16 +42,37 @@
 				</div>
 				<p>There's also a normal <a href="#" class="btn btn-default">link</a> button too.</p>
 				
+				<h2>Labels</h2>
+				<p>Labels are similar to buttons, but they aren't supposed to be clicked. They are instead supposed to provide info etc, typically on headings.</p>
+				<p>They share the same names and colours as buttons, so they are easy to remember.</p>
+				<p>These are created using a spans, the .label class and then .label-default or whatever the correct label is.</p>
+				
+				<div class="labelContainer">
+				<h3>Heading <span class="label label-default">Default</span></h3>
+				<h3>Heading <span class="label label-primary">Primary</span></h3>
+				<h3>Heading <span class="label label-info">Info</span></h3>
+				<h3>Heading <span class="label label-success">Success</span></h3>
+				<h3>Heading <span class="label label-warning">Warning</span></h3>
+				<h3>Heading <span class="label label-danger">Danger</span></h3>
+				</div>
+				
 				<h2>Lists</h2>
 				<p>We can also create lists using Bootstrap.</p>
+				<p>This is done using the .lists class on a container and a .list-group class on the ul.</p>
+				<p>Individual list items should have the .list-group-item class.</p>
 				<p>Here's the default display example below:</p>
 				<div class="lists">
 					<ul class="list-group">
 						<li class="list-group-item">List Item 1</li>
 						<li class="list-group-item">List Item 2</li>
 						<li class="list-group-item">List Item 3</li>
+						<li class="list-group-item disabled">List Item 4</li>
 					</ul>
 				</div>
+				
+				<p>To disable a list item, add the .disabled class to it like the fourth item.</p>
+				<p>To make a list item active, add the .active class.</p>
+				<p><strong>If you wish to use buttons instead of lists, simply use buttons instead of the list items. The ul isn't needed either, obviously.</strong></p>
 				
 				<h3>List Icons</h3>
 				<p>We can also go even further by adding icons:</p>
@@ -71,6 +98,19 @@
 						</a>
 					</ul>
 				</div>
+				
+				<h3>List Colours</h3>
+				<p>Similar to labels, badges etc, we can colour lists with some basic templates. These share the same names.</p>
+				<p>See the example below:</p>
+				
+				<div class="list-group">
+						<a href="#" class="list-group-item list-group-item-success">Success</a>
+						<a href="#" class="list-group-item list-group-item-info">Info</a>
+						<a href="#" class="list-group-item list-group-item-warning">Warning</a>
+						<a href="#" class="list-group-item list-group-item-danger">Danger</a>
+				</div>
+				
+				<p>Links have been used instead of list items, notice the hover effect.</p>
 			</div>
 		</div>
 	</div>
