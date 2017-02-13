@@ -2965,19 +2965,19 @@ Contents
 	In total, below is what we need to make:
 	
 	<div class="navbar-header">
-		<a class="navbar-brand" href="#">CHOCOBLOCK</a>  
-		<ul id="myCollapsingList" class ="nav navbar-nav collapse navbar-collapse">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Portfolio</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>                 
+		<a class="navbar-brand" href="#">CHOCOBLOCK</a>             
 		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myCollapsingList">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
 	</div>
+	<ul id="myCollapsingList" class ="nav navbar-nav collapse navbar-collapse">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>      
 
 	Now you have a responsive, good looking button for a navigation bar.
 
@@ -3011,3 +3011,195 @@ Contents
 15 Javascript Revisited
 
 	Video - https://youtu.be/qKQJuqFGhI8
+	
+	Javascript is the language of the web. Any web developer needs to know this language.
+	
+	JS is used to add dynamic content to websites. We look at Javascript and a few libraries such as JQuery and D3.
+	
+	First, however, we need to get the hang of Javascript itself. 
+	
+	One tool which we can use for this is called repl.it, it's a free tool for executing codes. 
+	
+	To use it, go to this site: https://repl.it/languages/javascript
+	
+	Use console.log() to output to screen.
+	
+	Outcomes:
+	JavaScript Data Structures and Controls
+	JavaScript Functions
+	JavaScript Objects
+
+
+15.1 Comments
+
+	Lets master some Javascript basics.
+	
+	For starters, comments can be written in two ways, depending on if they are one line or more.
+
+	// For singe lines
+	
+	/*		
+	For multiple
+	lines, just like CSS
+	*/
+	
+	These aren't read by the browser, so are used to carry notes, removed code etc.
+	
+	Comments are useful for labelling or explaining the JS code, which can make it easier to read, remember and manage.
+	
+	It's common practice to leave comments in JS docs.
+	
+	
+15.2 Declaring Variables
+
+	Variables are at the core of programming languages. They contain data, which can be used and modified as the program runs.
+
+	Variables can be declared in two ways. 
+	
+	First, with the keyword var. For example:
+	
+	var x = 42;
+	
+	This can be used to declare both local and global variables.
+	
+	The second is simply assigning a value. For example:
+	
+	x = 42;
+	
+	Notice the lack of the var keyword. This creates a warning, so it's not worth doing.
+	
+	If you wish to declare a variable which should never change after it's declared, use a constant, as seen below.
+	
+	const myConst = 12;
+
+	The variable "myConst" now equals 12, and cannot be changed from this.
+	
+	
+15.3 Data Types
+
+	Variables hold data, but what kinds of data can it hold?
+	
+	Here they are:
+	
+	Boolean   - True or False value.
+	Number    - A numerical value, whole or float.
+	String    - Text, declared within speech marks.
+	Object   - More on these later.
+	undefined - When the value is undefined, it has this.
+	null      - Special value.
+
+
+15.4 Operators
+
+	Operators are used in logical statements to determine equality or difference between variables or values.
+	
+	Here are the operators:
+	
+	==   - Equal to
+	===  - Equal to and of the same type
+	!=   - Not equal to
+	!=== - Not equal to or not of the same type
+	
+	>    - Greater than
+	<    - Less than
+	>=   - Greater than or equal to
+	<=   - Less than or equal to
+	
+	
+15.5 If Statements
+
+	We can use operators to decide if certain code should be executed or not.
+	
+	If statements output a Boolean value, and only run relevant code when it returns True.
+	
+	If the operation evaluates to True, it will read the contained code. If it evaluates to False, it won't read the contained code.
+
+	if (condition) {
+		// Code to be executed if condition evaluates to true
+	}
+	
+	We can also use the "else" condition to set what should happen if the condition returns False.
+	
+	if (condition) {
+		// Code to be executed if condition evaluates to true
+	}
+	else {
+		// Code to be executed if the condition evalues to false.
+	}
+
+	Example:
+	
+	if (1 == 1) {
+		var x = 1;
+	}
+	else {
+		var x = 2;
+	}
+
+	Result - The condition is true, so x is given a value of 1.
+
+
+15.6 Variable Value Overide
+
+	We can freely redefine values of variables, without worrying about errors or data types.
+	
+	So we can do the below.
+	
+	var x = 42;
+	var x = "Test";
+	
+	We've changed the value, and the data type of the value. This can be done throughout a program.
+
+
+15.7 Type Coercion
+
+	JS can attempt to coerce a variable into the correct type when required.
+	
+	For instance, if we attempt to add a string and a number together, it will output it all as a string.
+	
+	Example:
+	
+	"This outputs " + 42;
+	
+	Result - "This outputs 42"
+	
+	TAKE NOTE OF THE SPACE AT THE END OF THE STRING, MEANING THERE'S A GAB BEFORE THE 42.
+	
+	Subtracting a number from a string doesn't really work, for instance..
+	
+	"37" - 7 = 30
+	
+	It returns a numeric value, but doesn't calculate it like one, simply taking 7 from the number.
+	
+	When using operations the equal type operater ignores corcion completely. If they are of different Data Types, it evaluates to False.
+
+	Example:
+	
+	30 === '30';
+	
+	Result - False
+	
+	
+15.8 Strings
+
+	Strings are a basic but very common Data Type, holding text. 
+	
+	Javascript identifies strings by speech marks, which contain the text being held in the string.
+	
+	Example:
+	
+	var x = "This is a string";
+
+	Both single and double quotes can be used. Quotes can be used within the string if it's the other kind than the one containing it.
+	
+	Strings cannot be divided, multiplied or subtracted, but they can be added together.
+	
+	Adding them together displays them one after the other. This is known as concatenation.
+	
+	Example:
+	
+	"con" + "cat" + "e" + "nate";
+	
+	Result - "Contatenate"
+	
+	Remember to add spaces if there's more than one word.
