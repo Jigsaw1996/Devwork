@@ -180,6 +180,19 @@ Contents
 		14.5 Summary
 		
 	15 Javascript Revisited
+		15.1 Comments
+		15.2 Declaring Variables
+		15.3 Data Types
+		15.4 Operators
+		15.5 If Statements
+		15.6 Variable Value Overide
+		15.7 Type Coercion
+		15.8 Strings
+		15.9 String Methods
+		15.10 For Loops
+		15.11 Arrays
+			15.11.1 Array Iteration
+			15.11.2 Array Methods
 
 
 1 Reopening the Box Model
@@ -3137,7 +3150,22 @@ Contents
 	}
 
 	Result - The condition is true, so x is given a value of 1.
+	
+	But what if we want a second if condition in case the first fails? For this, we use a else if statement.
+	
+	Example:
+	
+	if (1 == 2) {
+		var x = 1;
+	}
+	else if (1 == 1) {
+		var x = 2;
+	}
+	else {
+		var x = 2;
+	}
 
+	Result - The else if statement is true, so x == 2.
 
 15.6 Variable Value Overide
 
@@ -3203,3 +3231,110 @@ Contents
 	Result - "Contatenate"
 	
 	Remember to add spaces if there's more than one word.
+	
+	
+15.9 String Methods
+
+	Functions are a program's way of running a certain process, either built in or created manually.
+	
+	Methods are functions tied to a certain object or variable.
+	
+	Here are some of them:
+	
+	charAt() - Returns the character which is at the index provided as an argument.
+	charCodeAt() - Returns the unicode of the character at the index provided.
+	concat() - Adds a string to the end of the other.
+	includes() - Checks if the string contains a character or string.
+	startsWith() - Checks if the string begins with a character or string. 
+	endsWith() - Checks if the string ends with a character or string. 
+	indexOf() - Returns the first index value of a provided character.
+	lastIndexOf() - Returns the last index value of a provided character.
+	search() - Searches the string for a certain character, string or regular expression and returns it's value.
+	toUpperCase() - Converts the text to uppercase
+	toLowerCase() - Converts the text to lowercase
+	
+	
+15.10 For Loops
+
+	Loops are used to make the browser cycle through the same code whilst a certain condition is true. 
+	
+	This is great when the same task needs to run a set amount of times, as you don't need to write it over and over.
+	
+	for ([initialExpression]; [condition]; [incrementExpression]) {
+		statement
+	}
+
+	The initial expression is a new variable which the For loop will use, usually for dictating conditions.
+	
+	The condition is the operator which dictates when the loop runs and stops. The browser checks this before the start of every run. If True, it runs. If false, it doesn't.
+	
+	The increment expression is what happens at the end of every loop, which is useful for changing a value to keep track of how many times it has ran.
+	
+	Example:
+	
+	for (x = 1; x<=4; x++) {
+		console.log("loop value:" + x)
+	}
+
+	This will run 4 times, printing the console message 4 times with it's numbered value.
+	
+	
+15.11 Arrays
+
+	Arrays are used in Javascript to allow a single variable to hold an index of data rather than a simple data type.
+	
+	So if we have loads of data for the same thing, we can use an array to hold all of it without setting up loads of arrays.
+
+	var listOfNumbers = [2, 3, 5, 7, 11];
+	
+	As you can see, the variable holds 5 different numbers rather than 1.
+	
+	They don't need to all have the same data type, we can fill them with strings, numbers etc.
+	
+	To get a certain value from the list, you have to use an index.
+	
+	var secondValue = listOfNumbers[1];
+	
+	As you can see, we grab the name of the array, and then the index of the value we wish to print.
+	
+	Index values are zero-based, so the first value is 0, the second is 1, third is 2 etc.
+	
+	To determine the length of an array, we can use the length property.
+	
+	Example:
+	
+	var arrayLength = listOfNumbers.length
+	
+	Result - arrayLength equals five, because the array has 5 items.
+	
+	
+15.11.1 Array Iteration
+
+	What if we want to apply the same thing to every array item?
+	
+	For this, we can use a for loop.
+
+	var myArray = ['one','two','three','four','five','six'];
+ 
+	for (var num in myArray) {
+		console.log(myArray[num]); //show element
+	}
+	
+	What this is doing is creating a new variable, num, which will represent the current array index. It will cycle through all indexes and apply the contained code to it.
+	
+	In the above, we have it go through and print every array value to the console.
+
+	Try this in Replit.
+	
+	
+15.11.2 Array Methods
+
+	Javascript offers a number of methods we can use on arrays.
+	
+	push() - The argument will be added to the end of the array as a new index.
+	unshift() - Adds an element to the front of the array.
+	shift() - Removes the first index of the array and returns it.
+	pop() - Removes the last index of the array and returns it.
+	indexOf() - Searches the array for a value given as an argument, and returns it's index. If not in the array, it returns -1.
+	
+	
