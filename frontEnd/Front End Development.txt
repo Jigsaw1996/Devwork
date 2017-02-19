@@ -2377,12 +2377,17 @@ Contents
 
 	Files with .min are minimized files, and will load faster in browser.
 
-	Pages using bootstrap need to have the following scripts:
+	Pages using bootstrap need to have the following style and scripts:
 	
 	 <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" async></script>
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" async></script>
 	  
-	 Jquery is needed in order to handle the JS files.
+	 Jquery is needed in order to handle the JS files, hence why this is a link.
+	 
+	 There's also another option, which is to link to CDN's files. This is great as many sites do it, so the user's browser will have already downloaded them.
+	 
+	 This saves user load times and also makes files easier to manage, as they aren't local and are located elsewhere.
 
 
 12.2 The Grid System
@@ -3317,7 +3322,7 @@ Contents
 	var myArray = ['one','two','three','four','five','six'];
  
 	for (var num in myArray) {
-		console.log(myArray[num]); //show element
+		console.log(myArray[num]);
 	}
 	
 	What this is doing is creating a new variable, num, which will represent the current array index. It will cycle through all indexes and apply the contained code to it.
@@ -3337,4 +3342,51 @@ Contents
 	pop() - Removes the last index of the array and returns it.
 	indexOf() - Searches the array for a value given as an argument, and returns it's index. If not in the array, it returns -1.
 	
+	
+15.12 Functions
+
+	Functions are useful for defining code which can be used multiple times and with several purposes, without having to rewrite it.
+	
+	They are defined, and then called when needed, with relevant arguments.
+	
+	Functions have many forms, but they are predominantly either named or anonymous.
+	
+	Named functions are given a name, anonymous functions are instead usually assigned to a variable and called through that.
+	
+	Named:
+	
+	function functionName() {
+		...
+	}
+	
+	Anon:
+	
+	var functionName = function() {
+	
+	}
+	
+	
+15.13 Function Arguments
+	
+	Functions take arguments within the brackets, which are filled with data provided when the function is called.
+	
+	For instance:
+	
+	function myFunction(x, y) {
+		return x + y
+	}
+
+	var z = myFunction(1,2);
+	
+	z will equal 3, because the x and y are replaced with the values we used when called.
+	
+	We can have as many of these as required, and can call them during the function as many times as required.
+	
+	Also take note of the return keyword, which we use to return the output for the function. In this case, it returns the calculation so it can be assigned to the z variable.
+	
+	Also remember that return will end the function, so it won't read anything after it.
+	
+	
+15.14 Callbacks
+
 	

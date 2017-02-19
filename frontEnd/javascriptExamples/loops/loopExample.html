@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Loop Examples</title>
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+	<script src="js/loop.js" async></script>
+</head>
+<body>
+	<header id="top">
+		<div>
+			<h1>Front End Tutorial</h1>
+		</div>
+	</header>
+	<main>
+		<h1>Loop Examples</h1>
+		<p>Loops are used to run the same statements repeatedly as long as a condition is true.</p>
+		
+		<h2>For Loops</h2>
+		<p>For loops take three arguments, listed below.</p>
+		
+		<ul>
+			<li>Initial expression, used to create a variable relevant to the loop.</li>
+			<li>Checked before each run, if False it stops running.</li>
+			<li>Increment Expression, this action is completed at the end of each loop.</li>
+		</ul>
+		
+		<p><em>for ([initialExpression]; [condition]; [incrementExpression]) {</em><br />
+		<em>statement</em><br />
+		<em>}</em></p>
+		
+		<p>For an example, view the console. We have used a loop to print the numbers one through five.</p>
+		
+		<h2>Looping Arrays</h2>
+		<p>Arrays store multiple data and data types. What if we wish to make changes to all of them?</p>
+		<p>We can use a for loop to accomplish this, as seen below.</p>
+		
+		<p><em>for (var num in myArray) {</em><br />
+		<em>console.log(myArray[num]);</em><br />
+		<em>}</em></p>
+		
+		<p>What this is doing is creating a new variable, num, which will represent the current array index number.</p> 
+		
+		<p>It will cycle through all indexes and output each array item to the console individually.</p>
+		
+		<p>Once this for loop has cycled through all list items, it automatically stops.</p>
+	</main>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>
