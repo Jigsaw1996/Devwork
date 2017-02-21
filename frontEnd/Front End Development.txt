@@ -3389,4 +3389,30 @@ Contents
 	
 15.14 Callbacks
 
+	Callbacks are basically functionception.
+	
+	These involve having a function, and running another function through it by using it as an argument.
+	
+	For example:
+ 
+	function wotDayIsIt(callback){
+		var day = (new Date().getDay());
+		callback(day)
+	}
+ 
+	var dayOfWeek = function(day){
+		if (day === 0 || day === 6) {
+			console.log("it’s the weekend, yippee !");
+		}
+		else {
+			console.log("bummer, it’s a work day")
+		}
+	}
+ 
+	wotDayIsIt(dayOfWeek);
+	
+	In this example, we define a function with one argument, which we will be the name of the function we wish to run through it.
+	
+	In this case, we use the wotDayIsIt function to get the day, and the day is then ran through the dayOfWeek function to decide it's message.
+	
 	
