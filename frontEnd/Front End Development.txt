@@ -3416,3 +3416,55 @@ Contents
 	In this case, we use the wotDayIsIt function to get the day, and the day is then ran through the dayOfWeek function to decide it's message.
 	
 	
+15.15 Objects
+
+	Javascript is an Object Oriented Language.
+	
+	In short, this means that we can replicate real world objects by representing them as a virtual object in our code.
+	
+	Objects work in key:value pairs which allow us to define data and functions relevant to it.
+	
+	They are defined as the below shows.
+	
+	var objectName = {key1:value1, key2:value2, ...};
+	
+	The values can be anything from a data type to a function (otherwise refered to as a method, as it's within an object).
+
+	A working example would be the below:
+	
+	var superHero = {
+		firstName: "Bruce",
+		secondName: "Wayne",
+		title: "Batman"
+	};
+	
+	To recieve a certain value we do the below.
+	
+	objectName.keyName
+	
+	So if we wanted to find out Batman's secret identity, we'd to the below.
+	
+	superHero.firstName;
+	superHero.secondName;
+
+	Doing this effectively expands the Javascript language. We can create as many new JS objects as we like on top of the existing ones.
+	
+	
+15.15.1 Object Methods
+
+	We can include a function as part of a key:value pair by using an anonymous function.
+	
+	Example:
+	
+	var superHero = {
+		firstName: "Bruce",
+		secondName: "Wayne",
+		title: "Batman",
+		revealIdentity: function() {
+			return "I'm" + superHero.firstName + superHero.secondName + "!";
+		}
+	};
+
+	We can call the function using the below.
+	
+	superHero.revealIdentity();

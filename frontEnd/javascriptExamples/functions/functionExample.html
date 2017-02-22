@@ -6,6 +6,7 @@
 	<title>Function Examples</title>
 	<link href="../../style.css" rel="stylesheet" />
 	<link href="style.css" rel="Stylesheet" />
+	<script src="js/function.js" async></script>
 </head>
 <body>
 	<header id="top">
@@ -15,7 +16,56 @@
 	</header>
 	<main>
 		<h1>Function Examples</h1>
-		<p>Functions are common in programming languages.</p>
+		<p>Functions are common in programming languages. They allow for code to be reused multiple times and, in many cases, for multiple purposes.</p>
+		<p>They are first defined, and then called with relevant arguments. They can be executed as many times as necessary.</p>
+		
+		<h2>Syntax</h2>
+		<p>First, a function must be defined. This involved writing relevant code which will run when the function is called.</p>
+		<p>Any arguments should be placed in the brackets, and within the function where necessary. The values are provided when called.</p>
+		
+		<p>To define the function:</p>
+		<p><em>function functionName (arguments) {<br />
+		relevant code<br />
+		}</em></p>
+		
+		<p>After it has been defined, we can call it as many times as we like, such as below.</p>
+		
+		<p><em>functionName(argumentValues);</em></p>
+		<p>The argument values will then replace the argument names placed within the definition.</p>
+		
+		<h2>Example</h2>
+		<p>Below are three list items. A function has been used to produce these, with arguments being used to change their outputs.</p>
+		<ul id="items">
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<p>This shows how one function can be used multiple times.</p>
+		
+		<h2>Callbacks</h2>
+		<p>Callbacks involve running a function through another function.</p>
+		<p>This is common in programming, and is useful for making the most use of functions.</p>
+		<p>Below is the code you'd typically see from this:</p>
+		
+		<p><em>function wotDayIsIt(callback){<br />
+		var day = (new Date().getDay());<br />
+		callback(day)<br />
+		}</em></p>
+ 
+		<p><em>var dayOfWeek = function(day){<br />
+		if (day === 0 || day === 6) {<br />
+		console.log("it’s the weekend, yippee !");<br />
+		}<br />
+		else {<br />
+			console.log("bummer, it’s a work day")<br />
+		}<br />
+		}</em></p>
+ 
+		<p><em>wotDayIsIt(dayOfWeek);</em></p>
+		
+		<p>In this example, we define a function with one argument, which we will be the name of the function we wish to run through it.</p>
+	
+		<p>In this case, we use the wotDayIsIt function to get the day, and the day is then ran through the dayOfWeek function to decide it's message.</p>
 	</main>
 	<a href="#top" id="bottomLinkToTop">
 		<img src="../../img/arrow.png" alt="arrow"/>
