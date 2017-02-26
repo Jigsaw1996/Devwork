@@ -193,6 +193,18 @@ Contents
 		15.11 Arrays
 			15.11.1 Array Iteration
 			15.11.2 Array Methods
+		15.12 Functions
+		15.13 Function Arguments
+		15.14 Callbacks
+		15.15 Objects
+			15.15.1 Object Methods
+			15.15.2 This Keyword
+			15.15.3 Arrays in Objects
+		15.16 Object Instances
+		15.17 JSON
+		
+	16 JQuery
+		16.1 Downloading JQuery
 
 
 1 Reopening the Box Model
@@ -3468,3 +3480,150 @@ Contents
 	We can call the function using the below.
 	
 	superHero.revealIdentity();
+	
+	We can also access them like below, as if it's an array item.
+	
+	superHero["firstName"];
+	
+	Note that this does not work for functions, use the first method for that.
+	
+	Try to keep naming as precise and as easy to read and understand as possible.
+	
+
+15.15.2 This Keyword
+
+	Whenever a function or object gets created it can be specifically referred to using the this keyword.
+	
+	So when accessing object data from within the object, we don't need to use it's name. We simply use the "this" keyword.
+	
+	Lets take our existing object for an example of how this is done.
+	
+	var superHero = {
+		firstName: "Bruce",
+		secondName: "Wayne",
+		title: "Batman",
+		revealIdentity: function() {
+			return "I'm" + this.firstName + this.secondName + "!";
+		}
+	};
+	
+	Notice we use the this keyword rather than the name of the object.
+	
+	This is an important part of OOP. The scope of an object refers to the data contained within the current active (the one being read) object. 
+	
+	The DOM itself operates with a scope. Window is the highest level. Anything outside of our objects are in the window scope. Anything within the object have an object scope.
+	
+	
+15.15.3 Arrays in Objects
+
+	As well as functions, we can use arrays as the key:data items.
+	
+	This is done like the below.
+	
+	var superHero = {
+		superArray: [0,1,2]
+	};
+
+	However, we can also set up an array containing further objects, within a main object.
+	
+	For example, we'd do the below to set up the enemies list for the superhero.
+	
+	var superHero = {
+		enemies: [
+			{
+				name: "General Zod",
+				homePlanet: "Krypton"
+			},
+			{
+				name: "Lex Luther",
+				homePlanet: "Earth"
+			}
+		]
+	}
+
+	As you can see, this allows us to set additional objects within a main objects, with multiple keys to choose from.
+	
+	Notice that the individual objects don't have names, like the main superHero function is. This is called an anonymous object.
+	
+	
+15.16 Object Instances
+
+	Now that we understand basic objects, we can look at instances.
+	
+	If we created a superman object, what if we then wanted to make a batman one?
+	
+	We could just retype everything, but that's not ideal.
+	
+	Instead we create instances, by creating an object constructor which all the superheroes are created from.
+	
+	var Hero = function(firstName, secondName, title, homeCity) {
+		this.firstName = firstName;
+		this.secondName = secondName;
+		this.title = title;
+		this.homeCity = homeCity;
+	}
+	
+	First note that every item uses the "this" keyword so that the value applies the instance being created, not the constructor itself.
+	
+	We then create an instance like so:
+	
+	var superman = new Hero("Clark", "Kent", "Superman", "Metropolis");
+	
+	As you can see, the "new" keyword is required before calling the instance, like you would a function.
+	
+	As many key:value pairs can be contained within the constructor, they will all be copied across into the instances.
+	
+	For adding functions etc, it's best to use "prototype", like below.
+
+	Hero.prototype.getName = function() {
+		return this.firstName + " " + this.secondName;
+	};
+
+	When working with JS, remember that pretty much everything is an object. This includes HTML elements.
+	
+	
+15.17 JSON
+
+	Javascript Object Notation (JSON) is an open, human and machine-readable standard that facilitates data interchange, and along with XML is the main format for data interchange used on the modern web. 
+	
+	JSON supports all the basic data types you’d expect: numbers, strings, and boolean values, as well as arrays.
+	
+	The syntax rules are stricter in JSON, as such there is an inbuilt function to convert content into JSON standard.
+	
+	JSON.stringify()
+	
+	Using this will return the relevant string in the correct format for JSON, without any fucntions and using " rather than '.
+	
+	We do this in cases where the JS code in question may need to be transfered, i.e with API creation.
+	
+	Similarly we can transfer it back using:
+	
+	JSON.parse()
+	
+	The .parse() function can be used to convert JSON data back to JavaScript objects when retrieving data from an external source (we discuss this in the next lesson).
+
+
+16 JQuery
+
+	Video - https://youtu.be/pALpvtvGn_c
+
+	Javascript is the language of the web, and does a great job of it. However it can sometimes be tricky and complicated to pick up.
+	
+	This is where JQuery comes in, being used to manage simple tasks that take up many lines of code and make using JS easier.
+	
+	It also has a simpler syntax and is cross-browser compatible.
+	
+	Overall it makes using JS on your website easier.
+	
+	JQuery is the most popular JS library, learning about it also very beneficial when handling other people's projects.
+
+	Outcomes:
+	Find HTML elements
+	Change their CSS
+	Change their content
+	Listen to user interaction
+	Respond to user interaction
+
+	
+16.1 Downloading JQuery
+
