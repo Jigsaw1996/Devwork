@@ -480,6 +480,23 @@ form input:focus, form textarea:focus {
 }
 
 
+/* Popup Styles */
+
+@media screen and (min-width: 1px) {
+	.popups div {
+		display: none;
+		position: fixed;
+		top: calc(50% - 300px);
+		left: 10%;
+		width: 80%;
+		padding: 0 10%;
+		box-sizing: border-box;
+		background-color: #ffffff;
+		color: #000;
+	}
+}
+
+
 /* Footer Styles */
 
 @media screen and (min-width: 1px) {

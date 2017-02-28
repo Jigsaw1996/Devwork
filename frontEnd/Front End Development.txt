@@ -205,6 +205,7 @@ Contents
 		
 	16 JQuery
 		16.1 Downloading JQuery
+		16.2 Selectors
 
 
 1 Reopening the Box Model
@@ -3626,4 +3627,227 @@ Contents
 
 	
 16.1 Downloading JQuery
+
+	There are two ways of doing this. Firstly, you can download and host it.
+
+	JQuery can be downloaded from it's site - https://jquery.com/download/
+	
+	There are a few versions to choose from. You should choose the latest, uncompressed, development version.
+
+	The location of the jquery.js file then has to be lnked in the head of the HTML document.
+	
+	Alternately, you can simply link from Google CDN.
+	
+	Not only does this then not need to be hosted directly, but the user will likely have this cached from other sites using it.
+	
+	This saves load times as it won't need to be downloaded again.
+	
+	Here's the correct link for this method:
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	Put this in the head of the HTML page to use JQuery without direct hosting.
+	
+	
+16.2 Selectors
+
+	Similarly to CSS, we can use selectors to grab a HTML element.
+	
+	There are three basic types:
+
+	Element - Grabbing the HTML element by name
+	Class - Grabbing the HTML element by class
+	ID - Grabbing the HTML element by ID
+	
+	Each of these use the jQuery function, containing a string of the element, class or ID to look for.
+	
+16.2.1 Element Selector
+
+	The element selector in jQuery selects all elements that have the same element tag name.
+	
+	To do this, we'd to the below.
+	
+	$("a"); // Selects all anchor tags.
+	
+	THE DOLLAR SYMBOL IS SHORTHAND FOR JQUERY. YOU CAN ALSO DO jQuery("a");
+	
+	
+16.2.2 Class Selector
+
+	Similarly, we can use a class selector. See the below.
+	
+	$(".myClass"); // Selects all elements using .myCLass
+	
+	Take note of the . in the string.
+	
+	
+16.2.3 ID Selector
+
+	Lastly, to select ID's you do the below, as you'd expect.
+	
+	$("#myID");
+	
+	
+16.3 The DOM
+
+	One of the most important aspects of JavaScript in web development is the Document Object Model (DOM).
+
+	This simply means the breakdown of the HTML tree, starting from the window, then the document, then html, then head/body etc.
+	
+	Here's an image representing this.
+	
+	http://lms.codeinstitute.net/wp-content/uploads/2015/10/1445434392_image3-768x696.png
+	
+	The DOM hierarchy shows each element's parent, siblings and children.
+	
+	This concept is used to help organize, access and manipulate your HTML elements. 
+	
+	Worth noting at this stage that each element is often refered to as a node. There are also text nodes and attribute nodes.
+	
+	
+	
+16.4 Parent/Child Relation Selectors
+
+	So how do we navigate the DOM in JQuery?
+	
+	First we need to find out the current node's position in the DOM, and then where we wish to travel to.
+	
+	Once we have found this out, we can move like the below.
+	
+	$("p > a"); // Returns anchor tags which are direct children of paragraphs
+	
+	$("p a"); // Returns anchor tags which are descendants of paragraphs.
+	
+	
+16.5 Psuedo Selectors
+
+	Similar to CSS, there are a number of psuedo selectors we can make use of.
+	
+	In jQuery, these are selected like below:
+	
+	$("a:first"); // Selects the first anchor tag on the page
+	$("a:last"); // Selects the last anchor tag on the page
+	$(":header"); // Selects the header elements of the page (h1, h2 etc)
+	$(":animated"); // Selects all elements in the progress of animation upon the time of run.
+	$(":checked"); // Selects all elements which are checked or selected.
+	$(":even"); // Selects all even elements
+	$(":focus"); // Selects element which is currently focused
+
+
+	The pictures below provide a full breakdown:
+	Selectors - http://lms.codeinstitute.net/wp-content/uploads/2015/10/table21.png
+	Psuedo Selectors - http://lms.codeinstitute.net/wp-content/uploads/2015/10/table3.png
+	
+	A full list of selectors can be found here: https://api.jquery.com/category/selectors/
+	
+	
+16.6 Chrome Development Tools
+
+	JQuery is usually written in a seperate file to HTML. 
+	
+	One useful tool is using Google Development Tools to write JQuery statements into the page.
+	
+	Go to Settings > More Tools > Developer Tools
+	
+	Click on console, and type away!
+	
+	This is great for testing, resolving issues and not having to worry about overiding any saved code.
+
+
+16.7 Manipulating CSS
+
+	Now that we know how to select elements, we can start messing with them.
+	
+	There are a couple of ways to do this. 
+	
+	First is to use the css() function, like so:
+	
+	$("a").css("color","red"); // Sets all anchor tags to use red as their color.
+	
+	Properties and values are comma seperated.
+
+	This will add CSS as inline, which we don't like as HTML and CSS should be seperate. We will take a look at how to best change this in the next section.
+	
+	
+16.8 Manipulating HTML
+
+	Similar to the css() function, there is also the html() function for adding stuff.
+	
+	To recieve all HTML content from an element do the below.
+	
+	$("body").html(); // Returns all the html from the body
+
+	We can also replace the HTML in the element, we do this by adding it as an argument.
+	
+	$("body").html("<h1>New Title</h1>"); // Adds a title tag to the body, replacing any existing content.
+
+	If we wanted to just replace the text of an element, we can use the text() function.
+	
+	This is done like the below.
+	
+	$(".paragraph").text("This is some next text added to the element"); // This adds text to the element
+	
+	If we don't want to destroy existing content, we can instead append it.
+	
+	$("#myElement").append("<p>Additional text"); // Text is added as a child to the element
+	
+	To remove an element, use the remove() function.
+	
+	$("#myElement").remove(); // Removes the selected element and any children.
+	
+	Lastly, we can remove all child elements using the empty() function.
+	
+	$("#myElement").empty();
+
+	
+16.9 Document.Ready
+
+	In order to make sure that the page has loaded before running any code, we can use the ready() function.
+	
+	This contains an anonymous function, which we will use to contain code we only wish to load once the DOM is loaded.
+	
+	For Example:
+	
+	$(document).ready(function() {
+		// Code to run on page load
+	});
+
+	
+16.10 Adding and Removing Classes
+
+	We mentioned earlier that inline css is bad. We need to seperate html and css.
+	
+	One trick we can perform is to instead add and take away classes where necessary.
+	
+	Lets say we created a class to add an underline to an element.
+	
+	.underline{
+		text-decoration: underline;
+	}
+	
+	We can then use the addClass() function to apply this class to an element.
+	
+	Example:
+	
+	$("p").addClass("underline");
+	
+	Note that we do not need the . for the class, simply the name.
+	
+	If we then wish to remove it, we use the removeClass() function.
+	
+	$("p").removeClass("underline");
+
+
+16.11 JQuery Events
+
+	Video - https://youtu.be/P9EfUVgaD6g
+
+	Now that we know how to use JQuery, we can use it for user interaction.
+	
+	Events are a big part of that, using triggers to know when to trigger functions and manipulations to HTML and CSS.
+
+	Outcomes:
+	Understand events
+	Understand effects
+	Understand method chaining
 
