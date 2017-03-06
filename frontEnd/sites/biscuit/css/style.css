@@ -245,13 +245,13 @@ form input:focus, form textarea:focus {
 	main .banner .contactUs form input[type="submit"] {
 		padding: 10px 5%;
 		box-sizing: content-box;
-		background-color: #0013B2;
+		background-color: #E86B0C;
 		color: #fff;
 		transition: .3s;
 	}
 	
 	main .banner .contactUs form input[type="submit"]:hover {
-		background-color: #E86B0C;
+		background-color: #FF0000;
 	}
 }
 
@@ -446,7 +446,7 @@ form input:focus, form textarea:focus {
 		border-radius: 25px;
 		margin: 0 auto;
 		font-size: 1rem;
-		background-color: #0013B2;
+		background-color: #E86B0C;
 		color: #fff;
 	}
 }
@@ -475,24 +475,7 @@ form input:focus, form textarea:focus {
 	}
 	
 	.newsletter form input[type="submit"]:hover {
-		background-color: #E86B0C;
-	}
-}
-
-
-/* Popup Styles */
-
-@media screen and (min-width: 1px) {
-	.popups div {
-		display: none;
-		position: fixed;
-		top: calc(50% - 300px);
-		left: 10%;
-		width: 80%;
-		padding: 0 10%;
-		box-sizing: border-box;
-		background-color: #ffffff;
-		color: #000;
+		background-color: #FF0000;
 	}
 }
 

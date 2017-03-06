@@ -206,7 +206,37 @@ Contents
 	16 JQuery
 		16.1 Downloading JQuery
 		16.2 Selectors
-
+			16.2.1 Element Selector
+			16.2.2 Class Selector
+			16.2.3 ID Selector
+		16.3 The DOM
+		16.4 Parent/Child Relation Selectors
+		16.5 Psuedo Selectors
+		16.6 Chrome Development Tools
+		16.7 Manipulating CSS
+		16.8 Manipulating HTML
+		16.9 Document.Ready
+		16.10 Adding and Removing Classes
+		
+	17 JQuery Events
+		17.1 Events in JQuery
+			17.1.1 Event Handlers
+			17.1.2 The On Event
+		17.2 Animation
+			17.2.1 Effects
+			17.2.2 FadeTo
+		17.3 Method Chaining
+		17.4 Attributes
+		17.5 Importance of This
+		
+	18 JQuery: Traversing MT. Dom
+		18.1 Traversing Up and Down the DOM Tree
+		18.2 Traversing Sideways
+		18.3 Toggling Classes
+		18.4 Other Traversing Methods
+		
+	19 Javascript Part 2
+		
 
 1 Reopening the Box Model
 
@@ -3661,6 +3691,7 @@ Contents
 	
 	Each of these use the jQuery function, containing a string of the element, class or ID to look for.
 	
+	
 16.2.1 Element Selector
 
 	The element selector in jQuery selects all elements that have the same element tag name.
@@ -3703,7 +3734,6 @@ Contents
 	This concept is used to help organize, access and manipulate your HTML elements. 
 	
 	Worth noting at this stage that each element is often refered to as a node. There are also text nodes and attribute nodes.
-	
 	
 	
 16.4 Parent/Child Relation Selectors
@@ -3838,7 +3868,7 @@ Contents
 	$("p").removeClass("underline");
 
 
-16.11 JQuery Events
+17 JQuery Events
 
 	Video - https://youtu.be/P9EfUVgaD6g
 
@@ -3851,3 +3881,254 @@ Contents
 	Understand effects
 	Understand method chaining
 
+
+17.1 Events in JQuery
+
+	Throughout ineraction of users with various elements on web pages, many actions can occur.
+	
+	JQuery helps manage these events, making it easy to attach our own functions to handle any such event.
+
+	Below are the events and their shorthand methods which should be used.
+	
+	.click() - Activated when the user clicks.
+	.keydown() - When the user holds a key
+	.keypress() - When the user presses a key
+	.keyup() - When the key rises
+	.mouseover() - Whilst the mouse is over an element
+	.mouseout() - When the mouse moves off an element
+	.mouseenter() - When the mouse enters an element
+	.mouseleave() - When the mouse leaves an element
+	.scroll() - When the user scrolls on the element
+	.focus() - When the user focuses on the element
+	.blur() - When the element is blured
+	.resize() - When the element is resized
+	
+	Some of these are more common than others. 
+	
+	A full list can be found here: https://api.jquery.com/category/events/
+	
+	
+17.1.1 Event Handlers
+
+	One of the most common event handlers is a click event.
+	
+	We do this like the below.
+	
+	$("p").click(function() {
+		// Run this code when a p tag is clicked
+	});
+
+	These use anonymous functions to run, as you can see.
+
+	Similarly, if we wanted to set up a function for the mouse enter and leave, we would do the below.
+	
+	$("p").mouseenter(function(){
+		// Run this code when the mouse moves over the p
+	});
+	
+	$("p").mouseleave(function(){
+		// Run this code when the mouse moves off the p.
+	});
+
+
+17.1.2 The On Event
+
+	An alternative to using the individual functions, we can use the .on() function.
+	
+	For click, we'd do the below:
+	
+	$("p").on("click",function(){  
+		// Run this code when a p tag is clicked
+	});
+	
+	The names for all the types are still the same, the difference is that this uses one function.
+	
+	It also saves memory in larger programs.
+
+
+17.2 Animation
+
+	We have already seen animations in CSS. JQuery supports even more animation features out of the box.
+	
+	The effects can be implemented over a specified time, resulting in animation.
+	
+	The duraction of the effect can be specified in milliseconds, "fast", "medium" or "slow".
+	
+	
+17.2.1 Effects
+
+	The available effects are lissted below.
+	
+	.show(); - Shows a previously hidden element.
+	.hide(); - Hides a previously visible element.
+	.toggle(); - Toggles the visibility, from visible to not visible.
+	.slideDown(); - Slides down a hidden element.
+	.slideUp(); - Sides up a visible element.
+	.slideToggle(); - Toggles slides down and slides up.
+	.fadeIn(); - Fades in a hidden element.
+	.fadeOut(); - Fades out a visible element.
+	.fadeToggle(); - Toggles fade ins and outs.
+	
+	
+17.2.2 FadeTo
+
+	Enables you to fade a HTML element partially in or out.
+	
+	This gives it a transparent effect.
+	
+	It has two parameters, speed and opacity.
+	
+	Example:
+	
+	$("#button").fadeTo(1000, 0.5); // Makes it half visible
+	
+	
+17.3 Method Chaining
+
+	One aspect of JQuery which is useful is method chaining.
+	
+	This means that we don't need to divide commands, in many cases doing them one after the other.
+	
+	So instead of this:
+	
+	$("#myButton").removeClass("blueBox");
+	$("#myButton").addClass("border");
+	
+	We instead just do this:
+	$("#myButton").removeClass("border").addClass("blueBox");
+	
+	This is because most methods return an object which can be used to call another method.
+
+	
+17.4 Attributes
+
+	An element's attributes are important and contain useful information, it's important to access and manipulate them.
+	
+	The .attr() function can be used to get, add and manipulate attributes.
+	
+	Example:
+	
+	$("a").attr("href","http://www.google.com/");
+	
+	
+17.5 Importance of This
+
+	When working with elements, it can be useful to refer to the specific element.
+	
+	An example is with the below.
+
+	$('p').click(function() {
+		$('p').slideToggle('slow');
+	});
+	
+	This makes the p tag disappear when clicked on.
+	
+	One issue though, clicking on it will make EVERY p tag disappear, as that's what's selected.
+	
+	How do we make it so that it applies to all p tags, but without affecting all when clicked?
+	
+	Like this: 
+	
+	$('p').click(function() {
+		$(this).slideToggle('slow');
+	});
+	
+	The "this" keyword refers only to the exact element being acted upon. When working with the DOM, this refers to the currently active node.
+	
+	Now that we use "this" to be toggled, only the p tag relevant to the function is impacted by it despite it starting off as relevant to all of them.
+	
+
+	
+18 JQuery: Traversing MT. Dom
+
+	Video - https://youtu.be/X3cr1q98ToA
+	
+	It's easy to find and modify elements using classes and ID's.
+	
+	However, not all elements will have helpful ids and classes and you may want to select first elements of lists etc.
+	
+	JQuery has another way to access elements which is based on the DOM structure. 
+	
+	This is very useful and worth learning about. 
+
+	Outcomes: 
+	Traversing the DOM tree
+	
+
+18.1 Traversing Up and Down the DOM Tree
+
+	You can obtain the direct parent of an element by using the parent() method, like below.
+	
+	$("#myElement").parent(); // Returns the ID's parent
+
+	Similarly we can select the children of an element using the below.
+	
+	$("div").children(); // Returns the children of a div element.
+	
+	If we are after a specific child, we can specify it as an argument.
+	
+	$("div").children("p"); // Returns only p tags which are a child of divs.
+	
+	
+18.2 Traversing Sideways
+
+	Now that we know how to traverse up and down, how to we move between siblings?
+	
+	We do this by using the next() and prev() functions.
+	
+	$("div").next(); // Returns the next sibling
+	$("div").prev(); // Returns the previous subling.
+	
+	An important note as that this isn't the next selected element, but the next in the dom tree.
+	
+	var firstDiv = $(".contentDiv").first()
+	firstDiv.next().css("background-color", "#ffaaaa");
+	
+	In this example, we select the first .contentDiv classed element, and from there select the next element.
+	
+	We then add some css to that element.
+	
+	
+18.3 Toggling Classes
+
+	One very useful JQuery function is toggleClass().
+	
+	What this means is that we can toggle a particular class on or off.
+	
+	$("div").toggleClass("myClass"); // Removes the myclass function.
+	
+	We can use these with events etc. 
+
+
+18.4 Other Traversing Methods
+
+	Lets look at a few other traversing methods. 
+	
+	The first() function returns the first element in the selected set of elements.
+	
+	$(".contentDiv").first();
+	
+	Similarly the last() function selects the last element in the selected set of elements.
+	
+	$(".contentDiv").last();
+	
+	The siblings() function returns all siblings of the current selected element.
+	
+	$(".contentDiv").siblings();
+	
+	Lastly the filter() method lets you specify some additional criteria.
+	
+	$("p").filter(".intro").addClass("highlight");
+	
+	This will only add the .highlight class if it has .intro as a class already.
+	
+	
+19 Javascript Part 2
+
+	Javascript was designed to run in a browser enviroment, so we need to understand this enviromentand particular issues it raises.
+	
+	Most applications require data from external or internal services. We will look at techniques for retrieving data from the client side.
+	
+	Outcomes:
+	JavaScript in the Browser
+	JavaScript and external communication
