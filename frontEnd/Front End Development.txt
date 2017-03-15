@@ -4132,3 +4132,409 @@ Contents
 	Outcomes:
 	JavaScript in the Browser
 	JavaScript and external communication
+
+
+19.1 Javascript In The Browser
+
+	For JS, the most important HTML tag is <script>.
+	
+	The tag allows us to include JS in the document.
+	
+	The JS contained, either internally or externally, will be read as soon as the browser encounters it.
+	
+	Including large programs in HTML documents is impractical. As such, you link externally like so.
+	
+	<script src="js/myfile.js"></script>
+	
+	The myfile.js file contains the JS code to be loaded. 
+	
+	Whenever the browser loctes an external URL as part of page content, such as image, css, js etc, it immediately downloads it.
+	
+	
+19.2 The Document Object
+
+	We saw in the JQuery lesson the concept of the DOM. JQuery hides a lot of underlying code.
+	
+	When traversing the DOM, JQuery uses the global "document" object.
+	
+	This gives us access to all the objects at a lower level than the JQuery library.
+	
+	
+19.3 The Window Object
+
+	Have you wondered where the $ comes from in JQuery?
+	
+	In the browser exists a global object called window. This is accessible anywhere in JS. 
+	
+	Window is the object used to hold all global variables.
+	
+	In the JQuery library, the begining is a declaration as follows:
+	
+	var jQuery = {};  // empty object
+	
+	All the JQuery functions are created and attached to this object, for instance.
+	
+	jQuery.ajax = function() { 
+		//ajax code
+    }
+    
+    Then at the end of the library is a variable added to the window object.
+    
+    window.jQuery = window.$ = jQuery;
+    
+    This allows us to use either $ or jQuery to access library functions.
+    
+    When we refer to a variable, JS looks at the window object for a reference.
+    
+    The window obect is implied, so we don't always have to specify it.
+    
+    All global variables and functions are attached to the window object.
+    
+    
+19.4 Global vs Local
+
+	Good developers divide the JS code into seperate JS files. We place these in our html documents using <script>
+	
+	It would be wrong to assume each of these JS files are seperate programs. The browser compiles all of them into one big JS file.
+	
+	This means we need to understand how JS implements scope.
+	
+	JS has local and global scope. A variable or function is put into the global scope if it is declared outside a function definition. 
+	
+	Any variable declared inside a function def is said to be local to that function, and cannot be accessed outside of it.
+	
+	There is one issue that needs to be mentioned. If a variable is not declared with the var keyword, it is assumed to be a global variable.
+	
+	This includes if it is declared within a function definition. 
+	
+	The lesson here is to not repeat variable names in different files. Doing this causes conflicts. 
+	
+	
+19.5 Module Pattern
+
+	Modules divide programs into clusters of code that, by some criterion, belong together.
+	
+	In the discussion about the window object, you may have asked this question; if JQuery is a variable, isn't it already on the global scole? 
+	
+	This is a good question. 
+	
+	There is another type of function we need to mention, called a self exectuting function. This function executes immediately. 
+	
+	It looks like the below:
+	
+	(function() {
+		// Code goes here
+	})();
+	
+	The () causes immediate execution.
+	
+	The code declared here has a local scope, not global. 
+	
+	This solves the issue we discussed by putting code inside self executing functions, were everything declared has a local scope.
+	
+	This means everything outside of this cannot call or edit anything contained within. 
+	
+	But then how do we pass data from the module to the application? 
+	
+	Here we use the window object. Attaching objects to the window object means we can access it outside of self executing functions, as seen below.
+	
+	(function() {
+		jQuery = {}; // attach functions to this object
+		jQuery.ajax = function() {
+			console.log("this is the ajax function");
+		}
+		window.jQuery = window.$ = jQuery;
+	})();
+	
+	$.ajax(); // This outputs the message to the console
+	
+	Here, from within the self executing function, we attach the JQuery function to the window, making it global.
+	
+	
+19.7 External Communication
+
+	When people refer to an API, they are refering to a HTTP API, which is a way of sharing application data over the internet. 
+	
+	i.e; Twitter has an API for importing tweets into your document.
+	
+	This is the power of http API's, being able to mash up data from multiple applications into your own, or create one to enhance other applications etc.
+	
+	Each resource on the web is named by a Uniform Resource Locator (URL) which looks like this:
+	
+	http://example.net/myPath.html
+	
+	http://     - protocol
+	example.net - server
+	myPath.html - path
+
+	The protocol tells us the URL uses a HTTP, or otherwise an encrypted HTTP, which would be https://
+	
+	The server is where we are requesting the resource from, so that the browser can connect to it. 
+	
+	Last is the path, which is the location of the specific resource we wish t grab. 
+	
+	So the API consists of a URL which gives a specified location on the resource. 
+	
+	
+19.8 API Attributes
+	
+	So if we wanted an ap to allow you to view, create and delete widgets, we would create API's to do this.
+	
+	http://example.com/view_widgets
+	http://example.com/create_new_widget?name=Widgetizer
+	http://example.com/delete_widget?id=123
+	
+	The parameters to an API call are separated from the URL by the ? character and additional parameters seperated by the & character. 
+	
+	So in the below:
+	
+	http://example.com/create_new_widget?name=Widgetizer
+	
+	We have one parameter, name=Widgetizer. 
+	
+	This will return the resource in JSON form. 
+	
+	API's will generally have some form of documentation telling us how the API can be used. 
+	
+	So we know how to form an API url to access data, but how do we process it for our client side application?
+	
+	
+19.9 Asynchronous Programming
+
+	One of JS's features is how it handles async code. 
+	
+	Rather than blocking the thread, async code gets pushed to an event queue that fires after all other code executes.
+	
+	This was introduced to make sure web page content isn't blocked by downloading large JS files.
+	
+	Another example is how images are downloaded alongside the remaining html content. It doesn't wait for the image to load.
+	
+	When thinking of async, it's best to think of it as "now and later."
+	
+	Syncronous processes happen now, async process hapen later. 
+	
+	
+19.10 Time Outs and Intervals
+
+	Following on from the idea of async programming, we can look at some built in async processes.
+	
+	JS's most basic async functions are setTimeout and setInterval.
+	
+	setTimeout executes a given function after an amount of time basses. It accepts a function and a time (in ms) as the arguments.
+	
+	Example:
+	
+	setTimeout(function() {
+		console.log("Activates after 5 seconds");
+	} ,500);
+	
+	Intervals do the same, but will continually run the code. 
+	
+	A timeout or interval will not execute until all remaining code in a block has executed.
+	
+	Both timeouts and intervals are pushed into an Event Loop.
+	
+	The event loop is a queue of callback functions. When an async function executes, the callback function is pushed into the queue.
+	
+	The JS engine doesn't start processing the event loop till all other code has finished.
+	
+	
+19.11 AJAX
+
+	AJAX stands for Async Javascript and XML. The term has been made redundant due to widespread adoption of JSON formal over XML data.
+	
+	The tech was developed to enable the process of feching data from the web without needing refresh.
+	
+	AJAX allows for fetching of data from remote servers and have the data processed client side.
+	
+	AJAX can be used to consume remote API's and is an async process.
+	
+	JQuery has a number if implementations to allow for calling of an API and the return of it.
+	
+	See http://api.jquery.com/jquery.ajax/
+	
+	One such is the .ajax() function. In the simplest form, it consists of a:
+	
+	url - the API location, including any parameters
+	datatype - in this case JSON
+	complete - a callback function to process the data returned from the api
+	error - a callback function to process any error from the API from.
+	
+	Below, we create an object using AJAX.
+	
+	Example: 
+	
+	function getAPI() {
+		$.ajax({
+			url: "http://myurl.net/location?parameter=1",
+			datatype: "json",
+			complete: function(response) {
+				// relevant code
+				$("#myElement").html(response.responseText);
+			}
+			error: function() {
+				$("#output").html("Error Detected");
+			}
+		});
+	}
+
+	So now we just need to return it.
+
+	getAPI();
+	
+	This will return the content to the html of the #myElement ID.
+	
+	
+19.12 Debugging in the browser
+
+	When using JS in the browser, it's important we are comfortable using the devtools browsers provide so that we can troubleshood etc.
+	
+	Any errors will be shown in the console, this is a good way of spotting syntax errors.
+	
+	If there are no syntax errors, however, using console.log() is a great way of outputting data to see where problems are coming from.
+	
+	Additionally, we can use "sources" in the developer tools.
+	
+	This tells us all of the sources relevant to the current page.
+
+
+19.13 JQuery Promise
+
+	We'll look at the promise method of working with async processes.
+	
+	One of the things about the above code is that we have a hardcoded reference to the html element we want to add the data to. This dependency is not best practice, we want the ajax function to be reusable.
+	
+	JQuery uses the concept of a deffered object. This has a number of properties. It has a promise attached - this is what is returned to the calling process.
+	
+	It has a resolved property, which is called when the process is complete. In turn turn this triggers the promise to execute via a .then() function.
+	
+	then() recieves two parameters, a success calback and a fail callback. Our terminology we can think of the promise as the now, and the then as later.
+	
+	In summary, it'd look like this:
+	
+	function getMovieById(id) {
+		var dfd = new $.Deferred();
+		$.ajax({
+			url:"https://api.themoviedb.org/3/movie/"+ id +"?api_key=35e16679c616a21b9ddebb66272c5902",
+			dataType: "json",
+			complete: function (response) {          
+				var movie = response.responseJSON;
+				return dfd.resolve( movie );//movie gets sent to .then()
+			},
+			error: function () {
+				dfd.reject("error on ajax call");
+			},
+		});
+	return dfd.promise();  //returns before resolve
+
+	
+	Note that there are no html references, we also have used the responseJSON property from the response object instead of responseText.
+	
+	The promise is returned from the getMoviesById() function. This is the "now".
+	
+	When the promise is resolved the callback funcion in the then() function is executed. This is the "later".
+	
+	The data passed to the then() function callback is that which is passed to the resolve() function in the getMoviesById() function. 
+	
+	function getMovie(id) {
+		getMovieById(id).then(
+			function(movie) {//success
+				//getMovieById finished to process results.
+				//This is better as we removed dependency on html
+				//need to stringify to display results.
+				$('#output').html(JSON.stringify(movie));
+				$('#overview').html(movie.overview);                
+			},
+			function(message) {//failure
+				$('#output').html('Bummer: there was an error! ' + message);
+			}
+		);
+	}
+	
+	
+20 Unit Testing
+
+	Unit Testing is a way of testing your code to make sure it works.
+	
+	When a developer is writing functionity, they will create tests before they start building their functionality.
+	
+	This is known as test-driven development, otherwise known as TDD.
+	
+	This gives the dev a clear vision of what their functionality needs to do and makes their code as concise as possible.
+	
+	For example, if a developer knows they need to build a function which adds two numbers together and returns the result, they will create a test for that function/
+	
+	Having tests also allows developers to make changes to code at a later stage, because the test is already in place.
+	
+	Behaviour Driven Development, or BDD is another approach.
+	
+	Generally speaking, BDD will describe the behaviour of the funcionality.
+	
+	These scenarios are sometimes called "Given When Then" scenarios.
+	
+	In a Given-When-Then scenario, this may lead to something like the following.
+	
+	"Given a user wishes to register for the application, when they click on the registration link, then they are presented with a registration form."
+	
+	This outlines the steps the user will take, it also gives the dev an outline of the simplest ting that needs to be built.
+	
+	In order for the test to pass, the dev will know that they need to create a link, the form and allow the register.
+	
+	
+20.1 Describe
+
+	Another way to use BDD is to describe a spec which wll have some kind of expectation. This is how most JS testing frameworks work.
+	
+	Example: 
+	
+	describe('Add function', function() {
+		it('should add two numbers together', function() {
+			expect(add(2, 2).toBe(4));
+		});
+	});
+
+	When we use describe() we are descrbing a test suite. Each test suite will be made up of specs.
+	
+	In this case, we only have one spec. This spec is the it() method.
+	
+	When you read the string in the describe and the it method, they read together a full sentence.
+	
+	In this case, "Add function should add two numbers together". 
+	
+	The expect() is the calculation and the expected outcome.
+	
+	describe() - Made up of secifications we are testing.
+	it()       - Contains a spec and it's description.
+	expect()   - Specifies the calculation.
+	add()      - What we have used to perform the calculation.
+	toBe()     - Specifies the expected outcome of the calculation.
+
+	The toBe() will return a True or False value, depending if the add() is equal to the expected result or not.
+
+	In JS there are a number of different frameworks that can be used.
+	
+	qUnit is a testing framework built for testing JQuery code.
+	Other frameworks include mocha, sinon and jasmine.
+	
+	The thing about these frameworks is that we can test more than just JQuery. We can use them to test any JS code.
+	
+	These frameworks are written in NodeJS. NodeJS is a form of JS that allows us to use JS outside of the web browser.
+	
+	When we wish to run tests, we need to use a type of tool called a test runner.
+	
+	Common tools for tests are gulp, grunt, npm, karma as well as the browser.
+	
+	These will just take all the tests you have written and run through them to see if they pass, fail.
+
+
+20.2 Jasmine
+
+	Jasmine is a simple but powerful testing framework or JS.
+	
+	It can be found here: https://jasmine.github.io/
+	
+	Included here is the SpecRunner.html file. Open this in the browser.
+	
+	The tests are found in Src, which contains js files with the tests to be performed.
+	
+	

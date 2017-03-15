@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Async Examples</title>
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/async.js"></script>
+</head>
+<body>
+	<header id="top">
+		<div>
+			<h1>Front End Tutorial</h1>
+		</div>
+	</header>
+	<main>
+		<h1>Async Examples</h1>
+		<p>Async Programming means taking functions etc outside of the standard load, and places it into a queue only loaded after all other elements.</p>
+		<p>This is useful so as to make sure everything vital is loaded first.</p>
+		<p>A useful way of making sure all html has loaded before JS loads, wrap the js files in the following:</p>
+		<p><em>$(document).ready(function() {<br />
+			// Relevant Code
+		)};</em></p>
+		
+		<h2>Timeouts</h2>
+		<p>Similar to the above, we can manually set code to only run after a certain amount of time has past.</p>
+		<p>The timer only starts once all other elements have loaded, be mindful of this.</p>
+		<p>For instance, the below text will change colour after 10 seconds.</p>
+		
+		<p id="timeout">Changing Colour...</p>
+		
+		<h2>Intervals</h2>
+		<p>Similar to timeouts, we can use intervals to run code repeatedly at set times.</p>
+		<p>For instance, every two seconds, the below text will change colour.</p>
+		
+		<p id="interval" class="red">I'm red</p>
+		
+		<h2>Clock Example</h2>
+		<p>Below is an example of how we can use the interval function in a practical purpose. In this case, it's a clock.</p>
+		<p id="printTime">Loading...</p>
+	</main>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>
