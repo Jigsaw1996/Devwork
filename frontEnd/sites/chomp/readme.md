@@ -12,9 +12,9 @@
 * Effective use of the Boostrap library
 * Mobile first design
 * UX
-* JQuery Events and Effects
+* JQuery events and effects
 * Ajax
-* Wireframing and Mockups
+* Wireframing and mockups
 
 
 # General Description
@@ -49,12 +49,12 @@ The aim is to provide them with interesting and well made products.
 
 # Scope
 
-* Read Content
-* View Products
-* Check Availability
-* Fill in Contact Forms
-* Find Contact Information
-* Find Out More About Us
+* Read content
+* View products
+* Check availability
+* Fill in contact forms
+* Find contact information
+* Find out more about us
 
 
 # Structure
