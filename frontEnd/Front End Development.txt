@@ -180,7 +180,79 @@ Contents
 		14.5 Summary
 		
 	15 Javascript Revisited
-
+		15.1 Comments
+		15.2 Declaring Variables
+		15.3 Data Types
+		15.4 Operators
+		15.5 If Statements
+		15.6 Variable Value Overide
+		15.7 Type Coercion
+		15.8 Strings
+		15.9 String Methods
+		15.10 For Loops
+		15.11 Arrays
+			15.11.1 Array Iteration
+			15.11.2 Array Methods
+		15.12 Functions
+		15.13 Function Arguments
+		15.14 Callbacks
+		15.15 Objects
+			15.15.1 Object Methods
+			15.15.2 This Keyword
+			15.15.3 Arrays in Objects
+		15.16 Object Instances
+		15.17 JSON
+		
+	16 JQuery
+		16.1 Downloading JQuery
+		16.2 Selectors
+			16.2.1 Element Selector
+			16.2.2 Class Selector
+			16.2.3 ID Selector
+		16.3 The DOM
+		16.4 Parent/Child Relation Selectors
+		16.5 Psuedo Selectors
+		16.6 Chrome Development Tools
+		16.7 Manipulating CSS
+		16.8 Manipulating HTML
+		16.9 Document.Ready
+		16.10 Adding and Removing Classes
+		
+	17 JQuery Events
+		17.1 Events in JQuery19.13 JQuery Promise
+			17.1.1 Event Handlers
+			17.1.2 The On Event
+		17.2 Animation
+			17.2.1 Effects
+			17.2.2 FadeTo
+		17.3 Method Chaining
+		17.4 Attributes
+		17.5 Importance of This
+		
+	18 JQuery: Traversing MT. Dom
+		18.1 Traversing Up and Down the DOM Tree
+		18.2 Traversing Sideways
+		18.3 Toggling Classes
+		18.4 Other Traversing Methods
+		
+	19 Javascript Part 2
+		19.1 Javascript In The Browser
+		19.2 The Document Object
+		19.3 The Window Object
+		19.4 Global vs Local
+		19.5 Module Pattern
+		19.7 External Communication
+		19.8 API Attributes
+		19.9 Asynchronous Programming
+		19.10 Time Outs and Intervals20.2 Jasmine
+		19.11 AJAX
+		19.12 Debugging in the browser
+		19.13 JQuery Promise
+		
+	20 Unit Testing
+		20.1 Describe
+		20.2 Jasmine
+		
 
 1 Reopening the Box Model
 
@@ -2364,12 +2436,17 @@ Contents
 
 	Files with .min are minimized files, and will load faster in browser.
 
-	Pages using bootstrap need to have the following scripts:
+	Pages using bootstrap need to have the following style and scripts:
 	
 	 <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	 <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js" async></script>
 	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" async></script>
 	  
-	 Jquery is needed in order to handle the JS files.
+	 Jquery is needed in order to handle the JS files, hence why this is a link.
+	 
+	 There's also another option, which is to link to CDN's files. This is great as many sites do it, so the user's browser will have already downloaded them.
+	 
+	 This saves user load times and also makes files easier to manage, as they aren't local and are located elsewhere.
 
 
 12.2 The Grid System
@@ -2965,19 +3042,19 @@ Contents
 	In total, below is what we need to make:
 	
 	<div class="navbar-header">
-		<a class="navbar-brand" href="#">CHOCOBLOCK</a>  
-		<ul id="myCollapsingList" class ="nav navbar-nav collapse navbar-collapse">
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About</a></li>
-			<li><a href="#">Portfolio</a></li>
-			<li><a href="#">Contact</a></li>
-		</ul>                 
+		<a class="navbar-brand" href="#">CHOCOBLOCK</a>             
 		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myCollapsingList">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 		</button>
 	</div>
+	<ul id="myCollapsingList" class ="nav navbar-nav collapse navbar-collapse">
+		<li><a href="#">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>      
 
 	Now you have a responsive, good looking button for a navigation bar.
 
@@ -3011,3 +3088,1469 @@ Contents
 15 Javascript Revisited
 
 	Video - https://youtu.be/qKQJuqFGhI8
+	
+	Javascript is the language of the web. Any web developer needs to know this language.
+	
+	JS is used to add dynamic content to websites. We look at Javascript and a few libraries such as JQuery and D3.
+	
+	First, however, we need to get the hang of Javascript itself. 
+	
+	One tool which we can use for this is called repl.it, it's a free tool for executing codes. 
+	
+	To use it, go to this site: https://repl.it/languages/javascript
+	
+	Use console.log() to output to screen.
+	
+	Outcomes:
+	JavaScript Data Structures and Controls
+	JavaScript Functions
+	JavaScript Objects
+
+
+15.1 Comments
+
+	Lets master some Javascript basics.
+	
+	For starters, comments can be written in two ways, depending on if they are one line or more.
+
+	// For singe lines
+	
+	/*		
+	For multiple
+	lines, just like CSS
+	*/
+	
+	These aren't read by the browser, so are used to carry notes, removed code etc.
+	
+	Comments are useful for labelling or explaining the JS code, which can make it easier to read, remember and manage.
+	
+	It's common practice to leave comments in JS docs.
+	
+	
+15.2 Declaring Variables
+
+	Variables are at the core of programming languages. They contain data, which can be used and modified as the program runs.
+
+	Variables can be declared in two ways. 
+	
+	First, with the keyword var. For example:
+	
+	var x = 42;
+	
+	This can be used to declare both local and global variables.
+	
+	The second is simply assigning a value. For example:
+	
+	x = 42;
+	
+	Notice the lack of the var keyword. This creates a warning, so it's not worth doing.
+	
+	If you wish to declare a variable which should never change after it's declared, use a constant, as seen below.
+	
+	const myConst = 12;
+
+	The variable "myConst" now equals 12, and cannot be changed from this.
+	
+	
+15.3 Data Types
+
+	Variables hold data, but what kinds of data can it hold?
+	
+	Here they are:
+	
+	Boolean   - True or False value.
+	Number    - A numerical value, whole or float.
+	String    - Text, declared within speech marks.
+	Object   - More on these later.
+	undefined - When the value is undefined, it has this.
+	null      - Special value.
+
+
+15.4 Operators
+
+	Operators are used in logical statements to determine equality or difference between variables or values.
+	
+	Here are the operators:
+	
+	==   - Equal to
+	===  - Equal to and of the same type
+	!=   - Not equal to
+	!=== - Not equal to or not of the same type
+	
+	>    - Greater than
+	<    - Less than
+	>=   - Greater than or equal to
+	<=   - Less than or equal to
+	
+	
+15.5 If Statements
+
+	We can use operators to decide if certain code should be executed or not.
+	
+	If statements output a Boolean value, and only run relevant code when it returns True.
+	
+	If the operation evaluates to True, it will read the contained code. If it evaluates to False, it won't read the contained code.
+
+	if (condition) {
+		// Code to be executed if condition evaluates to true
+	}
+	
+	We can also use the "else" condition to set what should happen if the condition returns False.
+	
+	if (condition) {
+		// Code to be executed if condition evaluates to true
+	}
+	else {
+		// Code to be executed if the condition evalues to false.
+	}
+
+	Example:
+	
+	if (1 == 1) {
+		var x = 1;
+	}
+	else {
+		var x = 2;
+	}
+
+	Result - The condition is true, so x is given a value of 1.
+	
+	But what if we want a second if condition in case the first fails? For this, we use a else if statement.
+	
+	Example:
+	
+	if (1 == 2) {
+		var x = 1;
+	}
+	else if (1 == 1) {
+		var x = 2;
+	}
+	else {
+		var x = 2;
+	}
+
+	Result - The else if statement is true, so x == 2.
+
+15.6 Variable Value Overide
+
+	We can freely redefine values of variables, without worrying about errors or data types.
+	
+	So we can do the below.
+	
+	var x = 42;
+	var x = "Test";
+	
+	We've changed the value, and the data type of the value. This can be done throughout a program.
+
+
+15.7 Type Coercion
+
+	JS can attempt to coerce a variable into the correct type when required.
+	
+	For instance, if we attempt to add a string and a number together, it will output it all as a string.
+	
+	Example:
+	
+	"This outputs " + 42;
+	
+	Result - "This outputs 42"
+	
+	TAKE NOTE OF THE SPACE AT THE END OF THE STRING, MEANING THERE'S A GAB BEFORE THE 42.
+	
+	Subtracting a number from a string doesn't really work, for instance..
+	
+	"37" - 7 = 30
+	
+	It returns a numeric value, but doesn't calculate it like one, simply taking 7 from the number.
+	
+	When using operations the equal type operater ignores corcion completely. If they are of different Data Types, it evaluates to False.
+
+	Example:
+	
+	30 === '30';
+	
+	Result - False
+	
+	
+15.8 Strings
+
+	Strings are a basic but very common Data Type, holding text. 
+	
+	Javascript identifies strings by speech marks, which contain the text being held in the string.
+	
+	Example:
+	
+	var x = "This is a string";
+
+	Both single and double quotes can be used. Quotes can be used within the string if it's the other kind than the one containing it.
+	
+	Strings cannot be divided, multiplied or subtracted, but they can be added together.
+	
+	Adding them together displays them one after the other. This is known as concatenation.
+	
+	Example:
+	
+	"con" + "cat" + "e" + "nate";
+	
+	Result - "Contatenate"
+	
+	Remember to add spaces if there's more than one word.
+	
+	
+15.9 String Methods
+
+	Functions are a program's way of running a certain process, either built in or created manually.
+	
+	Methods are functions tied to a certain object or variable.
+	
+	Here are some of them:
+	
+	charAt() - Returns the character which is at the index provided as an argument.
+	charCodeAt() - Returns the unicode of the character at the index provided.
+	concat() - Adds a string to the end of the other.
+	includes() - Checks if the string contains a character or string.
+	startsWith() - Checks if the string begins with a character or string. 
+	endsWith() - Checks if the string ends with a character or string. 
+	indexOf() - Returns the first index value of a provided character.
+	lastIndexOf() - Returns the last index value of a provided character.
+	search() - Searches the string for a certain character, string or regular expression and returns it's value.
+	toUpperCase() - Converts the text to uppercase
+	toLowerCase() - Converts the text to lowercase
+	
+	
+15.10 For Loops
+
+	Loops are used to make the browser cycle through the same code whilst a certain condition is true. 
+	
+	This is great when the same task needs to run a set amount of times, as you don't need to write it over and over.
+	
+	for ([initialExpression]; [condition]; [incrementExpression]) {
+		statement
+	}
+
+	The initial expression is a new variable which the For loop will use, usually for dictating conditions.
+	
+	The condition is the operator which dictates when the loop runs and stops. The browser checks this before the start of every run. If True, it runs. If false, it doesn't.
+	
+	The increment expression is what happens at the end of every loop, which is useful for changing a value to keep track of how many times it has ran.
+	
+	Example:
+	
+	for (x = 1; x<=4; x++) {
+		console.log("loop value:" + x)
+	}
+
+	This will run 4 times, printing the console message 4 times with it's numbered value.
+	
+	
+15.11 Arrays
+
+	Arrays are used in Javascript to allow a single variable to hold an index of data rather than a simple data type.
+	
+	So if we have loads of data for the same thing, we can use an array to hold all of it without setting up loads of arrays.
+
+	var listOfNumbers = [2, 3, 5, 7, 11];
+	
+	As you can see, the variable holds 5 different numbers rather than 1.
+	
+	They don't need to all have the same data type, we can fill them with strings, numbers etc.
+	
+	To get a certain value from the list, you have to use an index.
+	
+	var secondValue = listOfNumbers[1];
+	
+	As you can see, we grab the name of the array, and then the index of the value we wish to print.
+	
+	Index values are zero-based, so the first value is 0, the second is 1, third is 2 etc.
+	
+	To determine the length of an array, we can use the length property.
+	
+	Example:
+	
+	var arrayLength = listOfNumbers.length
+	
+	Result - arrayLength equals five, because the array has 5 items.
+	
+	
+15.11.1 Array Iteration
+
+	What if we want to apply the same thing to every array item?
+	
+	For this, we can use a for loop.
+
+	var myArray = ['one','two','three','four','five','six'];
+ 
+	for (var num in myArray) {
+		console.log(myArray[num]);
+	}
+	
+	What this is doing is creating a new variable, num, which will represent the current array index. It will cycle through all indexes and apply the contained code to it.
+	
+	In the above, we have it go through and print every array value to the console.
+
+	Try this in Replit.
+	
+	
+15.11.2 Array Methods
+
+	Javascript offers a number of methods we can use on arrays.
+	
+	push() - The argument will be added to the end of the array as a new index.
+	unshift() - Adds an element to the front of the array.
+	shift() - Removes the first index of the array and returns it.
+	pop() - Removes the last index of the array and returns it.
+	indexOf() - Searches the array for a value given as an argument, and returns it's index. If not in the array, it returns -1.
+	
+	
+15.12 Functions
+
+	Functions are useful for defining code which can be used multiple times and with several purposes, without having to rewrite it.
+	
+	They are defined, and then called when needed, with relevant arguments.
+	
+	Functions have many forms, but they are predominantly either named or anonymous.
+	
+	Named functions are given a name, anonymous functions are instead usually assigned to a variable and called through that.
+	
+	Named:
+	
+	function functionName() {
+		...
+	}
+	
+	Anon:
+	
+	var functionName = function() {
+	
+	}
+	
+	
+15.13 Function Arguments
+	
+	Functions take arguments within the brackets, which are filled with data provided when the function is called.
+	
+	For instance:
+	
+	function myFunction(x, y) {
+		return x + y
+	}
+
+	var z = myFunction(1,2);
+	
+	z will equal 3, because the x and y are replaced with the values we used when called.
+	
+	We can have as many of these as required, and can call them during the function as many times as required.
+	
+	Also take note of the return keyword, which we use to return the output for the function. In this case, it returns the calculation so it can be assigned to the z variable.
+	
+	Also remember that return will end the function, so it won't read anything after it.
+	
+	
+15.14 Callbacks
+
+	Callbacks are basically functionception.
+	
+	These involve having a function, and running another function through it by using it as an argument.
+	
+	For example:
+ 
+	function wotDayIsIt(callback){
+		var day = (new Date().getDay());
+		callback(day)
+	}
+ 
+	var dayOfWeek = function(day){
+		if (day === 0 || day === 6) {
+			console.log("it’s the weekend, yippee !");
+		}
+		else {
+			console.log("bummer, it’s a work day")
+		}
+	}
+ 
+	wotDayIsIt(dayOfWeek);
+	
+	In this example, we define a function with one argument, which we will be the name of the function we wish to run through it.
+	
+	In this case, we use the wotDayIsIt function to get the day, and the day is then ran through the dayOfWeek function to decide it's message.
+	
+	
+15.15 Objects
+
+	Javascript is an Object Oriented Language.
+	
+	In short, this means that we can replicate real world objects by representing them as a virtual object in our code.
+	
+	Objects work in key:value pairs which allow us to define data and functions relevant to it.
+	
+	They are defined as the below shows.
+	
+	var objectName = {key1:value1, key2:value2, ...};
+	
+	The values can be anything from a data type to a function (otherwise refered to as a method, as it's within an object).
+
+	A working example would be the below:
+	
+	var superHero = {
+		firstName: "Bruce",
+		secondName: "Wayne",
+		title: "Batman"
+	};
+	
+	To recieve a certain value we do the below.
+	
+	objectName.keyName
+	
+	So if we wanted to find out Batman's secret identity, we'd to the below.
+	
+	superHero.firstName;
+	superHero.secondName;
+
+	Doing this effectively expands the Javascript language. We can create as many new JS objects as we like on top of the existing ones.
+	
+	
+15.15.1 Object Methods
+
+	We can include a function as part of a key:value pair by using an anonymous function.
+	
+	Example:
+	
+	var superHero = {
+		firstName: "Bruce",
+		secondName: "Wayne",
+		title: "Batman",
+		revealIdentity: function() {
+			return "I'm" + superHero.firstName + superHero.secondName + "!";
+		}
+	};
+
+	We can call the function using the below.
+	
+	superHero.revealIdentity();
+	
+	We can also access them like below, as if it's an array item.
+	
+	superHero["firstName"];
+	
+	Note that this does not work for functions, use the first method for that.
+	
+	Try to keep naming as precise and as easy to read and understand as possible.
+	
+
+15.15.2 This Keyword
+
+	Whenever a function or object gets created it can be specifically referred to using the this keyword.
+	
+	So when accessing object data from within the object, we don't need to use it's name. We simply use the "this" keyword.
+	
+	Lets take our existing object for an example of how this is done.
+	
+	var superHero = {
+		firstName: "Bruce",
+		secondName: "Wayne",
+		title: "Batman",
+		revealIdentity: function() {
+			return "I'm" + this.firstName + this.secondName + "!";
+		}
+	};
+	
+	Notice we use the this keyword rather than the name of the object.
+	
+	This is an important part of OOP. The scope of an object refers to the data contained within the current active (the one being read) object. 
+	
+	The DOM itself operates with a scope. Window is the highest level. Anything outside of our objects are in the window scope. Anything within the object have an object scope.
+	
+	
+15.15.3 Arrays in Objects
+
+	As well as functions, we can use arrays as the key:data items.
+	
+	This is done like the below.
+	
+	var superHero = {
+		superArray: [0,1,2]
+	};
+
+	However, we can also set up an array containing further objects, within a main object.
+	
+	For example, we'd do the below to set up the enemies list for the superhero.
+	
+	var superHero = {
+		enemies: [
+			{
+				name: "General Zod",
+				homePlanet: "Krypton"
+			},
+			{
+				name: "Lex Luther",
+				homePlanet: "Earth"
+			}
+		]
+	}
+
+	As you can see, this allows us to set additional objects within a main objects, with multiple keys to choose from.
+	
+	Notice that the individual objects don't have names, like the main superHero function is. This is called an anonymous object.
+	
+	
+15.16 Object Instances
+
+	Now that we understand basic objects, we can look at instances.
+	
+	If we created a superman object, what if we then wanted to make a batman one?
+	
+	We could just retype everything, but that's not ideal.
+	
+	Instead we create instances, by creating an object constructor which all the superheroes are created from.
+	
+	var Hero = function(firstName, secondName, title, homeCity) {
+		this.firstName = firstName;
+		this.secondName = secondName;
+		this.title = title;
+		this.homeCity = homeCity;
+	}
+	
+	First note that every item uses the "this" keyword so that the value applies the instance being created, not the constructor itself.
+	
+	We then create an instance like so:
+	
+	var superman = new Hero("Clark", "Kent", "Superman", "Metropolis");
+	
+	As you can see, the "new" keyword is required before calling the instance, like you would a function.
+	
+	As many key:value pairs can be contained within the constructor, they will all be copied across into the instances.
+	
+	For adding functions etc, it's best to use "prototype", like below.
+
+	Hero.prototype.getName = function() {
+		return this.firstName + " " + this.secondName;
+	};
+
+	When working with JS, remember that pretty much everything is an object. This includes HTML elements.
+	
+	
+15.17 JSON
+
+	Javascript Object Notation (JSON) is an open, human and machine-readable standard that facilitates data interchange, and along with XML is the main format for data interchange used on the modern web. 
+	
+	JSON supports all the basic data types you’d expect: numbers, strings, and boolean values, as well as arrays.
+	
+	The syntax rules are stricter in JSON, as such there is an inbuilt function to convert content into JSON standard.
+	
+	JSON.stringify()
+	
+	Using this will return the relevant string in the correct format for JSON, without any fucntions and using " rather than '.
+	
+	We do this in cases where the JS code in question may need to be transfered, i.e with API creation.
+	
+	Similarly we can transfer it back using:
+	
+	JSON.parse()
+	
+	The .parse() function can be used to convert JSON data back to JavaScript objects when retrieving data from an external source (we discuss this in the next lesson).
+
+
+16 JQuery
+
+	Video - https://youtu.be/pALpvtvGn_c
+
+	Javascript is the language of the web, and does a great job of it. However it can sometimes be tricky and complicated to pick up.
+	
+	This is where JQuery comes in, being used to manage simple tasks that take up many lines of code and make using JS easier.
+	
+	It also has a simpler syntax and is cross-browser compatible.
+	
+	Overall it makes using JS on your website easier.
+	
+	JQuery is the most popular JS library, learning about it also very beneficial when handling other people's projects.
+
+	Outcomes:
+	Find HTML elements
+	Change their CSS
+	Change their content
+	Listen to user interaction
+	Respond to user interaction
+
+	
+16.1 Downloading JQuery
+
+	There are two ways of doing this. Firstly, you can download and host it.
+
+	JQuery can be downloaded from it's site - https://jquery.com/download/
+	
+	There are a few versions to choose from. You should choose the latest, uncompressed, development version.
+
+	The location of the jquery.js file then has to be lnked in the head of the HTML document.
+	
+	Alternately, you can simply link from Google CDN.
+	
+	Not only does this then not need to be hosted directly, but the user will likely have this cached from other sites using it.
+	
+	This saves load times as it won't need to be downloaded again.
+	
+	Here's the correct link for this method:
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	
+	Put this in the head of the HTML page to use JQuery without direct hosting.
+	
+	
+16.2 Selectors
+
+	Similarly to CSS, we can use selectors to grab a HTML element.
+	
+	There are three basic types:
+
+	Element - Grabbing the HTML element by name
+	Class - Grabbing the HTML element by class
+	ID - Grabbing the HTML element by ID
+	
+	Each of these use the jQuery function, containing a string of the element, class or ID to look for.
+	
+	
+16.2.1 Element Selector
+
+	The element selector in jQuery selects all elements that have the same element tag name.
+	
+	To do this, we'd to the below.
+	
+	$("a"); // Selects all anchor tags.
+	
+	THE DOLLAR SYMBOL IS SHORTHAND FOR JQUERY. YOU CAN ALSO DO jQuery("a");
+	
+	
+16.2.2 Class Selector
+
+	Similarly, we can use a class selector. See the below.
+	
+	$(".myClass"); // Selects all elements using .myCLass
+	
+	Take note of the . in the string.
+	
+	
+16.2.3 ID Selector
+
+	Lastly, to select ID's you do the below, as you'd expect.
+	
+	$("#myID");
+	
+	
+16.3 The DOM
+
+	One of the most important aspects of JavaScript in web development is the Document Object Model (DOM).
+
+	This simply means the breakdown of the HTML tree, starting from the window, then the document, then html, then head/body etc.
+	
+	Here's an image representing this.
+	
+	http://lms.codeinstitute.net/wp-content/uploads/2015/10/1445434392_image3-768x696.png
+	
+	The DOM hierarchy shows each element's parent, siblings and children.
+	
+	This concept is used to help organize, access and manipulate your HTML elements. 
+	
+	Worth noting at this stage that each element is often refered to as a node. There are also text nodes and attribute nodes.
+	
+	
+16.4 Parent/Child Relation Selectors
+
+	So how do we navigate the DOM in JQuery?
+	
+	First we need to find out the current node's position in the DOM, and then where we wish to travel to.
+	
+	Once we have found this out, we can move like the below.
+	
+	$("p > a"); // Returns anchor tags which are direct children of paragraphs
+	
+	$("p a"); // Returns anchor tags which are descendants of paragraphs.
+	
+	
+16.5 Psuedo Selectors
+
+	Similar to CSS, there are a number of psuedo selectors we can make use of.
+	
+	In jQuery, these are selected like below:
+	
+	$("a:first"); // Selects the first anchor tag on the page
+	$("a:last"); // Selects the last anchor tag on the page
+	$(":header"); // Selects the header elements of the page (h1, h2 etc)
+	$(":animated"); // Selects all elements in the progress of animation upon the time of run.
+	$(":checked"); // Selects all elements which are checked or selected.
+	$(":even"); // Selects all even elements
+	$(":focus"); // Selects element which is currently focused
+
+
+	The pictures below provide a full breakdown:
+	Selectors - http://lms.codeinstitute.net/wp-content/uploads/2015/10/table21.png
+	Psuedo Selectors - http://lms.codeinstitute.net/wp-content/uploads/2015/10/table3.png
+	
+	A full list of selectors can be found here: https://api.jquery.com/category/selectors/
+	
+	
+16.6 Chrome Development Tools
+
+	JQuery is usually written in a seperate file to HTML. 
+	
+	One useful tool is using Google Development Tools to write JQuery statements into the page.
+	
+	Go to Settings > More Tools > Developer Tools
+	
+	Click on console, and type away!
+	
+	This is great for testing, resolving issues and not having to worry about overiding any saved code.
+
+
+16.7 Manipulating CSS
+
+	Now that we know how to select elements, we can start messing with them.
+	
+	There are a couple of ways to do this. 
+	
+	First is to use the css() function, like so:
+	
+	$("a").css("color","red"); // Sets all anchor tags to use red as their color.
+	
+	Properties and values are comma seperated.
+
+	This will add CSS as inline, which we don't like as HTML and CSS should be seperate. We will take a look at how to best change this in the next section.
+	
+	
+16.8 Manipulating HTML
+
+	Similar to the css() function, there is also the html() function for adding stuff.
+	
+	To recieve all HTML content from an element do the below.
+	
+	$("body").html(); // Returns all the html from the body
+
+	We can also replace the HTML in the element, we do this by adding it as an argument.
+	
+	$("body").html("<h1>New Title</h1>"); // Adds a title tag to the body, replacing any existing content.
+
+	If we wanted to just replace the text of an element, we can use the text() function.
+	
+	This is done like the below.
+	
+	$(".paragraph").text("This is some next text added to the element"); // This adds text to the element
+	
+	If we don't want to destroy existing content, we can instead append it.
+	
+	$("#myElement").append("<p>Additional text"); // Text is added as a child to the element
+	
+	To remove an element, use the remove() function.
+	
+	$("#myElement").remove(); // Removes the selected element and any children.
+	
+	Lastly, we can remove all child elements using the empty() function.
+	
+	$("#myElement").empty();
+
+	
+16.9 Document.Ready
+
+	In order to make sure that the page has loaded before running any code, we can use the ready() function.
+	
+	This contains an anonymous function, which we will use to contain code we only wish to load once the DOM is loaded.
+	
+	For Example:
+	
+	$(document).ready(function() {
+		// Code to run on page load
+	});
+
+	
+16.10 Adding and Removing Classes
+
+	We mentioned earlier that inline css is bad. We need to seperate html and css.
+	
+	One trick we can perform is to instead add and take away classes where necessary.
+	
+	Lets say we created a class to add an underline to an element.
+	
+	.underline{
+		text-decoration: underline;
+	}
+	
+	We can then use the addClass() function to apply this class to an element.
+	
+	Example:
+	
+	$("p").addClass("underline");
+	
+	Note that we do not need the . for the class, simply the name.
+	
+	If we then wish to remove it, we use the removeClass() function.
+	
+	$("p").removeClass("underline");
+
+
+17 JQuery Events
+
+	Video - https://youtu.be/P9EfUVgaD6g
+
+	Now that we know how to use JQuery, we can use it for user interaction.
+	
+	Events are a big part of that, using triggers to know when to trigger functions and manipulations to HTML and CSS.
+
+	Outcomes:
+	Understand events
+	Understand effects
+	Understand method chaining
+
+
+17.1 Events in JQuery
+
+	Throughout ineraction of users with various elements on web pages, many actions can occur.
+	
+	JQuery helps manage these events, making it easy to attach our own functions to handle any such event.
+
+	Below are the events and their shorthand methods which should be used.
+	
+	.click() - Activated when the user clicks.
+	.keydown() - When the user holds a key
+	.keypress() - When the user presses a key
+	.keyup() - When the key rises
+	.mouseover() - Whilst the mouse is over an element
+	.mouseout() - When the mouse moves off an element
+	.mouseenter() - When the mouse enters an element
+	.mouseleave() - When the mouse leaves an element
+	.scroll() - When the user scrolls on the element
+	.focus() - When the user focuses on the element
+	.blur() - When the element is blured
+	.resize() - When the element is resized
+	
+	Some of these are more common than others. 
+	
+	A full list can be found here: https://api.jquery.com/category/events/
+	
+	
+17.1.1 Event Handlers
+
+	One of the most common event handlers is a click event.
+	
+	We do this like the below.
+	
+	$("p").click(function() {
+		// Run this code when a p tag is clicked
+	});
+
+	These use anonymous functions to run, as you can see.
+
+	Similarly, if we wanted to set up a function for the mouse enter and leave, we would do the below.
+	
+	$("p").mouseenter(function(){
+		// Run this code when the mouse moves over the p
+	});
+	
+	$("p").mouseleave(function(){
+		// Run this code when the mouse moves off the p.
+	});
+
+
+17.1.2 The On Event
+
+	An alternative to using the individual functions, we can use the .on() function.
+	
+	For click, we'd do the below:
+	
+	$("p").on("click",function(){  
+		// Run this code when a p tag is clicked
+	});
+	
+	The names for all the types are still the same, the difference is that this uses one function.
+	
+	It also saves memory in larger programs.
+
+
+17.2 Animation
+
+	We have already seen animations in CSS. JQuery supports even more animation features out of the box.
+	
+	The effects can be implemented over a specified time, resulting in animation.
+	
+	The duraction of the effect can be specified in milliseconds, "fast", "medium" or "slow".
+	
+	
+17.2.1 Effects
+
+	The available effects are lissted below.
+	
+	.show(); - Shows a previously hidden element.
+	.hide(); - Hides a previously visible element.
+	.toggle(); - Toggles the visibility, from visible to not visible.
+	.slideDown(); - Slides down a hidden element.
+	.slideUp(); - Sides up a visible element.
+	.slideToggle(); - Toggles slides down and slides up.
+	.fadeIn(); - Fades in a hidden element.
+	.fadeOut(); - Fades out a visible element.
+	.fadeToggle(); - Toggles fade ins and outs.
+	
+	
+17.2.2 FadeTo
+
+	Enables you to fade a HTML element partially in or out.
+	
+	This gives it a transparent effect.
+	
+	It has two parameters, speed and opacity.
+	
+	Example:
+	
+	$("#button").fadeTo(1000, 0.5); // Makes it half visible
+	
+	
+17.3 Method Chaining
+
+	One aspect of JQuery which is useful is method chaining.
+	
+	This means that we don't need to divide commands, in many cases doing them one after the other.
+	
+	So instead of this:
+	
+	$("#myButton").removeClass("blueBox");
+	$("#myButton").addClass("border");
+	
+	We instead just do this:
+	$("#myButton").removeClass("border").addClass("blueBox");
+	
+	This is because most methods return an object which can be used to call another method.
+
+	
+17.4 Attributes
+
+	An element's attributes are important and contain useful information, it's important to access and manipulate them.
+	
+	The .attr() function can be used to get, add and manipulate attributes.
+	
+	Example:
+	
+	$("a").attr("href","http://www.google.com/");
+	
+	
+17.5 Importance of This
+
+	When working with elements, it can be useful to refer to the specific element.
+	
+	An example is with the below.
+
+	$('p').click(function() {
+		$('p').slideToggle('slow');
+	});
+	
+	This makes the p tag disappear when clicked on.
+	
+	One issue though, clicking on it will make EVERY p tag disappear, as that's what's selected.
+	
+	How do we make it so that it applies to all p tags, but without affecting all when clicked?
+	
+	Like this: 
+	
+	$('p').click(function() {
+		$(this).slideToggle('slow');
+	});
+	
+	The "this" keyword refers only to the exact element being acted upon. When working with the DOM, this refers to the currently active node.
+	
+	Now that we use "this" to be toggled, only the p tag relevant to the function is impacted by it despite it starting off as relevant to all of them.
+	
+
+	
+18 JQuery: Traversing MT. Dom
+
+	Video - https://youtu.be/X3cr1q98ToA
+	
+	It's easy to find and modify elements using classes and ID's.
+	
+	However, not all elements will have helpful ids and classes and you may want to select first elements of lists etc.
+	
+	JQuery has another way to access elements which is based on the DOM structure. 
+	
+	This is very useful and worth learning about. 
+
+	Outcomes: 
+	Traversing the DOM tree
+	
+
+18.1 Traversing Up and Down the DOM Tree
+
+	You can obtain the direct parent of an element by using the parent() method, like below.
+	
+	$("#myElement").parent(); // Returns the ID's parent
+
+	Similarly we can select the children of an element using the below.
+	
+	$("div").children(); // Returns the children of a div element.
+	
+	If we are after a specific child, we can specify it as an argument.
+	
+	$("div").children("p"); // Returns only p tags which are a child of divs.
+	
+	
+18.2 Traversing Sideways
+
+	Now that we know how to traverse up and down, how to we move between siblings?
+	
+	We do this by using the next() and prev() functions.
+	
+	$("div").next(); // Returns the next sibling
+	$("div").prev(); // Returns the previous subling.
+	
+	An important note as that this isn't the next selected element, but the next in the dom tree.
+	
+	var firstDiv = $(".contentDiv").first()
+	firstDiv.next().css("background-color", "#ffaaaa");
+	
+	In this example, we select the first .contentDiv classed element, and from there select the next element.
+	
+	We then add some css to that element.
+	
+	
+18.3 Toggling Classes
+
+	One very useful JQuery function is toggleClass().
+	
+	What this means is that we can toggle a particular class on or off.
+	
+	$("div").toggleClass("myClass"); // Removes the myclass function.
+	
+	We can use these with events etc. 
+
+
+18.4 Other Traversing Methods
+
+	Lets look at a few other traversing methods. 
+	
+	The first() function returns the first element in the selected set of elements.
+	
+	$(".contentDiv").first();
+	
+	Similarly the last() function selects the last element in the selected set of elements.
+	
+	$(".contentDiv").last();
+	
+	The siblings() function returns all siblings of the current selected element.
+	
+	$(".contentDiv").siblings();
+	
+	Lastly the filter() method lets you specify some additional criteria.
+	
+	$("p").filter(".intro").addClass("highlight");
+	
+	This will only add the .highlight class if it has .intro as a class already.
+	
+	
+19 Javascript Part 2
+
+	Javascript was designed to run in a browser enviroment, so we need to understand this enviromentand particular issues it raises.
+	
+	Most applications require data from external or internal services. We will look at techniques for retrieving data from the client side.
+	
+	Outcomes:
+	JavaScript in the Browser
+	JavaScript and external communication
+
+
+19.1 Javascript In The Browser
+
+	For JS, the most important HTML tag is <script>.
+	
+	The tag allows us to include JS in the document.
+	
+	The JS contained, either internally or externally, will be read as soon as the browser encounters it.
+	
+	Including large programs in HTML documents is impractical. As such, you link externally like so.
+	
+	<script src="js/myfile.js"></script>
+	
+	The myfile.js file contains the JS code to be loaded. 
+	
+	Whenever the browser loctes an external URL as part of page content, such as image, css, js etc, it immediately downloads it.
+	
+	
+19.2 The Document Object
+
+	We saw in the JQuery lesson the concept of the DOM. JQuery hides a lot of underlying code.
+	
+	When traversing the DOM, JQuery uses the global "document" object.
+	
+	This gives us access to all the objects at a lower level than the JQuery library.
+	
+	
+19.3 The Window Object
+
+	Have you wondered where the $ comes from in JQuery?
+	
+	In the browser exists a global object called window. This is accessible anywhere in JS. 
+	
+	Window is the object used to hold all global variables.
+	
+	In the JQuery library, the begining is a declaration as follows:
+	
+	var jQuery = {};  // empty object
+	
+	All the JQuery functions are created and attached to this object, for instance.
+	
+	jQuery.ajax = function() { 
+		//ajax code
+    }
+    
+    Then at the end of the library is a variable added to the window object.
+    
+    window.jQuery = window.$ = jQuery;
+    
+    This allows us to use either $ or jQuery to access library functions.
+    
+    When we refer to a variable, JS looks at the window object for a reference.
+    
+    The window obect is implied, so we don't always have to specify it.
+    
+    All global variables and functions are attached to the window object.
+    
+    
+19.4 Global vs Local
+
+	Good developers divide the JS code into seperate JS files. We place these in our html documents using <script>
+	
+	It would be wrong to assume each of these JS files are seperate programs. The browser compiles all of them into one big JS file.
+	
+	This means we need to understand how JS implements scope.
+	
+	JS has local and global scope. A variable or function is put into the global scope if it is declared outside a function definition. 
+	
+	Any variable declared inside a function def is said to be local to that function, and cannot be accessed outside of it.
+	
+	There is one issue that needs to be mentioned. If a variable is not declared with the var keyword, it is assumed to be a global variable.
+	
+	This includes if it is declared within a function definition. 
+	
+	The lesson here is to not repeat variable names in different files. Doing this causes conflicts. 
+	
+	
+19.5 Module Pattern
+
+	Modules divide programs into clusters of code that, by some criterion, belong together.
+	
+	In the discussion about the window object, you may have asked this question; if JQuery is a variable, isn't it already on the global scole? 
+	
+	This is a good question. 
+	
+	There is another type of function we need to mention, called a self exectuting function. This function executes immediately. 
+	
+	It looks like the below:
+	
+	(function() {
+		// Code goes here
+	})();
+	
+	The () causes immediate execution.
+	
+	The code declared here has a local scope, not global. 
+	
+	This solves the issue we discussed by putting code inside self executing functions, were everything declared has a local scope.
+	
+	This means everything outside of this cannot call or edit anything contained within. 
+	
+	But then how do we pass data from the module to the application? 
+	
+	Here we use the window object. Attaching objects to the window object means we can access it outside of self executing functions, as seen below.
+	
+	(function() {
+		jQuery = {}; // attach functions to this object
+		jQuery.ajax = function() {
+			console.log("this is the ajax function");
+		}
+		window.jQuery = window.$ = jQuery;
+	})();
+	
+	$.ajax(); // This outputs the message to the console
+	
+	Here, from within the self executing function, we attach the JQuery function to the window, making it global.
+	
+	
+19.7 External Communication
+
+	When people refer to an API, they are refering to a HTTP API, which is a way of sharing application data over the internet. 
+	
+	i.e; Twitter has an API for importing tweets into your document.
+	
+	This is the power of http API's, being able to mash up data from multiple applications into your own, or create one to enhance other applications etc.
+	
+	Each resource on the web is named by a Uniform Resource Locator (URL) which looks like this:
+	
+	http://example.net/myPath.html
+	
+	http://     - protocol
+	example.net - server
+	myPath.html - path
+
+	The protocol tells us the URL uses a HTTP, or otherwise an encrypted HTTP, which would be https://
+	
+	The server is where we are requesting the resource from, so that the browser can connect to it. 
+	
+	Last is the path, which is the location of the specific resource we wish t grab. 
+	
+	So the API consists of a URL which gives a specified location on the resource. 
+	
+	
+19.8 API Attributes
+	
+	So if we wanted an ap to allow you to view, create and delete widgets, we would create API's to do this.
+	
+	http://example.com/view_widgets
+	http://example.com/create_new_widget?name=Widgetizer
+	http://example.com/delete_widget?id=123
+	
+	The parameters to an API call are separated from the URL by the ? character and additional parameters seperated by the & character. 
+	
+	So in the below:
+	
+	http://example.com/create_new_widget?name=Widgetizer
+	
+	We have one parameter, name=Widgetizer. 
+	
+	This will return the resource in JSON form. 
+	
+	API's will generally have some form of documentation telling us how the API can be used. 
+	
+	So we know how to form an API url to access data, but how do we process it for our client side application?
+	
+	
+19.9 Asynchronous Programming
+
+	One of JS's features is how it handles async code. 
+	
+	Rather than blocking the thread, async code gets pushed to an event queue that fires after all other code executes.
+	
+	This was introduced to make sure web page content isn't blocked by downloading large JS files.
+	
+	Another example is how images are downloaded alongside the remaining html content. It doesn't wait for the image to load.
+	
+	When thinking of async, it's best to think of it as "now and later."
+	
+	Syncronous processes happen now, async process hapen later. 
+	
+	
+19.10 Time Outs and Intervals
+
+	Following on from the idea of async programming, we can look at some built in async processes.
+	
+	JS's most basic async functions are setTimeout and setInterval.
+	
+	setTimeout executes a given function after an amount of time basses. It accepts a function and a time (in ms) as the arguments.
+	
+	Example:
+	
+	setTimeout(function() {
+		console.log("Activates after 5 seconds");
+	} ,500);
+	
+	Intervals do the same, but will continually run the code. 
+	
+	A timeout or interval will not execute until all remaining code in a block has executed.
+	
+	Both timeouts and intervals are pushed into an Event Loop.
+	
+	The event loop is a queue of callback functions. When an async function executes, the callback function is pushed into the queue.
+	
+	The JS engine doesn't start processing the event loop till all other code has finished.
+	
+	
+19.11 AJAX
+
+	AJAX stands for Async Javascript and XML. The term has been made redundant due to widespread adoption of JSON formal over XML data.
+	
+	The tech was developed to enable the process of feching data from the web without needing refresh.
+	
+	AJAX allows for fetching of data from remote servers and have the data processed client side.
+	
+	AJAX can be used to consume remote API's and is an async process.
+	
+	JQuery has a number if implementations to allow for calling of an API and the return of it.
+	
+	See http://api.jquery.com/jquery.ajax/
+	
+	One such is the .ajax() function. In the simplest form, it consists of a:
+	
+	url - the API location, including any parameters
+	datatype - in this case JSON
+	complete - a callback function to process the data returned from the api
+	error - a callback function to process any error from the API from.
+	
+	Below, we create an object using AJAX.
+	
+	Example: 
+	
+	function getAPI() {
+		$.ajax({
+			url: "http://myurl.net/location?parameter=1",
+			datatype: "json",
+			complete: function(response) {
+				// relevant code
+				$("#myElement").html(response.responseText);
+			}
+			error: function() {
+				$("#output").html("Error Detected");
+			}
+		});
+	}
+
+	So now we just need to return it.
+
+	getAPI();
+	
+	This will return the content to the html of the #myElement ID.
+	
+	
+19.12 Debugging in the browser
+
+	When using JS in the browser, it's important we are comfortable using the devtools browsers provide so that we can troubleshood etc.
+	
+	Any errors will be shown in the console, this is a good way of spotting syntax errors.
+	
+	If there are no syntax errors, however, using console.log() is a great way of outputting data to see where problems are coming from.
+	
+	Additionally, we can use "sources" in the developer tools.
+	
+	This tells us all of the sources relevant to the current page.
+
+
+19.13 JQuery Promise
+
+	We'll look at the promise method of working with async processes.
+	
+	One of the things about the above code is that we have a hardcoded reference to the html element we want to add the data to. This dependency is not best practice, we want the ajax function to be reusable.
+	
+	JQuery uses the concept of a deffered object. This has a number of properties. It has a promise attached - this is what is returned to the calling process.
+	
+	It has a resolved property, which is called when the process is complete. In turn turn this triggers the promise to execute via a .then() function.
+	
+	then() recieves two parameters, a success calback and a fail callback. Our terminology we can think of the promise as the now, and the then as later.
+	
+	In summary, it'd look like this:
+	
+	function getMovieById(id) {
+		var dfd = new $.Deferred();
+		$.ajax({
+			url:"https://api.themoviedb.org/3/movie/"+ id +"?api_key=35e16679c616a21b9ddebb66272c5902",
+			dataType: "json",
+			complete: function (response) {          
+				var movie = response.responseJSON;
+				return dfd.resolve( movie );//movie gets sent to .then()
+			},
+			error: function () {
+				dfd.reject("error on ajax call");
+			},
+		});
+	return dfd.promise();  //returns before resolve
+
+	
+	Note that there are no html references, we also have used the responseJSON property from the response object instead of responseText.
+	
+	The promise is returned from the getMoviesById() function. This is the "now".
+	
+	When the promise is resolved the callback funcion in the then() function is executed. This is the "later".
+	
+	The data passed to the then() function callback is that which is passed to the resolve() function in the getMoviesById() function. 
+	
+	function getMovie(id) {
+		getMovieById(id).then(
+			function(movie) {//success
+				//getMovieById finished to process results.
+				//This is better as we removed dependency on html
+				//need to stringify to display results.
+				$('#output').html(JSON.stringify(movie));
+				$('#overview').html(movie.overview);                
+			},
+			function(message) {//failure
+				$('#output').html('Bummer: there was an error! ' + message);
+			}
+		);
+	}
+	
+	
+20 Unit Testing
+
+	Unit Testing is a way of testing your code to make sure it works.
+	
+	When a developer is writing functionity, they will create tests before they start building their functionality.
+	
+	This is known as test-driven development, otherwise known as TDD.
+	
+	This gives the dev a clear vision of what their functionality needs to do and makes their code as concise as possible.
+	
+	For example, if a developer knows they need to build a function which adds two numbers together and returns the result, they will create a test for that function/
+	
+	Having tests also allows developers to make changes to code at a later stage, because the test is already in place.
+	
+	Behaviour Driven Development, or BDD is another approach.
+	
+	Generally speaking, BDD will describe the behaviour of the funcionality.
+	
+	These scenarios are sometimes called "Given When Then" scenarios.
+	
+	In a Given-When-Then scenario, this may lead to something like the following.
+	
+	"Given a user wishes to register for the application, when they click on the registration link, then they are presented with a registration form."
+	
+	This outlines the steps the user will take, it also gives the dev an outline of the simplest ting that needs to be built.
+	
+	In order for the test to pass, the dev will know that they need to create a link, the form and allow the register.
+	
+	
+20.1 Describe
+
+	Another way to use BDD is to describe a spec which wll have some kind of expectation. This is how most JS testing frameworks work.
+	
+	Example: 
+	
+	describe('Add function', function() {
+		it('should add two numbers together', function() {
+			expect(add(2, 2).toBe(4));
+		});
+	});
+
+	When we use describe() we are descrbing a test suite. Each test suite will be made up of specs.
+	
+	In this case, we only have one spec. This spec is the it() method.
+	
+	When you read the string in the describe and the it method, they read together a full sentence.
+	
+	In this case, "Add function should add two numbers together". 
+	
+	The expect() is the calculation and the expected outcome.
+	
+	describe() - Made up of secifications we are testing.
+	it()       - Contains a spec and it's description.
+	expect()   - Specifies the calculation.
+	add()      - What we have used to perform the calculation.
+	toBe()     - Specifies the expected outcome of the calculation.
+
+	The toBe() will return a True or False value, depending if the add() is equal to the expected result or not.
+
+	In JS there are a number of different frameworks that can be used.
+	
+	qUnit is a testing framework built for testing JQuery code.
+	Other frameworks include mocha, sinon and jasmine.
+	
+	The thing about these frameworks is that we can test more than just JQuery. We can use them to test any JS code.
+	
+	These frameworks are written in NodeJS. NodeJS is a form of JS that allows us to use JS outside of the web browser.
+	
+	When we wish to run tests, we need to use a type of tool called a test runner.
+	
+	Common tools for tests are gulp, grunt, npm, karma as well as the browser.
+	
+	These will just take all the tests you have written and run through them to see if they pass, fail.
+
+
+20.2 Jasmine
+
+	Jasmine is a simple but powerful testing framework or JS.
+	
+	It can be found here: https://jasmine.github.io/
+	
+	Included here is the SpecRunner.html file. Open this in the browser.
+	
+	The tests are found in Src, which contains js files with the tests to be performed.
+	
+	

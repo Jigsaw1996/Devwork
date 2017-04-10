@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bootstrap Example</title>
+	<link href="../../extensions/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="../../extensions/bootstrap-3.3.7-dist/js/bootstrap.min.js" async></script>
+</head>
+<body>
+	<header class="navbar navbar-default navbar-fixed-top">
+		<nav class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myCollapsingList">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Front End Tutorial</a>
+			</div>
+			<div id="myCollapsingList" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Contact Us</a></li>
+				</ul>    
+			</div>             
+		</nav>
+	</header>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-10 col-xs-offset-1 col-md-6 main col-md-offset-0">
+				<h1>Bootstrap Example</h1>
+				<p>Bootstrap is an extention of CSS which gives a bunch of default display possibilies.</p>
+				<p>It is open-source, free and mobile responsive.</p>
+				<p>This page is built with Bootstrap, lets explain how it works.</p>
+				
+				<h2>Grid System</h2>
+				<p>Bootstrap displays content using a grid system, which divides each row into 12 columns. Page elements can take up any number of these.</p>
+				<p>To set this up, firstly we need to set up the grid container using the .container class on the container.</p>
+				<p>We then need another container for the individual row called .row. This row contains the 12 columns.</p>
+				<p>Individual elements in this grid then need a class. This class depends on the size of the screen.</p>
+				
+				<h2>Responsive Classes</h2>
+				<p>Column widths of elements within a row are decided by a class, which looks like the below:</p>
+				
+				<div class="well">
+					<p>.col-xx-12</p>
+				</div>
+				
+				<p>12 represents the maximum width. If you want it to take up half the screen width, use 6 etc.</p>
+				<p>The xx should be replaced with the screen size which you want this width to apply to.</p>
+				<p>The screen sizes are below:</p>
+				<ul>
+					<li>xs - Small screens, less than 768px</li>
+					<li>sm - Tablets, equal or bigger than 768px</li>
+					<li>md - Smaller desktops, equal or bigger than 992px</li>
+					<li>lg - Larger desktops, equal or bigger than 1200px</li>
+				</ul>
+				
+				<p>Apply multiple classes to the same column element, so that it has multiple widths depending on screen size.</p>
+				<p><strong>NOTE: Bootstrap is mobile responsive, so widths on smaller screens will apply to larger screens unless overwritten.</strong></p>
+				
+				<h2>Hidden and Offset</h2>
+				<p>As well as width, we can define the offset of the element at different screen sizes. This is done by applying the below to the element:</p>
+				
+				<div class="well">
+					<p>.col-xx-offset-3</p>
+				</div>
+				
+				<p>This will make the column skip 3 columns on the screen size and higher specified in place of the xx. This is useful for centering elements with less than full widths etc.</p>
+				<p>Similarly we can make it invisible entirely on set screen sizes using the below:</p>
+				
+				<div class="well">
+					<p>.hidden-xx</p>
+				</div>
+				
+				<p>The item will then not display at all at that screen size.</p>
+				
+				<h2>Container Widths</h2>
+				<p>By default, containers have left and right margins. However, what about when we want full width elements?</p>
+				<p>Newer Bootstrap versions have a class for this, as seen below:</p>
+				
+				<div class="well">
+					<p>.container-fluid</p>
+				</div>
+				
+				<p>This will make the container stretch to the ends of the screen. This may not look great, so think before deploying.</p>
+			</div>
+		</div>
+	</div>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>

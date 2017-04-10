@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Array Examples</title>
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+	<script src="js/arrayList.js" async></script>
+</head>
+<body>
+	<header id="top">
+		<div>
+			<h1>Front End Tutorial</h1>
+		</div>
+	</header>
+	<main>
+		<h1>Array Examples</h1>
+		<p>Arrays are used to store data and multiple data types within a single variable.</p>
+		<p>This means that, rather than creating hundreds of variables, you only need one to manage your list.</p>
+		<p>Arrays are indexed, and can be accessed through a zero-based index system.</p>
+		
+		<h2>Syntax</h2>
+		<p>Below is how you declare a variable.</p>
+		
+		<p><em>var myArray = [1, 3, 3.14, "string", false];</em></p>
+		
+		<p>As you can see above, we use braces to hold the data, each one being comma seperated. Data type rules still apply, so speech marks are still needed for strings etc.</p>
+		<p><strong>There's no limit to the amount of array items you can add, though try and keep the lists maintainable.</strong></p>
+		
+		<h2>Accessing Array Items</h2>
+		<p>So how do we access data when it's stored in an array?</p>
+		<p>We do this using the variable, curly braces and the index of the item we're accessing.</p>
+		<p>To accessing the second array item, do the below.</p>
+		
+		<p><em>var x = myArray[1];</em></p>
+		
+		<p>This assigns the variable x a value of 3, because that's the second value in the array.</p>
+		<p>Note that array indexes are zero-based. The first item has an index of 0, the second of 1 and so on.</p>
+		
+		<h2>Array Length</h2>
+		<p>If we need to find out the length of an array, that being how many items an array contains, there is a property we can use.</p>
+		<p>Using .length on the variable assigned to the list returns the length of the list, like below.</p>
+		
+		<p><em>var arrayLength = myArray.length;</em></p>
+		
+		<p>The above assigns the arrayLength variable a value of 5, because that's how many items the myArray array contains.</p>
+		
+		<h2>Array Methods</h2>
+		<p>There are a number of methods which can be used on arrays.</p>
+		<ul>
+			<li>push() - The argument will be added to the end of the array as a new index.</li>
+			<li>unshift() - Adds an element to the front of the array.</li>
+			<li>shift() - Removes the first index of the array and returns it.</li>
+			<li>pop() - Removes the last index of the array and returns it.</li>
+			<li>indexOf() - Searches the array for a value given as an argument, and returns it's index. If not in the array, it returns -1.</li>
+		</ul>
+		
+		<p>So, for example, the below will add an "additional item" string to the end of the array.</p>
+		
+		<p>myArray.push("additional item");</p>
+		<p>View console to see all of the items, including this additional item, printed.</p>
+	</main>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>

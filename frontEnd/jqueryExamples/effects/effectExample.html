@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Effect Examples</title>
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/events.js"></script>
+</head>
+<body>
+	<header id="top">
+		<div>
+			<h1>Front End Tutorial</h1>
+		</div>
+	</header>
+	<main>
+		<h1>Effect Examples</h1>
+		<p>Whilst CSS has animation posibiliies, JQuery supports additional options right out the box.</p>
+		<p>Using these alongside events can create some cool opportunities for websites.</p>
+		
+		<h2>Syntax</h2>
+		<p>To declare a toggle to show/hide a p element, do the below.</p>
+		<p><em>$("p").toggle();</em></p>
+		<p>Some effects take values, such as a number argument for fades and slide which dictates how long the effect takes in miliseconds.</p>
+		
+		<h2>Examples</h2>
+		<button type="button" id="squareToggle">Toggle</button>
+		<div id="toggleSquare">
+			
+		</div>
+		
+		<button type="button" id="squareSlide">Slide</button>
+		<div id="slideSquare">
+			
+		</div>
+		<button type="button" id="squareFade">Fade</button>
+		<div id="fadeSquare">
+			
+		</div>
+		
+		<button type="button" id="squareFadeTo">Fade To</button>
+		<div id="fadeToSquare">
+			
+		</div>
+		
+		<p>Note that fade to is used to make an element semi-transparent rather than invisible.</p>
+		
+		<h2>Effect Types</h2>
+		<ul>
+			<li>.show(); - Shows a previously hidden element.</li>
+			<li>.hide(); - Hides a previously visible element.</li>
+			<li>.toggle(); - Toggles the visibility, from visible to not visible.</li>
+			<li>.slideDown(); - Slides down a hidden element.</li>
+			<li>.slideUp(); - Sides up a visible element.</li>
+			<li>.slideToggle(); - Toggles slides down and slides up.</li>
+			<li>.fadeIn(); - Fades in a hidden element.</li>
+			<li>.fadeOut(); - Fades out a visible element.</li>
+			<li>.fadeToggle(); - Toggles fade ins and outs.</li>
+		</ul>
+	</main>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>

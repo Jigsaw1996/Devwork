@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object Examples</title>
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+	<script src="js/object.js" async></script>
+</head>
+<body>
+	<header id="top">
+		<div>
+			<h1>Front End Tutorial</h1>
+		</div>
+	</header>
+	<main>
+		<h1>Object Examples</h1>
+		<p>Objects are used to create items, people or other object types and relevant data types.</p>
+		<p>Contained data works in key:data pairs. The data can be a data type, a function or an array.</p>
+		
+		<h2>Syntax</h2>
+		<p>Objects are defined using a variable, with the value being contained in curly braces.</p>
+		<p>The contained data is then given a key:data pair.</p>
+		
+		<p><em>var objectName = {<br />
+		containedVariable: "Value";<br />
+		containedFunction: function() {<br />
+			code...<br />
+		}<br />
+		containedArray:<br />
+		}<br /></em></p>
+		
+		<p>Note that we use anonymous functions when declared from within an object.</p>
+		<p>To access a object item, we use <em>objectName.keyName</em>. This will return the key's value.</p>
+		
+		<h2>Example</h2>
+		<p>In the attached Javascript file, we have declared the following object for the superhero batman.</p>
+		
+		<ul>
+			<li>A variable for his first name.</li>
+			<li>A variable for his second name.</li>
+			<li>A variable with a boolean value, determining if his suit is on or not.</li>
+			<li>A function to make him say his identity.</li>
+			<li>A function to take his suit on.</li>
+			<li>A function to take his suit off.</li>
+		</ul>
+		<p>Use the below buttons to see how this works.</p>
+		
+		<div class="box" id="box">
+			<ul id="consoleList">
+				<li>Command Batman:</li>
+			</ul>
+		</div>
+		<button id="revealIdentity">Reveal Identity</button>
+		<button id="suitUp">Suit Up</button>
+		<button id="suitOff">Suit Off</button>
+		
+	</main>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>

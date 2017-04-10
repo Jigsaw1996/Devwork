@@ -1,0 +1,33 @@
+@media screen and (min-width: 1px) {
+
+	.navbar {
+		background: none;
+		background-color: #A99999;
+	}
+
+	.main {
+		padding: 5%;
+		border-radius: 25px;
+		margin-top: 180px;
+		margin-bottom: 30px;
+		overflow: auto;
+		background-color: #EDEDED;
+	}
+
+	.navbar-default .navbar-brand {
+		color: #fff;
+	}
+
+	.navbar-default .navbar-nav>li>a {
+		color: #fff;
+	}
+
+}
+
+@media screen and (min-width: 992px) {
+	.main {
+		padding: 2.5%;
+		border-radius: 25px 50px 25px 50px;
+		margin-top: 80px;
+	}
+}

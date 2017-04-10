@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Variable Examples</title>
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+</head>
+<body>
+	<header id="top">
+		<div>
+			<h1>Front End Tutorial</h1>
+		</div>
+	</header>
+	<main>
+		<h1>Variable Examples</h1>
+		<p>Variables are at the core of a programming language.</p>
+		<p>They are used to store data which the program will use.</p>
+		<p>Once defined, they can be redefined, changed or used elsewhere.</p>
+		
+		<h2>Declaring Variables</h2>
+		<p>To declare a variable in JS, use the "var" keyword, followed by the name, then assign the value.</p>
+		<p>The equals sign is the assign key in JS.</p>
+		
+		<p><em>var x = 1;</em></p>
+		
+		<p>This gives the variable x a value of 1.</p>
+		<p>In this case, the data type used is a number, there are more data types which will be covered below.</p>
+		<p><strong>Include a semi-colon at the end of each operation to avoid error.</strong></p>
+		
+		<h2>Calling Variables</h2>
+		<p>Once a variable has been defined, we can call it's value later by simply placing the variable name in the relevant place.</p>
+		<p>See the below:</p>
+		
+		<p><em>var x = 1;</em></p>
+		<p><em>var y = x;</em></p>
+		
+		<p>y will have a value of 1, because when declaring it's value, we placed the name of the x variable. This calls it's value when read.</p>
+		
+		<h2>Data Types</h2>
+		<p>In the above examples, the values of variables have been numbers. Naturally, there are more than just numbers used by applications.</p>
+		<p>There are several data types we should look at.</p>
+		
+		<ul>
+			<li>Booleans - True or False value.</li>
+			<li>Numbers - A numeric value, either whole or with a floating point.</li>
+			<li>Strings - Text, a value surrounded with speech marks.</li>
+			<li>undefined - When no value has been given yet, it has this as it's data type.</li>
+			<li>null - A special keyword, more on this later.</li>
+		</ul>
+		
+		<p>Below are examples of the big three.</p>
+		
+		<p><em>var boolean = True;</em></p>
+		<p><em>var number = 3.14;</em></p>
+		<p><em>var string = "This is some text";</em></p>
+		
+		<h2>Type Coercion</h2>
+		<p>If you try and add different types of data together, JS will try to perform these.</p>
+		<p>For numbers and text, it can add them together and output a string, like below.</p>
+		
+		<p><em>x = "The answer is " + 42 // "The answer is 42"</em></p>
+		<p><em>y = 42 + " is the answer" // "42 is the answer"</em></p>
+		
+		<p>JS adds these together.</p>
+		<p>Any other circumstance and it wont have the intended result.</p>
+	</main>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>

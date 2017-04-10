@@ -23,5 +23,4 @@ addEventListener("load", function() {
 	// Event Listeners
 	homeBtn.addEventListener("click", slideHome);
 	contactBtn.addEventListener("click", slideContact);
-
 });

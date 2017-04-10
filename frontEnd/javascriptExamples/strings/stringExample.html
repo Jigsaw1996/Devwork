@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>String Examples</title>
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+	<script src="js/green.js" async></script>
+</head>
+<body>
+	<header id="top">
+		<div>
+			<h1>Front End Tutorial</h1>
+		</div>
+	</header>
+	<main>
+		<h1>String Examples</h1>
+		<p>Strings are a common data type in Javascript, they store text within a variable.</p>
+		<p>The browser knows a string by the speech marks surrounding it, these can be double or single quotes.</p>
+		<p>Below is an example of a string stored within a variable.</p>
+		
+		<p><em>var x = "Lorem Ipsum";</em></p>
+		
+		<p>Strings can be added together, as seen below.</p>
+		
+		<p><em>var x = "lorem ";</em><br />
+		<em>var y = "ipsum";</em><br />
+		<em>var z = x + y;</em>
+		
+		<p>In the above example, z will equal "lorem ipsum" as it adds the two together.</p>
+		<p><strong>Take note of the space after lorem. Remember to add spaces between words.</strong></p>
+		
+		<h2>Characters</h2>
+		<p>What if we want speech marks or other characters as part of the string? Surely this will end the string prematurely?</p>
+		<p>The solution is to use the other type of speech mark to the one you used to declare it.</p>
+		<p>For Example:</p>
+		
+		<p><em>var x = "This string contains 'speech marks' as part of the text."</em></p>
+		
+		<p>The speech marks are now saved as part of the string.</p>
+		
+		<h2>String Methods</h2>
+		<p>There are a number of methods which we can use on strings.</p>
+		<p>Here are some of these.</p>
+		
+		<ul>
+			<li>charAt() - Returns the character which is at the index provided as an argument.</li>
+			<li>charCodeAt() - Returns the unicode of the character at the index provided.</li>
+			<li>concat() - Adds a string to the end of the other.</li>
+			<li>includes() - Checks if the string contains a character or string.</li>
+			<li>startsWith() - Checks if the string begins with a character or string.</li> 
+			<li>endsWith() - Checks if the string ends with a character or string.</li>
+			<li>indexOf() - Returns the first index value of a provided character.</li>
+			<li>lastIndexOf() - Returns the last index value of a provided character.</li>
+			<li>search() - Searches the string for a certain character, string or regular expression and returns it's value.</li>
+			<li>toUpperCase() - Converts the text to uppercase.</li>
+			<li>toLowerCase() - Converts the text to lowercase.</li>
+		</ul>
+		<p>For example, we will use the below to make the string uppercase, and then check if it ends with an uppercase G.</p>
+		
+		<p><em>var green = document.getElementById("green");</em></p>
+		<p><em>var x = "lowercase string";</em></p>
+
+		<p><em>>var y = x.toUpperCase();</em></p>
+		<p><em>var z = y.endsWith("G");</em></p>
+
+		<p><em>if (z) {<br/>
+		green.style.color = "green";<br />
+		}</em></p>
+		<p><em>>else {<br />
+		green.style.red = "red";<br />
+		}</em></p>
+
+		<p id="green">If it does, this text will be green.</p>
+	</main>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>

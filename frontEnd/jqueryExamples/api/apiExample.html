@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>API Examples</title>
+	<link href="../../style.css" rel="stylesheet" />
+	<link href="style.css" rel="Stylesheet" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="js/api.js"></script>
+	<script src="js/promise.js"></script>
+</head>
+<body>
+	<header id="top">
+		<div>
+			<h1>Front End Tutorial</h1>
+		</div>
+	</header>
+	<main>
+		<h1>API Examples</h1>
+		<p>API's are a way of making your page interact with other pages.</p>
+		<p>Below is an example of how this works.</p>
+		<p>Here, we have returned the contents of an API.</p>
+		<p>See the linked JS file for more information on this, we have used a movie DB as the source for the API and have returned it's content.</p>
+		
+		<div id="output">
+		
+		</div>
+		
+		<h2>Promise Example</h2>
+		<p>The issue with the above is that it hardcodes the html into it, which isn't ideal as we want this to be reusable.</p>
+		<p>One of the ways of doing this is using the deferred object.</p>
+		<p>This has a number of properties.</p>
+		<ul>
+			<li>It has a promise attached to it, which is what is returned in the calling process.</li>
+			<li>It also has a resolved property, which gets called when the process is complete.</li>
+		</ul>
+		
+		<p>The resolved property triggers the promise to execute.</p>
+		
+		<p>Here it is, written out in full:</p>
+		
+		<p><em>function getMovieById(id) {<br />
+      var dfd = new $.Deferred();<br />
+    $.ajax({<br />
+        url:"https://api.themoviedb.org/3/movie/"+id<br />
+ +"?api_key=35e16679c616a21b9ddebb66272c5902",<br />
+          dataType: "json",<br />
+         complete: function (response) {<br />          
+             var movie = response.responseJSON;<br />
+             return dfd.resolve( movie );//movie gets sent to .then()<br />
+         },<br />
+         error: function () {<br />
+             dfd.reject("error on ajax call");<br />
+         },<br />
+     });<br />
+     return dfd.promise();  //returns before resolve<br />
+}</em></p>
+
+	<p>Notice the lack of html references.</p>
+	<p>We've used a function to hold this, so all we need to do is call it, like below.</p>
+	
+	<p><em>function getMovie(id) {<br />
+   getMovieById(id).then(<br />
+      function(movie) {//success<br />
+            $('#output').html(JSON.stringify(movie));<br />
+            $('#overview').html(movie.overview);     <br />           
+      },<br />
+      function(message) {//failure<br />
+            $('#output').html('Bummer: there was an error! ' + message);<br />
+      }<br />
+      );<br />
+	}</em></p>
+
+	<h2>Example</h2>
+	<p>Working example below:</p>
+	<p id="promise"></p>
+	</main>
+	<a href="#top" id="bottomLinkToTop">
+		<img src="../../img/arrow.png" alt="arrow"/>
+	</a>
+	<footer>
+		<p>Sam Moore - 2016</p>
+	</footer>
+</body>
+</html>

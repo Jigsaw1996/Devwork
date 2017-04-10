@@ -1,0 +1,29 @@
+/* General Styling */
+
+body {
+	background-color: #5F86B2;
+}
+
+
+/* Header */
+
+header {
+	background-color: #9CCBFF;
+}
+
+header a {
+	color: #fff;
+}
+
+header a:hover {
+	color: #5F86B2;
+}
+
+header>li>a:focus, header>li>a:hover {
+	background-color: #fff;
+	color: #5F86B2;
+}
+
+
+/* Jumbo */
+
