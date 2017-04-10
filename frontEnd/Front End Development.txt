@@ -219,7 +219,7 @@ Contents
 		16.10 Adding and Removing Classes
 		
 	17 JQuery Events
-		17.1 Events in JQuery
+		17.1 Events in JQuery19.13 JQuery Promise
 			17.1.1 Event Handlers
 			17.1.2 The On Event
 		17.2 Animation
@@ -236,6 +236,22 @@ Contents
 		18.4 Other Traversing Methods
 		
 	19 Javascript Part 2
+		19.1 Javascript In The Browser
+		19.2 The Document Object
+		19.3 The Window Object
+		19.4 Global vs Local
+		19.5 Module Pattern
+		19.7 External Communication
+		19.8 API Attributes
+		19.9 Asynchronous Programming
+		19.10 Time Outs and Intervals20.2 Jasmine
+		19.11 AJAX
+		19.12 Debugging in the browser
+		19.13 JQuery Promise
+		
+	20 Unit Testing
+		20.1 Describe
+		20.2 Jasmine
 		
 
 1 Reopening the Box Model
