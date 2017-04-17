@@ -1,7 +1,16 @@
 /* General Styling */
 
+html {
+	font-size: 16px;
+}
+
 body {
+	font-size: 1rem;
 	background-color: #5F86B2;
+}
+
+a:focus {
+	outline: none;
 }
 
 
@@ -9,21 +18,116 @@ body {
 
 header {
 	background-color: #9CCBFF;
+	/*background: linear-gradient(to bottom, #9CCBFF, #5F86B2);
+	/* box-shadow: 3px 0 5px 5px #333;*/
 }
 
 header a {
 	color: #fff;
 }
 
-header a:hover {
+.nav a:hover {
 	color: #5F86B2;
 }
 
-header>li>a:focus, header>li>a:hover {
+.nav li>a:focus, .nav li>a:hover {
 	background-color: #fff;
 	color: #5F86B2;
 }
 
+.navbar-toggle .icon-bar {
+		background-color: #fff;
+}
+
+.navbar-nav>li>a {
+	text-align: center;
+}
+
+
+/* -- Home Page -- */
+
 
 /* Jumbo */
 
+.jumbotron {
+	background-image: url('../img/banner.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+.jumbotron .container {
+	margin: 0 auto;
+}
+
+.jumbotron h1, .jumbotron p {
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+	color: #fff;
+}
+
+.jumbotron h1 {
+	font-size: 2rem;
+	letter-spacing: 0.1rem;
+	line-height: 2rem;
+	margin: 0 0 20px 0;
+}
+
+.jumbotron p {
+	font-size: 1.4rem;
+}
+
+@media (min-width: 500px) {
+	.jumbotron .container {
+		margin: 70px auto;
+	}
+}
+
+@media (min-width: 800px) {
+	.jumbotron .container {
+		margin: 150px auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	.jumbotron .container {
+		margin: 180px auto;
+	}
+}
+
+/* Main Section */
+
+main {
+	padding: 20px 0;
+}
+
+
+/* Info Items */
+
+.infoItem {
+	width: 90%;
+	border-radius: 5px;
+	box-sizing: border-box;
+	margin: 0 auto 20px auto;
+	background-color: #fff;
+	transition: 0.3s;
+}
+
+.infoItem:hover {
+	transform: scale(1.05);
+}
+
+.infoItem img {
+	width: 100%;
+	border-radius: 5px 5px 0 0;
+}
+
+.infoItem div {
+	padding: 15px 5%;
+	text-align: center;
+}
+
+.infoItem div h3 {
+	margin: 0 0 10px 0;
+	font-weight: bold;
+}
