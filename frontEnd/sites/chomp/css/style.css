@@ -104,13 +104,13 @@ footer p {
 
 .jumbotron {
 	margin: 50px 0 0 0;
-	background-image: url('../img/banner.jpg');
+	background-image: url('../img/bannerXS.jpg');
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
 
 .jumbotron .container {
-	margin: 0 auto;
+	margin: 50px auto;
 }
 
 .jumbotron h1, .jumbotron p {
@@ -131,19 +131,38 @@ footer p {
 	font-size: 1.4rem;
 }
 
+.jumbotron .ctaLink {
+	margin: 20px 0 0 0;
+}
+
+.jumbotron .btn-default {
+	font-size: 1.2rem;
+	background-color: #9CCBFF;
+	border-color: transparent;
+	color: #fff;
+}
+
 @media (min-width: 500px) {
 	.jumbotron .container {
-		margin: 70px auto;
+		margin: 100px auto;
 	}
 }
 
 @media (min-width: 800px) {
+	.jumbotron {
+		background-image: url('../img/bannerM.jpg');
+	}
+	
 	.jumbotron .container {
 		margin: 150px auto;
 	}
 }
 
 @media (min-width: 1200px) {
+	.jumbotron {
+		background-image: url('../img/banner.jpg');
+	}
+
 	.jumbotron .container {
 		margin: 180px auto;
 	}
@@ -294,7 +313,7 @@ main {
 /* Section  */
 
 .sectionContainer {
-	background-image: url('../img/section.jpg');
+	background-image: url('../img/sectionXS.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
@@ -311,8 +330,37 @@ main {
 	background-color: #fff;
 }
 
-@media (min-width: 992px) {
-	.sectionContainer section {
-		margin: 60px auto;
+@media (min-width: 800px) {
+	.sectionContainer {
+		background-image: url('../img/sectionM.jpg');
 	}
+	
+	.sectionContainer section {
+		margin: 80px auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	.sectionContainer {
+		background-image: url('../img/section.jpg');
+	}
+}
+
+
+/* Contact Link */
+
+.contactLink {
+	margin-top: 40px;
+	margin-bottom: 40px;
+}
+
+.contactLink p {
+	text-align: center;
+}
+
+.contactLink p .btn-default {
+	font-size: 1.2rem;
+	background-color: #FFFFFF;
+	border-color: transparent;
+	color: #000;
 }
