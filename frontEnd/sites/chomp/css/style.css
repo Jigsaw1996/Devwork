@@ -75,12 +75,22 @@ header a {
 	color: #5F86B2;
 }
 
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+	background-color: #fff;
+	color: #5F86B2;
+}
+
 .navbar-toggle .icon-bar {
 		background-color: #fff;
 }
 
 .navbar-nav>li>a {
 	text-align: center;
+}
+
+.dropdown-menu {
+	background-color: #fff;
+	color: #5F86B2;
 }
 
 
@@ -254,6 +264,41 @@ main {
 @media (min-width: 992px) {
 	.infoItem .imgContainer {
 		height: 170px;
+	}
+}
+
+
+/* Opened Boxes */
+
+.openBox {
+	display: none;
+	padding: 40px 0 20px 0;
+	border-top: 2px solid #fff;
+	margin: 40px 0 20px 0;
+}
+
+.openBox img {
+	margin: 0 0 40px 0;
+}
+
+.openBox h3 {
+	margin: 0 0 40px 0;
+	font-size: 1.7rem;
+	font-weight: bold;
+}
+
+.openBox h3, .openBox p {
+	text-align: center;
+	color: #fff;
+}
+
+@media (min-width: 992px) {
+	.openBox img {
+		margin: 0;
+	}
+	
+	.openBox p {
+		text-align: left;
 	}
 }
 

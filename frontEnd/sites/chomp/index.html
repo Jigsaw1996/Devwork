@@ -13,28 +13,40 @@
 	<!--Scripts-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<script src="js/general.js"></script>
+	<script src="js/box.js"></script>
 	<!--Fonts-->
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
 </head>
 <body>
-	<header class="container-fluid navbar-fixed-top">		
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">Chomp</a>           
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myCollapsingList">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
+	<header class="container-fluid navbar-fixed-top">
+		<div class="row">	
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">Chomp</a>           
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myCollapsingList">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+			</div>
+			<ul id="myCollapsingList" class ="nav navbar-nav navbar-right collapse navbar-collapse">
+				<li><a href="#">About</a></li>
+				<li><a href="#">Service</a></li>
+				<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Product Lines <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Gifts and Toys</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Accessories</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Liscenced Merchandise</a></li>
+						<li role="separator" class="divider"></li>
+					</ul>
+				</li>
+				<li><a href="#">Requests</a></li>
+				<li><a href="#">Supply Products</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul> 
 		</div>
-		<ul id="myCollapsingList" class ="nav navbar-nav navbar-right collapse navbar-collapse">
-			<li><a href="#">About</a></li>
-			<li><a href="#">Service</a></li>
-			<li><a href="#">Product Lines</a></li>
-			<li><a href="#">Requests</a></li>
-			<li><a href="#">Supply Products</a></li>
-			<li><a href="#">Contact Us</a></li>
-		</ul>      
 	</header>
 	<div class="jumbotron">
 		<div class="container">
@@ -44,38 +56,75 @@
 		</div>
 	</div>
 	<main class="container">
-		<h2>Product Lines</h2>
-		<div class="col-xs-12 col-md-4">
-			<div class="infoItem">
-				<div class="imgContainer">
-					<img src="img/products/toys.jpg" width="100%" alt="img"/>
+		<div class="row">
+			<h2>Product Lines</h2>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-md-4">
+				<div class="infoItem" id="linkGift">
+					<div class="imgContainer">
+						<img src="img/products/toys.jpg" width="100%" alt="img"/>
+					</div>
+					<div class="infoText">
+						<h3>Gifts and Toys</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
 				</div>
-				<div class="infoText">
-					<h3>Gifts and Toys</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="infoItem" id="linkAccessory">
+					<div class="imgContainer">
+						<img src="img/products/accessories.jpg" width="100%" alt="img"/>
+					</div>
+					<div class="infoText">
+						<h3>Accessories</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="infoItem" id="linkLiscenced">
+					<div class="imgContainer">
+						<img src="img/products/liscenced.jpg" width="100%" alt="img"/>
+					</div>
+					<div class="infoText">
+						<h3>Liscenced Merchandise</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="col-xs-12 col-md-4">
-			<div class="infoItem">
-				<div class="imgContainer">
-					<img src="img/products/accessories.jpg" width="100%" alt="img"/>
-				</div>
-				<div class="infoText">
-					<h3>Accessories</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				</div>
+		<div class="row openBox" id="giftBox">
+			<h3>Gifts and Toys</h3>
+			<div class="col-xs-12 col-md-4">
+				<img src="img/products/toys.jpg" width="100%" alt="img"/>
+			</div>
+			<div class="col-xs-12 col-md-8">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+				<p><a href="#" class="btn btn-default">More Information</a></p>
 			</div>
 		</div>
-		<div class="col-xs-12 col-md-4">
-			<div class="infoItem">
-				<div class="imgContainer">
-					<img src="img/products/liscenced.jpg" width="100%" alt="img"/>
-				</div>
-				<div class="infoText">
-					<h3>Liscenced Merchandise</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-				</div>
+		<div class="row openBox" id="accessoryBox">
+			<h3>Accessories</h3>
+			<div class="col-xs-12 col-md-4">
+				<img src="img/products/accessories.jpg" width="100%" alt="img"/>
+			</div>
+			<div class="col-xs-12 col-md-8">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+				<p><a href="#" class="btn btn-default">More Information</a></p>
+			</div>
+		</div>
+		<div class="row openBox" id="liscenceBox">
+			<h3>Liscenced Merchandise</h3>
+			<div class="col-xs-12 col-md-4">
+				<img src="img/products/liscenced.jpg" width="100%" alt="img"/>
+			</div>
+			<div class="col-xs-12 col-md-8">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+				<p><a href="#" class="btn btn-default">More Information</a></p>
 			</div>
 		</div>
 	</main>
