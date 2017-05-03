@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	
-	// Slide Function
+	// Slide function for boxes on the home page
 	
 	function openSlide(box) {
 		if ($(box).hasClass("activeBox")) { // If box is already open, close it
@@ -12,6 +12,7 @@ $(document).ready(function() {
 			$(".activeBox").removeClass("activeBox");
 			$(box).slideDown();
 			$(box).addClass("activeBox");
+			$('html, body').animate({scrollTop:$("#scrollLock").position().top - 70}, 'slow');
 		}
 	}
 	

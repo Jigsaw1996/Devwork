@@ -70,6 +70,10 @@ header a {
 	color: #5F86B2;
 }
 
+.nav .active {
+	color: #5F86B2;
+}
+
 .nav li>a:focus, .nav li>a:hover {
 	background-color: #fff;
 	color: #5F86B2;
@@ -93,6 +97,12 @@ header a {
 	color: #5F86B2;
 }
 
+
+@media (min-width: 768px) {
+	.navbar-right {
+		margin-right: 0;
+	}
+}
 
 /* Footer */
 
@@ -272,9 +282,9 @@ main {
 
 .openBox {
 	display: none;
-	padding: 40px 0 20px 0;
+	padding: 40px 0 40px 0;
 	border-top: 2px solid #fff;
-	margin: 40px 0 20px 0;
+	margin: 0;
 }
 
 .openBox img {
