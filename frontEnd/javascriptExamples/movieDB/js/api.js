@@ -9,6 +9,7 @@ $(document).ready(function() {
 				$('#name').html(movie.title);
 				$('#score').html("Average Score: " + movie.vote_average + "/10");
 				$('#overview').html("<h3>Overview:</h3>" + movie.overview);
+				$('#runtime').html("<strong>Runtime:</strong> " + movie.runtime + " minutes");
 			},
 			error: function () {
 				$('#output').html('Bummer: there was an error!');
