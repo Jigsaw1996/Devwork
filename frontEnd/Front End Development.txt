@@ -4549,8 +4549,70 @@ Contents
 	
 	It can be found here: https://jasmine.github.io/
 	
-	Included here is the SpecRunner.html file. Open this in the browser.
+	Included here is the SpecRunner.html file. This is used to display outcomes of our tests.
 	
-	The tests are found in Src, which contains js files with the tests to be performed.
+	There are some example files in the spec/src folders. In our own tests, we fill these with our own.
+	
+	The src folder contains js files we are testing. These files can be elsewhere in a program, so long as it's linked in the spec runner.
+	
+	The spec folder holds the tests we are imposing upon the src files. This allows us to test function outcomes using an external file.
+	
+	The spec files contain the following Syntax.
+	
+	describe("Calculator", function() {
+		describe('Addition function', function() {
+			it('Add two numbers together and return the result', function() {
+				expect(addition(2,2)).toBe(4);
+			});
+		});
+	});
+	
+	The describe() function is used to declare our tests. The first argument is a name which will be displayed. Multiple descriptions can be contained within each other.
+	
+	So we have the Calculator application we are building. Then within that there is the addition functionality we have built. We then declare tests we are imposing on this functionality.
+	
+	We do this using the it() function. The first argument is the description of the test we are running. The second is a function with the calculation.
+	
+	For this, we use the expect() and toBe() functions. Expect calls the function from the source with some test arguments. toBe lists the expected result of the function.
+	
+	In this case, we are calling te addition() function we have made, which adds two numbers together, with 2 and 2 as the arguments. The function will add the two numbers together if it works correctly.
+	
+	When we open the Spec Runner document, it will tell us if the function has passed with the relevant result. If there is an error, we will know the function does not work correctly and can search for a solution.
+	
+	See the Jasmine folder with our examples of this.
 	
 	
+20.3 In Development
+
+	To mark functionality as in development, attach  prototype.persistFavoriteStatus to it.
+	
+	Like so:
+	
+	function Song() {
+	}
+	
+	Song.prototype.persistFavoriteStatus = function(value) {
+		// something complicated
+		throw new Error("not yet implemented");
+	};
+
+
+20.4 Spying
+
+	Lets say that, rather than testing if a function returns a certain value, we wanted to see if a certain event occurs.
+	
+	We can use spyOn() to do just this. First, we select what function to keep an eye on. 
+	
+	The it() is then the same function we are monitoring. Then, rather than toBe() we use toHaveBeenCalledWith() to see if the function we're watching was called with the same arguments.
+	
+	So in full:
+	
+	it("should have called the alert function if either number is undefined", function() {
+		spyOn(window, "alert");
+		addition("Hello");
+		expect(window.alert).toHaveBeenCalledWith("Arguments must both be a number");
+	});
+
+	When the it function calls addition(), we are hoping an alert function will then be called with "Arguments must both be a number" as it's argument. If so, the test will pass.
+	
+	If not, something is wrong.
