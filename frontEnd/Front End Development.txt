@@ -252,7 +252,12 @@ Contents
 	20 Unit Testing
 		20.1 Describe
 		20.2 Jasmine
+		20.3 In Development
+		20.4 Spying
+		20.5 Summary
 		
+	21 AngularJS
+		21.1 AngularJS To Do Project
 
 1 Reopening the Box Model
 
@@ -4549,8 +4554,117 @@ Contents
 	
 	It can be found here: https://jasmine.github.io/
 	
-	Included here is the SpecRunner.html file. Open this in the browser.
+	Included here is the SpecRunner.html file. This is used to display outcomes of our tests.
 	
-	The tests are found in Src, which contains js files with the tests to be performed.
+	There are some example files in the spec/src folders. In our own tests, we fill these with our own.
+	
+	The src folder contains js files we are testing. These files can be elsewhere in a program, so long as it's linked in the spec runner.
+	
+	The spec folder holds the tests we are imposing upon the src files. This allows us to test function outcomes using an external file.
+	
+	The spec files contain the following Syntax.
+	
+	describe("Calculator", function() {
+		describe('Addition function', function() {
+			it('Add two numbers together and return the result', function() {
+				expect(addition(2,2)).toBe(4);
+			});
+		});
+	});
+	
+	The describe() function is used to declare our tests. The first argument is a name which will be displayed. Multiple descriptions can be contained within each other.
+	
+	So we have the Calculator application we are building. Then within that there is the addition functionality we have built. We then declare tests we are imposing on this functionality.
+	
+	We do this using the it() function. The first argument is the description of the test we are running. The second is a function with the calculation.
+	
+	For this, we use the expect() and toBe() functions. Expect calls the function from the source with some test arguments. toBe lists the expected result of the function.
+	
+	In this case, we are calling te addition() function we have made, which adds two numbers together, with 2 and 2 as the arguments. The function will add the two numbers together if it works correctly.
+	
+	When we open the Spec Runner document, it will tell us if the function has passed with the relevant result. If there is an error, we will know the function does not work correctly and can search for a solution.
+	
+	See the Jasmine folder with our examples of this.
 	
 	
+20.3 In Development
+
+	To mark functionality as in development, attach  prototype.persistFavoriteStatus to it.
+	
+	Like so:
+	
+	function Song() {
+	}
+	
+	Song.prototype.persistFavoriteStatus = function(value) {
+		// something complicated
+		throw new Error("not yet implemented");
+	};
+
+
+20.4 Spying
+
+	Lets say that, rather than testing if a function returns a certain value, we wanted to see if a certain event occurs.
+	
+	We can use spyOn() to do just this. First, we select what function to keep an eye on. 
+	
+	The it() is then the same function we are monitoring. Then, rather than toBe() we use toHaveBeenCalledWith() to see if the function we're watching was called with the same arguments.
+	
+	So in full:
+	
+	it("should have called the alert function if either number is undefined", function() {
+		spyOn(window, "alert");
+		addition("Hello");
+		expect(window.alert).toHaveBeenCalledWith("Arguments must both be a number");
+	});
+
+	When the it function calls addition(), we are hoping an alert function will then be called with "Arguments must both be a number" as it's argument. If so, the test will pass.
+	
+	If not, something is wrong.
+	
+	
+20.5 Summary
+
+	This covers some useful tools when it comes to Test Driven Development.
+	
+	The reason for us doing this is to make sure our code is both functioning, and functioning correctly. 
+	
+	It also provides clarity and confidence in our work.
+	
+	This is particularly useful when it comes to working with existing projects to make sure changes don't cause issues.
+	
+	
+21 AngularJS
+
+	Video - https://youtu.be/E9fzN-tD9r4
+	
+	AngularJS is a structural framework for building dynamic web apps.
+	
+	It lets you use HTML as your template language and extend HTML syntax to express your application's components clearly and succinctly.
+	
+	Angular was developed by Google around 2009 and is maintained by them.
+	
+	Angular is one of a growing number of MVC type frameworks, also including ember.js, backbone.js and knockout.js. The term MVC stands for Model View Controller.
+	
+	AngularJS is a framework, and as such imposes a structure on a developer. The structure can roughly be described by referring common app design patterns, which we will be exploring.
+	
+	These design patterns seperate out components of an application into a logical structure. This is often referred to as a seperation of concerns.
+	
+	In AngularJS these are referred to as controllers, services, directives, consultants and filters. A framework is responsible for managing initialization/interaction between these components.
+
+	The developer's task is to fill the components with their own code.
+	
+	You can find sites using Angular here; https://www.madewithangular.com/
+	
+	Outcomes;
+	Framework Vs Library
+	The MVC / MVVM Design Patterns
+	Setting up the Routing Configuration
+	Angular Forms
+	Services and $http
+	Authentication over REST using JWTs
+	Creating and Retrieving Todo Items
+	Directives
+	
+	
+21.1 AngularJS To Do Project
